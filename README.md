@@ -19,6 +19,9 @@
 
 [**Scrum board**](https://trello.com/b/uNYqSmu7/agile)
 
+[PubWebsite] (https://lillejohn22.github.io/)
+
+**Other Group Documents**
 [Social Contract](https://www.overleaf.com/project/5e78bdbf4b0d3600011fef94)
 
 [Project ideas](https://docs.google.com/document/d/1k_mHuLcZ9OvkI-vUGn5mLNtOOzorqsnM5VZBiyd6xP0/edit#heading=h.uqgi5nsgq5rt)
@@ -26,7 +29,5 @@
 [Design Document](https://docs.google.com/document/d/1fVXF8uIhJW6w_5GY0Plv2MNIyX6TfHhCqAInZfSoNgk/edit)
 
 [Meetings](https://docs.google.com/document/d/1dcxJ8pMqfS4kS1LxVa4P2S6e0350JRCzHmraORlDVDQ/edit#heading=h.abhqm953pq0r)
-
-**Link to old repo**
 
 [OLD REPO](https://github.com/emmouto/DAT257_Teams16)
