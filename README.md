@@ -16,7 +16,8 @@
 [Antonia Welzel](https://github.com/antoniiia)
 
 **Links to Group Documents**
-(**Scrum board**)[https://trello.com/b/uNYqSmu7/agile]
+
+(Scrum board)[https://trello.com/b/uNYqSmu7/agile]
 
 [Social Contract](https://www.overleaf.com/project/5e78bdbf4b0d3600011fef94)
 
