@@ -22,6 +22,7 @@
 [PubWebsite] (https://lillejohn22.github.io/)
 
 **Other Group Documents**
+
 [Social Contract](https://www.overleaf.com/project/5e78bdbf4b0d3600011fef94)
 
 [Project ideas](https://docs.google.com/document/d/1k_mHuLcZ9OvkI-vUGn5mLNtOOzorqsnM5VZBiyd6xP0/edit#heading=h.uqgi5nsgq5rt)
