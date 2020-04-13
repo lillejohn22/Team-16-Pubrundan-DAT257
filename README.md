@@ -24,3 +24,7 @@
 [Design Document](https://docs.google.com/document/d/1fVXF8uIhJW6w_5GY0Plv2MNIyX6TfHhCqAInZfSoNgk/edit)
 
 [Meetings](https://docs.google.com/document/d/1dcxJ8pMqfS4kS1LxVa4P2S6e0350JRCzHmraORlDVDQ/edit#heading=h.abhqm953pq0r)
+
+**Link to old repo**
+
+[OLD REPO] (https://github.com/emmouto/DAT257_Teams16)
