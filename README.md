@@ -27,4 +27,4 @@
 
 **Link to old repo**
 
-[OLD REPO] (https://github.com/emmouto/DAT257_Teams16)
+[OLD REPO](https://github.com/emmouto/DAT257_Teams16)
