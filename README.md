@@ -19,7 +19,7 @@
 
 [**Scrum board**](https://trello.com/b/uNYqSmu7/agile)
 
-[PubWebsite] (https://lillejohn22.github.io/)
+[PubWebsite](https://lillejohn22.github.io/)
 
 **Other Group Documents**
 
