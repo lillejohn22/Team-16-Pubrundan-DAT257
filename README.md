@@ -1,19 +1,7 @@
 # Agile Software Project Management | DAT257
-**Group 16**
+**Group 16 Members Githubs**
 
-[Thomas Jinton](https://github.com/ThomasT2)
-
-[Jennifer Krogh](https://github.com/jenniferkrogh)
-
-[Ludvig Lindell](https://github.com/Ludvig7)
-
-[Jesper Lundgren](https://github.com/jeslundg)
-
-[Johan Nilsson](https://github.com/lillejohn22)
-
-[Emma Pettersson](https://github.com/emmouto)
-
-[Antonia Welzel](https://github.com/antoniiia)
+[Thomas Jinton](https://github.com/ThomasT2), [Jennifer Krogh](https://github.com/jenniferkrogh), [Ludvig Lindell](https://github.com/Ludvig7), [Jesper Lundgren](https://github.com/jeslundg), [Johan Nilsson](https://github.com/lillejohn22), [Emma Pettersson](https://github.com/emmouto), [Antonia Welzel](https://github.com/antoniiia)
 
 **Links to Group Documents**
 
