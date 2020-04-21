@@ -1,0 +1,128 @@
+/* ---------------
+        Fonts
+   --------------- */
+@font-face {
+    font-family: "Lato Regular";
+    src: url(../fonts/lato/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Lato Thin";
+    src: url(../fonts/lato/Lato-Thin.ttf);
+}
+
+@font-face {
+    font-family: "Lato Bold";
+    src: url(../fonts/lato/Lato-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Raleway Regular";
+    src: url(../fonts/raleway/Raleway-Regular.ttf);
+}
+
+
+/* ---------------
+        Grid
+   --------------- */
+
+/* Some code for image zooming borrowed from here:
+   https://thatwebdude.com/tutorial/css-image-zooming-grid/ */
+
+#grid-container {
+    width: 75%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+}
+
+.grid-element {
+    position: relative;
+    overflow: hidden;
+    border: 10pt solid #fff;
+    height: 350pt;
+}
+
+.grid-element img {
+    scale: 1.1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 100%;
+    width: auto;
+    -webkit-transition: all .5s ease;   /* Safari and Chrome */
+    -moz-transition: all .5s ease;      /* Firefox */
+    -ms-transition: all .5s ease;       /* IE 9 */
+    -o-transition: all .5s ease;        /* Opera */
+    transition: all .5s ease;
+}
+
+.grid-element:hover img {
+    -webkit-transform:scale(1.1);  /* Safari and Chrome */
+    -moz-transform:scale(1.1);     /* Firefox */
+    -ms-transform:scale(1.1);      /* IE 9 */
+    -o-transform:scale(1.1);       /* Opera */
+    transform:scale(1.1);
+}
+
+.grid-element-name {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: block;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5em;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 23% 0 0;
+    padding: 10px 0;
+    height: 43pt;
+    border-top: 5px solid rgba(255, 255, 255, .3);
+    border-bottom: 5px solid rgba(255, 255, 255, .3);
+}
+
+.grid-element-info {
+    position: absolute;
+    top: 46%;
+    left: 5%;
+    z-index: 10;
+    width: 90%;
+    height: 50%;
+    color: black;
+    padding: 10pt;
+    background-color: white;
+    overflow: auto; 
+}
+
+.custom-scrollbar-js,
+.custom-scrollbar-css {
+  height: 200px;
+}
+
+
+/* Custom Scrollbar using CSS */
+.custom-scrollbar-css {
+  overflow-y: scroll;
+}
+
+/* scrollbar width */
+.custom-scrollbar-css::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* scrollbar track */
+.custom-scrollbar-css::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+/* scrollbar handle */
+.custom-scrollbar-css::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: #00d2ff;
+  background-image: linear-gradient(to top, #00d2ff 0%, #3a7bd5 100%);
+}
