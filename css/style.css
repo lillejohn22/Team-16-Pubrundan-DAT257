@@ -93,36 +93,31 @@
     z-index: 10;
     width: 90%;
     height: 50%;
-    color: black;
-    padding: 10pt;
+    padding: 15pt;
     background-color: white;
     overflow: auto; 
 }
 
-.custom-scrollbar-js,
-.custom-scrollbar-css {
-  height: 200px;
+.grid-element-info span {
+    position: relative;
+    color: black;
+    font-family: Raleway Regular;
+    font-size: medium;
+    padding: 10pt;
+    bottom: 3pt;
 }
 
-
-/* Custom Scrollbar using CSS */
-.custom-scrollbar-css {
-  overflow-y: scroll;
+.grid-element-info br {
+    display: block;
+    content: ""; 
+    margin-top: 10pt; 
 }
 
-/* scrollbar width */
-.custom-scrollbar-css::-webkit-scrollbar {
-  width: 5px;
+.grid-element a {
+    color: black;
 }
 
-/* scrollbar track */
-.custom-scrollbar-css::-webkit-scrollbar-track {
-  background: #eee;
+.grid-element:hover a {
+    color: black;
 }
 
-/* scrollbar handle */
-.custom-scrollbar-css::-webkit-scrollbar-thumb {
-  border-radius: 1rem;
-  background-color: #00d2ff;
-  background-image: linear-gradient(to top, #00d2ff 0%, #3a7bd5 100%);
-}
