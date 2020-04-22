@@ -43,7 +43,7 @@
 }
 
 .grid-element img {
-    scale: 1.1;
+    transform: scale(1.05);
     display: block;
     margin-left: auto;
     margin-right: auto;
