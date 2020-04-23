@@ -1,7 +1,7 @@
 
     function changeQueueColour(x) {
 
-        if((x == 1)) {
+        if((x == 3)) {
 
         document.getElementById("circle-1").style.backgroundColor = "red";
 
@@ -9,7 +9,7 @@
 
         document.getElementById("circle-2").style.backgroundColor = "yellow";
 
-        } else if((x == 3)) {
+        } else if((x == 1)) {
 
         document.getElementById("circle-3").style.backgroundColor = "green";
 
@@ -17,4 +17,5 @@
 
     }
 
+    //changeQueueColour(queueValue);
     changeQueueColour(2);

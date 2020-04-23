@@ -1,6 +1,6 @@
 const queueVoter = document.querySelector('.queueVoter');
 const keys = queueVoter.querySelector('.voteButton');
-let voteArray = [];
+var voteArray = [];
 const maxArrayLength  = 5;
 
 
