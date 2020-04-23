@@ -121,3 +121,48 @@
     color: black;
 }
 
+.rectangle {
+  height: 76px;
+  width: 40px;
+  background-color: #555;
+  margin: auto;
+  position: relative;
+  left: 70px;
+}
+
+.circle {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#circle-1 {
+  background-color: #464348;
+  top: 2px;
+  left: 9px;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#circle-2 {
+  background-color: #464348;
+  top: 27px;
+  left: 9px;
+    height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#circle-3 {
+  background-color: #464348;
+  top: 51px;
+  left: 9px;
+    height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  position: absolute;
+}
