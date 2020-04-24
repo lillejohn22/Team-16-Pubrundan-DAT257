@@ -12,18 +12,18 @@ keys.addEventListener('click', e => {
         const keyContent = key.value;
 
         if (voteArray.length < maxArrayLength) {
-            let vote = {queueLength: parseInt(keyContent) , time: Date.now()};
+            let vote = parseInt(keyContent);
             voteArray.push(vote);
         }
         else {
             voteArray.shift();
-            let vote = {queueLength: parseInt(keyContent) , time: Date.now()};
+            let vote = parseInt(keyContent);
             voteArray.push(vote)
 
         }
         console.log(voteArray)
-
-        queueValue = calcQueue(voteArray);
+      
+       queueValue = calcQueue(voteArray);
 
     }
 });
