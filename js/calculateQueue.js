@@ -8,7 +8,7 @@ function calcQueue (queue){
 
     for (i = 0; i < tempQueue.length; i++){
          var queueElem = tempQueue.shift;
-         um = sum + queueElem.queueLength;
+         sum = sum + queueElem.queueLength;
     }
 
     if (tempQueue.length < maxArrayLength){
