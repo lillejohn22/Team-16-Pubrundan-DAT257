@@ -1,7 +1,6 @@
 const queueVoter = document.querySelector('.queueVoter');
 const keys = queueVoter.querySelector('.voteButton');
 var voteArray = [];
-var queueValue = 0;
 const maxArrayLength  = 5;
 
 
@@ -23,7 +22,6 @@ keys.addEventListener('click', e => {
         }
         console.log(voteArray)
         changeQueueColour(calculateQueue(voteArray));
-        //changeQueueColour(voteArray.pop());
 
     }
 });
