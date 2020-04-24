@@ -10,13 +10,7 @@ function calculateQueue (queue){
          sum = sum + tempQueue[i];
     }
 
-    if (tempQueue.length < maxArrayLength){
       finalValue = Math.round(sum / tempQueue.length);
-    }
-    else {
-      finalValue = Math.round(sum / maxArrayLength);
-    }
-
 
     return finalValue;
 
