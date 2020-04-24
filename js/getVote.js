@@ -22,8 +22,7 @@ keys.addEventListener('click', e => {
 
         }
         console.log(voteArray)
-      
-       queueValue = calcQueue(voteArray);
+        changeQueueColour(voteArray.pop());
 
     }
 });
