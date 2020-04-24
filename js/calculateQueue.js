@@ -11,10 +11,10 @@ function calculateQueue (queue){
     }
 
     if (tempQueue.length < maxArrayLength){
-      finalValue = Math.ceil(sum / tempQueue.length);
+      finalValue = Math.round(sum / tempQueue.length);
     }
     else {
-      finalValue = Math.ceil(sum / maxArrayLength);
+      finalValue = Math.round(sum / maxArrayLength);
     }
 
 
