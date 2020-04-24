@@ -6,12 +6,12 @@ const maxArrayLength  = 5;
 
 keys.addEventListener('click', e => {
 
-    // Används matches??
+
     if (e.target.matches('button')) {
         const key = e.target;
-        const keyContent = key.textContent;
+        const keyContent = key.value;
 
-        if(voteArray.length < maxArrayLength) {
+        if (voteArray.length < maxArrayLength) {
             let vote = {queueLength: parseInt(keyContent) , time:Date.now()};
             voteArray.push(vote);
         }
