@@ -1,14 +1,13 @@
 
 //Calculates the average of the queue entries.
-function calcQueue (queue){
+function calculateQueue (queue){
 
     var tempQueue = queue;
-    var sum;
-    var finalValue;
+    var sum = 0;
+    var finalValue = 0;
 
     for (i = 0; i < tempQueue.length; i++){
-         var queueElem = tempQueue.shift;
-         sum = sum + queueElem.queueLength;
+         sum = sum + tempQueue[i];
     }
 
     if (tempQueue.length < maxArrayLength){
@@ -18,5 +17,7 @@ function calcQueue (queue){
       finalValue = Math.ceil(sum / maxArrayLength);
     }
 
+
     return finalValue;
+
 }

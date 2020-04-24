@@ -20,6 +20,3 @@
         }
 
     }
-
-   // changeQueueColour(queueValue);
-    //changeQueueColour(2);

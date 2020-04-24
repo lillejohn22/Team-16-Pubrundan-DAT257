@@ -22,7 +22,8 @@ keys.addEventListener('click', e => {
 
         }
         console.log(voteArray)
-        changeQueueColour(voteArray.pop());
+        changeQueueColour(calculateQueue(voteArray));
+        //changeQueueColour(voteArray.pop());
 
     }
 });
