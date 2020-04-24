@@ -11,7 +11,7 @@
 
 **Other Group Documents**
 
-[Social Contract](https://www.overleaf.com/project/5e78bdbf4b0d3600011fef94)
+[Social Contract (Overleaf)](https://www.overleaf.com/project/5e78bdbf4b0d3600011fef94)
 
 [Project ideas](https://docs.google.com/document/d/1k_mHuLcZ9OvkI-vUGn5mLNtOOzorqsnM5VZBiyd6xP0/edit#heading=h.uqgi5nsgq5rt)
 
@@ -20,3 +20,16 @@
 [Meetings](https://docs.google.com/document/d/1dcxJ8pMqfS4kS1LxVa4P2S6e0350JRCzHmraORlDVDQ/edit#heading=h.abhqm953pq0r)
 
 [OLD REPO](https://github.com/emmouto/DAT257_Teams16)
+
+**NodeJS setup** 
+
+Download NodeJS from [NodeJS](https://nodejs.org/en/). 
+
+To run server in IntelliJ make new run configuration in the upper right corner. 
+Make a new NodeJS server and set javascript to server.js. 
+
+To view the website open browser and go to "localhost:3000"
+
+If it does not work to run the project form IntelliJ, follow the instructions at [express](https://expressjs.com/en/starter/installing.html).
+
+Ask in the group if any problems arise :)) 
