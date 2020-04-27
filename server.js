@@ -9,6 +9,10 @@ server.get('/', function (req, res) {
     res.sendFile('index.html', {root: __dirname});
 });
 
+server.get('/index.html', function (req, res) {
+    res.sendFile('./index.html', {root: __dirname});
+});
+
 // Responds with the file in the image folder.
 server.get('/images/:theImage', function (req, res) {
     res.sendFile('./images/' + req.params.theImage,{root: __dirname});
