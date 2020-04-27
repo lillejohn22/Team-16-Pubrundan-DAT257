@@ -2,7 +2,7 @@ const express = require('express')
 const server = express()
 const port = 3000
 
-server.listen(process.env.PORT || port)
+server.listen(port)
 
 // Responds to the get request with the main website.
 server.get('/', function (req, res) {
