@@ -1,5 +1,5 @@
 
-//Calculates the average of the queue entries.
+//Calculates the average of the latest queue entries.
 function calculateQueue (queue){
 
     var tempQueue = queue;
@@ -10,7 +10,7 @@ function calculateQueue (queue){
          sum = sum + tempQueue[i];
     }
 
-      finalValue = Math.round(sum / tempQueue.length);
+    finalValue = Math.round(sum / tempQueue.length);
 
     return finalValue;
 

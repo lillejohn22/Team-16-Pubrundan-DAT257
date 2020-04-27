@@ -1,9 +1,9 @@
 const queueVoter = document.querySelector('.queueVoter');
 const keys = queueVoter.querySelector('.voteButton');
 var voteArray = [];
-const maxArrayLength  = 5;
+const maxArrayLength = 5;
 
-
+//Register key event and saves result on an array.
 keys.addEventListener('click', e => {
 
     if (e.target.matches('button')) {
@@ -18,10 +18,9 @@ keys.addEventListener('click', e => {
             voteArray.shift();
             let vote = parseInt(keyContent);
             voteArray.push(vote)
-
         }
+
         console.log(voteArray)
         changeQueueColour(calculateQueue(voteArray));
-
     }
 });
