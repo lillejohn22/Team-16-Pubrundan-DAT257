@@ -21,13 +21,19 @@
 
 **NodeJS setup** 
 
-Download NodeJS from [NodeJS](https://nodejs.org/en/). 
+Download and Install NodeJS from [NodeJS](https://nodejs.org/en/).
 
-To run server in IntelliJ make new run configuration in the upper right corner. 
-Make a new NodeJS server and set javascript to server.js. 
+Navigate to the folder _lillejohn22.github.io_ and run the following command to start the server.
+```
+npm start server.js
+```
+or using nodemon: 
+```
 
-To view the website open browser and go to "localhost:3000"
+```
 
-If it does not work to run the project form IntelliJ, follow the instructions at [express](https://expressjs.com/en/starter/installing.html).
 
-Ask in the group if any problems arise :)) 
+To make the server automatically reload upon changes install nodemon: 
+```
+npm install -g nodemon 
+```
