@@ -27,10 +27,7 @@ Navigate to the folder _lillejohn22.github.io_ and run the following command to 
 ```
 npm start server.js
 ```
-or using nodemon: 
-```
 
-```
 
 
 To make the server automatically reload upon changes install nodemon: 
