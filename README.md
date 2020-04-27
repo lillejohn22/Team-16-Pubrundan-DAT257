@@ -19,18 +19,22 @@
 
 [OLD REPO](https://github.com/emmouto/DAT257_Teams16)
 
-**NodeJS setup** 
-
+# NodeJS setup 
+#### Installation
 Download and Install NodeJS from [NodeJS](https://nodejs.org/en/).
 
-Navigate to the folder _lillejohn22.github.io_ and run the following command to start the server.
+#### Run in Commandline
+Navigate to the project folder in your commandprompt.   
+Run the following command:
 ```
-npm start server.js
-```
+npm run nodemon
+``` 
+#### Run in IntelliJ
+To run nodemon from IntelliJ go to:   
+1. _Run_,  
+2. _Edit Configurations..._,
+3. Find and add a NodeJS configuration under templates.
+4. In the lower box (before launch) add a NPM script.
+5. Pick _nodemon_ as the script.   
 
-
-
-To make the server automatically reload upon changes install nodemon: 
-```
-npm install -g nodemon 
-```
+ 
