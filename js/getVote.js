@@ -22,6 +22,6 @@ keys.addEventListener('click', e => {
 
 
         console.log(voteArray)
-        changeQueueColour(document.getElementByClassName("grid-element-name")[0].id, calculateQueue(voteArray));
+        changeQueueColour(document.getElementById("grid-element-name")[0].id, calculateQueue(voteArray));
     }
 });
