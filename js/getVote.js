@@ -22,6 +22,6 @@ keys.addEventListener('click', e => {
 
 
         console.log(voteArray)
-        changeQueueColour(document.getElementByClassName("pubs")[0].id, calculateQueue(voteArray));
+        changeQueueColour(document.getElementByClassName("voteButton")[0].id, calculateQueue(voteArray));
     }
 });
