@@ -20,8 +20,10 @@ keys.addEventListener('click', e => {
             voteArray.push(vote)
         }
 
+        var x = key.id;
+
 
         console.log(voteArray)
-        changeQueueColour(document.getElementsByClassName("col-sm-6 col-lg-4 col-xl-3 grid-element").id, calculateQueue(voteArray));
+        changeQueueColour(document.getElementsByClassName("col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed")[x].id, calculateQueue(voteArray));
     }
 });
