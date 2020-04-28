@@ -1,25 +1,25 @@
 
    //Changes color on the queue length indicator.
-    function changeQueueColour(x, id) {
+    function changeQueueColour(x) {
 
         if(x == 3) {
 
-            document.getElementById(id).classList.add('long-queue');
-            document.getElementById(id).classList.remove('medium-queue');
-            document.getElementById(id).classList.remove('short-queue');
+            document.getElementById("gasquen").classList.add('long-queue');
+            document.getElementById("gasquen").classList.remove('medium-queue');
+            document.getElementById("gasquen").classList.remove('short-queue');
 
         } else if(x == 2) {
 
-            document.getElementById(id).classList.remove('long-queue');
-            document.getElementById(id).classList.add('medium-queue');
-            document.getElementById(id).classList.remove('short-queue');
+            document.getElementById("gasquen").classList.remove('long-queue');
+            document.getElementById("gasquen").classList.add('medium-queue');
+            document.getElementById("gasquen").classList.remove('short-queue');
 
         } else if(x == 1) {
 
-            document.getElementById(id).classList.remove('long-queue');
-            document.getElementById(id).classList.remove('medium-queue');
-            document.getElementById(id).classList.add('short-queue');
+            document.getElementById("gasquen").classList.remove('long-queue');
+            document.getElementById("gasquen").classList.remove('medium-queue');
+            document.getElementById("gasquen").classList.add('short-queue');
         }
     }
 
-    changeQueueColour(3,"gasquen");
+   // changeQueueColour(3,"gasquen");
