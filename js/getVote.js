@@ -23,7 +23,7 @@ keys.addEventListener('click', e => {
         // test variable to decide which pub id to call, based on which button is clicked
         var x = keys.id;
 
-        var id = document.getElementsByClassName("col-sm-6 col-lg-4 col-xl-3 grid-element")[0].id;
+        var id = document.getElementsByClassName("col-sm-6 col-lg-4 col-xl-3 grid-element")[x].id;
 
 
         console.log(voteArray)
