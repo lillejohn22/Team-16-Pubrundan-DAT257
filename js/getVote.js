@@ -21,10 +21,10 @@ keys.addEventListener('click', e => {
         }
 
         // variable to decide which pub id to call, based on which button is clicked
-        var x = key.id;
+        var x = keys.id;
 
 
         console.log(voteArray)
-        changeQueueColour(document.getElementsByClassName("col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed")[0].id, calculateQueue(voteArray));
+        changeQueueColour(document.getElementsByClassName("col-sm-6 col-lg-4 col-xl-3 grid-element")[0].id, calculateQueue(voteArray));
     }
 });
