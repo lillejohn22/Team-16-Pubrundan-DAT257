@@ -22,7 +22,7 @@ keys.addEventListener('click', e => {
 
 
         // get the buttons' id
-        var x = document.querySelector('.voteButton').id;
+        var x = document.getElementsByClassName("votebutton")[0].id;
 
         console.log(voteArray)
         changeQueueColour(x, calculateQueue(voteArray));
