@@ -20,11 +20,13 @@ keys.addEventListener('click', e => {
             voteArray.push(vote)
         }
 
-        // variable to decide which pub id to call, based on which button is clicked
+        // test variable to decide which pub id to call, based on which button is clicked
         var x = keys.id;
+
+        var id = document.getElementsByClassName("col-sm-6 col-lg-4 col-xl-3 grid-element")[0].id;
 
 
         console.log(voteArray)
-        changeQueueColour(document.getElementsByClassName("col-sm-6 col-lg-4 col-xl-3 grid-element")[0].id, calculateQueue(voteArray));
+        changeQueueColour(id, calculateQueue(voteArray));
     }
 });
