@@ -113,6 +113,10 @@
     color: black;
 }
 
+.col-sm-6 col-lg-4 col-xl-3 grid-element {
+    background-color: #8281A0;
+}
+
 .long-queue {
   background-color: #E84258;
 }
