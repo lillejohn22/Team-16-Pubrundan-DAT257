@@ -20,7 +20,11 @@ keys.addEventListener('click', e => {
             voteArray.push(vote)
         }
 
+
+        // get the buttons' id
+        var x = button.id;
+
         console.log(voteArray)
-        changeQueueColour("bulten", calculateQueue(voteArray));
+        changeQueueColour(x, calculateQueue(voteArray));
     }
 });
