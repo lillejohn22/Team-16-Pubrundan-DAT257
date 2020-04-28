@@ -1,25 +1,23 @@
 
-   //Changes color on the queue length indicator.
-    function changeQueueColour(x) {
+//Changes the class of the object with given id.
+function changeQueueColour(id, color) {
 
-        if(x == 3) {
+     if(color == 1) {
 
-            document.getElementById("bulten").classList.add('long-queue');
-            document.getElementById("bulten").classList.remove('medium-queue');
-            document.getElementById("bulten").classList.remove('short-queue');
+            document.getElementById(id).classList.remove('long-queue');
+            document.getElementById(id).classList.remove('medium-queue');
+            document.getElementById(id).classList.add('short-queue');
 
-        } else if(x == 2) {
+     } else if(color == 2) {
 
-            document.getElementById("bulten").classList.remove('long-queue');
-            document.getElementById("bulten").classList.add('medium-queue');
-            document.getElementById("bulten").classList.remove('short-queue');
+            document.getElementById(id).classList.remove('long-queue');
+            document.getElementById(id).classList.add('medium-queue');
+            document.getElementById(id).classList.remove('short-queue');
 
-        } else if(x == 1) {
+     } else if(color == 3) {
 
-            document.getElementById("bulten").classList.remove('long-queue');
-            document.getElementById("bulten").classList.remove('medium-queue');
-            document.getElementById("bulten").classList.add('short-queue');
-        }
-    }
-
-   // changeQueueColour(3,"gasquen");
+            document.getElementById(id).classList.add('long-queue');
+            document.getElementById(id).classList.remove('medium-queue');
+            document.getElementById(id).classList.remove('short-queue');
+     }
+}
