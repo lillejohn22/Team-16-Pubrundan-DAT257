@@ -4,21 +4,21 @@
 
         if(x == 3) {
 
-            document.getElementById("gasquen").classList.add('long-queue');
-            document.getElementById("gasquen").classList.remove('medium-queue');
-            document.getElementById("gasquen").classList.remove('short-queue');
+            document.getElementById("bulten").classList.add('long-queue');
+            document.getElementById("bulten").classList.remove('medium-queue');
+            document.getElementById("bulten").classList.remove('short-queue');
 
         } else if(x == 2) {
 
-            document.getElementById("gasquen").classList.remove('long-queue');
-            document.getElementById("gasquen").classList.add('medium-queue');
-            document.getElementById("gasquen").classList.remove('short-queue');
+            document.getElementById("bulten").classList.remove('long-queue');
+            document.getElementById("bulten").classList.add('medium-queue');
+            document.getElementById("bulten").classList.remove('short-queue');
 
         } else if(x == 1) {
 
-            document.getElementById("gasquen").classList.remove('long-queue');
-            document.getElementById("gasquen").classList.remove('medium-queue');
-            document.getElementById("gasquen").classList.add('short-queue');
+            document.getElementById("bulten").classList.remove('long-queue');
+            document.getElementById("bulten").classList.remove('medium-queue');
+            document.getElementById("bulten").classList.add('short-queue');
         }
     }
 
