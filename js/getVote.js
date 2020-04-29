@@ -31,29 +31,23 @@ keys.addEventListener('click', e => {
     }
 });
 
-// Sending and receiving data in JSON format using POST method
-//
-var xhr = new XMLHttpRequest();
-var url = "/voted";
-xhr.open("POST", url, true);
-xhr.setRequestHeader("Content-Type", "application/json");
-
-var data = JSON.stringify({"email": "hey@mail.com", "password": "101010"});
-console.log(data);
-xhr.send(data);
-
-/*
 var v = 0;
 const url = '/voted';
 $('.btn').click(function () {
-    $.post(url, {xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<text>\n" +
-            "  <para>hello world</para>\n" +
-            "</text>" });
+    $.ajax({
+        type: "POST",
+        url: "/voted",
+        data: '{"test":"hello world!"}',
+        contentType: 'application/json',
+        success: console.log("Request worked!")
+    })
     console.log(v++);
-    /* $.get(url, function(data,status){
-        console.log(`${data}`)
-        console.log('nu tryckte du')
+});
 
-    }); */
+/*
+$.get(url, function(data,status){
+    console.log(`${data}`)
+    console.log('nu tryckte du')
 
+});
+*/
