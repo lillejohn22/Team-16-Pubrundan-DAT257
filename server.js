@@ -22,10 +22,10 @@ server.use('/voted', (request, response, next) => {
 
 
 
-
+var pubQueues = [[]];
 function updateQueueLength (pubName, vote){
 
-    var tempQueue = queueArray;
+
     var sum = 0;
     var finalValue = 0;
 
