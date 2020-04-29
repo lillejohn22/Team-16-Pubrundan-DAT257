@@ -1,4 +1,5 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 
 const port = 3000
 const server = express()
@@ -7,6 +8,7 @@ server.listen(port)
 
 server.get('/', function (req, res) {
     res.sendFile('index.html', {root: __dirname});
+    res.statusCode(200)
 });
 
 // server.use is a middleware function that. This means that it process all types of requests.
@@ -18,10 +20,20 @@ server.get('/', function (req, res) {
 // });
 
 // Don't forget to close the connection pls :3
- var s = 0;
+
+server.configure(function(){
+    app.use(express.bodyParser());
+});
+
+server.post('/ReceiveJSON', function(req, res){
+    console.log(req.body);
+    res.send("ok");
+});
+
+var s = 0;
 server.use('/voted', (request, response, next) => {
-    console.log(request.method + ' ' + request.params.toString())
-    console.log(request.method + ' ' + request.params.toString())
+    bodyParser.json()
+    console.log(request.method + ' \n' + request.body)
     console.log(s++);
     response.end("Nu är kontaktne sluuuut")
 })

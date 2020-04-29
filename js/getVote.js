@@ -38,10 +38,4 @@ $('.btn').click(function () {
             "  <para>hello world</para>\n" +
             "</text>" });
     console.log(v++);
-    /* $.get(url, function(data,status){
-        console.log(`${data}`)
-        console.log('nu tryckte du')
-
-    }); */
-
 })
