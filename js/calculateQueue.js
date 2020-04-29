@@ -18,10 +18,10 @@ function calculateQueue (queue){
     if (tempQueue.length <= 10){
         return (resQueue = strLevels.slice(0,5));
     }
-    else if(tempQueue.length >=11 && <=20){
+    else if(tempQueue.length >=11 && tempQueue.length<=20){
         return (resQueue = strLevels.slice(7,13));
     }
-    else(tempQueue.length >=30){
+    else if(tempQueue.length >=30){
         return (resQueue = strLevels.slice(15,19));
     }
 
