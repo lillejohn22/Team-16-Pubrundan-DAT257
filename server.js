@@ -15,16 +15,29 @@ server.get('/', function (req, res) {
     res.sendFile('index.html', {root: __dirname});
 });
 
-
-var s = 0;
 server.use('/voted', (request, response, next) => {
-    console.log(s++);
-    console.log(request.body.test)
+    updateQueueLength(request.body.pubName,request.body.vote);
     response.end("Nu är kontakten sluuuut")
 })
 
 
 
+
+function updateQueueLength (pubName, vote){
+
+    var tempQueue = queueArray;
+    var sum = 0;
+    var finalValue = 0;
+
+    for (i = 0; i < tempQueue.length; i++){
+        sum = sum + tempQueue[i];
+    }
+
+    finalValue = Math.round(sum / tempQueue.length);
+
+    return finalValue;
+
+}
 // server.use is a middleware function that. This means that it process all types of requests.
 // To limit it to a smaller subset, set the first parameter string to be the sub-url you want to process.
 // To no block further middleware calls include the "next" parameter in the anonymous function that is call.
