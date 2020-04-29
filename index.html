@@ -19,354 +19,405 @@
   </head>
   
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="index.html">Pubrunda</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Pubrunda</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="">Pub Map</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Profile
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="views/profile.html">My account</a>
-                          <a class="dropdown-item" href="">Information</a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="#">Extra</a>
-                      </div>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link disabled" href="">Contact Us</a>
-                  </li>
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form>
-          </div>
-      </nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Pub Map</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Profile
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="views/profile.html">My account</a>
+                        <a class="dropdown-item" href="">Information</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Extra</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="">Contact Us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav> <!-- Navbar end -->
 
 
-    <!-- Grid/list of pubs -->  
+    <!-- Grid/list of pubs -->
     <div class="container-fluid" id="grid-container">
         <div class="row">
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="bulten">
-                <a href="#"> <!-- Open detailed view -->
-                    <div class="grid-element-contracted-info">
-                        <img src="images/pubs/bulten/logo.png" class="grid-element-logo"/>
-                        <h3 class="grid-element-name">Café Bulten</h3>
-                    </div>
-                    
-                    <div class="grid-element-expanded-info">
-                        <i class="material-icons md-18">location_on</i>
-                        <span>Rainbow Road 1</span>
- 
-                        <br>
+            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="help">
+                <div class="grid-element-contracted-info">
+                    <h3 class="grid-element-name">Help me!</h3>
+                    <i class="material-icons expand-indicator">keyboard_arrow_down </i>
+                </div>
 
-                        <i class="material-icons md-36">schedule</i> 
-                        <span>00 - 00</span>
+                <div class="grid-element-expanded-info">
+                    <i class="material-icons md-18">location_on</i>
+                    <span>Rainbow Road 1</span>
 
-                        <div class="container">
-                            <div class="queueVoter">
-                                <div class="voteButton" id="bultenButtons">
-                                    <button type="button" value= 1 class="btn btn-outline-success btn-sm">Kort</button>
-                                    <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medel</button>
-                                    <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Lång</button>
-                                </div>
+                    <br>
+
+                    <i class="material-icons md-36">schedule</i>
+                    <span>00 - 00</span>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element short-queue" id="bulten">
+                <div class="grid-element-contracted-info">
+                    <h3 class="grid-element-name">Café Bulten</h3>
+                    <i class="material-icons expand-indicator">keyboard_arrow_down </i>
+                </div>
+                
+                <div class="grid-element-expanded-info">
+                    <i class="material-icons md-18">location_on</i>
+                    <span>Rainbow Road 1</span>
+
+                    <br>
+
+                    <i class="material-icons md-36">schedule</i> 
+                    <span>00 - 00</span>
+
+                    <div class="container">
+                        <div class="queueVoter">
+                            <div class="voteButton" id="0">
+                                <button type="button" value= 1 class="btn btn-outline-success btn-sm">Kort</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medel</button>
+                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Lång</button>
                             </div>
                         </div>
-                    </div> 
-                </a>
+                    </div>
+                </div> 
             </div>
 
             <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="japripps">
-                <a href="#"> <!-- Open detailed view -->
-                    <h3 class="grid-element-name" >J.A. Pripps</h3>
-                    <div class="grid-element-expanded-info">
-                        <i class="material-icons md-18">location_on</i>
-                        <span>Rainbow Road 1</span>
- 
-                        <br>
+                <div class="grid-element-contracted-info">
+                    <h3 class="grid-element-name">J.A. Pripps</h3>
+                    <i class="material-icons expand-indicator">keyboard_arrow_down </i>
+                </div>
 
-                        <i class="material-icons md-36">schedule</i> 
-                        <span>00 - 00</span>
+                <div class="grid-element-expanded-info">
+                    <i class="material-icons md-18">location_on</i>
+                    <span>Rainbow Road 1</span>
 
-                        <div class="container">
-                            <div class="queueVoter">
-                                <div class="voteButton" id="japrippsButtons">
-                                    <button type="button" value= 1 class="btn btn-outline-success btn-sm">Kort</button>
-                                    <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medel</button>
-                                    <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Lång</button>
-                                </div>
+                    <br>
+
+                    <i class="material-icons md-36">schedule</i> 
+                    <span>00 - 00</span>
+
+                    <div class="container">
+                        <div class="queueVoter">
+                            <div class="voteButton" id="1">
+                                <button type="button" value= 1 class="btn btn-outline-success btn-sm">Kort</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medel</button>
+                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Lång</button>
                             </div>
                         </div>
+                    </div>
 
-                    </div> 
-                </a>
+                </div>
             </div>
 
             <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="wijkanders">
-                <a href="#"> <!-- Open detailed view -->
+                <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Wijkanders</h3>
-                    <div class="grid-element-expanded-info">
-                        <i class="material-icons md-18">location_on</i>
-                        <span>Rainbow Road 1</span>
- 
-                        <br>
+                    <i class="material-icons expand-indicator">keyboard_arrow_down </i>
+                </div>
 
-                        <i class="material-icons md-36">schedule</i> 
-                        <span>00 - 00</span>
-                    </div> 
-                </a>
+                <div class="grid-element-expanded-info">
+                    <i class="material-icons md-18">location_on</i>
+                    <span>Rainbow Road 1</span>
+
+                    <br>
+
+                    <i class="material-icons md-36">schedule</i> 
+                    <span>00 - 00</span>
+                </div> 
             </div>
 
             <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="gasquen">
-                <a href="#"> <!-- Open detailed view -->
+                <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Gasquen</h3>
-                    <div class="grid-element-expanded-info">
-                        <i class="material-icons md-18">location_on</i>
-                        <span>Rainbow Road 1</span>
- 
-                        <br>
+                    <i class="material-icons expand-indicator">keyboard_arrow_down </i>
+                </div>
 
-                        <i class="material-icons md-36">schedule</i> 
-                        <span>00 - 00</span>
-                    </div> 
-                </a>
+                <div class="grid-element-expanded-info">
+                    <i class="material-icons md-18">location_on</i>
+                    <span>Rainbow Road 1</span>
+
+                    <br>
+
+                    <i class="material-icons md-36">schedule</i> 
+                    <span>00 - 00</span>
+                </div> 
             </div>
 
             <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="cafec">
-                <a href="#"> <!-- Open detailed view -->
+                <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Café C</h3>
-                    <div class="grid-element-expanded-info">
-                        <i class="material-icons md-18">location_on</i>
-                        <span>Rainbow Road 1</span>
- 
-                        <br>
+                    <i class="material-icons expand-indicator">keyboard_arrow_down </i>
+                </div>
+                <div class="grid-element-expanded-info">
+                    <i class="material-icons md-18">location_on</i>
+                    <span>Rainbow Road 1</span>
 
-                        <i class="material-icons md-36">schedule</i> 
-                        <span>00 - 00</span>
-                    </div> 
-                </a>
+                    <br>
+
+                    <i class="material-icons md-36">schedule</i> 
+                    <span>00 - 00</span>
+                </div> 
             </div>
 
             <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="11an">
-                <a href="#"> <!-- Open detailed view -->
+                <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">11:an</h3>
-                    <div class="grid-element-expanded-info">
-                        <i class="material-icons md-18">location_on</i>
-                        <span>Rainbow Road 1</span>
- 
-                        <br>
+                    <i class="material-icons expand-indicator">keyboard_arrow_down </i>
+                </div>
 
-                        <i class="material-icons md-36">schedule</i> 
-                        <span>00 - 00</span>
-                    </div> 
-                </a>
+                <div class="grid-element-expanded-info">
+                    <i class="material-icons md-18">location_on</i>
+                    <span>Rainbow Road 1</span>
+
+                    <br>
+
+                    <i class="material-icons md-36">schedule</i> 
+                    <span>00 - 00</span>
+                </div> 
             </div>
 
             <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="rodarummet">
-                <a href="#"> <!-- Open detailed view -->
+                <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Röda Rummet</h3>
-                    <div class="grid-element-expanded-info">
-                        <i class="material-icons md-18">location_on</i>
-                        <span>Rainbow Road 1</span>
- 
-                        <br>
+                    <i class="material-icons expand-indicator">keyboard_arrow_down </i>
+                </div>
 
-                        <i class="material-icons md-36">schedule</i> 
-                        <span>00 - 00</span>
-                    </div> 
-                </a>
+                <div class="grid-element-expanded-info">
+                    <i class="material-icons md-18">location_on</i>
+                    <span>Rainbow Road 1</span>
+
+                    <br>
+
+                    <i class="material-icons md-36">schedule</i> 
+                    <span>00 - 00</span>
+                </div> 
             </div>
 
             <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="ventren">
-                <a href="#"> <!-- Open detailed view -->
+                <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">V-entrén</h3>
-                    <div class="grid-element-expanded-info">
-                        <i class="material-icons md-18">location_on</i>
-                        <span>Rainbow Road 1</span>
- 
-                        <br>
+                    <i class="material-icons expand-indicator">keyboard_arrow_down </i>
+                </div>
 
-                        <i class="material-icons md-36">schedule</i> 
-                        <span>00 - 00</span>
-                    </div> 
-                </a>
+                <div class="grid-element-expanded-info">
+                    <i class="material-icons md-18">location_on</i>
+                    <span>Rainbow Road 1</span>
+
+                    <br>
+
+                    <i class="material-icons md-36">schedule</i> 
+                    <span>00 - 00</span>
+                </div> 
             </div>
 
             <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="basen">
-                <a href="#"> <!-- Open detailed view -->
+                <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Basen</h3>
-                    <div class="grid-element-expanded-info">
-                        <i class="material-icons md-18">location_on</i>
-                        <span>Rainbow Road 1</span>
- 
-                        <br>
+                    <i class="material-icons expand-indicator">keyboard_arrow_down </i>
+                </div>
 
-                        <i class="material-icons md-36">schedule</i> 
-                        <span>00 - 00</span>
-                    </div> 
-                </a>
+                <div class="grid-element-expanded-info">
+                    <i class="material-icons md-18">location_on</i>
+                    <span>Rainbow Road 1</span>
+
+                    <br>
+
+                    <i class="material-icons md-36">schedule</i> 
+                    <span>00 - 00</span>
+                </div> 
             </div>
 
             <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="goldeni">
-                <a href="#"> <!-- Open detailed view -->
+                <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Golden-I</h3>
-                    <div class="grid-element-expanded-info">
-                        <i class="material-icons md-18">location_on</i>
-                        <span>Rainbow Road 1</span>
- 
-                        <br>
+                    <i class="material-icons expand-indicator">keyboard_arrow_down </i>
+                </div>
 
-                        <i class="material-icons md-36">schedule</i> 
-                        <span>00 - 00</span>
-                    </div> 
-                </a>
+                <div class="grid-element-expanded-info">
+                    <i class="material-icons md-18">location_on</i>
+                    <span>Rainbow Road 1</span>
+
+                    <br>
+
+                    <i class="material-icons md-36">schedule</i> 
+                    <span>00 - 00</span>
+                </div> 
             </div>
 
             <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="kajsabaren">
-                <a href="#"> <!-- Open detailed view -->
+                <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Kajsabaren</h3>
-                    <div class="grid-element-expanded-info">
-                        <i class="material-icons md-18">location_on</i>
-                        <span>Rainbow Road 1</span>
- 
-                        <br>
+                    <i class="material-icons expand-indicator">keyboard_arrow_down </i>
+                </div>
 
-                        <i class="material-icons md-36">schedule</i> 
-                        <span>00 - 00</span>
-                    </div> 
-                </a>
+                <div class="grid-element-expanded-info">
+                    <i class="material-icons md-18">location_on</i>
+                    <span>Rainbow Road 1</span>
+
+                    <br>
+
+                    <i class="material-icons md-36">schedule</i> 
+                    <span>00 - 00</span>
+                </div> 
             </div>
 
             <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="focus">
-                <a href="#"> <!-- Open detailed view -->
+                <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Focus</h3>
-                    <div class="grid-element-expanded-info">
-                        <i class="material-icons md-18">location_on</i>
-                        <span>Rainbow Road 1</span>
- 
-                        <br>
+                    <i class="material-icons expand-indicator">keyboard_arrow_down </i>
+                </div>
 
-                        <i class="material-icons md-36">schedule</i> 
-                        <span>00 - 00</span>
-                    </div> 
-                </a>
+                <div class="grid-element-expanded-info">
+                    <i class="material-icons md-18">location_on</i>
+                    <span>Rainbow Road 1</span>
+
+                    <br>
+
+                    <i class="material-icons md-36">schedule</i> 
+                    <span>00 - 00</span>
+                </div> 
             </div>
 
             <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="hubben21">
-                <a href="#"> <!-- Open detailed view -->
+                <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Hubben 2.1</h3>
-                    <div class="grid-element-expanded-info">
-                        <i class="material-icons md-18">location_on</i>
-                        <span>Rainbow Road 1</span>
- 
-                        <br>
+                    <i class="material-icons expand-indicator">keyboard_arrow_down </i>
+                </div>
 
-                        <i class="material-icons md-36">schedule</i> 
-                        <span>00 - 00</span>
-                    </div> 
-                </a>
+                <div class="grid-element-expanded-info">
+                    <i class="material-icons md-18">location_on</i>
+                    <span>Rainbow Road 1</span>
+
+                    <br>
+
+                    <i class="material-icons md-36">schedule</i> 
+                    <span>00 - 00</span>
+                </div> 
             </div>
 
             <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="fortnox">
-                <a href="#"> <!-- Open detailed view -->
+                <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Fort NOx</h3>
-                    <div class="grid-element-expanded-info">
-                        <i class="material-icons md-18">location_on</i>
-                        <span>Rainbow Road 1</span>
- 
-                        <br>
+                    <i class="material-icons expand-indicator">keyboard_arrow_down </i>
+                </div>
 
-                        <i class="material-icons md-36">schedule</i> 
-                        <span>00 - 00</span>
-                    </div> 
-                </a>
+                <div class="grid-element-expanded-info">
+                    <i class="material-icons md-18">location_on</i>
+                    <span>Rainbow Road 1</span>
+
+                    <br>
+
+                    <i class="material-icons md-36">schedule</i> 
+                    <span>00 - 00</span>
+                </div> 
             </div>
 
             <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="gastownospritkoket">
-                <a href="#"> <!-- Open detailed view -->
+                <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Gastown & Spritköket</h3>
-                    <div class="grid-element-expanded-info">
-                        <i class="material-icons md-18">location_on</i>
-                        <span>Rainbow Road 1</span>
- 
-                        <br>
+                    <i class="material-icons expand-indicator">keyboard_arrow_down </i>
+                </div>
 
-                        <i class="material-icons md-36">schedule</i> 
-                        <span>00 - 00</span>
-                    </div> 
-                </a>
+                <div class="grid-element-expanded-info">
+                    <i class="material-icons md-18">location_on</i>
+                    <span>Rainbow Road 1</span>
+
+                    <br>
+
+                    <i class="material-icons md-36">schedule</i> 
+                    <span>00 - 00</span>
+                </div> 
             </div>
 
             <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="winden">
-                <a href="#"> <!-- Open detailed view -->
+                <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Winden</h3>
-                    <div class="grid-element-expanded-info">
-                        <i class="material-icons md-18">location_on</i>
-                        <span>Rainbow Road 1</span>
- 
-                        <br>
+                    <i class="material-icons expand-indicator">keyboard_arrow_down </i>
+                </div>
 
-                        <i class="material-icons md-36">schedule</i> 
-                        <span>00 - 00</span>
-                    </div> 
-                </a>
+                <div class="grid-element-expanded-info">
+                    <i class="material-icons md-18">location_on</i>
+                    <span>Rainbow Road 1</span>
+
+                    <br>
+
+                    <i class="material-icons md-36">schedule</i> 
+                    <span>00 - 00</span>
+                </div> 
             </div>
 
             <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="jarnvagspub">
-                <a href="#"> <!-- Open detailed view -->
+                <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Järnvägspub</h3>
-                    <div class="grid-element-expanded-info">
-                        <i class="material-icons md-18">location_on</i>
-                        <span>Rainbow Road 1</span>
- 
-                        <br>
+                    <i class="material-icons expand-indicator">keyboard_arrow_down </i>
+                </div>
 
-                        <i class="material-icons md-36">schedule</i> 
-                        <span>00 - 00</span>
-                    </div> 
-                </a>
+                <div class="grid-element-expanded-info">
+                    <i class="material-icons md-18">location_on</i>
+                    <span>Rainbow Road 1</span>
+
+                    <br>
+
+                    <i class="material-icons md-36">schedule</i> 
+                    <span>00 - 00</span>
+                </div> 
             </div>
 
             <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="zaloonen">
-                <a href="#"> <!-- Open detailed view -->
+                <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Zaloonen</h3>
-                    <div class="grid-element-expanded-info">
-                        <i class="material-icons md-18">location_on</i>
-                        <span>Rainbow Road 1</span>
- 
-                        <br>
+                    <i class="material-icons expand-indicator">keyboard_arrow_down </i>
+                </div>
 
-                        <i class="material-icons md-36">schedule</i> 
-                        <span>00 - 00</span>
-                    </div> 
-                </a>
+                <div class="grid-element-expanded-info">
+                    <i class="material-icons md-18">location_on</i>
+                    <span>Rainbow Road 1</span>
+
+                    <br>
+
+                    <i class="material-icons md-36">schedule</i> 
+                    <span>00 - 00</span>
+                </div> 
             </div>
 
             <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="pignwhistle">
-                <a href="#"> <!-- Open detailed view -->
+                <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Pig 'n' Whistle</h3>
-                    <div class="grid-element-expanded-info">
-                        <i class="material-icons md-18">location_on</i>
-                        <span>Rainbow Road 1</span>
- 
-                        <br>
+                    <i class="material-icons expand-indicator">keyboard_arrow_down </i>
+                </div>
 
-                        <i class="material-icons md-36">schedule</i> 
-                        <span>00 - 00</span>
-                    </div> 
-                </a>
+                <div class="grid-element-expanded-info">
+                    <i class="material-icons md-18">location_on</i>
+                    <span>Rainbow Road 1</span>
+
+                    <br>
+
+                    <i class="material-icons md-36">schedule</i> 
+                    <span>00 - 00</span>
+                </div> 
             </div> <!-- Columns end -->
         </div> <!-- Row end -->
     </div> <!-- Grid end -->
@@ -486,8 +537,7 @@
     <script src="js/calculateQueue.js"></script>
     <script src="js/changeQueueColour.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
+    <script src="js/expandContractGridElements.js"></script>
   </body>
 
 </html>
