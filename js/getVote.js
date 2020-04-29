@@ -31,10 +31,23 @@ keys.addEventListener('click', e => {
     }
 });
 
-const Url = '/voted';
+var v = 0;
+const url = '/voted';
 $('.btn').click(function () {
-    $.get(Url, function(data,status){
-        console.log(`${data}`)
-        console.log('nu tryckte du')
-    });
-})
+    $.ajax({
+        type: "POST",
+        url: "/voted",
+        data: '{"test":"hello world!"}',
+        contentType: 'application/json',
+        success: console.log("Request worked!")
+    })
+    console.log(v++);
+});
+
+/*
+$.get(url, function(data,status){
+    console.log(`${data}`)
+    console.log('nu tryckte du')
+
+});
+*/
