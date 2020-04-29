@@ -39,21 +39,20 @@
     position: relative;
     overflow: hidden;
     border: 10pt solid #fff;
-    height: 200pt;
+    height: 100pt;
+    -webkit-transition: all .5s ease;   /* Safari and Chrome */
+    -moz-transition: all .5s ease;      /* Firefox */
+    -ms-transition: all .5s ease;       /* IE 9 */
+    -o-transition: all .5s ease;        /* Opera */
+    transition: all .5s ease;
 }
 
-.grid-element-logo {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-  display: block;
-  text-align: center;
-  margin: 7.5% 0 0;
-  padding: 10px 0;
-  height: 43pt;
+.grid-element:hover {
+  cursor: pointer;
+}
+
+.grid-element-contracted-info {
+  height: 100pt;
 }
 
 .grid-element-name {
@@ -66,28 +65,45 @@
     display: block;
     text-align: center;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.45em;
     font-weight: 900;
     letter-spacing: -1px;
     text-transform: uppercase;
     color: #fff;
-    margin: 7.5% 0 0;
+    margin: 9% 0 0;
     padding: 10px 0;
     height: 43pt;
     border-top: 5px solid rgba(255, 255, 255, .3);
     border-bottom: 5px solid rgba(255, 255, 255, .3);
 }
 
+.expand-indicator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: block;
+  color:white;
+  margin-top: 63.5pt;
+  margin-left: 45%;
+  transform-origin: center center;
+}
+
 .grid-element-expanded-info {
     position: absolute;
-    top: 46%;
+    top: 80pt;
     left: 5%;
     z-index: 10;
     width: 90%;
-    height: 50%;
+    height: 60%;
     padding: 15pt;
     background-color: white;
     overflow: auto; 
+    padding: 18px;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
 }
 
 .grid-element-expanded-info span {
@@ -105,6 +121,10 @@
     margin-top: 10pt; 
 }
 
+.grid-element-expanded-info:hover {
+  cursor: initial;
+}
+
 .grid-element a {
     color: black;
 }
@@ -113,24 +133,36 @@
     color: black;
 }
 
-.col-sm-6 col-lg-4 col-xl-3 grid-element {
-    background-color: #8281A0;
-}
-
 .long-queue {
   background-color: #E84258;
+}
+
+.long-queue:hover {
+  background-color: rgb(230, 47, 71);
 }
 
 .medium-queue {
   background-color: #FEE191;
 }
 
+.medium-queue:hover {
+  background-color: rgb(243, 204, 96);
+}
+
 .short-queue {
   background-color: #B0D8A4;
 }
 
+.short-queue:hover {
+  background-color: rgb(140, 211, 119);
+}
+
 .pub-closed {
   background-color: #8281A0;
+}
+
+.pub-closed:hover {
+  background-color: rgb(106, 104, 156);
 }
 
 /* Nice orange colour: #FD8060 */
