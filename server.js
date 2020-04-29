@@ -28,7 +28,7 @@ function updateQueueLength (pubName, vote){
 
     var sum = 0;
     var finalValue = 0;
-
+    var tempQueue = [4];
     for (i = 0; i < tempQueue.length; i++){
         sum = sum + tempQueue[i];
     }
