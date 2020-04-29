@@ -16,10 +16,14 @@ server.get('/', function (req, res) {
 //     express.static(__dirname + '/js');
 //     next();
 // });
+
+// Don't forget to close the connection pls :3
  var s = 0;
 server.use('/voted', (request, response, next) => {
     console.log(request.method + ' ' + request.params.toString())
+    console.log(request.method + ' ' + request.params.toString())
     console.log(s++);
+    response.end("Nu är kontaktne sluuuut")
 })
 
 server.use("/js", express.static(__dirname + '/js'))
