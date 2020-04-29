@@ -1,5 +1,8 @@
-
-//Changes the class of the object with given id.
+/**
+ * Changes the color using number 1 to 3 of the object with given id.
+ * @param {string} id
+ * @param {Int} color
+ */
 function changeQueueColour(id, color) {
 
 
