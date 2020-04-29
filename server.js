@@ -13,31 +13,17 @@ server.listen(port, () => console.log(`Server started on port: ${port}`))
 server.get('/', (req, res) => res.sendFile('index.html', {root: __dirname}));
 
 var requestNumber = 0;
-var lastFiveVotesArray = [];
 server.use('/voted', (request, response, next) => {
-    let voteValue = request.body.voteValue;
-    updateQueueArray(voteValue);
-    getUpdatedVoteValue(voteValue);
+    let voteValue = getUpdatedVoteValue(request.body.voteValue);
     response.status(200).json(voteValue);
-    requestNumber++;
-
     /*
     // For debugging purposes
     console.log("A post request for '/voted' has been registered " + requestNumber++);
     console.log("Requested voteValue: " + request.body.voteValue);
     console.log(voteValue)
-    console.log(`VoteArray:  ${lastFiveVotesArray}`)
      */
-
     next()
 })
-
-function updateQueueArray(vote) {
-    if(lastFiveVotesArray.length === 5) {
-        lastFiveVotesArray.shift();
-    }
-    lastFiveVotesArray.push(vote);
-}
 
 /**
  * Dummy function, in future this will return correct voteValue for color change.
@@ -46,7 +32,7 @@ function updateQueueArray(vote) {
  * @return {*}
  */
 function getUpdatedVoteValue(voteValue) {
-    var temp = {}
+    var temp = new Object()
     switch(parseInt(voteValue)) {
         case 1:
             temp.colorIndex = parseInt(voteValue) + 1;
