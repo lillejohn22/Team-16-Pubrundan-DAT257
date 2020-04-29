@@ -16,21 +16,16 @@ server.get('/', function (req, res) {
 });
 
 server.use('/voted', (request, response, next) => {
-    newVoteRegistered(request,response);
+    updateQueueLength(request.body.pubName,request.body.vote);
     response.end("Nu är kontakten sluuuut")
 })
 
-function newVoteRegistered(request,response) {
-    var queue = [];
-    calculateQueue(queue);
-    console.log("det funkar")
-}
 
 
-//Calculates the average of the latest queue entries.
-function calculateQueue (queue){
 
-    var tempQueue = queue;
+function updateQueueLength (pubName, vote){
+
+    var tempQueue = queueArray;
     var sum = 0;
     var finalValue = 0;
 
