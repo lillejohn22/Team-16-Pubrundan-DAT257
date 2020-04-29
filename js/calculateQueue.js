@@ -1,5 +1,12 @@
 
 //Calculates the average of the latest queue entries.
+/**
+ * Beräknar den nya kön för den pub med queueID. Där newVote är en ny röst och
+ * voteTime is when the vote was placed.
+ * @param String queueID, int newVote, int voteTime
+ * @returns int newQueueLength for the pub with queueID.
+ */
+
 function calculateQueue (queue){
 
     //const queueValue <-- The amount of people in the queue at a given time!
