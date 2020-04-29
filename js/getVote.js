@@ -27,14 +27,14 @@ keys.addEventListener('click', e => {
 
 
         console.log(voteArray)
-
-        const Url = '/voted';
-        $('.btn').click(function () {
-            $.get(Url, function(data,status){
-                console.log(`${data}`)
-            });
-        })
-
         changeQueueColour(id, calculateQueue(voteArray));
     }
 });
+
+const Url = '/voted';
+$('.btn').click(function () {
+    $.get(Url, function(data,status){
+        console.log(`${data}`)
+        console.log('nu tryckte du')
+    });
+})
