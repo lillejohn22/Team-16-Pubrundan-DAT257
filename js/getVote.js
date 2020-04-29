@@ -1,7 +1,11 @@
 const queueVoter = document.querySelector('.queueVoter');
 const keys = queueVoter.querySelector('.voteButton');
-var voteArray = [];
+
 const maxArrayLength = 5;
+
+var v = 0;
+var voteArray = [];
+const url = '/voted';
 
 //Register key event and saves result on an array.
 keys.addEventListener('click', e => {
@@ -20,27 +24,20 @@ keys.addEventListener('click', e => {
             voteArray.push(vote)
         }
 
-        // test variable to decide which pub id to call, based on which button is clicked
-        var x = keys.id;
+        var vote = keyContent;
+        var dateTime = Date.now();
+        var pubName = key.parentNode.getAttribute("id");
+        var jsonString = JSON.stringify({vote, dateTime, pubName});
 
-        var id = document.getElementsByClassName("col-sm-6 col-lg-4 col-xl-3 grid-element")[x].id;
+        console.log(jsonString)
 
-
-        console.log(voteArray)
-        changeQueueColour(id, calculateQueue(voteArray));
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: jsonString,
+            contentType: 'application/json',
+            success: console.log("Request worked!")
+        })
+        console.log(v++);
     }
 });
-
-var v = 0;
-const url = '/voted';
-$('.btn').click(function () {
-    $.ajax({
-        type: "POST",
-        url: "/voted",
-        data: '{"test":"hello world!"}',
-        contentType: 'application/json',
-        success: console.log("Request worked!")
-    })
-    console.log(v++);
-});
-
