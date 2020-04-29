@@ -30,11 +30,18 @@ keys.addEventListener('click', e => {
         changeQueueColour(id, calculateQueue(voteArray));
     }
 });
-
-const Url = '/voted';
+var v = 0;
+const url = '/voted';
 $('.btn').click(function () {
-    $.get(Url, function(data,status){
+    $.post(url, {xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+            "<text>\n" +
+            "  <para>hello world</para>\n" +
+            "</text>" });
+    console.log(v++);
+    /* $.get(url, function(data,status){
         console.log(`${data}`)
         console.log('nu tryckte du')
-    });
+
+    }); */
+
 })

@@ -16,9 +16,10 @@ server.get('/', function (req, res) {
 //     express.static(__dirname + '/js');
 //     next();
 // });
-
+ var s = 0;
 server.use('/voted', (request, response, next) => {
-    console.log(request.method + ' ' + request.name)
+    console.log(request.method + ' ' + request.params.toString())
+    console.log(s++);
 })
 
 server.use("/js", express.static(__dirname + '/js'))
