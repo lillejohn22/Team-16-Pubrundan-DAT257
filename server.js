@@ -17,6 +17,9 @@ server.use("/images", express.static(__dirname + '/images'))
 server.use("/css", express.static(__dirname + '/css'))
 server.use("/fonts", express.static(__dirname + '/fonts'))
 
+var antalVotes = 0;
 server.get('/voted', function (req, res) {
     console.log('you just voted! This is your data: ' + req.params)
+    antalVotes++
+    console.log(antalVotes)
 });
