@@ -1,11 +1,18 @@
+/**
+ * Expands the grid element when clicked, and contracts it when clicked again.
+ * 
+ * @author Emma Pettersson
+ */
+
 var conElems = document.getElementsByClassName("grid-element-contracted-info");
 var elems = document.getElementsByClassName("grid-element");
-var expInd = document.getElementsByClassName("expand-indicator");
-var i;
+var expInd = document.getElementsByClassName("grid-element-expand-indicator");
 
-for (i = 0; i < conElems.length; i++) {
+for (var i = 0; i < conElems.length; i++) {
   conElems[i].addEventListener("click", function() {
     this.classList.toggle("active");
+
+    // Gets the index of the grid element that was clicked.
     var index = $(this).parent().index();
 
     if (elems[index].style.height != "250pt"){
