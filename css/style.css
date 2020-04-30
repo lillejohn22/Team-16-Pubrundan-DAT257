@@ -77,7 +77,7 @@
     border-bottom: 5px solid rgba(255, 255, 255, .3);
 }
 
-.expand-indicator {
+.grid-element-expand-indicator {
   position: absolute;
   top: 0;
   right: 0;
@@ -88,7 +88,6 @@
   color:white;
   margin-top: 63.5pt;
   margin-left: 45%;
-  transform-origin: center center;
 }
 
 .grid-element-expanded-info {
@@ -125,14 +124,8 @@
   cursor: initial;
 }
 
-.grid-element a {
-    color: black;
-}
 
-.grid-element:hover a {
-    color: black;
-}
-
+/* Background colours for grid elements, depending on queue length */
 .long-queue {
   background-color: #E84258;
 }
@@ -164,51 +157,4 @@
 .pub-closed:hover {
   background-color: rgb(106, 104, 156);
 }
-
-/* Nice orange colour: #FD8060 */
-
-.rectangle {
-  height: 76px;
-  width: 40px;
-  background-color: #555;
-  margin: auto;
-  position: relative;
-  left: 70px;
-}
-
-.circle {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  position: absolute;
-}
-
-#circle-1 {
-  background-color: #464348;
-  top: 2px;
-  left: 9px;
-  height: 22px;
-  width: 22px;
-  border-radius: 50%;
-  position: absolute;
-}
-
-#circle-2 {
-  background-color: #464348;
-  top: 27px;
-  left: 9px;
-    height: 22px;
-  width: 22px;
-  border-radius: 50%;
-  position: absolute;
-}
-
-#circle-3 {
-  background-color: #464348;
-  top: 51px;
-  left: 9px;
-    height: 22px;
-  width: 22px;
-  border-radius: 50%;
-  position: absolute;
-}
+/* END of bg colours */
