@@ -17,17 +17,18 @@ var lastFiveVotesArray = [];
 server.use('/voted', (request, response, next) => {
     let voteValue = request.body.voteValue;
     updateQueueArray(voteValue);
-    getUpdatedVoteValue(voteValue);
-    response.status(200).json(voteValue);
+    // @TODO Find better vaiable shit thing updatedVoteValueToBePassedToWebsite
+    let updatedVoteValueToBePassedToWebsite = getUpdatedVoteValue(voteValue);
+
+    response.status(200).json(updatedVoteValueToBePassedToWebsite);
     requestNumber++;
 
     /*
     // For debugging purposes
     console.log("A post request for '/voted' has been registered " + requestNumber++);
-    console.log("Requested voteValue: " + request.body.voteValue);
-    console.log(voteValue)
+    console.log("Requested voteValue (stored in voteValue): " + request.body.voteValue);
     console.log(`VoteArray:  ${lastFiveVotesArray}`)
-     */
+    */
 
     next()
 })
