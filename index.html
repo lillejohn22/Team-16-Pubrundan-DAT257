@@ -18,25 +18,29 @@
   </head>
   
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">Pubrunda</a>
+    <!----------------------- 
+             Navbar 
+    ------------------------>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">Pub Crawl</a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse nav-items" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="">Pub Map</a>
+                    <a class="nav-link" href="views/pubmap.html">Pub Map</a>
                 </li>
+
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Profile
-                    </a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</a>
+                    
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="views/profile.html">My account</a>
                         <a class="dropdown-item" href="">Information</a>
@@ -44,19 +48,41 @@
                         <a class="dropdown-item" href="#">Extra</a>
                     </div>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="">Contact Us</a>
+                    <a class="nav-link" href="">Contact Us</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
         </div>
     </nav> <!-- Navbar end -->
 
 
-    <!-- Grid/list of pubs -->
+    <!----------------------- 
+        Search/sort/filter 
+    ------------------------>
+    <div class="container-fluid" id="ssf-container">
+        <div class="row">
+            <div class="col-lg-12 ssf-element" id="search">
+                <h2>Search</h2>
+
+            </div>
+
+            <div class="col-lg-6 ssf-element" id="sort">
+                <h2>Sort</h2>
+
+            </div>
+
+            <div class="col-lg-6 ssf-element" id="filter">
+                <h2>Filter</h2>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!----------------------- 
+        Grid/list of pubs 
+    ------------------------>
     <div class="container-fluid" id="grid-container">
         <div class="row">
             <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="help">
@@ -66,13 +92,7 @@
                 </div>
 
                 <div class="grid-element-expanded-info">
-                    <i class="material-icons md-18">location_on</i>
-                    <span>Rainbow Road 1</span>
-
-                    <br>
-
-                    <i class="material-icons md-36">schedule</i>
-                    <span>00 - 00</span>
+                    
                 </div>
             </div>
 
@@ -91,19 +111,24 @@
                     <i class="material-icons md-36">schedule</i> 
                     <span>00 - 00</span>
 
-                    <div class="container">
+                    <br>
+
+                    <i class="material-icons md-36">how_to_vote</i> 
+                    <span>Vote for the queue length</span>
+
+                    <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="0">
-                                <button type="button" value= 1 class="btn btn-outline-success btn-sm">Kort</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medel</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Lång</button>
+                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>
                     </div>
                 </div> 
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="japripps">
+            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element medium-queue" id="japripps">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">J.A. Pripps</h3>
                     <i class="material-icons grid-element-expand-indicator">keyboard_arrow_down </i>
@@ -118,12 +143,17 @@
                     <i class="material-icons md-36">schedule</i> 
                     <span>00 - 00</span>
 
-                    <div class="container">
+                    <br>
+
+                    <i class="material-icons md-36">how_to_vote</i> 
+                    <span>Vote for the queue length</span>
+
+                    <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="1">
-                                <button type="button" value= 1 class="btn btn-outline-success btn-sm">Kort</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medel</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Lång</button>
+                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>
                     </div>
@@ -131,7 +161,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="wijkanders">
+            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element long-queue" id="wijkanders">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Wijkanders</h3>
                     <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
@@ -422,102 +452,61 @@
     </div> <!-- Grid end -->
 
 
-    <!-- Footer -->
-    <footer class="page-footer font-small indigo">
-
-        <!-- Footer Links -->
-        <div class="container text-center text-md-left">
-
-            <!-- Grid row -->
+    <!----------------------- 
+              Footer 
+    ------------------------>
+    <footer class="site-footer">
+        <div class="container-fluid">
             <div class="row">
+                <div class="col-md-3 site-footer-element">
+                    <h2 class="site-footer-heading mb-4">About Us</h2>
+                    <hr class="site-footer-element-hr">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    </p>
+                </div>
 
-                <!-- Grid column -->
-                <div class="col-md-3 mx-auto">
-
-                    <!-- Links -->
-                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Chalmers Policy</h5>
+                <div class="col-md-3 site-footer-element">
+                    <h5 class="site-footer-heading mb-4">Chalmers Policy</h5>
+                    <hr class="site-footer-element-hr">
 
                     <ul class="list-unstyled">
-                        <li>
-                            <a href="#!">Students under 18</a>
-                        </li>
-                        <li>
-                            <a href="#!">Allowed alcohol products</a>
-                        </li>
+                        <li><a href="#!">Link 1</a></li>
+                        <li><a href="#!">Link 2</a></li>
                     </ul>
-
                 </div>
-                <!-- Grid column -->
 
-                <hr class="clearfix w-100 d-md-none">
-
-                <!-- Grid column -->
-                <div class="col-md-3 mx-auto">
-
-                    <!-- Links -->
-                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Useful Links</h5>
+                <div class="col-md-3 site-footer-element">
+                    <h5 class="site-footer-heading mb-4">Rules</h5>
+                    <hr class="site-footer-element-hr">
 
                     <ul class="list-unstyled">
-                        <li>
-                            <a href="#!">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 2</a>
-                        </li>
+                        <li><a href="#!">Link 1</a></li>
+                        <li><a href="#!">Link 2</a></li>
                     </ul>
-
                 </div>
-                <!-- Grid column -->
 
-                <hr class="clearfix w-100 d-md-none">
-
-                <!-- Grid column -->
-                <div class="col-md-3 mx-auto">
-
-                    <!-- Links -->
-                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Rules</h5>
-
+                <div class="col-md-3 site-footer-element">
+                    <h5 class="site-footer-heading mb-4">Student Union</h5>
+                    <hr class="site-footer-element-hr">
+                    
                     <ul class="list-unstyled">
-                        <li>
-                            <a href="#!">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 2</a>
-                        </li>
+                        <li><a href="#!">Link 1</a></li>
+                        <li><a href="#!">Link 2</a></li>
                     </ul>
-
                 </div>
-                <!-- Grid column -->
-
-                <hr class="clearfix w-100 d-md-none">
-
-                <!-- Grid column -->
-                <div class="col-md-3 mx-auto">
-
-                    <!-- Links -->
-                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Student Union</h5>
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 2</a>
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- Grid column -->
-
-            </div>
-            <!-- Grid row -->
-
+            </div> <!-- Grid row -->
         </div>
-        <!-- Footer Links -->
+
+        <hr class="site-footer-hr">
 
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+        <div class="footer-copyright text-center">
+            <h6>
+                &copy; 
+                <script>document.write(new Date().getFullYear());</script>
+                Copyright
+            </h6>
         </div>
         <!-- Copyright -->
 
