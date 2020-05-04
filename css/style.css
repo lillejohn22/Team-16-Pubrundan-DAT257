@@ -190,7 +190,6 @@ body {
     padding: 15pt;
     background-color: #F4F7F5;
     overflow: auto; 
-    padding: 18px;
     overflow: hidden;
     transition: all 0.2s ease-out;
 }
@@ -199,9 +198,9 @@ body {
     position: relative;
     color: #08090A;
     font-family: Raleway Regular;
-    font-size: medium;
+    font-size: 12pt;
     padding: 10pt;
-    bottom: 3pt;
+    bottom: -3pt;
 }
 
 .grid-element-expanded-info br {
@@ -212,6 +211,21 @@ body {
 
 .grid-element-expanded-info:hover {
   cursor: initial;
+}
+
+.grid-icon {
+  width: 24px;
+  height: 24px;
+}
+
+#help {
+  background-color: #3BB2E2;
+  opacity: 80%;
+}
+
+#help:hover {
+  background-color: #3BB2E2;
+  opacity: 100%;
 }
 
 
@@ -260,6 +274,7 @@ body {
 }
 
 .queue-container {
+  margin-top: 5pt;
   margin-left: 22pt;
 }
 

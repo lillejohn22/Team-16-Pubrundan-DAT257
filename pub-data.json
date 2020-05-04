@@ -1,226 +1,206 @@
 {
-  "pubs" :
-    [
-      {
-        "name" : "Café Bulten",
-        "host" : "Café Bulten",
-        "location" : "Hörsalsvägen 7, 412 58 Göteborg",
-        "openingHours" : "18 - 01",
-        "paymentTypes" : ["SU-card", "Card"],
-        "id" : "bulten"
-      },
+  "bulten":{
+    "name" : "Café Bulten",
+    "host" : "Café Bulten",
+    "location" : "",
+    "address" : "Hörsalsvägen 7, 412 58 Göteborg",
+    "openingHours" : "18 - 01",
+    "paymentTypes" : ["SU-card", "Card"],
+    "filter" : [""]
+  },
 
-      {
-        "name" : "J.A. Pripps",
-        "host" : "J.A. Pripps",
-        "location" : "Sven Hultins gata 4, 412 58 Göteborg",
-        "openingHours" : "15 - 01",
-        "paymentTypes" : ["SU-card", "Card"],
-        "id" : "japripps"
-      },
+  "japripps":{
+    "name" : "J.A. Pripps",
+    "host" : "J.A. Pripps",
+    "location" : "",
+    "address" : "Sven Hultins gata 4, 412 58 Göteborg",
+    "openingHours" : "15 - 01",
+    "paymentTypes" : ["SU-card", "Card"],
+    "filter" : [""]
+  },
 
-      {
-        "name" : "Wijkanders",
-        "host" : "Wijkanders",
-        "location" : "Vera Sandbergs allé 5B, 411 33 Göteborg",
-        "openingHours" : "15 - 22",
-        "paymentTypes" : ["SU-card", "Card"],
-        "id" : "wijkanders"
-      },
+  "wijkanders":{
+    "name" : "Wijkanders",
+    "host" : "Wijkanders",
+    "location" : "",
+    "address" : "Vera Sandbergs allé 5B, 411 33 Göteborg",
+    "openingHours" : "15 - 22",
+    "paymentTypes" : ["SU-card", "Card"],
+    "filter" : [""]
+  },
 
-      {
-        "name" : "Gasquen",
-        "host" : "GasqueK",
-        "location" : "TEKNOLOGPLATSEN 6, 412 58 Göteborg",
-        "openingHours" : "20 - 01",
-        "paymentTypes" : ["SU-card", "Card"],
-        "id" : "gasquen"
-      },
+  "gasquen":{
+    "name" : "Gasquen",
+    "host" : "GasqueK",
+    "location" : "",
+    "address" : "Teknologplatsen 6, 412 58 Göteborg",
+    "openingHours" : "20 - 01",
+    "paymentTypes" : ["SU-card", "Card"],
+    "filter" : [""]
+  },
 
-      {
-        "name" : "Café C",
-        "host" : "C",
-        "location" : "Lindholmspiren 5, 417 55 Göteborg",
-        "openingHours" : "15 - 19",
-        "paymentTypes" : ["SU-card", "Card"],
-        "id" : "cafec"
-      },
+  "cafec":{
+    "name" : "Café C",
+    "host" : "C",
+    "location" : "",
+    "address" : "Lindholmspiren 5, 417 55 Göteborg",
+    "openingHours" : "15 - 19",
+    "paymentTypes" : ["SU-card", "Card"],
+    "filter" : [""],
+    "id" : "cafec"
+  },
 
-      {
-        "name" : "11:an",
-        "host" : "Pubf",
-        "location" : "Forskningsgången 4, 417 56 Göteborg",
-        "openingHours" : "15 - 20",
-        "paymentTypes" : "Card",
-        "id" : "11an"
-      },
+  "11an":{
+    "name" : "11:an",
+    "host" : "Pubf",
+    "location" : "",
+    "address" : "Forskningsgången 4, 417 56 Göteborg",
+    "openingHours" : "15 - 20",
+    "paymentTypes" : "Card",
+    "filter" : [""],
+    "id" : "11an"
+  },
 
-      {
-        "name" : "Röda Rummet",
-        "host" : "PubA",
-        "location" : "Sven Hultins gata 6,412 58 Göteborg",
-        "openingHours" : "19 -03",
-        "paymentTypes" : "Card",
-        "id" : "rodarummet"
-      },
+  "rodarummet":{
+    "name" : "Röda Rummet",
+    "host" : "PubA",
+    "location" : "",
+    "address" : "Sven Hultins gata 6,412 58 Göteborg",
+    "openingHours" : "19 -03",
+    "paymentTypes" : "Card",
+    "filter" : [""],
+    "id" : "rodarummet"
+  },
 
-      {
-        "name" : "V-entrén",
-        "host" : "SNOK",
-        "location" : "",
-        "openingHours" : "19 -03",
-        "paymentTypes" : "Card",
-        "id" : "ventren"
-      },
+  "ventren":{
+    "name" : "V-entrén",
+    "host" : "SNOK",
+    "location" : "",
+    "address" : "Sven Hultins gata 6,412 58 Göteborg",
+    "openingHours" : "19 -03",
+    "paymentTypes" : "Card",
+    "filter" : [""],
+    "id" : "ventren"
+  },
 
-      {
-        "name" : "Basen",
-        "host" : "Delta",
-        "location" : "",
-        "openingHours" : "19 - 01",
-        "paymentTypes" : "Card",
-        "id" : "basen"
-      },
+  "basen":{
+    "name" : "Basen",
+    "host" : "Delta",
+    "location" : "",
+    "address" : "Rännvägen 6b, 412 58 Göteborg",
+    "openingHours" : "19 - 01",
+    "paymentTypes" : "Card",
+    "filter" : [""],
+    "id" : "basen"
+  },
 
-      {
-        "name" : "Golden-I",
-        "host" : "QQ7",
-        "location" : "",
-        "openingHours" : "19 - 03",
-        "paymentTypes" : "Cash",
-        "id" : "goldeni"
-      },
+  "goldeni":{
+    "name" : "Golden-I",
+    "host" : "QQ7",
+    "location" : "",
+    "address" : "Vera Sandbergs allé 8A, 411 33 Göteborg",
+    "openingHours" : "19 - 03",
+    "paymentTypes" : "Cash",
+    "filter" : [""],
+    "id" : "goldeni"
+  },
 
-      {
-        "name" : "Kajsabaren",
-        "host" : "Kajsabaren",
-        "location" : "",
-        "openingHours" : "17 - 01",
-        "paymentTypes" : ["Cash", "Card"],
-        "id" : "kajsabaren"
-      },
+  "kajsabaren":{
+    "name" : "Kajsabaren",
+    "host" : "Kajsabaren",
+    "location" : "",
+    "address" : "Maskingränd 2, 412 58 Göteborg",
+    "openingHours" : "17 - 01",
+    "paymentTypes" : ["Cash", "Card"],
+    "filter" : [""],
+    "id" : "kajsabaren"
+  },
 
-      {
-        "name" : "Focus",
-        "host" : "Djungelpatrullen",
-        "location" : "",
-        "openingHours" : "19 - 03",
-        "paymentTypes" : "Cash",
-        "id" : "focus"
-      },
+  "focus":{
+    "name" : "Focus",
+    "host" : "Djungelpatrullen",
+    "location" : "",
+    "address" : "Kemivägen 11, 411 33 Göteborg",
+    "openingHours" : "19 - 03",
+    "paymentTypes" : "Cash",
+    "filter" : [""],
+    "id" : "focus"
+  },
 
-      {
-        "name" : "Hubben 2.1",
-        "host" : "P.R.I.T.",
-        "location" : "",
-        "openingHours" : "17 - 02",
-        "paymentTypes" : "Card",
-        "id" : "hubben21"
-      },
+  "hubben21":{
+    "name" : "Hubben 2.1",
+    "host" : "P.R.I.T.",
+    "location" : "",
+    "address" : "Hörsalsvägen 9, 412 58 Göteborg",
+    "openingHours" : "17 - 02",
+    "paymentTypes" : "Card",
+    "filter" : [""],
+    "id" : "hubben21"
+  },
 
-      {
-        "name" : "Fort NOx",
-        "host" : "Häks",
-        "location" : "",
-        "openingHours" : "19 - 01",
-        "paymentTypes" : "Card",
-        "id" : "fortnox"
-      },
+  "fortnox":{
+    "name" : "Fort NOx",
+    "host" : "Häks",
+    "location" : "Kemihuset, Campus Johanneberg",
+    "address" : "",
+    "openingHours" : "19 - 01",
+    "paymentTypes" : "Card",
+    "filter" : [""],
+    "id" : "fortnox"
+  },
 
-      {
-        "name" : "Gastown & Spritköket",
-        "host" : "Kaos",
-        "location" : "",
-        "openingHours" : "19 - 01",
-        "paymentTypes" : "Card",
-        "id" : "gastownospritkoket"
-      },
+  "gastownospritkoket":{
+    "name" : "Gastown & Spritköket",
+    "host" : "Kaos",
+    "location" : "Kemihuset, Campus Johanneberg",
+    "address" : "",
+    "openingHours" : "19 - 01",
+    "paymentTypes" : "Card",
+    "filter" : [""],
+    "id" : "gastownospritkoket"
+  },
 
-      {
-        "name" : "Winden",
-        "host" : "Rustmästeriet",
-        "location" : "",
-        "openingHours" : "19 - 03",
-        "paymentTypes" : ["Cash", "Card"],
-        "id" : "winden"
-      },
+  "winden":{
+    "name" : "Winden",
+    "host" : "Rustmästeriet",
+    "location" : "",
+    "address" : "Hörsalsvägen 5, 412 58 Göteborg",
+    "openingHours" : "19 - 03",
+    "paymentTypes" : ["Cash", "Card"],
+    "filter" : [""],
+    "id" : "winden"
+  },
 
-      {
-        "name" : "Järnvägspub",
-        "host" : "prosex.",
-        "location" : "",
-        "openingHours" : "18 - 01",
-        "paymentTypes" : ["Cash", "Card"],
-        "id" : "jarnvagspub"
-      },
+  "jarnvagspub":{
+    "name" : "Järnvägspub",
+    "host" : "prosex.",
+    "location" : "Tågvagnen, Chalmers",
+    "address" : "Sven Hultins gata 4, 412 58 Göteborg", 
+    "openingHours" : "18 - 01",
+    "paymentTypes" : ["Cash", "Card"],
+    "filter" : [""],
+    "id" : "jarnvagspub"
+  },
 
-      {
-        "name" : "Zaloonen",
-        "host" : "Zexet",
-        "location" : "",
-        "openingHours" : "19 - 01",
-        "paymentTypes" : "Card",
-        "id" : "zaloonen"
-      },
+  "zaloonen":{
+    "name" : "Zaloonen",
+    "host" : "Zexet",
+    "location" : "",
+    "address" : "Gibraltarvallsvägen 3, 412 58 Göteborg",
+    "openingHours" : "19 - 01",
+    "paymentTypes" : "Card",
+    "filter" : [""],
+    "id" : "zaloonen"
+  },
 
-      {
-        "name" : "Pig 'n' Whistle",
-        "host" : "Pig 'n' Whistle",
-        "location" : "",
-        "openingHours" : "16 - 01",
-        "paymentTypes" : ["Cash", "Card"],
-        "id" : "pignwhistle"
-      }
-    ],
-
-  "food" :
-    [
-      {
-        "host" : "Virus",
-        "food" : "Burgers (+veg)",
-        "location" : "",
-        "openingHours" : "19 - 03",
-        "paymentTypes" : "Swish"
-      },
-
-      {
-        "host" : "P.R.I.T.",
-        "food" : "Waffles",
-        "location" : "",
-        "openingHours" : "17 - 02",
-        "paymentTypes" : "Swish"
-      },
-
-      {
-        "host" : "DaltonZ",
-        "food" : "DaltonZ burgers w/cheese and bacon (+veg)",
-        "location" : "",
-        "openingHours" : "17 -24",
-        "paymentTypes" : "Card"
-      },
-
-      {
-        "host" : "H-Rustet",
-        "food" : "Burgers w/ bacon",
-        "location" : "",
-        "openingHours" : "15 - 18",
-        "paymentTypes" : ["Cash", "Card"]
-      },
-
-      {
-        "host" : "RustI",
-        "food" : "Burgers (+veg, gluten free",
-        "location" : ")",
-        "openingHours" : "19 - 01",
-        "paymentTypes" : ["Cash", "Swish"]
-      },
-
-      {
-        "host" : "Delta",
-        "food" : "Burgers w/ cheese",
-        "location" : "",
-        "openingHours" : "19 -01",
-        "paymentTypes" : "Card"
-      }
-    ]
+  "pignwhistle":{
+    "name" : "Pig 'n' Whistle",
+    "host" : "Pig 'n' Whistle",
+    "location" : "",
+    "address" : "Gibraltargatan 80, 412 79 Göteborg",
+    "openingHours" : "16 - 01",
+    "paymentTypes" : ["Cash", "Card"],
+    "filter" : [""],
+    "id" : "pignwhistle"
+  }
 }

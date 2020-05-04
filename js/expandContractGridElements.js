@@ -15,8 +15,8 @@ for (var i = 0; i < conElems.length; i++) {
     // Gets the index of the grid element that was clicked.
     var index = $(this).parent().index();
 
-    if (elems[index].style.height != "250pt"){
-        elems[index].style.height = "250pt";
+    if (elems[index].style.height != "300pt"){
+        elems[index].style.height = "300pt";
         elems[index].style.opacity = "100%";
         expInd[index].innerHTML = "keyboard_arrow_up";
     } else {
