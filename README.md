@@ -19,6 +19,8 @@
 
 [OLD REPO](https://github.com/emmouto/DAT257_Teams16)
 
+[ZOOM Handledningslänk](https://chalmers.zoom.us/j/2550119262)
+
 # NodeJS setup 
 #### Installation
 Download and Install NodeJS from [NodeJS](https://nodejs.org/en/).
