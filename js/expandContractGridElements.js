@@ -17,9 +17,11 @@ for (var i = 0; i < conElems.length; i++) {
 
     if (elems[index].style.height != "250pt"){
         elems[index].style.height = "250pt";
+        elems[index].style.opacity = "100%";
         expInd[index].innerHTML = "keyboard_arrow_up";
     } else {
         elems[index].style.height = "100pt";
+        elems[index].style.opacity = "80%";
         expInd[index].innerHTML = "keyboard_arrow_down";
     } 
   });

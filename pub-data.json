@@ -1,0 +1,226 @@
+{
+  "pubs" :
+    [
+      {
+        "name" : "Café Bulten",
+        "host" : "Café Bulten",
+        "location" : "Hörsalsvägen 7, 412 58 Göteborg",
+        "openingHours" : "18 - 01",
+        "paymentTypes" : ["SU-card", "Card"],
+        "id" : "bulten"
+      },
+
+      {
+        "name" : "J.A. Pripps",
+        "host" : "J.A. Pripps",
+        "location" : "Sven Hultins gata 4, 412 58 Göteborg",
+        "openingHours" : "15 - 01",
+        "paymentTypes" : ["SU-card", "Card"],
+        "id" : "japripps"
+      },
+
+      {
+        "name" : "Wijkanders",
+        "host" : "Wijkanders",
+        "location" : "Vera Sandbergs allé 5B, 411 33 Göteborg",
+        "openingHours" : "15 - 22",
+        "paymentTypes" : ["SU-card", "Card"],
+        "id" : "wijkanders"
+      },
+
+      {
+        "name" : "Gasquen",
+        "host" : "GasqueK",
+        "location" : "TEKNOLOGPLATSEN 6, 412 58 Göteborg",
+        "openingHours" : "20 - 01",
+        "paymentTypes" : ["SU-card", "Card"],
+        "id" : "gasquen"
+      },
+
+      {
+        "name" : "Café C",
+        "host" : "C",
+        "location" : "Lindholmspiren 5, 417 55 Göteborg",
+        "openingHours" : "15 - 19",
+        "paymentTypes" : ["SU-card", "Card"],
+        "id" : "cafec"
+      },
+
+      {
+        "name" : "11:an",
+        "host" : "Pubf",
+        "location" : "Forskningsgången 4, 417 56 Göteborg",
+        "openingHours" : "15 - 20",
+        "paymentTypes" : "Card",
+        "id" : "11an"
+      },
+
+      {
+        "name" : "Röda Rummet",
+        "host" : "PubA",
+        "location" : "Sven Hultins gata 6,412 58 Göteborg",
+        "openingHours" : "19 -03",
+        "paymentTypes" : "Card",
+        "id" : "rodarummet"
+      },
+
+      {
+        "name" : "V-entrén",
+        "host" : "SNOK",
+        "location" : "",
+        "openingHours" : "19 -03",
+        "paymentTypes" : "Card",
+        "id" : "ventren"
+      },
+
+      {
+        "name" : "Basen",
+        "host" : "Delta",
+        "location" : "",
+        "openingHours" : "19 - 01",
+        "paymentTypes" : "Card",
+        "id" : "basen"
+      },
+
+      {
+        "name" : "Golden-I",
+        "host" : "QQ7",
+        "location" : "",
+        "openingHours" : "19 - 03",
+        "paymentTypes" : "Cash",
+        "id" : "goldeni"
+      },
+
+      {
+        "name" : "Kajsabaren",
+        "host" : "Kajsabaren",
+        "location" : "",
+        "openingHours" : "17 - 01",
+        "paymentTypes" : ["Cash", "Card"],
+        "id" : "kajsabaren"
+      },
+
+      {
+        "name" : "Focus",
+        "host" : "Djungelpatrullen",
+        "location" : "",
+        "openingHours" : "19 - 03",
+        "paymentTypes" : "Cash",
+        "id" : "focus"
+      },
+
+      {
+        "name" : "Hubben 2.1",
+        "host" : "P.R.I.T.",
+        "location" : "",
+        "openingHours" : "17 - 02",
+        "paymentTypes" : "Card",
+        "id" : "hubben21"
+      },
+
+      {
+        "name" : "Fort NOx",
+        "host" : "Häks",
+        "location" : "",
+        "openingHours" : "19 - 01",
+        "paymentTypes" : "Card",
+        "id" : "fortnox"
+      },
+
+      {
+        "name" : "Gastown & Spritköket",
+        "host" : "Kaos",
+        "location" : "",
+        "openingHours" : "19 - 01",
+        "paymentTypes" : "Card",
+        "id" : "gastownospritkoket"
+      },
+
+      {
+        "name" : "Winden",
+        "host" : "Rustmästeriet",
+        "location" : "",
+        "openingHours" : "19 - 03",
+        "paymentTypes" : ["Cash", "Card"],
+        "id" : "winden"
+      },
+
+      {
+        "name" : "Järnvägspub",
+        "host" : "prosex.",
+        "location" : "",
+        "openingHours" : "18 - 01",
+        "paymentTypes" : ["Cash", "Card"],
+        "id" : "jarnvagspub"
+      },
+
+      {
+        "name" : "Zaloonen",
+        "host" : "Zexet",
+        "location" : "",
+        "openingHours" : "19 - 01",
+        "paymentTypes" : "Card",
+        "id" : "zaloonen"
+      },
+
+      {
+        "name" : "Pig 'n' Whistle",
+        "host" : "Pig 'n' Whistle",
+        "location" : "",
+        "openingHours" : "16 - 01",
+        "paymentTypes" : ["Cash", "Card"],
+        "id" : "pignwhistle"
+      }
+    ],
+
+  "food" :
+    [
+      {
+        "host" : "Virus",
+        "food" : "Burgers (+veg)",
+        "location" : "",
+        "openingHours" : "19 - 03",
+        "paymentTypes" : "Swish"
+      },
+
+      {
+        "host" : "P.R.I.T.",
+        "food" : "Waffles",
+        "location" : "",
+        "openingHours" : "17 - 02",
+        "paymentTypes" : "Swish"
+      },
+
+      {
+        "host" : "DaltonZ",
+        "food" : "DaltonZ burgers w/cheese and bacon (+veg)",
+        "location" : "",
+        "openingHours" : "17 -24",
+        "paymentTypes" : "Card"
+      },
+
+      {
+        "host" : "H-Rustet",
+        "food" : "Burgers w/ bacon",
+        "location" : "",
+        "openingHours" : "15 - 18",
+        "paymentTypes" : ["Cash", "Card"]
+      },
+
+      {
+        "host" : "RustI",
+        "food" : "Burgers (+veg, gluten free",
+        "location" : ")",
+        "openingHours" : "19 - 01",
+        "paymentTypes" : ["Cash", "Swish"]
+      },
+
+      {
+        "host" : "Delta",
+        "food" : "Burgers w/ cheese",
+        "location" : "",
+        "openingHours" : "19 -01",
+        "paymentTypes" : "Card"
+      }
+    ]
+}

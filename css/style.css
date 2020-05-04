@@ -1,4 +1,11 @@
 /* ---------------
+      Colours
+   --------------- */
+/* https://coolors.co/414141-ccdfcb-ff6a5c-056571-d33f49-88d18a-ffd25a */
+
+
+
+/* ---------------
         Fonts
    --------------- */
 @font-face {
@@ -21,6 +28,88 @@
     src: url(../fonts/raleway/Raleway-Regular.ttf);
 }
 
+@font-face {
+  font-family: "Oswald";
+  src: url(../fonts/oswald/static/Oswald-Regular.ttf)
+}
+
+@font-face {
+  font-family: "Oswald Light";
+  src: url(../fonts/oswald/static/Oswald-Light.ttf)
+}
+
+body {
+  background-color: #F4F7F5;
+}
+
+
+/* ---------------
+       Navbar
+   --------------- */
+
+.navbar {
+  font-family: "Raleway Regular";
+  font-size: 1em;
+  background-color: #333333;
+  color: #F4F7F5;
+}
+
+.navbar a {
+  color: #999999;
+  -webkit-transition: all .5s ease;   /* Safari and Chrome */
+  -moz-transition: all .5s ease;      /* Firefox */
+  -ms-transition: all .5s ease;       /* IE 9 */
+  -o-transition: all .5s ease;        /* Opera */
+  transition: all .5s ease;
+}
+
+.navbar .navbar-brand {
+  font-size: 1.5em;
+  margin-left: 12.5%;
+  text-transform: uppercase;
+  color: #F4F7F5;
+}
+
+.nav-items {
+  margin-left: 12.5%;
+}
+
+.nav-item {
+  padding-left: 50pt;
+}
+
+.navbar-toggler {
+  margin-right: 12.5%;
+}
+
+.nav-item > a:hover {
+  color: #F4F7F5;
+}
+
+
+/* ---------------
+         SSF
+   --------------- */
+
+#ssf-container {
+  width: 75%;
+}
+
+.ssf-element {
+  margin-top: 15pt;
+  margin-bottom: -15pt;
+  background-color: #333333;
+  border: 5pt solid #F4F7F5;
+  height: 150pt;
+}
+
+.ssf-element h2 {
+  font-family: "Raleway Regular";
+  color: #F4F7F5;
+  text-align: center;
+  padding-top: 10pt;
+}
+
 
 /* ---------------
         Grid
@@ -31,6 +120,7 @@
 
 #grid-container {
     width: 75%;
+    margin-top: 25pt;
     margin-left: 12.5%;
     margin-right: 12.5%;
 }
@@ -38,7 +128,7 @@
 .grid-element {
     position: relative;
     overflow: hidden;
-    border: 10pt solid #fff;
+    border: 10pt solid #F4F7F5;
     height: 100pt;
     -webkit-transition: all .5s ease;   /* Safari and Chrome */
     -moz-transition: all .5s ease;      /* Firefox */
@@ -69,7 +159,7 @@
     font-weight: 900;
     letter-spacing: -1px;
     text-transform: uppercase;
-    color: #fff;
+    color: #F4F7F5;
     margin: 9% 0 0;
     padding: 10px 0;
     height: 43pt;
@@ -85,20 +175,20 @@
   left: 0;
   z-index: 10;
   display: block;
-  color:white;
+  color: #F4F7F5;
   margin-top: 63.5pt;
   margin-left: 45%;
 }
 
 .grid-element-expanded-info {
     position: absolute;
-    top: 80pt;
+    top: 81pt;
     left: 5%;
     z-index: 10;
     width: 90%;
     height: 60%;
     padding: 15pt;
-    background-color: white;
+    background-color: #F4F7F5;
     overflow: auto; 
     padding: 18px;
     overflow: hidden;
@@ -107,7 +197,7 @@
 
 .grid-element-expanded-info span {
     position: relative;
-    color: black;
+    color: #08090A;
     font-family: Raleway Regular;
     font-size: medium;
     padding: 10pt;
@@ -125,36 +215,116 @@
 }
 
 
-/* Background colours for grid elements, depending on queue length */
+/* ---------------
+       Queue
+   --------------- */
+
 .long-queue {
-  background-color: #E84258;
+  background-color: #D81159;
+  opacity: 80%;
 }
 
 .long-queue:hover {
-  background-color: rgb(230, 47, 71);
+  background-color: #D81159;
+  opacity: 100%;
 }
 
 .medium-queue {
-  background-color: #FEE191;
+  background-color: #D5A021;
+  opacity: 80%;
 }
 
 .medium-queue:hover {
-  background-color: rgb(243, 204, 96);
+  background-color: #D5A021;
+  opacity: 100%;
 }
 
 .short-queue {
-  background-color: #B0D8A4;
+  background-color: #748E54;
+  opacity: 80%;
 }
 
 .short-queue:hover {
-  background-color: rgb(140, 211, 119);
+  background-color: #748E54;
+  opacity: 100%;
 }
 
 .pub-closed {
-  background-color: #8281A0;
+  background-color: #333333;
+  opacity: 80%;
 }
 
 .pub-closed:hover {
-  background-color: rgb(106, 104, 156);
+  background-color: #333333;
+  opacity: 100%;
 }
-/* END of bg colours */
+
+.queue-container {
+  margin-left: 22pt;
+}
+
+
+/* ---------------
+       Footer
+   --------------- */
+
+.site-footer {
+  font-family: "Oswald Light";
+  font-weight: 100;
+  background-color: #333333;
+  color: #F4F7F5;
+  margin-top: 25pt;
+  padding: 5% 12.5% 5% 12.5%;
+  font-size: 13pt;
+}
+
+.site-footer a {
+  color: #999999;
+  -webkit-transition: all .5s ease;   /* Safari and Chrome */
+  -moz-transition: all .5s ease;      /* Firefox */
+  -ms-transition: all .5s ease;       /* IE 9 */
+  -o-transition: all .5s ease;        /* Opera */
+  transition: all .5s ease;
+}
+
+.site-footer a:hover {
+  color: #F4F7F5;
+  text-decoration: none;
+}
+
+.site-footer li {
+  padding-bottom: 10pt;
+}
+
+.site-footer p {
+  color: #999999;
+  padding-bottom: 10pt;
+  -webkit-transition: all .5s ease;   /* Safari and Chrome */
+  -moz-transition: all .5s ease;      /* Firefox */
+  -ms-transition: all .5s ease;       /* IE 9 */
+  -o-transition: all .5s ease;        /* Opera */
+  transition: all .5s ease;
+}
+
+.site-footer .site-footer-heading {
+  font-size: 15pt;
+  color: #F4F7F5; 
+  text-transform: uppercase;
+}
+
+.site-footer-element-hr {
+  border-color: #666666;
+  margin: -15pt 0 3% 0;
+}
+
+.site-footer .site-footer-element {
+  margin-bottom: 2%;
+  padding: 0 15pt 0 15pt;
+}
+
+.site-footer-hr {
+  border-color: #666666;
+  margin: 0 0 3% 0;
+}
+
+
