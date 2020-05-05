@@ -97,7 +97,6 @@ body {
 
 .ssf-element {
   margin-top: 15pt;
-  margin-bottom: -15pt;
   background-color: #333333;
   border: 5pt solid #F4F7F5;
   height: 150pt;
@@ -120,7 +119,6 @@ body {
 
 #grid-container {
     width: 80%;
-    margin-top: 25pt;
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -241,6 +239,21 @@ body {
   margin-right: auto;
   width: 24px;
   height: 24px;
+}
+
+.grid-icon-info-container p {
+  font-family: Raleway Regular;
+  text-align: center;
+  font-size: 10pt;
+  margin: -7pt 0 0 0 ;
+}
+
+#help-text {
+  color: #FFFFFF;
+  font-family: Raleway Regular;
+  text-align: center;
+  margin-top: 2%;
+  font-size: 10pt;;
 }
 
 #help {
