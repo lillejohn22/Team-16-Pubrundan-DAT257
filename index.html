@@ -85,18 +85,50 @@
     ------------------------>
     <div class="container-fluid" id="grid-container">
         <div class="row">
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element order-first" id="help">
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-first" id="help">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Help me!</h3>
                     <i class="material-icons grid-element-expand-indicator" id="help-expand-indicator">keyboard_arrow_down </i>
                 </div>
 
                 <div class="grid-element-expanded-info">
-                    
-                </div>
+                    <img class="grid-icon" src="images/icons/location.png"></img>
+                    <span class="location-info">Rainbow Road 1</span>
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <img class="grid-icon" src="images/icons/time.png"></img>
+                    <span class="time-info">00 - 00</span>
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <img class="grid-icon" src="images/icons/vote.png"></img>
+                    <span>Queue length vote</span>
+
+                    <div class="container queue-container">
+                        <div class="queueVoter">
+                            <div class="voteButton" id="">
+                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
+                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <div class="container-fluid grid-icon-info-container">
+                        <img class="grid-icon-info icon-beer" src="images/icons/beer.png" title="Beer"></img>
+                        <img class="grid-icon-info icon-drink" src="images/icons/drink-nocolor.png" title="Drink"></img>
+                        <img class="grid-icon-info icon-wine" src="images/icons/wine-nocolor.png" title="Wine"></img>
+                        <img class="grid-icon-info icon-food" src="images/icons/food.png" title="Food"></img>
+                        <img class="grid-icon-info icon-coffee" src="images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
+                        <img class="grid-icon-info icon-activities" src="images/icons/activity-nocolor.png" title="Activities"></img>
+                    </div>
+                </div> 
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element short-queue" id="bulten">
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element short-queue" id="bulten">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Café Bulten</h3>
                     <i class="material-icons grid-element-expand-indicator">keyboard_arrow_down </i>
@@ -114,13 +146,13 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <img class="grid-icon" src="images/icons/vote.png"></img>
-                    <span>Vote for the queue length</span>
+                    <span>Queue length vote</span>
 
                     <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="">
                                 <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
                                 <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>
@@ -139,7 +171,7 @@
                 </div> 
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element medium-queue" id="japripps">
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element medium-queue" id="japripps">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">J.A. Pripps</h3>
                     <i class="material-icons grid-element-expand-indicator">keyboard_arrow_down </i>
@@ -157,13 +189,13 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <img class="grid-icon" src="images/icons/vote.png"></img>
-                    <span>Vote for the queue length</span>
+                    <span>Queue length vote</span>
 
                     <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="">
                                 <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
                                 <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>
@@ -182,7 +214,7 @@
                 </div> 
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element long-queue" id="wijkanders">
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element long-queue" id="wijkanders">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Wijkanders</h3>
                     <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
@@ -200,13 +232,13 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <img class="grid-icon" src="images/icons/vote.png"></img>
-                    <span>Vote for the queue length</span>
+                    <span>Queue length vote</span>
 
                     <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="">
                                 <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
                                 <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>
@@ -225,7 +257,7 @@
                 </div> 
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="gasquen">
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed" id="gasquen">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Gasquen</h3>
                     <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
@@ -243,13 +275,13 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <img class="grid-icon" src="images/icons/vote.png"></img>
-                    <span>Vote for the queue length</span>
+                    <span>Queue length vote</span>
 
                     <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="">
                                 <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
                                 <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>
@@ -268,7 +300,7 @@
                 </div> 
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="cafec">
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed" id="cafec">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Café C</h3>
                     <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
@@ -286,13 +318,13 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <img class="grid-icon" src="images/icons/vote.png"></img>
-                    <span>Vote for the queue length</span>
+                    <span>Queue length vote</span>
 
                     <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="">
                                 <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
                                 <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>
@@ -311,7 +343,7 @@
                 </div> 
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="11an">
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed" id="11an">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">11:an</h3>
                     <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
@@ -329,13 +361,13 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <img class="grid-icon" src="images/icons/vote.png"></img>
-                    <span>Vote for the queue length</span>
+                    <span>Queue length vote</span>
 
                     <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="">
                                 <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
                                 <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>
@@ -354,7 +386,7 @@
                 </div> 
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="rodarummet">
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed" id="rodarummet">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Röda Rummet</h3>
                     <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
@@ -372,13 +404,13 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <img class="grid-icon" src="images/icons/vote.png"></img>
-                    <span>Vote for the queue length</span>
+                    <span>Queue length vote</span>
 
                     <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="">
                                 <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
                                 <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>
@@ -397,7 +429,7 @@
                 </div> 
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="ventren">
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed" id="ventren">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">V-entrén</h3>
                     <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
@@ -415,13 +447,13 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <img class="grid-icon" src="images/icons/vote.png"></img>
-                    <span>Vote for the queue length</span>
+                    <span>Queue length vote</span>
 
                     <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="">
                                 <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
                                 <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>
@@ -440,7 +472,7 @@
                 </div> 
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="basen">
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed" id="basen">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Basen</h3>
                     <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
@@ -458,13 +490,13 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <img class="grid-icon" src="images/icons/vote.png"></img>
-                    <span>Vote for the queue length</span>
+                    <span>Queue length vote</span>
 
                     <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="">
                                 <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
                                 <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>
@@ -483,7 +515,7 @@
                 </div> 
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="goldeni">
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed" id="goldeni">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Golden-I</h3>
                     <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
@@ -501,13 +533,13 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <img class="grid-icon" src="images/icons/vote.png"></img>
-                    <span>Vote for the queue length</span>
+                    <span>Queue length vote</span>
 
                     <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="">
                                 <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
                                 <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>
@@ -526,7 +558,7 @@
                 </div> 
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="kajsabaren">
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed" id="kajsabaren">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Kajsabaren</h3>
                     <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
@@ -544,13 +576,13 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <img class="grid-icon" src="images/icons/vote.png"></img>
-                    <span>Vote for the queue length</span>
+                    <span>Queue length vote</span>
 
                     <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="">
                                 <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
                                 <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>
@@ -569,7 +601,7 @@
                 </div> 
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="focus">
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed" id="focus">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Focus</h3>
                     <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
@@ -587,13 +619,13 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <img class="grid-icon" src="images/icons/vote.png"></img>
-                    <span>Vote for the queue length</span>
+                    <span>Queue length vote</span>
 
                     <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="">
                                 <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
                                 <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>
@@ -612,7 +644,7 @@
                 </div> 
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="hubben21">
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed" id="hubben21">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Hubben 2.1</h3>
                     <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
@@ -630,13 +662,13 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <img class="grid-icon" src="images/icons/vote.png"></img>
-                    <span>Vote for the queue length</span>
+                    <span>Queue length vote</span>
 
                     <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="">
                                 <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
                                 <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>
@@ -655,7 +687,7 @@
                 </div> 
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="fortnox">
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed" id="fortnox">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Fort NOx</h3>
                     <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
@@ -673,13 +705,13 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <img class="grid-icon" src="images/icons/vote.png"></img>
-                    <span>Vote for the queue length</span>
+                    <span>Queue length vote</span>
 
                     <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="">
                                 <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
                                 <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>
@@ -698,7 +730,7 @@
                 </div> 
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="gastownospritkoket">
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed" id="gastownospritkoket">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Gastown & Spritköket</h3>
                     <i class="material-icons grid-element-expand-indicator">keyboard_arrow_down </i>
@@ -716,13 +748,13 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <img class="grid-icon" src="images/icons/vote.png"></img>
-                    <span>Vote for the queue length</span>
+                    <span>Queue length vote</span>
 
                     <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="">
                                 <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
                                 <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>
@@ -741,7 +773,7 @@
                 </div> 
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="winden">
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed" id="winden">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Winden</h3>
                     <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
@@ -759,13 +791,13 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <img class="grid-icon" src="images/icons/vote.png"></img>
-                    <span>Vote for the queue length</span>
+                    <span>Queue length vote</span>
 
                     <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="">
                                 <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
                                 <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>
@@ -784,7 +816,7 @@
                 </div> 
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="jarnvagspub">
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed" id="jarnvagspub">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Järnvägspub</h3>
                     <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
@@ -802,13 +834,13 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <img class="grid-icon" src="images/icons/vote.png"></img>
-                    <span>Vote for the queue length</span>
+                    <span>Queue length vote</span>
 
                     <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="">
                                 <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
                                 <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>
@@ -827,7 +859,7 @@
                 </div> 
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="zaloonen">
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed" id="zaloonen">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Zaloonen</h3>
                     <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
@@ -845,13 +877,13 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <img class="grid-icon" src="images/icons/vote.png"></img>
-                    <span>Vote for the queue length</span>
+                    <span>Queue length vote</span>
 
                     <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="">
                                 <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
                                 <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>
@@ -870,7 +902,7 @@
                 </div> 
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xl-3 grid-element pub-closed" id="pignwhistle">
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed" id="pignwhistle">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Pig 'n' Whistle</h3>
                     <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
@@ -888,13 +920,13 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <img class="grid-icon" src="images/icons/vote.png"></img>
-                    <span>Vote for the queue length</span>
+                    <span>Queue length vote</span>
 
                     <div class="container queue-container">
                         <div class="queueVoter">
                             <div class="voteButton" id="">
                                 <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Medium</button>
+                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
                                 <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
                             </div>
                         </div>

@@ -2,17 +2,17 @@
   "bulten":{
     "name" : "Café Bulten",
     "host" : "Café Bulten",
-    "location" : "Hörsalsvägen 7",
+    "location" : "M-huset",
     "address" : "Hörsalsvägen 7, 412 58 Göteborg",
     "openingHours" : "18 - 01",
     "paymentTypes" : ["SU-card", "Card"],
-    "filter" : ["food", "wine"]
+    "filter" : ["wine", "food"]
   },
 
   "japripps":{
     "name" : "J.A. Pripps",
     "host" : "J.A. Pripps",
-    "location" : "Sven Hultins gata 4",
+    "location" : "Kårhuset",
     "address" : "Sven Hultins gata 4, 412 58 Göteborg",
     "openingHours" : "15 - 01",
     "paymentTypes" : ["SU-card", "Card"],
@@ -22,7 +22,7 @@
   "wijkanders":{
     "name" : "Wijkanders",
     "host" : "Wijkanders",
-    "location" : "Vera Sandbergs allé 5B",
+    "location" : "Vasa Hus 8",
     "address" : "Vera Sandbergs allé 5B, 411 33 Göteborg",
     "openingHours" : "15 - 22",
     "paymentTypes" : ["SU-card", "Card"],
@@ -32,7 +32,7 @@
   "gasquen":{
     "name" : "Gasquen",
     "host" : "GasqueK",
-    "location" : "Teknologplatsen 6",
+    "location" : "Kårhuset",
     "address" : "Teknologplatsen 6, 412 58 Göteborg",
     "openingHours" : "20 - 01",
     "paymentTypes" : ["SU-card", "Card"],
@@ -42,7 +42,7 @@
   "cafec":{
     "name" : "Café C",
     "host" : "C",
-    "location" : "Lindholmspiren 5",
+    "location" : "Navet (Lindholmen)",
     "address" : "Lindholmspiren 5, 417 55 Göteborg",
     "openingHours" : "15 - 19",
     "paymentTypes" : ["SU-card", "Card"],
@@ -53,7 +53,7 @@
   "11an":{
     "name" : "11:an",
     "host" : "Pubf",
-    "location" : "Forskningsgången 4",
+    "location" : "Svea (Lindholmen)",
     "address" : "Forskningsgången 4, 417 56 Göteborg",
     "openingHours" : "15 - 20",
     "paymentTypes" : "Card",
@@ -64,7 +64,7 @@
   "rodarummet":{
     "name" : "Röda Rummet",
     "host" : "PubA",
-    "location" : "Sven Hultins gata 6",
+    "location" : "Biblioteket",
     "address" : "Sven Hultins gata 6, 412 58 Göteborg",
     "openingHours" : "19 -03",
     "paymentTypes" : "Card",
@@ -75,7 +75,7 @@
   "ventren":{
     "name" : "V-entrén",
     "host" : "SNOK",
-    "location" : "Sven Hultins gata 6",
+    "location" : "Samhällsbyggnad III",
     "address" : "Sven Hultins gata 6, 412 58 Göteborg",
     "openingHours" : "19 -03",
     "paymentTypes" : "Card",
@@ -86,7 +86,7 @@
   "basen":{
     "name" : "Basen",
     "host" : "Delta",
-    "location" : "Rännvägen 6b",
+    "location" : "EDIT",
     "address" : "Rännvägen 6b, 412 58 Göteborg",
     "openingHours" : "19 - 01",
     "paymentTypes" : "Card",
@@ -97,7 +97,7 @@
   "goldeni":{
     "name" : "Golden-I",
     "host" : "QQ7",
-    "location" : "Vera Sandbergs allé 8A",
+    "location" : "Vasa Hus 2",
     "address" : "Vera Sandbergs allé 8A, 411 33 Göteborg",
     "openingHours" : "19 - 03",
     "paymentTypes" : "Cash",
@@ -108,7 +108,7 @@
   "kajsabaren":{
     "name" : "Kajsabaren",
     "host" : "Kajsabaren",
-    "location" : "Maskingränd 2",
+    "location" : "EDIT",
     "address" : "Maskingränd 2, 412 58 Göteborg",
     "openingHours" : "17 - 01",
     "paymentTypes" : ["Cash", "Card"],
@@ -119,7 +119,7 @@
   "focus":{
     "name" : "Focus",
     "host" : "Djungelpatrullen",
-    "location" : "Kemivägen 11",
+    "location" : "Forskarhuset Fysik",
     "address" : "Kemivägen 11, 411 33 Göteborg",
     "openingHours" : "19 - 03",
     "paymentTypes" : "Cash",
@@ -130,7 +130,7 @@
   "hubben21":{
     "name" : "Hubben 2.1",
     "host" : "P.R.I.T.",
-    "location" : "Hörsalsvägen 9",
+    "location" : "EDIT",
     "address" : "Hörsalsvägen 9, 412 58 Göteborg",
     "openingHours" : "17 - 02",
     "paymentTypes" : "Card",
@@ -141,7 +141,7 @@
   "fortnox":{
     "name" : "Fort NOx",
     "host" : "Häks",
-    "location" : "Kemihuset",
+    "location" : "Kemi",
     "address" : "",
     "openingHours" : "19 - 01",
     "paymentTypes" : "Card",
@@ -152,7 +152,7 @@
   "gastownospritkoket":{
     "name" : "Gastown & Spritköket",
     "host" : "Kaos",
-    "location" : "Kemihuset",
+    "location" : "Kemi",
     "address" : "",
     "openingHours" : "19 - 01",
     "paymentTypes" : "Card",
@@ -163,7 +163,7 @@
   "winden":{
     "name" : "Winden",
     "host" : "Rustmästeriet",
-    "location" : "Hörsalsvägen 5",
+    "location" : "Gamla M-huset",
     "address" : "Hörsalsvägen 5, 412 58 Göteborg",
     "openingHours" : "19 - 03",
     "paymentTypes" : ["Cash", "Card"],
@@ -185,7 +185,7 @@
   "zaloonen":{
     "name" : "Zaloonen",
     "host" : "Zexet",
-    "location" : "Gibraltarvallsvägen 3",
+    "location" : "Hörsalar HB",
     "address" : "Gibraltarvallsvägen 3, 412 58 Göteborg",
     "openingHours" : "19 - 01",
     "paymentTypes" : "Card",
@@ -196,7 +196,7 @@
   "pignwhistle":{
     "name" : "Pig 'n' Whistle",
     "host" : "Pig 'n' Whistle",
-    "location" : "Gibraltargatan 80",
+    "location" : "Emilsborg 2",
     "address" : "Gibraltargatan 80, 412 79 Göteborg",
     "openingHours" : "16 - 01",
     "paymentTypes" : ["Cash", "Card"],
