@@ -92,7 +92,7 @@ body {
    --------------- */
 
 #ssf-container {
-  width: 75%;
+  width: 80%;
 }
 
 .ssf-element {
@@ -119,10 +119,10 @@ body {
    https://thatwebdude.com/tutorial/css-image-zooming-grid/ */
 
 #grid-container {
-    width: 75%;
+    width: 80%;
     margin-top: 25pt;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .grid-element {
@@ -193,32 +193,32 @@ body {
 }
 
 .grid-element-expanded-info {
-    position: absolute;
-    top: 81pt;
-    left: 5%;
-    z-index: 10;
-    width: 90%;
-    height: 69%;
-    padding: 15pt;
-    background-color: #F4F7F5;
-    overflow: auto; 
-    overflow: hidden;
-    transition: all 0.2s ease-out;
+  position: absolute;
+  top: 81pt;
+  left: 5%;
+  z-index: 10;
+  width: 90%;
+  height: 69%;
+  padding: 15pt;
+  background-color: #F4F7F5;
+  overflow: auto; 
+  overflow: hidden;
+  transition: all 0.2s ease-out;
 }
 
 .grid-element-expanded-info span {
-    position: relative;
-    color: #08090A;
-    font-family: Raleway Regular;
-    font-size: 12pt;
-    padding: 10pt;
-    bottom: -3pt;
+  position: relative;
+  color: #08090A;
+  font-family: Raleway Regular;
+  font-size: 12pt;
+  padding: 10pt;
+  bottom: -3pt;
 }
 
 .grid-element-expanded-info br {
-    display: block;
-    content: ""; 
-    margin-top: 10pt; 
+  display: block;
+  content: ""; 
+  margin-top: 10pt; 
 }
 
 .grid-element-expanded-info:hover {
@@ -230,10 +230,17 @@ body {
   height: 24px;
 }
 
+.grid-icon-info-container {
+  text-align: center;
+  width: 100%;
+}
+
 .grid-icon-info {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
   width: 24px;
   height: 24px;
-  margin: 0 3.5pt 0 3.5pt;
 }
 
 #help {
@@ -293,7 +300,7 @@ body {
 
 .queue-container {
   margin-top: 5pt;
-  margin-left: 22pt;
+  margin-left: 15pt;
 }
 
 
@@ -307,7 +314,7 @@ body {
   background-color: #333333;
   color: #F4F7F5;
   margin-top: 25pt;
-  padding: 5% 12.5% 5% 12.5%;
+  padding: 5% 10% 5% 10%;
   font-size: 13pt;
 }
 

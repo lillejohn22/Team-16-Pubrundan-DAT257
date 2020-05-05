@@ -29,41 +29,38 @@ window.onload = function() {
             console.log(elemID);
 
 
-            // The "help" element does not need any information from pub-data.json, that's why we use "i-1"
+            // The "help" element does not need any information from pub-data.json
             if (elemID !== "help") { 
-                $(locInfo[i-1]).text(data[elemID].location)
-                $(timeInfo[i-1]).text(data[elemID].openingHours)
+                $(locInfo[i]).text(data[elemID].location)
+                $(timeInfo[i]).text(data[elemID].openingHours)
 
                 // Fix icons
                 var filterIcons = data[elemID].filter;
                 var filterIconsLength = Object.keys(filterIcons).length;
-                var iconLocation;
 
                 for (var j = 0; j < filterIconsLength; j++) {
                     switch (filterIcons[j]) {
                         case "beer":
-                            beerIcon[j].src = "../images/icons/beer.png";
+                            beerIcon[i].src = "../images/icons/beer.png";
                             break;
                         case "drink":
-                            drinkIcon[j].src = "../images/icons/drink.png";
+                            drinkIcon[i].src = "../images/icons/drink.png";
                             break;
                         case "wine":
-                            wineIcon[j].src = "../images/icons/wine.png";
+                            wineIcon[i].src = "../images/icons/wine.png";
                             break;
                         case "food":
-                            foodIcon[j].src = "../images/icons/food.png";
+                            foodIcon[i].src = "../images/icons/food.png";
                             break;
                         case "coffee":
-                            coffeeIcon[j].src = "..images/icons/coffee.png"
+                            coffeeIcon[i].src = "..images/icons/coffee.png"
                             break;
                         case "activity":
-                            activityIcon[j].src = "..images/icons/activity.png";
+                            activityIcon[i].src = "..images/icons/activity.png";
                             break;
                     }
                 }
             }
-
-            console.log("------------")
         }
     }
 }
