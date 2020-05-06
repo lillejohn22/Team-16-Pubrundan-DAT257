@@ -107,6 +107,13 @@ body {
   color: #F4F7F5;
   text-align: center;
   padding-top: 10pt;
+  border-bottom: 5px solid rgba(255, 255, 255, .3);
+}
+
+ .align-radio {
+  display: flex;
+  justify-content: center;
+
 }
 
 
