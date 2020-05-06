@@ -14,7 +14,7 @@ server.listen(port, () => console.log(`Server started on port: ${port}`))
 
 server.get('/', (req, res) => res.sendFile('index.html', {root: __dirname}));
 server.get('/pub-data.json', (req, res) => {
-    var obj = JSON.parse(fs.readFileSync('pub-data.json', 'utf8'));
+    var obj = JSON.parse(fs.readFileSync(path.join(__dirname,'pub-data.json'),'utf8'));
     res.status(200).json(obj)
     console.log(obj)
 
