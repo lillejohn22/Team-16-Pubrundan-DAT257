@@ -1,6 +1,8 @@
 const express = require('express')
+const path = require('path')
 // const bodyParser = require('body-parser')
 // const calcQueue = require('./js/calculateQueue')
+var fs = require('fs');
 
 const server = express()
 const port = (process.env.PORT || 3000)
@@ -11,7 +13,12 @@ server.use(express.urlencoded({extended: false}))
 server.listen(port, () => console.log(`Server started on port: ${port}`))
 
 server.get('/', (req, res) => res.sendFile('index.html', {root: __dirname}));
-server.get('/pub-data.json', (req, res) => res.status(200).json(__dirname + 'pub-data.json'));
+server.get('/pub-data.json', (req, res) => {
+    var obj = JSON.parse(fs.readFileSync('pub-data.json', 'utf8'));
+    res.status(200).json(obj)
+    console.log(obj)
+
+});
 
 var requestNumber = 0;
 var lastFiveVotesArray = [];

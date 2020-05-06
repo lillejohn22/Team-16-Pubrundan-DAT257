@@ -1,6 +1,10 @@
 // window.onload: Executes when website is fully loaded and presented to the user.
 
-window.onload = function () {
+/**
+ * Enables the ActionListeners for the "voteButton" class (The vote buttons).
+ * This function is also responsible for sending the button data as JSON to the server.
+ */
+function enableVoting () {
     let keys = document.getElementsByClassName("voteButton");
 
     for (let i = 0; i < keys.length; i++) {
