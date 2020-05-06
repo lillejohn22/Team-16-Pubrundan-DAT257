@@ -28,12 +28,11 @@ window.onload = function() {
         for (var i = 0; i < elems.length; i++) { 
             var elemID = elems[i].id;
 
-            console.log(elemID);
+//            console.log(elemID);
 
 
             // The "help" element does not need any information from pub-data.json
             if (elemID !== "help") {
-                console.log(JSON.parse(data))
                 $(locInfo[i]).text(data[elemID].location)
                 $(timeInfo[i]).text(data[elemID].openingHours)
 
