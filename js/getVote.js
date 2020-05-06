@@ -1,23 +1,29 @@
-const queueVoter = document.querySelector('.queueVoter');
-const keys = queueVoter.querySelector('.voteButton');
+// window.onload: Executes when website is fully loaded and presented to the user.
 
-//Register key event and saves result on an array.
-keys.addEventListener('click', e => {
+window.onload = function () {
+    let keys = document.getElementsByClassName("voteButton");
 
-    if (e.target.matches('button')) {
-        const key = e.target;
-        var voteObject = {}; // Apparently makes a new object in JavaScript
-        voteObject.voteValue = key.value;
-        voteObject.date = Date.now();
-        var buttonid = key.parentNode.getAttribute("id");
-        console.log(buttonid);
-        console.log("hej");
-        voteObject.pubName = buttonid.replace("Buttons","");
-        voteObject.url = '/voted';
-        sendAndReceiveJSON(voteObject, voteObject.url, "post");
+    for (let i = 0; i < keys.length; i++) {
+       keys[i].addEventListener('click', e => {
+
+        if (e.target.matches('button')) {
+            const key = e.target;
+            var voteObject = {}; // Apparently makes a new object in JavaScript
+            voteObject.voteValue = key.value;
+            voteObject.date = Date.now();
+            voteObject.pubName = key.parentNode.getAttribute("id").replace("Buttons", "");
+            voteObject.url = '/voted';
+
+            // DEBUG PRINTS
+            console.log("Pressed: " + voteObject.pubName + '\n');
+            // console.log(voteObject.pubName)
+            // console.log(buttonid + '\n');
+
+            sendAndReceiveJSON(voteObject, voteObject.url, "post");
+            }
+        })
     }
-
-});
+};
 
 var v = 0;
 
@@ -41,9 +47,6 @@ async function sendAndReceiveJSON(data, url, method) {
 
     // Results is parsed as JSON
     let result = await response.json();
-
-    // @Todo Fix the hardcoded id value in call to changeQueueColor. Potentially enum the pub names and use index of pub?
-    changeQueueColour("wijkanders", 2);
     changeQueueColour(data.pubName, result.colorIndex);
 
     // DEBUG RELATED LINES

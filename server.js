@@ -70,4 +70,3 @@ server.use("/js", express.static(__dirname + '/js'))
 server.use("/images", express.static(__dirname + '/images'))
 server.use("/css", express.static(__dirname + '/css'))
 server.use("/fonts", express.static(__dirname + '/fonts'))
-
