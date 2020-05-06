@@ -7,7 +7,7 @@ for (var i = 0; i < sortElems.length; i++) {
     this.classList.toggle("active");
 
 
-    if (elem.id == "alpha"){
+    if (elem.id === "alpha"){
         alert("alpha");
         //sortFunction(PUBLIST, "alpha");
     } else {
@@ -28,7 +28,7 @@ alert(PL);
 //Sort the pub based on its argument, either alphabetically or by queue length-
 function sortFunction (publist, sortBy) {
 
-    if (sortBy == "alpha"){
+    if (sortBy === "alpha"){
         publist.sort();
     }
     else {
