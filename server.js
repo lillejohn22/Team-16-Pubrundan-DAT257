@@ -11,13 +11,14 @@ server.use(express.urlencoded({extended: false}))
 server.listen(port, () => console.log(`Server started on port: ${port}`))
 
 server.get('/', (req, res) => res.sendFile('index.html', {root: __dirname}));
+server.get('/pub-data.json', (req, res) => res.status(200).json(__dirname + 'pub-data.json'));
 
 var requestNumber = 0;
 var lastFiveVotesArray = [];
 server.use('/voted', (request, response, next) => {
     let voteValue = request.body.voteValue;
     updateQueueArray(voteValue);
-    // @TODO Find better vaiable shit thing updatedVoteValueToBePassedToWebsite
+    // @TODO Find better viable shit thing updatedVoteValueToBePassedToWebsite
     let updatedVoteValueToBePassedToWebsite = getUpdatedVoteValue(voteValue);
 
     response.status(200).json(updatedVoteValueToBePassedToWebsite);

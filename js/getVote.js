@@ -9,10 +9,14 @@ keys.addEventListener('click', e => {
         var voteObject = {}; // Apparently makes a new object in JavaScript
         voteObject.voteValue = key.value;
         voteObject.date = Date.now();
-        voteObject.pubName = key.parentNode.getAttribute("id");
+        var buttonid = key.parentNode.getAttribute("id");
+        console.log(buttonid);
+        console.log("hej");
+        voteObject.pubName = buttonid.replace("Buttons","");
         voteObject.url = '/voted';
         sendAndReceiveJSON(voteObject, voteObject.url, "post");
     }
+
 });
 
 var v = 0;
@@ -39,7 +43,8 @@ async function sendAndReceiveJSON(data, url, method) {
     let result = await response.json();
 
     // @Todo Fix the hardcoded id value in call to changeQueueColor. Potentially enum the pub names and use index of pub?
-    changeQueueColour("bulten", result.colorIndex);
+    changeQueueColour("wijkanders", 2);
+    changeQueueColour(data.pubName, result.colorIndex);
 
     // DEBUG RELATED LINES
     // console.log("The data that is sent " + JSON.stringify(data));
