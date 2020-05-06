@@ -10,7 +10,7 @@ const port = (process.env.PORT || 3000)
 server.use(express.json())
 server.use(express.urlencoded({extended: false}))
 
-server.listen(port, () => console.log(`Server started on port: ${port}`))
+server.listen(port, () => console.log(`Server started on "localhost: ${port}"`))
 
 server.get('/', (req, res) => res.sendFile('index.html', {root: __dirname}));
 server.get('/pub-data.json', (req, res) => {
