@@ -5,6 +5,8 @@
  */
 
 window.onload = function() {
+    enableVoting();
+
     var elems = document.getElementsByClassName("grid-element");
     var locInfo = document.getElementsByClassName("location-info");
     var timeInfo = document.getElementsByClassName("time-info");
@@ -30,7 +32,8 @@ window.onload = function() {
 
 
             // The "help" element does not need any information from pub-data.json
-            if (elemID !== "help") { 
+            if (elemID !== "help") {
+                console.log(JSON.parse(data))
                 $(locInfo[i]).text(data[elemID].location)
                 $(timeInfo[i]).text(data[elemID].openingHours)
 
