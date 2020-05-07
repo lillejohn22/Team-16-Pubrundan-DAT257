@@ -1,14 +1,14 @@
 
 //Sorts the pubs based on whether alphabetical or queue length is picked.
+//Calculates the average of the latest queue entries.
+//Displays each sorted list depending on which buttons was pressed
+/**
+ * This file has a function for sorting an array list, alphabetically and after queue length.
+ * It also registers which button was pressed and sorts the element on the website accordingly.
+ */
+
 var sortElems = document.getElementsByClassName("sortButtons");
-var elem = document.getElementsByClassName("sortPubs");
-
-//sortElems[0] = document.getElementById("alpha");
-//var elem2 = document.getElementById("alpha");
-
-
-//var EL = sortElems;
-//EL = [elem1, elem2];
+var elem = $('input[type=radio]'); //document.getElementsByTagName("input");
 
 var PL = ["wijkanders", "bulten", "japripps", "gasquen", "cafec", "11an", "rodarummet", "ventren",
 "basen", "goldeni", "kajsabaren", "focus", "hubben21", "fortnox", "gastownospritkoket", "winden", "jarnvagspub", "zaloonen", "pignwhistle"];
@@ -26,6 +26,7 @@ for (var i = 0; i < sortElems.length; i++) {
         sortFunction(PL, "alpha");
 
 
+        // removes each element's classlist tags for an element's order on the website
         for (var i = 0; i < PL.length; i++) {
         document.getElementById(PL[i]).classList.remove('order-1');
         document.getElementById(PL[i]).classList.remove('order-2');
@@ -48,7 +49,7 @@ for (var i = 0; i < sortElems.length; i++) {
         document.getElementById(PL[i]).classList.remove('order-19');
 
 
-
+        // adds new classlist tag for every element in order of new list
         switch(i) {
           case 0:
             document.getElementById(PL[i]).classList.add('order-1');
@@ -118,6 +119,8 @@ for (var i = 0; i < sortElems.length; i++) {
 
        // alert("queue");
         sortFunction(PL, "queue");
+
+        // removes each element's classlist tags for an element's order on the website
         for (var i = 0; i < PL.length; i++) {
                 document.getElementById(PL[i]).classList.remove('order-1');
                 document.getElementById(PL[i]).classList.remove('order-2');
@@ -140,6 +143,7 @@ for (var i = 0; i < sortElems.length; i++) {
                 document.getElementById(PL[i]).classList.remove('order-19');
 
 
+                // adds new classlist tag for every element in order of new list
                 switch(i) {
                   case 0:
                     document.getElementById(PL[i]).classList.add('order-1');
@@ -219,7 +223,11 @@ sortFunction(PL, "alpha");
 alert(PL);
 */
 
-//Sort the pub based on its argument, either alphabetically or by queue length-
+
+/**
+ * Sorts the pub based on its argument, either alphabetically or by queue length.
+ * @param Array publist, String sortBy
+ */
 function sortFunction (publist, sortBy) {
 
     if (sortBy === "alpha"){
@@ -242,7 +250,10 @@ function sortFunction (publist, sortBy) {
     }
 }
 
-//Returns the corresponding number based on which queue-class a pub has.
+/**
+ * Returns the corresponding number based on which queue-class a pub has.
+ * @returns value to be used in the sort function above
+ */
 function getQueueLength(pub){
 
             var pubItem = document.getElementById(pub);
