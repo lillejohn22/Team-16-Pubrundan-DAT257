@@ -1,5 +1,4 @@
 
-//Calculates the average of the latest queue entries.
 /**
  * Calculates the new queue for the pub with the corresponding queueID. The newVote is
  * the latest new vote session and voteTime is when the vote was placed and it will be
@@ -15,7 +14,11 @@ function calculateQueue(queueID, newVote, voteTime){
     var mediumTotal = 0;
     var longTotal = 0;
 
-    // 1 = short, 2 = medium, 3 = long
+    /*
+    Checks the occurences of the votes in
+    the array. Votes are represented by:
+    1 = short, 2 = medium, 3 = long
+    */
     for(var i=0;i<newVote.length;i++){
         if(newVote[i] === 1) {
             shortTotal++;
@@ -28,7 +31,11 @@ function calculateQueue(queueID, newVote, voteTime){
         }
     }
 
-    // Return Pubname and queue type
+    /*
+    The if-staesments will check which
+    vote who has the most occurences. If
+    there is a tie, the bigger goes through.
+    */
     if(shortTotal > (mediumTotal || longTotal)){
         return queueID + "Short";
     }
