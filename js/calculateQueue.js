@@ -1,11 +1,6 @@
 allPubs = new Map();
-pubNames = ["bulten", "japripps", "wijkanders", "gasquen", "cafec", "11an", "rodarummet", "ventren",
-            "basen", "goldeni", "kajsabaren", "focus", "hubben21", "fortnox", "gastownospritkoket",
-            "winden", "jarnvagspub", "zaloonen", "pignwhistle"]
-
 // ENUM hax in javascript
 const QueueLength = {SHORT: 1, MEDIUM: 2, LONG: 3,}; Object.freeze(QueueLength);
-
 // -----------------------------------------------------------------------------------------------------------
 
 module.exports = function updateQueue(voteObject){
