@@ -8,6 +8,7 @@ var pubList = ["wijkanders", "bulten", "japripps", "gasquen", "cafec", "11an", "
           "kajsabaren", "focus", "hubben21", "fortnox", "gastownospritkoket", "winden", "jarnvagspub", "zaloonen",
           "pignwhistle"];
 
+queueSort();
 
 /**
  * Sorts the pubs based on the alphabetical order.
