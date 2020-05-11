@@ -38,15 +38,8 @@
                     <a class="nav-link" href="/views/pubmap.html">Pub Map</a>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</a>
-                    
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="./views/profile.html">My account</a>
-                        <a class="dropdown-item" href="">Information</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Extra</a>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="/views/help.html">Help</a>
                 </li>
 
                 <li class="nav-item">
@@ -87,76 +80,39 @@
     </div> <!-- Search/sort/filter END -->
 
 
-    <!----------------------- 
+    <!-----------------------
+          Detailed view
+   ------------------------>
+    <div class="container-fluid detailed-view">
+        <div class="detailed-view-content">
+            <div class="exit-button" onclick="toggleDetailedView()"></div>
+        </div>
+    </div>
+
+
+    <!-----------------------
         Grid/list of pubs 
     ------------------------>
     <div class="container-fluid" id="grid-container">
         <div class="row">
-            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-first" id="help">
-                <p id="help-text">Tap me to expand/contract!</p>
-
-                <div class="grid-element-contracted-info">
-                    <h3 class="grid-element-name">Help me!</h3>
-                    <i class="material-icons grid-element-expand-indicator" id="help-expand-indicator">keyboard_arrow_down </i>
-                </div>
-
-                <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png"></img>
-                    <span class="location-info">Tap to open map :)</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/time.png"></img>
-                    <span class="time-info">00 - 00</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/vote.png"></img>
-                    <span>How long is queue?</span>
-
-                    <div class="container queue-container">
-                        <div class="queueVoter">
-
-                            <div class="voteButton" id="helpButtons">
-                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <div class="container-fluid grid-icon-info-container">
-                        <p>Filled in =  available!</p>
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer.png" title="Beer"></img>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"></img>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"></img>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food.png" title="Food"></img>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities"></img>
-                    </div>
-                </div>
-            </div>
-
             <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-1 short-queue" id="bulten">
                 <div class="grid-element-contracted-info">
                     <h3 class="grid-element-name">Café Bulten</h3>
                     <i class="material-icons grid-element-expand-indicator">keyboard_arrow_down </i>
                 </div>
-                
+
                 <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png"></img>
+                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
                     <span class="location-info">Rainbow Road 1</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/time.png"></img>
+                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
                     <span class="time-info">00 - 00</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/vote.png"></img>
+                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
                     <span>Queue length vote</span>
 
                     <div class="container queue-container">
@@ -172,14 +128,19 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"></img>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"></img>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"></img>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"></img>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities"></img>
+                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
                     </div>
-                </div> 
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <button class="detailed-view-button btn btn-outline-info btn-sm"
+                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                </div>
             </div>
 
             <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-2 medium-queue" id="japripps">
@@ -189,17 +150,17 @@
                 </div>
 
                 <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png"></img>
+                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
                     <span class="location-info">Rainbow Road 1</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/time.png"></img>
+                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
                     <span class="time-info">00 - 00</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/vote.png"></img>
+                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
                     <span>Queue length vote</span>
 
                     <div class="container queue-container">
@@ -215,14 +176,19 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"></img>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"></img>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"></img>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"></img>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities"></img>
+                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
                     </div>
-                </div> 
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <button class="detailed-view-button btn btn-outline-info btn-sm"
+                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                </div>
             </div>
 
             <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-3 long-queue" id="wijkanders">
@@ -232,17 +198,17 @@
                 </div>
 
                 <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png"></img>
+                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
                     <span class="location-info">Rainbow Road 1</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/time.png"></img>
+                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
                     <span class="time-info">00 - 00</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/vote.png"></img>
+                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
                     <span>Queue length vote</span>
 
                     <div class="container queue-container">
@@ -258,14 +224,19 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"></img>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"></img>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"></img>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"></img>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities"></img>
+                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
                     </div>
-                </div> 
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <button class="detailed-view-button btn btn-outline-info btn-sm"
+                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                </div>
             </div>
 
             <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-4 pub-closed" id="gasquen">
@@ -275,17 +246,17 @@
                 </div>
 
                 <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png"></img>
+                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
                     <span class="location-info">Rainbow Road 1</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/time.png"></img>
+                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
                     <span class="time-info">00 - 00</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/vote.png"></img>
+                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
                     <span>Queue length vote</span>
 
                     <div class="container queue-container">
@@ -301,14 +272,19 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"></img>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"></img>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"></img>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"></img>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities"></img>
+                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
                     </div>
-                </div> 
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <button class="detailed-view-button btn btn-outline-info btn-sm"
+                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                </div>
             </div>
 
             <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-5 pub-closed" id="cafec">
@@ -318,17 +294,17 @@
                 </div>
 
                 <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png"></img>
+                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
                     <span class="location-info">Rainbow Road 1</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/time.png"></img>
+                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
                     <span class="time-info">00 - 00</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/vote.png"></img>
+                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
                     <span>Queue length vote</span>
 
                     <div class="container queue-container">
@@ -344,14 +320,19 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"></img>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"></img>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"></img>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"></img>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities"></img>
+                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
                     </div>
-                </div> 
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <button class="detailed-view-button btn btn-outline-info btn-sm"
+                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                </div>
             </div>
 
             <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-6 pub-closed" id="11an">
@@ -361,17 +342,17 @@
                 </div>
 
                 <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png"></img>
+                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
                     <span class="location-info">Rainbow Road 1</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/time.png"></img>
+                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
                     <span class="time-info">00 - 00</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/vote.png"></img>
+                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
                     <span>Queue length vote</span>
 
                     <div class="container queue-container">
@@ -387,14 +368,19 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"></img>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"></img>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"></img>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"></img>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities"></img>
+                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
                     </div>
-                </div> 
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <button class="detailed-view-button btn btn-outline-info btn-sm"
+                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                </div>
             </div>
 
             <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-7 pub-closed" id="rodarummet">
@@ -404,17 +390,17 @@
                 </div>
 
                 <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png"></img>
+                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
                     <span class="location-info">Rainbow Road 1</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/time.png"></img>
+                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
                     <span class="time-info">00 - 00</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/vote.png"></img>
+                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
                     <span>Queue length vote</span>
 
                     <div class="container queue-container">
@@ -430,14 +416,19 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"></img>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"></img>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"></img>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"></img>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities"></img>
+                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
                     </div>
-                </div> 
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <button class="detailed-view-button btn btn-outline-info btn-sm"
+                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                </div>
             </div>
 
             <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-8 pub-closed" id="ventren">
@@ -447,17 +438,17 @@
                 </div>
 
                 <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png"></img>
+                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
                     <span class="location-info">Rainbow Road 1</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/time.png"></img>
+                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
                     <span class="time-info">00 - 00</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/vote.png"></img>
+                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
                     <span>Queue length vote</span>
 
                     <div class="container queue-container">
@@ -473,14 +464,19 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"></img>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"></img>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"></img>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"></img>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities"></img>
+                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
                     </div>
-                </div> 
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <button class="detailed-view-button btn btn-outline-info btn-sm"
+                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                </div>
             </div>
 
             <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-9 pub-closed" id="basen">
@@ -490,17 +486,17 @@
                 </div>
 
                 <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png"></img>
+                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
                     <span class="location-info">Rainbow Road 1</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/time.png"></img>
+                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
                     <span class="time-info">00 - 00</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/vote.png"></img>
+                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
                     <span>Queue length vote</span>
 
                     <div class="container queue-container">
@@ -516,14 +512,19 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"></img>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"></img>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"></img>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"></img>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities"></img>
+                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
                     </div>
-                </div> 
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <button class="detailed-view-button btn btn-outline-info btn-sm"
+                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                </div>
             </div>
 
             <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-10 pub-closed" id="goldeni">
@@ -533,17 +534,17 @@
                 </div>
 
                 <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png"></img>
+                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
                     <span class="location-info">Rainbow Road 1</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/time.png"></img>
+                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
                     <span class="time-info">00 - 00</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/vote.png"></img>
+                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
                     <span>Queue length vote</span>
 
                     <div class="container queue-container">
@@ -559,14 +560,19 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"></img>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"></img>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"></img>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"></img>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities"></img>
+                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
                     </div>
-                </div> 
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <button class="detailed-view-button btn btn-outline-info btn-sm"
+                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                </div>
             </div>
 
             <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-11 pub-closed" id="kajsabaren">
@@ -576,17 +582,17 @@
                 </div>
 
                 <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png"></img>
+                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
                     <span class="location-info">Rainbow Road 1</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/time.png"></img>
+                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
                     <span class="time-info">00 - 00</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/vote.png"></img>
+                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
                     <span>Queue length vote</span>
 
                     <div class="container queue-container">
@@ -602,14 +608,19 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"></img>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"></img>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"></img>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"></img>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities"></img>
+                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
                     </div>
-                </div> 
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <button class="detailed-view-button btn btn-outline-info btn-sm"
+                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                </div>
             </div>
 
             <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-12 pub-closed" id="focus">
@@ -619,17 +630,17 @@
                 </div>
 
                 <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png"></img>
+                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
                     <span class="location-info">Rainbow Road 1</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/time.png"></img>
+                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
                     <span class="time-info">00 - 00</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/vote.png"></img>
+                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
                     <span>Queue length vote</span>
 
                     <div class="container queue-container">
@@ -645,14 +656,19 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"></img>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"></img>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"></img>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"></img>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities"></img>
+                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
                     </div>
-                </div> 
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <button class="detailed-view-button btn btn-outline-info btn-sm"
+                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                </div>
             </div>
 
             <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-13 pub-closed" id="hubben21">
@@ -662,17 +678,17 @@
                 </div>
 
                 <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png"></img>
+                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
                     <span class="location-info">Rainbow Road 1</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/time.png"></img>
+                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
                     <span class="time-info">00 - 00</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/vote.png"></img>
+                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
                     <span>Queue length vote</span>
 
                     <div class="container queue-container">
@@ -688,14 +704,19 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"></img>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"></img>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"></img>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"></img>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities"></img>
+                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
                     </div>
-                </div> 
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <button class="detailed-view-button btn btn-outline-info btn-sm"
+                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                </div>
             </div>
 
             <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-14 pub-closed" id="fortnox">
@@ -705,17 +726,17 @@
                 </div>
 
                 <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png"></img>
+                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
                     <span class="location-info">Rainbow Road 1</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/time.png"></img>
+                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
                     <span class="time-info">00 - 00</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/vote.png"></img>
+                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
                     <span>Queue length vote</span>
 
                     <div class="container queue-container">
@@ -731,14 +752,19 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"></img>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"></img>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"></img>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"></img>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities"></img>
+                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
                     </div>
-                </div> 
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <button class="detailed-view-button btn btn-outline-info btn-sm"
+                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                </div>
             </div>
 
             <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-15 pub-closed" id="gastownospritkoket">
@@ -748,17 +774,17 @@
                 </div>
 
                 <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png"></img>
+                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
                     <span class="location-info">Rainbow Road 1</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/time.png"></img>
+                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
                     <span class="time-info">00 - 00</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/vote.png"></img>
+                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
                     <span>Queue length vote</span>
 
                     <div class="container queue-container">
@@ -774,14 +800,19 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"></img>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"></img>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"></img>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"></img>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities"></img>
+                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
                     </div>
-                </div> 
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <button class="detailed-view-button btn btn-outline-info btn-sm"
+                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                </div>
             </div>
 
             <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-16 pub-closed" id="winden">
@@ -791,17 +822,18 @@
                 </div>
 
                 <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png"></img>
+                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
                     <span class="location-info">Rainbow Road 1</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/time.png"></img>
+                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
                     <span class="time-info">00 - 00</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/vote.png"></img>
+                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                    <span>Queue length vote</span>
                     <span>Queue length vote</span>
 
                     <div class="container queue-container">
@@ -817,14 +849,19 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"></img>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"></img>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"></img>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"></img>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities"></img>
+                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
                     </div>
-                </div> 
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <button class="detailed-view-button btn btn-outline-info btn-sm"
+                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                </div>
             </div>
 
             <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-17 pub-closed" id="jarnvagspub">
@@ -834,17 +871,18 @@
                 </div>
 
                 <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png"></img>
+                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
                     <span class="location-info">Rainbow Road 1</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/time.png"></img>
+                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
                     <span class="time-info">00 - 00</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/vote.png"></img>
+                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                    <span>Queue length vote</span>
                     <span>Queue length vote</span>
 
                     <div class="container queue-container">
@@ -860,14 +898,19 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"></img>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"></img>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"></img>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"></img>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities"></img>
+                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
                     </div>
-                </div> 
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <button class="detailed-view-button btn btn-outline-info btn-sm"
+                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                </div>
             </div>
 
             <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-18 pub-closed" id="zaloonen">
@@ -877,17 +920,17 @@
                 </div>
 
                 <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png"></img>
+                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
                     <span class="location-info">Rainbow Road 1</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/time.png"></img>
+                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
                     <span class="time-info">00 - 00</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/vote.png"></img>
+                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
                     <span>Queue length vote</span>
 
                     <div class="container queue-container">
@@ -903,14 +946,19 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"></img>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"></img>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"></img>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"></img>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities"></img>
+                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
                     </div>
-                </div> 
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <button class="detailed-view-button btn btn-outline-info btn-sm"
+                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                </div>
             </div>
 
             <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-19 pub-closed" id="pignwhistle">
@@ -920,17 +968,17 @@
                 </div>
 
                 <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png"></img>
+                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
                     <span class="location-info">Rainbow Road 1</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/time.png"></img>
+                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
                     <span class="time-info">00 - 00</span>
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/vote.png"></img>
+                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
                     <span>Queue length vote</span>
 
                     <div class="container queue-container">
@@ -946,14 +994,19 @@
                     <hr class="grid-element-expanded-info-hr">
 
                     <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"></img>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"></img>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"></img>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"></img>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea"></img>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities"></img>
+                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
                     </div>
-                </div> 
+
+                    <hr class="grid-element-expanded-info-hr">
+
+                    <button class="detailed-view-button btn btn-outline-info btn-sm"
+                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                </div>
             </div> <!-- Columns END -->
         </div> <!-- Row END -->
     </div><!-- Grid END -->
@@ -1031,9 +1084,11 @@
      <!-- JavaScript files-->
     <script src="../js/changeQueueColour.js"></script>
     <script src="../js/sortFunction.js"></script>
+    <script src="../js/calculateQueue.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../js/expandContractGridElements.js"></script>
     <script src="../js/getVote.js"></script>
+    <script src="../js/handleDetailedView.js"></script>
 
     <!-- The window.onload function has to be the last one to be loaded! -->
     <script src="../js/addPubInfo.js"></script>

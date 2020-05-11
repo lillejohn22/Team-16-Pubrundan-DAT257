@@ -1,11 +1,4 @@
 /* ---------------
-      Colours
-   --------------- */
-/* https://coolors.co/414141-ccdfcb-ff6a5c-056571-d33f49-88d18a-ffd25a */
-
-
-
-/* ---------------
         Fonts
    --------------- */
 @font-face {
@@ -38,6 +31,10 @@
   src: url(../fonts/oswald/static/Oswald-Light.ttf)
 }
 
+
+/* ---------------
+       Body
+   --------------- */
 body {
   background-color: #F4F7F5;
 }
@@ -48,42 +45,42 @@ body {
    --------------- */
 
 .navbar {
-  font-family: "Raleway Regular";
-  font-size: 1em;
-  background-color: #333333;
-  color: #F4F7F5;
+    font-family: "Raleway Regular";
+    font-size: 1em;
+    background-color: #333333;
+    color: #F4F7F5;
+    z-index: 99;
 }
 
 .navbar a {
-  color: #999999;
-  -webkit-transition: all .5s ease;   /* Safari and Chrome */
-  -moz-transition: all .5s ease;      /* Firefox */
-  -ms-transition: all .5s ease;       /* IE 9 */
-  -o-transition: all .5s ease;        /* Opera */
-  transition: all .5s ease;
+    color: #999999;
+    -webkit-transition: all .5s ease;   /* Safari and Chrome */
+    -moz-transition: all .5s ease;      /* Firefox */
+    -o-transition: all .5s ease;        /* Opera */
+    transition: all .5s ease;
 }
 
 .navbar .navbar-brand {
-  font-size: 1.5em;
-  margin-left: 12.5%;
-  text-transform: uppercase;
-  color: #F4F7F5;
+    font-size: 1.5em;
+    margin-left: 12.5%;
+    text-transform: uppercase;
+    color: #F4F7F5;
 }
 
 .nav-items {
-  margin-left: 12.5%;
+    margin-left: 12.5%;
 }
 
 .nav-item {
-  padding-left: 50pt;
+    padding-left: 50pt;
 }
 
 .navbar-toggler {
-  margin-right: 12.5%;
+    margin-right: 12.5%;
 }
 
 .nav-item > a:hover {
-  color: #F4F7F5;
+    color: #F4F7F5;
 }
 
 
@@ -113,7 +110,6 @@ body {
  .align-radio {
   display: flex;
   justify-content: center;
-
 }
 
 
@@ -137,7 +133,6 @@ body {
     height: 100pt;
     -webkit-transition: all .5s ease;   /* Safari and Chrome */
     -moz-transition: all .5s ease;      /* Firefox */
-    -ms-transition: all .5s ease;       /* IE 9 */
     -o-transition: all .5s ease;        /* Opera */
     transition: all .5s ease;
 }
@@ -149,7 +144,6 @@ body {
   height: 100pt;
   -webkit-transition: all .5s ease;   /* Safari and Chrome */
   -moz-transition: all .5s ease;      /* Firefox */
-  -ms-transition: all .5s ease;       /* IE 9 */
   -o-transition: all .5s ease;        /* Opera */
   transition: all .5s ease;
 }
@@ -203,10 +197,9 @@ body {
   left: 5%;
   z-index: 10;
   width: 90%;
-  height: 69%;
+  height: 72.5%;
   padding: 15pt;
   background-color: #F4F7F5;
-  overflow: auto; 
   overflow: hidden;
   transition: all 0.2s ease-out;
 }
@@ -241,36 +234,109 @@ body {
 }
 
 .grid-icon-info {
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 24px;
-  height: 24px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 24px;
+    height: 24px;
 }
 
 .grid-icon-info-container p {
-  font-family: Raleway Regular;
-  text-align: center;
-  font-size: 10pt;
-  margin: -7pt 0 0 0 ;
+    font-family: Raleway Regular;
+    text-align: center;
+    font-size: 10pt;
+    margin: -7pt 0 0 0 ;
 }
 
 #help-text {
-  color: #FFFFFF;
-  font-family: Raleway Regular;
-  text-align: center;
-  margin-top: 2%;
-  font-size: 10pt;;
+    color: #FFFFFF;
+    font-family: Raleway Regular;
+    text-align: center;
+    margin-top: 2%;
+    font-size: 10pt;;
 }
 
 #help {
-  background-color: #3BB2E2;
-  opacity: 80%;
+    background-color: #3BB2E2;
+    opacity: 80%;
 }
 
 #help:hover {
-  background-color: #3BB2E2;
-  opacity: 100%;
+    background-color: #3BB2E2;
+    opacity: 100%;
+}
+
+.detailed-view-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ---------------
+   Detailed view
+   --------------- */
+
+.detailed-view {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+    transform: scale(1.1);
+    -webkit-transition: all .25s ease;   /* Safari and Chrome */
+    -moz-transition: all .25s ease;      /* Firefox */
+    -o-transition: all .25s ease;        /* Opera */
+    transition: all .25s ease;
+}
+
+.detailed-view-content {
+    position: fixed;
+    left: 10%;
+    top: 10%;
+    width: 80%;
+    height: auto;
+    background-color: #F4F7F5;
+    padding: 5pt;
+    -webkit-transition: all .25s ease;   /* Safari and Chrome */
+    -moz-transition: all .25s ease;      /* Firefox */
+    -o-transition: all .25s ease;        /* Opera */
+    transition: all .25s ease;
+}
+
+.show-detailed-view {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    -webkit-transition: all .5s ease;   /* Safari and Chrome */
+    -moz-transition: all .5s ease;      /* Firefox */
+    -o-transition: all .5s ease;        /* Opera */
+    transition: all .5s ease;
+}
+
+.exit-button {
+    float: right;
+    width: 15pt;
+    height: 15pt;
+    background-image: url("../images/icons/exit-nocolor.png");
+    background-size: contain;
+    -webkit-transition: all .25s ease;   /* Safari and Chrome */
+    -moz-transition: all .25s ease;      /* Firefox */
+    -o-transition: all .25s ease;        /* Opera */
+    transition: all .25s ease;
+}
+
+.exit-button:hover {
+    background-image: url("../images/icons/exit.png");
+    cursor: pointer;
+    -webkit-transition: all .25s ease;   /* Safari and Chrome */
+    -moz-transition: all .25s ease;      /* Firefox */
+    -o-transition: all .25s ease;        /* Opera */
+    transition: all .25s ease;
 }
 
 
@@ -337,6 +403,7 @@ body {
 
 .order-19{-ms-flex-order:19;order:19}
 
+
 /* ---------------
        Footer
    --------------- */
@@ -355,7 +422,6 @@ body {
   color: #999999;
   -webkit-transition: all .5s ease;   /* Safari and Chrome */
   -moz-transition: all .5s ease;      /* Firefox */
-  -ms-transition: all .5s ease;       /* IE 9 */
   -o-transition: all .5s ease;        /* Opera */
   transition: all .5s ease;
 }
@@ -374,7 +440,6 @@ body {
   padding-bottom: 10pt;
   -webkit-transition: all .5s ease;   /* Safari and Chrome */
   -moz-transition: all .5s ease;      /* Firefox */
-  -ms-transition: all .5s ease;       /* IE 9 */
   -o-transition: all .5s ease;        /* Opera */
   transition: all .5s ease;
 }
