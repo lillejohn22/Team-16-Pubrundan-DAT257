@@ -1,275 +1,183 @@
-
-//Sorts the pubs based on whether alphabetical or queue length is picked.
-//Calculates the average of the latest queue entries.
-//Displays each sorted list depending on which buttons was pressed
 /**
  * This file has a function for sorting an array list, alphabetically and after queue length.
  * It also registers which button was pressed and sorts the element on the website accordingly.
  */
 
-var sortElems = document.getElementsByClassName("sortButtons");
-var elem = $('input[type=radio]'); //document.getElementsByTagName("input");
 
-var PL = ["wijkanders", "bulten", "japripps", "gasquen", "cafec", "11an", "rodarummet", "ventren",
-"basen", "goldeni", "kajsabaren", "focus", "hubben21", "fortnox", "gastownospritkoket", "winden", "jarnvagspub", "zaloonen", "pignwhistle"];
-
+var pubList = ["wijkanders", "bulten", "japripps", "gasquen", "cafec", "11an", "rodarummet", "ventren", "basen", "goldeni",
+          "kajsabaren", "focus", "hubben21", "fortnox", "gastownospritkoket", "winden", "jarnvagspub", "zaloonen",
+          "pignwhistle"];
 
 
-for (var i = 0; i < sortElems.length; i++) {
-  sortElems[i].addEventListener("click", function() {
-    this.classList.toggle("active");
+/**
+ * Sorts the pubs based on the alphabetical order.
+ */
+function alphaSort() {
+    sortFunction(pubList, "alpha");
+
+    for (let i = 0; i < pubList.length; i++) {
+        removeOrderTags(i);
+        addOrderTag(i);
+    }
+}
 
 
-        if(elem.id === "alpha") {
+/**
+ * Sorts the pubs based on the queue length.
+ */
+function queueSort () {
+    sortFunction(pubList, "queue");
 
-        //alert("abcdef");
-        sortFunction(PL, "alpha");
-
-
-        // removes each element's classlist tags for an element's order on the website
-        for (var i = 0; i < PL.length; i++) {
-        document.getElementById(PL[i]).classList.remove('order-1');
-        document.getElementById(PL[i]).classList.remove('order-2');
-        document.getElementById(PL[i]).classList.remove('order-3');
-        document.getElementById(PL[i]).classList.remove('order-4');
-        document.getElementById(PL[i]).classList.remove('order-5');
-        document.getElementById(PL[i]).classList.remove('order-6');
-        document.getElementById(PL[i]).classList.remove('order-7');
-        document.getElementById(PL[i]).classList.remove('order-8');
-        document.getElementById(PL[i]).classList.remove('order-9');
-        document.getElementById(PL[i]).classList.remove('order-10');
-        document.getElementById(PL[i]).classList.remove('order-11');
-        document.getElementById(PL[i]).classList.remove('order-12');
-        document.getElementById(PL[i]).classList.remove('order-13');
-        document.getElementById(PL[i]).classList.remove('order-14');
-        document.getElementById(PL[i]).classList.remove('order-15');
-        document.getElementById(PL[i]).classList.remove('order-16');
-        document.getElementById(PL[i]).classList.remove('order-17');
-        document.getElementById(PL[i]).classList.remove('order-18');
-        document.getElementById(PL[i]).classList.remove('order-19');
+    for (let i = 0; i < pubList.length; i++) {
+        removeOrderTags(i);
+        addOrderTag(i);
+    }
+}
 
 
-        // adds new classlist tag for every element in order of new list
-        switch(i) {
-          case 0:
-            document.getElementById(PL[i]).classList.add('order-1');
+/**
+ * Removes each element's class list tags for an element's order on the website.
+ *
+ * @param {int} i - the index of the element
+ */
+function removeOrderTags(i) {
+    document.getElementById(pubList[i]).classList.remove('order-1');
+    document.getElementById(pubList[i]).classList.remove('order-2');
+    document.getElementById(pubList[i]).classList.remove('order-3');
+    document.getElementById(pubList[i]).classList.remove('order-4');
+    document.getElementById(pubList[i]).classList.remove('order-5');
+    document.getElementById(pubList[i]).classList.remove('order-6');
+    document.getElementById(pubList[i]).classList.remove('order-7');
+    document.getElementById(pubList[i]).classList.remove('order-8');
+    document.getElementById(pubList[i]).classList.remove('order-9');
+    document.getElementById(pubList[i]).classList.remove('order-10');
+    document.getElementById(pubList[i]).classList.remove('order-11');
+    document.getElementById(pubList[i]).classList.remove('order-12');
+    document.getElementById(pubList[i]).classList.remove('order-13');
+    document.getElementById(pubList[i]).classList.remove('order-14');
+    document.getElementById(pubList[i]).classList.remove('order-15');
+    document.getElementById(pubList[i]).classList.remove('order-16');
+    document.getElementById(pubList[i]).classList.remove('order-17');
+    document.getElementById(pubList[i]).classList.remove('order-18');
+    document.getElementById(pubList[i]).classList.remove('order-19');
+}
+
+
+/**
+ * Adds new class list tag for every element in order of new list.
+ *
+ * @param {int} i - the index of the element
+ */
+function addOrderTag(i) {
+    switch (i) {
+        case 0:
+            document.getElementById(pubList[i]).classList.add('order-1');
             break;
-          case 1:
-            document.getElementById(PL[i]).classList.add('order-2');
+        case 1:
+            document.getElementById(pubList[i]).classList.add('order-2');
             break;
-          case 2:
-            document.getElementById(PL[i]).classList.add('order-3');
+        case 2:
+            document.getElementById(pubList[i]).classList.add('order-3');
             break;
-          case 3:
-            document.getElementById(PL[i]).classList.add('order-4');
+        case 3:
+            document.getElementById(pubList[i]).classList.add('order-4');
             break;
-            case 4:
-            document.getElementById(PL[i]).classList.add('order-5');
+        case 4:
+            document.getElementById(pubList[i]).classList.add('order-5');
             break;
-            case 5:
-            document.getElementById(PL[i]).classList.add('order-6');
+        case 5:
+            document.getElementById(pubList[i]).classList.add('order-6');
             break;
-            case 6:
-            document.getElementById(PL[i]).classList.add('order-7');
+        case 6:
+            document.getElementById(pubList[i]).classList.add('order-7');
             break;
-            case 7:
-            document.getElementById(PL[i]).classList.add('order-8');
+        case 7:
+            document.getElementById(pubList[i]).classList.add('order-8');
             break;
-            case 8:
-            document.getElementById(PL[i]).classList.add('order-9');
+        case 8:
+            document.getElementById(pubList[i]).classList.add('order-9');
             break;
-            case 9:
-            document.getElementById(PL[i]).classList.add('order-10');
+        case 9:
+            document.getElementById(pubList[i]).classList.add('order-10');
             break;
-            case 10:
-            document.getElementById(PL[i]).classList.add('order-11');
-             break;
-            case 11:
-            document.getElementById(PL[i]).classList.add('order-12');
-             break;
-            case 12:
-            document.getElementById(PL[i]).classList.add('order-13');
-             break;
-            case 13:
-            document.getElementById(PL[i]).classList.add('order-14');
-             break;
-            case 14:
-            document.getElementById(PL[i]).classList.add('order-15');
-             break;
-            case 15:
-            document.getElementById(PL[i]).classList.add('order-16');
-             break;
-            case 16:
-            document.getElementById(PL[i]).classList.add('order-17');
-             break;
-            case 17:
-            document.getElementById(PL[i]).classList.add('order-18');
-             break;
-            case 18:
-            document.getElementById(PL[i]).classList.add('order-19');
-             break;
-
-          default:
-            alert(PL);
-        }
-
-        }
-
-} else {
-
-       // alert("queue");
-        sortFunction(PL, "queue");
-
-        // removes each element's classlist tags for an element's order on the website
-        for (var i = 0; i < PL.length; i++) {
-                document.getElementById(PL[i]).classList.remove('order-1');
-                document.getElementById(PL[i]).classList.remove('order-2');
-                document.getElementById(PL[i]).classList.remove('order-3');
-                document.getElementById(PL[i]).classList.remove('order-4');
-                document.getElementById(PL[i]).classList.remove('order-5');
-                document.getElementById(PL[i]).classList.remove('order-6');
-                document.getElementById(PL[i]).classList.remove('order-7');
-                document.getElementById(PL[i]).classList.remove('order-8');
-                document.getElementById(PL[i]).classList.remove('order-9');
-                document.getElementById(PL[i]).classList.remove('order-10');
-                document.getElementById(PL[i]).classList.remove('order-11');
-                document.getElementById(PL[i]).classList.remove('order-12');
-                document.getElementById(PL[i]).classList.remove('order-13');
-                document.getElementById(PL[i]).classList.remove('order-14');
-                document.getElementById(PL[i]).classList.remove('order-15');
-                document.getElementById(PL[i]).classList.remove('order-16');
-                document.getElementById(PL[i]).classList.remove('order-17');
-                document.getElementById(PL[i]).classList.remove('order-18');
-                document.getElementById(PL[i]).classList.remove('order-19');
-
-
-                // adds new classlist tag for every element in order of new list
-                switch(i) {
-                  case 0:
-                    document.getElementById(PL[i]).classList.add('order-1');
-                    break;
-                  case 1:
-                    document.getElementById(PL[i]).classList.add('order-2');
-                    break;
-                  case 2:
-                    document.getElementById(PL[i]).classList.add('order-3');
-                    break;
-                  case 3:
-                    document.getElementById(PL[i]).classList.add('order-4');
-                    break;
-                    case 4:
-                    document.getElementById(PL[i]).classList.add('order-5');
-                    break;
-                    case 5:
-                    document.getElementById(PL[i]).classList.add('order-6');
-                    break;
-                    case 6:
-                    document.getElementById(PL[i]).classList.add('order-7');
-                    break;
-                    case 7:
-                    document.getElementById(PL[i]).classList.add('order-8');
-                    break;
-                    case 8:
-                    document.getElementById(PL[i]).classList.add('order-9');
-                    break;
-                    case 9:
-                    document.getElementById(PL[i]).classList.add('order-10');
-                    break;
-                    case 10:
-                    document.getElementById(PL[i]).classList.add('order-11');
-                     break;
-                    case 11:
-                    document.getElementById(PL[i]).classList.add('order-12');
-                     break;
-                    case 12:
-                    document.getElementById(PL[i]).classList.add('order-13');
-                     break;
-                    case 13:
-                    document.getElementById(PL[i]).classList.add('order-14');
-                     break;
-                    case 14:
-                    document.getElementById(PL[i]).classList.add('order-15');
-                     break;
-                    case 15:
-                    document.getElementById(PL[i]).classList.add('order-16');
-                     break;
-                    case 16:
-                    document.getElementById(PL[i]).classList.add('order-17');
-                     break;
-                    case 17:
-                    document.getElementById(PL[i]).classList.add('order-18');
-                     break;
-                    case 18:
-                    document.getElementById(PL[i]).classList.add('order-19');
-                     break;
-
-                  default:
-                    alert(PL);
-                }
-
-             }
-
-              }
-
-  });
- }
-
-
-
-
-/*
-alert(PL);
-sortFunction(PL, "alpha");
-alert(PL);
-*/
+        case 10:
+            document.getElementById(pubList[i]).classList.add('order-11');
+            break;
+        case 11:
+            document.getElementById(pubList[i]).classList.add('order-12');
+            break;
+        case 12:
+            document.getElementById(pubList[i]).classList.add('order-13');
+            break;
+        case 13:
+            document.getElementById(pubList[i]).classList.add('order-14');
+            break;
+        case 14:
+            document.getElementById(pubList[i]).classList.add('order-15');
+            break;
+        case 15:
+            document.getElementById(pubList[i]).classList.add('order-16');
+            break;
+        case 16:
+            document.getElementById(pubList[i]).classList.add('order-17');
+            break;
+        case 17:
+            document.getElementById(pubList[i]).classList.add('order-18');
+            break;
+        case 18:
+            document.getElementById(pubList[i]).classList.add('order-19');
+            break;
+        default:
+            alert(pubList);
+    }
+}
 
 
 /**
  * Sorts the pub based on its argument, either alphabetically or by queue length.
- * @param Array publist, String sortBy
+ *
+ * @param {string[]} pubList - a list of all the pubs
+ * @param {string} sortBy - tells us how to sort the pubList
+ * @returns
  */
-function sortFunction (publist, sortBy) {
-
+function sortFunction (pubList, sortBy) {
     if (sortBy === "alpha"){
-        publist.sort();
-    }
-    else {
-        publist.sort(function (a, b) {
-
-            var newA = getQueueLength(a);
-            var newB = getQueueLength(b);
+        pubList.sort();
+    } else {
+        pubList.sort(function (a, b) {
+            const newA = getQueueLength(a);
+            const newB = getQueueLength(b);
 
             if (newA < newB) {
                 return -1;
-            }
-            if (newB < newA) {
+            } else if (newB < newA) {
                 return 1;
+            } else {
+                return 0;
             }
-            return 0;
         });
     }
 }
 
+
 /**
  * Returns the corresponding number based on which queue-class a pub has.
- * @returns value to be used in the sort function above
+ *
+ * @param {string} pub - the pub to get the queue length from
+ * @returns {int} the number to be used in the sort function above
  */
 function getQueueLength(pub){
+    const pubItem = document.getElementById(pub);
 
-            var pubItem = document.getElementById(pub);
-
-            if (pubItem.classList.contains('short-queue')){
-                return 1;
-            }
-            else if(pubItem.classList.contains('medium-queue')){
-                return 2;
-            }
-            else if(pubItem.classList.contains('long-queue')){
-                return 3;
-            }
-            else{
-                return 5;
-            }
+    if (pubItem.classList.contains('short-queue')){
+        return 1;
+    } else if(pubItem.classList.contains('medium-queue')){
+        return 2;
+    } else if(pubItem.classList.contains('long-queue')){
+        return 3;
+    } else {
+        return 5;
+    }
 }
 
 

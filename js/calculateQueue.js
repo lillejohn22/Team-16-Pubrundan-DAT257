@@ -1,10 +1,12 @@
-
 /**
  * Calculates the new queue for the pub with the corresponding queueID. The newVote is
  * the latest new vote session and voteTime is when the vote was placed and it will be
  * represented with an interval.
- * @param String queueID, int newVote, int voteTime
- * @returns int newQueueLength for the pub with queueID.
+ *
+ * @param {} queueID
+ * @param {} newVote
+ * @param {} voteTime
+ * @returns {int} newQueueLength for the pub with queueID
  */
 
 function calculateQueue(queueID, newVote, voteTime){
@@ -15,7 +17,7 @@ function calculateQueue(queueID, newVote, voteTime){
     var longTotal = 0;
 
     /*
-    Checks the occurences of the votes in
+    Checks the occurrences of the votes in
     the array. Votes are represented by:
     1 = short, 2 = medium, 3 = long
     */
@@ -32,8 +34,8 @@ function calculateQueue(queueID, newVote, voteTime){
     }
 
     /*
-    The if-staesments will check which
-    vote who has the most occurences. If
+    The if-statements will check which
+    vote who has the most occurrences. If
     there is a tie, the bigger goes through.
     */
     if(shortTotal > (mediumTotal || longTotal)){

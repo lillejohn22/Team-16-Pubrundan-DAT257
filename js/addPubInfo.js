@@ -1,7 +1,5 @@
 /**
  * Takes the information from pub-data.json and adds it to the correct grid elements.
- * 
- * @author Emma Pettersson
  */
 
 window.onload = function() {
@@ -24,17 +22,20 @@ window.onload = function() {
         processJSON(data);
     });
 
+
+    /**
+     * Processes the JSON data and makes the appropriate changes to the grid elements.
+     *
+     * @param data - the JSON data
+     */
     function processJSON(data) {
         for (var i = 0; i < elems.length; i++) { 
             var elemID = elems[i].id;
 
-//            console.log(elemID);
-
-
             // The "help" element does not need any information from pub-data.json
             if (elemID !== "help") {
-                $(locInfo[i]).text(data[elemID].location)
-                $(timeInfo[i]).text(data[elemID].openingHours)
+                $(locInfo[i]).text(data[elemID].location);
+                $(timeInfo[i]).text(data[elemID].openingHours);
 
                 // Fix icons
                 var filterIcons = data[elemID].filter;
