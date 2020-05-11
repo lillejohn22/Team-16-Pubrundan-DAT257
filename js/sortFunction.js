@@ -10,6 +10,7 @@ var pubList = ["wijkanders", "bulten", "japripps", "gasquen", "cafec", "11an", "
 
 queueSort();
 
+
 /**
  * Sorts the pubs based on the alphabetical order.
  */
