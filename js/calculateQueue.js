@@ -55,7 +55,7 @@ function calculateQueue(queueArray) {
     1 = short, 2 = medium, 3 = long
     */
     for (var i = 0; i < queueArray.length; i++) {
-        if (queueArray[i] == QueueLength.SHORT) {
+        if (queueArray[i] == QueueLength.SHORT) { // "===" breaks it because they have different types int and number.
             shortTotal++;
         } else if (queueArray[i] == QueueLength.MEDIUM) {
             mediumTotal++;
