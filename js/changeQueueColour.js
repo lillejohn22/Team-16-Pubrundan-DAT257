@@ -4,18 +4,21 @@
  * @param {string} id -
  * @param {int} color -
  */
-function changeQueueColour(id, color) {
-     if(color === 1) {
+
+const ColorIndex = {GREEN: 1, YELLOW: 2, RED: 3, CLOSED: 4}; Object.freeze(ColorIndex);
+
+function changeQueueColour(id, colorIndex) {
+     if(colorIndex == ColorIndex.GREEN) {
             document.getElementById(id).classList.remove('pub-closed');
             document.getElementById(id).classList.remove('long-queue');
             document.getElementById(id).classList.remove('medium-queue');
             document.getElementById(id).classList.add('short-queue');
-     } else if(color === 2) {
+     } else if(colorIndex == ColorIndex.YELLOW) {
             document.getElementById(id).classList.remove('pub-closed');
             document.getElementById(id).classList.remove('long-queue');
             document.getElementById(id).classList.add('medium-queue');
             document.getElementById(id).classList.remove('short-queue');
-     } else if(color === 3) {
+     } else if(colorIndex == ColorIndex.RED) {
             document.getElementById(id).classList.remove('pub-closed');
             document.getElementById(id).classList.add('long-queue');
             document.getElementById(id).classList.remove('medium-queue');
