@@ -19,7 +19,7 @@ function enableVoting () {
             voteObject.url = '/voted';
 
             // DEBUG PRINTS
-            console.log("Pressed: " + voteObject.pubName + '\n');
+            // console.log("Pressed: " + voteObject.pubName + '\n');
             // console.log(voteObject.pubName)
             // console.log(buttonid + '\n');
 
