@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 // const bodyParser = require('body-parser')
-// const calcQueue = require('./js/calculateQueue')
+const calcQueue = require('./js/calculateQueue')
 var fs = require('fs');
 
 const server = express()
@@ -31,6 +31,8 @@ server.use('/voted', (request, response, next) => {
     response.status(200).json(updatedVoteValueToBePassedToWebsite);
     requestNumber++;
 
+
+    calcQueue.calculateQueue(2,1,123)
     /*
     // For debugging purposes
     console.log("A post request for '/voted' has been registered " + requestNumber++);

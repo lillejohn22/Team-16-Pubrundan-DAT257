@@ -9,7 +9,7 @@
  * @returns {int} newQueueLength for the pub with queueID
  */
 
-function calculateQueue(queueID, newVote, voteTime){
+module.exports = function calculateQueue(queueID, newVote, voteTime){
 
     // Variables for every different queue option
     var shortTotal = 0;
