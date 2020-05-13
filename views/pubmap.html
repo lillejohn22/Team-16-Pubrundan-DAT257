@@ -23,10 +23,10 @@
       <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
               integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
               crossorigin=""></script>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-      <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+
+
+
+
       <style>
           html, body {
               height: 100%;
@@ -91,16 +91,16 @@
 
         // add the OpenStreetMap tiles
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-        }).addTo(map);
+           maxZoom: 19,
+          attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+      }).addTo(map);
 
         // show the scale bar on the lower left corner
         L.control.scale().addTo(map);
 
         // Icon
-        var greenIcon = L.icon({
-            iconUrl: "/images/icons/beer.png",
+        var Golden_I = L.icon({
+            iconUrl: "/images/icons/Golden_I_Logga.png",
 
            // shadowUrl: 'leaf-shadow.png',
 
@@ -111,9 +111,22 @@
             popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
         });
 
+        var Hubben = L.icon({
+            iconUrl: "/images/icons/Hubben_logga.png",
+
+            // shadowUrl: 'leaf-shadow.png',
+
+            iconSize:     [78, 95], // size of the icon
+            shadowSize:   [50, 64], // size of the shadow
+            iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+            shadowAnchor: [4, 62],  // the same for the shadow
+            popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+        });
 
 
-        L.marker([57.692882, 11.975164], {icon: greenIcon}).addTo(map).bindPopup("Iskall").openPopup();
+
+        L.marker([57.692882, 11.975164], {icon: Golden_I}).addTo(map).bindPopup("Iskall").openPopup();
+        L.marker([57.688335, 11.979359], {icon: Hubben}).addTo(map).bindPopup("DÖDSKRÖK1337").openPopup();
 
         // show a marker on the map
        // var marker = new L.Marker({lon:11.975164 , lat: 57.692882});
