@@ -62,6 +62,7 @@ function removeOrderTags(i) {
     document.getElementById(pubList[i]).classList.remove('order-17');
     document.getElementById(pubList[i]).classList.remove('order-18');
     document.getElementById(pubList[i]).classList.remove('order-19');
+    document.getElementById(pubList[i]).classList.remove('.hidden-xs-up');
 }
 
 
