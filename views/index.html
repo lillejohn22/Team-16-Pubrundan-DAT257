@@ -55,59 +55,97 @@
     ------------------------>
     <div class="container-fluid" id="ssf-container">
         <div class="row">
+            <!-----------------------
+                     Search
+            ------------------------>
             <div class="col-lg-12 ssf-element" id="search">
                 <h2>Search</h2>
-            </div>
+            </div> <!-- Search END -->
 
+
+            <!-----------------------
+                      Sort
+            ------------------------>
             <div class="col-lg-6 ssf-element" id="sort">
                 <h2>Sort</h2>
 
                 <div class="sortButtons btn-group btn-group-toggle align-radio" data-toggle="buttons">
-                    <label class="btn btn-light" onclick="alphaSort()">
+                    <label class="btn btn-light" id="alphaSort">
                         <input type="radio" name="sortPubs" id="alpha"> Alphabetical
                     </label>
-                    <label class="btn btn-light active" onclick="queueSort()">
+
+                    <label class="btn btn-light active" id="queueSort">
                         <input type="radio" name="sortPubs" id="queue"> Queue Length
                     </label>
                 </div>
-            </div>
+            </div> <!-- Sort END -->
 
+
+            <!-----------------------
+                     Filter
+            ------------------------>
             <div class="col-lg-6 ssf-element">
-                <div  class="filterButtons" id="filter">
+                <div class="filterButtons" id="filter">
                     <h2>Filter</h2>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="beer" value="option1">
-                        <label class="form-check-label" for="beer">Beer</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="drinks" value="option2">
-                        <label class="form-check-label" for="drinks">Drinks</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="wine" value="option3">
-                        <label class="form-check-label" for="wine">Wine</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="coffee" value="option4">
-                        <label class="form-check-label" for="coffee">Coffee & Tea</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="food" value="option5">
-                        <label class="form-check-label" for="food">Food</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="activity" value="option6">
-                        <label class="form-check-label" for="activity">Activities</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="open" value="option7">
-                        <label class="form-check-label" for="open">Open</label>
+                        <input class="form-check-input filter-checkbox" type="checkbox" id="beer" value="option1">
+                        <label class="form-check-label" for="beer">
+                            <img class="grid-icon-info icon-beer" src="../images/icons/beer.png" title="Beer" alt="beer-icon"/>
+                            Beer
+                        </label>
                     </div>
 
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input filter-checkbox" type="checkbox" id="drinks" value="option2">
+                        <label class="form-check-label" for="drinks">
+                            Drinks
+                            <img class="grid-icon-info icon-drink" src="../images/icons/drink.png" title="Drink" alt="drink-icon"/>
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input filter-checkbox" type="checkbox" id="wine" value="option1">
+                        <label class="form-check-label" for="wine">
+                            <img class="grid-icon-info icon-wine" src="../images/icons/wine.png" title="Wine" alt="wine-icon"/>
+                            Wine
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input filter-checkbox" type="checkbox" id="coffee" value="option2">
+                        <label class="form-check-label" for="coffee">
+                            <img class="grid-icon-info icon-coffee" src="../images/icons/coffee.png" title="Coffee & Tea" alt="coffee-icon"/>
+                            Coffee & Tea
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input filter-checkbox" type="checkbox" id="food" value="option1">
+                        <label class="form-check-label" for="food">
+                            <img class="grid-icon-info icon-food" src="../images/icons/food.png" title="Food" alt="food-icon"/>
+                            Food
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input filter-checkbox" type="checkbox" id="activities" value="option2">
+                        <label class="form-check-label" for="activities">
+                            <img class="grid-icon-info icon-activities" src="../images/icons/activity.png" title="Activities" alt="activity-icon"/>
+                            Activities
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input filter-checkbox" type="checkbox" id="open" value="option2">
+                        <label class="form-check-label" for="open">
+                            <img class="grid-icon-info icon-open" src="../images/icons/open.png" title="Open" alt="open-icon"/>
+                            Open
+                        </label>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </div> <!-- Filter END -->
+        </div> <!-- Row END -->
     </div> <!-- Search/sort/filter END -->
 
 
@@ -117,6 +155,20 @@
     <div class="container-fluid detailed-view">
         <div class="detailed-view-content">
             <div class="exit-button" onclick="toggleDetailedView()"></div>
+
+            <div class="container-fluid" id="detailed-view-content-container">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-6 col-xl-4 detailed-view-element">
+                        <img src="../images/pubs/bulten/logo.png" alt="pub-logo" id="detailed-view-logo"/>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-6 col-xl-4 detailed-view-element">
+                    </div>
+
+                    <div class="col-sm-12 col-lg-6 col-xl-4 detailed-view-element">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -1099,32 +1151,29 @@
                 Copyright
             </h6>
 
-            <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+            <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+                 from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
         </div>
         <!-- Copyright -->
-
     </footer> <!-- Footer END -->
-    
-    
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+
 
      <!-- JavaScript files-->
     <script src="../js/changeQueueColour.js"></script>
     <script src="../js/sortFunction.js"></script>
     <script src="../js/filterFunction.js"></script>
     <script src="../js/calculateQueue.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../js/expandContractGridElements.js"></script>
     <script src="../js/getVote.js"></script>
     <script src="../js/handleDetailedView.js"></script>
-
-    <!-- The window.onload function has to be the last one to be loaded! -->
     <script src="../js/addPubInfo.js"></script>
-
   </body>
-
 </html>

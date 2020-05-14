@@ -1,10 +1,10 @@
 /**
  * Takes the information from pub-data.json and adds it to the correct grid elements.
+ *
+ * @author Emma Pettersson
  */
 
-window.onload = function() {
-    enableVoting();
-
+$(window).on('load', function() {
     var elems = document.getElementsByClassName("grid-element");
     var locInfo = document.getElementsByClassName("location-info");
     var timeInfo = document.getElementsByClassName("time-info");
@@ -66,5 +66,5 @@ window.onload = function() {
             }
         }
     }
-}
+});
 

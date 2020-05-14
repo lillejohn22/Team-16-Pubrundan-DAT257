@@ -1,34 +1,60 @@
 /**
  * This file has a function for sorting an array list, alphabetically and after queue length.
  * It also registers which button was pressed and sorts the element on the website accordingly.
+ *
+ * @author Jennifer Krogh
+ * @author Emma Pettersson
  */
 
 
-var pubList = ["wijkanders", "bulten", "japripps", "gasquen", "cafec", "11an", "rodarummet", "ventren", "basen", "goldeni",
-          "kajsabaren", "focus", "hubben21", "fortnox", "gastownospritkoket", "winden", "jarnvagspub", "zaloonen",
-          "pignwhistle"];
+var pubList = ["wijkanders", "bulten", "japripps", "gasquen", "cafec", "11an", "rodarummet", "ventren", "basen",
+    "goldeni", "kajsabaren", "focus", "hubben21", "fortnox", "gastownospritkoket", "winden", "jarnvagspub", "zaloonen",
+    "pignwhistle"];
 
-queueSort();
+// The pubs should initially be sorted by their queue time.
+sortFunction(pubList, "queue");
 
 
 /**
  * Sorts the pubs based on the alphabetical order.
  */
-function alphaSort() {
+$('#alphaSort').click(function(){
     sortFunction(pubList, "alpha");
-
-    for (let i = 0; i < pubList.length; i++) {
-        removeOrderTags(i);
-        addOrderTag(i);
-    }
-}
+});
 
 
 /**
  * Sorts the pubs based on the queue length.
  */
-function queueSort () {
+$('#queueSort').click(function(){
     sortFunction(pubList, "queue");
+});
+
+
+/**
+ * Sorts the pub based on its argument, either alphabetically or by queue length.
+ *
+ * @param {string[]} pubList - a list of all the pubs
+ * @param {string} sortBy - tells us how to sort the pubList
+ * @returns
+ */
+function sortFunction (pubList, sortBy) {
+    if (sortBy === "alpha"){
+        pubList.sort();
+    } else {
+        pubList.sort(function (a, b) {
+            const newA = getQueueLength(a);
+            const newB = getQueueLength(b);
+
+            if (newA < newB) {
+                return -1;
+            } else if (newB < newA) {
+                return 1;
+            } else {
+                return 0;
+            }
+        });
+    }
 
     for (let i = 0; i < pubList.length; i++) {
         removeOrderTags(i);
@@ -132,33 +158,6 @@ function addOrderTag(i) {
             break;
         default:
             alert(pubList);
-    }
-}
-
-
-/**
- * Sorts the pub based on its argument, either alphabetically or by queue length.
- *
- * @param {string[]} pubList - a list of all the pubs
- * @param {string} sortBy - tells us how to sort the pubList
- * @returns
- */
-function sortFunction (pubList, sortBy) {
-    if (sortBy === "alpha"){
-        pubList.sort();
-    } else {
-        pubList.sort(function (a, b) {
-            const newA = getQueueLength(a);
-            const newB = getQueueLength(b);
-
-            if (newA < newB) {
-                return -1;
-            } else if (newB < newA) {
-                return 1;
-            } else {
-                return 0;
-            }
-        });
     }
 }
 

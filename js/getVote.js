@@ -1,10 +1,8 @@
-// window.onload: Executes when website is fully loaded and presented to the user.
-
 /**
  * Enables the ActionListeners for the "voteButton" class (The vote buttons).
  * This function is also responsible for sending the button data as JSON to the server.
  */
-function enableVoting () {
+$(window).on('load', function() {
     let keys = document.getElementsByClassName("voteButton");
 
     for (let i = 0; i < keys.length; i++) {
@@ -13,6 +11,7 @@ function enableVoting () {
         if (e.target.matches('button')) {
             const key = e.target;
             var voteObject = {}; // Apparently makes a new object in JavaScript
+
             voteObject.voteValue = key.value;
             voteObject.date = Date.now();
             voteObject.pubName = key.parentNode.getAttribute("id").replace("Buttons", "");
@@ -27,7 +26,8 @@ function enableVoting () {
             }
         })
     }
-};
+});
+
 
 var v = 0;
 
@@ -38,7 +38,6 @@ var v = 0;
  * @param {string} method
  */
 async function sendAndReceiveJSON(data, url, method) {
-
     // Sends POST request to server at url = '/voted'
     let response = await fetch(url, {
         method: method.toUpperCase(),

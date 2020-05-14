@@ -1,4 +1,15 @@
+/**
+ * Handles the detailed view.
+ * Opens it, closes it, and adds the data to it.
+ *
+ * @author Emma Pettersson
+ */
+
 const detailedView = document.querySelector(".detailed-view");
+
+// Event listeners
+window.addEventListener("click", windowOnClick);
+
 
 /**
  * Opens the detailed view.
@@ -21,9 +32,6 @@ function windowOnClick(event) {
         toggleDetailedView();
     }
 }
-
-// Event listener for the window
-window.addEventListener("click", windowOnClick);
 
 
 /**
