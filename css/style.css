@@ -112,6 +112,64 @@ body {
   justify-content: center;
 }
 
+#searchBar {
+
+width: 85%;
+font-size: 16px;
+padding: 12px 20px 12px 40px;
+border: 1px solid #ddd;
+margin-bottom: 12px;
+
+
+}
+
+.searchButton {
+
+width: 10%;
+font-size: 16px;
+padding: 1px 2px 1px 4px;
+border: 1px solid #ddd;
+margin-right: auto;
+background-color: #f8f9fa;
+color: #212529;
+border-color: #f8f9fa;
+
+
+}
+
+#searchList {
+
+list-style-type: none;
+padding: 0;
+margin: 0;
+visibility: visible;
+
+}
+
+.searchL {
+
+border: none;
+margin-top: -1px;
+padding: 5px;
+background-color: #F6F6F6;
+font-size: 16px;
+color: black;
+display: block;
+text-decoration: none;
+
+}
+
+.searchL a:hover {
+
+background-color: #A9A9A9;
+color: white;
+text-decoration: none;
+display: block;
+
+
+}
+
+
 
 /* ---------------
         Grid
