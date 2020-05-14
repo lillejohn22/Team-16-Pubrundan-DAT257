@@ -62,13 +62,20 @@ body {
 
 .navbar .navbar-brand {
     font-size: 1.5em;
-    margin-left: 12.5%;
+    margin-left: 9.75%;
+    text-transform: uppercase;
+    color: #F4F7F5;
+}
+
+.navbar .navbar-promo {
+    font-size: 0.5em;
+    font-style: italic;
     text-transform: uppercase;
     color: #F4F7F5;
 }
 
 .nav-items {
-    margin-left: 12.5%;
+    margin-left: 29.25%;
 }
 
 .nav-item {
@@ -82,6 +89,22 @@ body {
 .nav-item > a:hover {
     color: #F4F7F5;
 }
+
+.fa-beer {
+    color: white;
+}
+.fa-phone {
+    color:white;
+}
+
+.fa-street-view {
+    color:white;
+}
+
+.fa-info-circle {
+    color:white;
+}
+
 
 
 /* ---------------
