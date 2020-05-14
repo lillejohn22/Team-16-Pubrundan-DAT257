@@ -6,8 +6,8 @@ function googleSearch() {
 // get the input of the search bar
 var input = document.getElementById("searchBar");
 
-
 var filter= input.value.toUpperCase().replace(/\s+/g, '');
+
 
 // get list objects with pub names
 var ul = document.getElementById("searchList");
@@ -25,14 +25,14 @@ var txtValue = a.textContent || a.innerText;
     li[i].style.display = "";
     document.getElementById("searchList").classList.remove('invisible');
 
-    // special case, if
+    // special case, if the e has no acute accent
     } else if(filter.indexOf("CAFE") > -1) {
 
     li[0].style.display = "";
     li[3].style.display = "";
     document.getElementById("searchList").classList.remove('invisible');
 
-    // special case, if
+    // special case, if the J.A. is spelled without dots
     } else if(filter.indexOf("JA") > -1) {
 
              li[1].style.display = "";
