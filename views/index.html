@@ -65,19 +65,19 @@
                 <h2>Search</h2>
 
                 <input type="text" id="searchBar" onkeyup="googleSearch()" placeholder="Search for pubs...">
-                <button type="search" class="searchButton" onclick="searchFunction()">Search</button>
+                <button type="search" id="searchButton" onclick="searchFunction()">Search</button>
 
                 <ul class="searchL invisible" id="searchList">
-                    <li onmousedown="clickPubSearch(0)" class="searchL" id="0"><a href="#"> Café Bulten </a></li>
-                    <li onmousedown="clickPubSearch(1)" class="searchL" id="1"><a href="#"> J.A. Pripps </a></li>
-                    <li onmousedown="clickPubSearch(2)" class="searchL" id="2"><a href="#"> Wijkanders </a></li>
-                    <li onmousedown="clickPubSearch(3)" class="searchL" id="3"><a href="#"> Café C </a></li>
-                    <li onmousedown="clickPubSearch(4)" class="searchL" id="4"><a href="#"> Basen </a></li>
-                    <li onmousedown="clickPubSearch(5)" class="searchL" id="5"><a href="#"> 11:an </a></li>
-                    <li onmousedown="clickPubSearch(6)" class="searchL" id="6"><a href="#"> Focus </a></li>
-                    <li onmousedown="clickPubSearch(7)" class="searchL" id="7"><a href="#"> Fort Nox </a></li>
-                    <li onmousedown="clickPubSearch(8)" class="searchL" id="8"><a href="#"> Gasquen </a></li>
-                    <li onmousedown="clickPubSearch(9)" class="searchL" id="9"><a href="#"> Gastown & Spritköket </a></li>
+                    <li onmousedown="clickPubSearch(0)"  class="searchL" id="0"> <a href="#"> Café Bulten </a></li>
+                    <li onmousedown="clickPubSearch(1)"  class="searchL" id="1"> <a href="#"> J.A. Pripps </a></li>
+                    <li onmousedown="clickPubSearch(2)"  class="searchL" id="2"> <a href="#"> Wijkanders </a></li>
+                    <li onmousedown="clickPubSearch(3)"  class="searchL" id="3"> <a href="#"> Café C </a></li>
+                    <li onmousedown="clickPubSearch(4)"  class="searchL" id="4"> <a href="#"> Basen </a></li>
+                    <li onmousedown="clickPubSearch(5)"  class="searchL" id="5"> <a href="#"> 11:an </a></li>
+                    <li onmousedown="clickPubSearch(6)"  class="searchL" id="6"> <a href="#"> Focus </a></li>
+                    <li onmousedown="clickPubSearch(7)"  class="searchL" id="7"> <a href="#"> Fort Nox </a></li>
+                    <li onmousedown="clickPubSearch(8)"  class="searchL" id="8"> <a href="#"> Gasquen </a></li>
+                    <li onmousedown="clickPubSearch(9)"  class="searchL" id="9"> <a href="#"> Gastown & Spritköket </a></li>
                     <li onmousedown="clickPubSearch(10)" class="searchL" id="10"><a href="#"> Golden-I </a></li>
                     <li onmousedown="clickPubSearch(11)" class="searchL" id="11"><a href="#"> Hubben 2.1 </a></li>
                     <li onmousedown="clickPubSearch(12)" class="searchL" id="12"><a href="#"> Järnvägspub </a></li>
@@ -182,7 +182,7 @@
    ------------------------>
     <div class="container-fluid detailed-view">
         <div class="detailed-view-content">
-            <div class="exit-button" onclick="toggleDetailedView()"></div>
+            <div class="exit-button"></div>
 
             <div class="container-fluid" id="detailed-view-content-container">
                 <div class="row">
@@ -249,8 +249,7 @@
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <button class="detailed-view-button btn btn-outline-info btn-sm"
-                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
                 </div>
             </div>
 
@@ -297,8 +296,7 @@
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <button class="detailed-view-button btn btn-outline-info btn-sm"
-                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
                 </div>
             </div>
 
@@ -345,8 +343,7 @@
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <button class="detailed-view-button btn btn-outline-info btn-sm"
-                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
                 </div>
             </div>
 
@@ -393,8 +390,7 @@
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <button class="detailed-view-button btn btn-outline-info btn-sm"
-                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
                 </div>
             </div>
 
@@ -441,8 +437,7 @@
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <button class="detailed-view-button btn btn-outline-info btn-sm"
-                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
                 </div>
             </div>
 
@@ -489,8 +484,7 @@
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <button class="detailed-view-button btn btn-outline-info btn-sm"
-                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
                 </div>
             </div>
 
@@ -537,8 +531,7 @@
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <button class="detailed-view-button btn btn-outline-info btn-sm"
-                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
                 </div>
             </div>
 
@@ -585,8 +578,7 @@
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <button class="detailed-view-button btn btn-outline-info btn-sm"
-                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
                 </div>
             </div>
 
@@ -633,8 +625,7 @@
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <button class="detailed-view-button btn btn-outline-info btn-sm"
-                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
                 </div>
             </div>
 
@@ -681,8 +672,7 @@
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <button class="detailed-view-button btn btn-outline-info btn-sm"
-                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
                 </div>
             </div>
 
@@ -729,8 +719,7 @@
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <button class="detailed-view-button btn btn-outline-info btn-sm"
-                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
                 </div>
             </div>
 
@@ -777,8 +766,7 @@
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <button class="detailed-view-button btn btn-outline-info btn-sm"
-                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
                 </div>
             </div>
 
@@ -825,8 +813,7 @@
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <button class="detailed-view-button btn btn-outline-info btn-sm"
-                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
                 </div>
             </div>
 
@@ -873,8 +860,7 @@
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <button class="detailed-view-button btn btn-outline-info btn-sm"
-                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
                 </div>
             </div>
 
@@ -921,8 +907,7 @@
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <button class="detailed-view-button btn btn-outline-info btn-sm"
-                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
                 </div>
             </div>
 
@@ -970,8 +955,7 @@
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <button class="detailed-view-button btn btn-outline-info btn-sm"
-                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
                 </div>
             </div>
 
@@ -1019,8 +1003,7 @@
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <button class="detailed-view-button btn btn-outline-info btn-sm"
-                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
                 </div>
             </div>
 
@@ -1067,8 +1050,7 @@
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <button class="detailed-view-button btn btn-outline-info btn-sm"
-                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
                 </div>
             </div>
 
@@ -1115,8 +1097,7 @@
 
                     <hr class="grid-element-expanded-info-hr">
 
-                    <button class="detailed-view-button btn btn-outline-info btn-sm"
-                            onclick="toggleDetailedView(this)">Open detailed view</button>
+                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
                 </div>
             </div> <!-- Columns END -->
         </div> <!-- Row END -->

@@ -7,8 +7,16 @@
 
 const detailedView = document.querySelector(".detailed-view");
 
-// Event listeners
+/* Event listeners */
 window.addEventListener("click", windowOnClick);
+
+$('.detailed-view-button').click(function(event) {
+    toggleDetailedView($(event.target));
+});
+
+$('.exit-button').click(function(event) {
+    toggleDetailedView($(event.target));
+});
 
 
 /**
@@ -19,8 +27,10 @@ window.addEventListener("click", windowOnClick);
 function toggleDetailedView(obj) {
     detailedView.classList.toggle("show-detailed-view");
 
-    if (!obj.id.classList.contains("show-detailed-view"))
-        addDetailedViewData(obj.id);
+    if (detailedView.classList.contains("show-detailed-view")) {
+        // We send the object's grandparent, because it has the id we need
+        addDetailedViewData($(obj).parent().parent());
+    }
 }
 
 
