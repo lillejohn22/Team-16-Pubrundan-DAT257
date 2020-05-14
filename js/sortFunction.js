@@ -4,7 +4,7 @@
  */
 
 
-var pubList = ["wijkanders", "bulten", "japripps", "gasquen", "cafec", "11an", "rodarummet", "ventren", "basen",
+var pubList = ["bulten", "japripps", "wijkanders", "gasquen", "cafec", "11an", "rodarummet", "ventren", "basen",
     "goldeni", "kajsabaren", "focus", "hubben21", "fortnox", "gastownospritkoket", "winden", "jarnvagspub", "zaloonen",
     "pignwhistle"];
 
@@ -68,7 +68,7 @@ function sortFunction (pubList, sortBy) {
  * @param {int} i - the index of the element
  */
 function removeOrderTags(i) {
-    for (let j = 1; j < 20; j++) {
+    for (let j = 0; j < 20; j++) {
         let orderN = "order-" + j;
 
         document.getElementById(pubList[i]).classList.remove(orderN);

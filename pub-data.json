@@ -26,7 +26,7 @@
     "address" : "Vera Sandbergs allé 5B, 411 33 Göteborg",
     "openingHours" : "15 - 22",
     "paymentTypes" : ["SU-card", "Card"],
-    "filter" : [""]
+    "filter" : ["beer"]
   },
 
   "gasquen":{
@@ -46,8 +46,7 @@
     "address" : "Lindholmspiren 5, 417 55 Göteborg",
     "openingHours" : "15 - 19",
     "paymentTypes" : ["SU-card", "Card"],
-    "filter" : [""],
-    "id" : "cafec"
+    "filter" : [""]
   },
 
   "11an":{
@@ -57,8 +56,7 @@
     "address" : "Forskningsgången 4, 417 56 Göteborg",
     "openingHours" : "15 - 20",
     "paymentTypes" : "Card",
-    "filter" : [""],
-    "id" : "11an"
+    "filter" : [""]
   },
 
   "rodarummet":{
@@ -68,8 +66,7 @@
     "address" : "Sven Hultins gata 6, 412 58 Göteborg",
     "openingHours" : "19 - 03",
     "paymentTypes" : "Card",
-    "filter" : [""],
-    "id" : "rodarummet"
+    "filter" : [""]
   },
 
   "ventren":{
@@ -79,8 +76,7 @@
     "address" : "Sven Hultins gata 6, 412 58 Göteborg",
     "openingHours" : "19 -03",
     "paymentTypes" : "Card",
-    "filter" : [""],
-    "id" : "ventren"
+    "filter" : [""]
   },
 
   "basen":{
@@ -90,8 +86,7 @@
     "address" : "Rännvägen 6b, 412 58 Göteborg",
     "openingHours" : "19 - 01",
     "paymentTypes" : "Card",
-    "filter" : [""],
-    "id" : "basen"
+    "filter" : [""]
   },
 
   "goldeni":{
@@ -101,8 +96,7 @@
     "address" : "Vera Sandbergs allé 8A, 411 33 Göteborg",
     "openingHours" : "19 - 03",
     "paymentTypes" : "Cash",
-    "filter" : [""],
-    "id" : "goldeni"
+    "filter" : [""]
   },
 
   "kajsabaren":{
@@ -112,8 +106,7 @@
     "address" : "Maskingränd 2, 412 58 Göteborg",
     "openingHours" : "17 - 01",
     "paymentTypes" : ["Cash", "Card"],
-    "filter" : [""],
-    "id" : "kajsabaren"
+    "filter" : [""]
   },
 
   "focus":{
@@ -123,8 +116,7 @@
     "address" : "Kemivägen 11, 411 33 Göteborg",
     "openingHours" : "19 - 03",
     "paymentTypes" : "Cash",
-    "filter" : [""],
-    "id" : "focus"
+    "filter" : [""]
   },
 
   "hubben21":{
@@ -134,8 +126,7 @@
     "address" : "Hörsalsvägen 9, 412 58 Göteborg",
     "openingHours" : "17 - 02",
     "paymentTypes" : "Card",
-    "filter" : [""],
-    "id" : "hubben21"
+    "filter" : [""]
   },
 
   "fortnox":{
@@ -145,8 +136,7 @@
     "address" : "",
     "openingHours" : "19 - 01",
     "paymentTypes" : "Card",
-    "filter" : [""],
-    "id" : "fortnox"
+    "filter" : [""]
   },
 
   "gastownospritkoket":{
@@ -156,8 +146,7 @@
     "address" : "",
     "openingHours" : "19 - 01",
     "paymentTypes" : "Card",
-    "filter" : [""],
-    "id" : "gastownospritkoket"
+    "filter" : [""]
   },
 
   "winden":{
@@ -167,8 +156,7 @@
     "address" : "Hörsalsvägen 5, 412 58 Göteborg",
     "openingHours" : "19 - 03",
     "paymentTypes" : ["Cash", "Card"],
-    "filter" : [""],
-    "id" : "winden"
+    "filter" : [""]
   },
 
   "jarnvagspub":{
@@ -178,8 +166,7 @@
     "address" : "Sven Hultins gata 4, 412 58 Göteborg", 
     "openingHours" : "18 - 01",
     "paymentTypes" : ["Cash", "Card"],
-    "filter" : [""],
-    "id" : "jarnvagspub"
+    "filter" : [""]
   },
 
   "zaloonen":{
@@ -200,7 +187,6 @@
     "address" : "Gibraltargatan 80, 412 79 Göteborg",
     "openingHours" : "16 - 01",
     "paymentTypes" : ["Cash", "Card"],
-    "filter" : [""],
-    "id" : "pignwhistle"
+    "filter" : [""]
   }
 }

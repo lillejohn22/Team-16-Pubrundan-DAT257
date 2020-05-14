@@ -1,5 +1,5 @@
 $(window).on('load', function() {
-    var allPubs = ["wijkanders", "bulten", "japripps", "gasquen", "cafec", "11an", "rodarummet", "ventren", "basen",
+    var allPubs = ["bulten", "japripps", "wijkanders", "gasquen", "cafec", "11an", "rodarummet", "ventren", "basen",
         "goldeni", "kajsabaren", "focus", "hubben21", "fortnox", "gastownospritkoket", "winden", "jarnvagspub",
         "zaloonen", "pignwhistle"];
 
@@ -52,7 +52,7 @@ $(window).on('load', function() {
 
         resetPubs();
 
-        updateFilter(data, filter);
+        updateFilter(data);
 
         reorderPubs();
     }
@@ -71,9 +71,7 @@ $(window).on('load', function() {
 
         resetPubs();
 
-        for (let i = 0; i < currentFilters.length; i++) {
-            updateFilter(data, currentFilters[i]);
-        }
+        updateFilter();
 
         reorderPubs();
     }
@@ -83,27 +81,28 @@ $(window).on('load', function() {
      * Updates which pubs are visible/invisible.
      *
      * @param data   - the data from pub-data.json
-     * @param filter - the filter to apply
      */
-    function updateFilter(data, filter) {
-        for (let i = 0; i < allPubs.length; i++) {
-            let pub = allPubs[i];
+    function updateFilter(data) {
+        for (let i = 0; i < currentFilters.length; i++) {
+            for (let j = 0; j < allPubs.length; j++) {
+                let pub = allPubs[j];
 
-            if (filter === "open") {
-                if (!document.getElementById(pub).classList.contains("pub-closed")) {
-                    document.getElementById(pub).classList.add("visible");
-                    document.getElementById(pub).classList.remove("invisible");
+                if (currentFilters[i] === "open") {
+                    if (!document.getElementById(pub).classList.contains("pub-closed")) {
+                        document.getElementById(pub).classList.add("visible");
+                        document.getElementById(pub).classList.remove("invisible");
+                    } else {
+                        document.getElementById(pub).classList.add("invisible");
+                        document.getElementById(pub).classList.remove("visible");
+                    }
                 } else {
-                    document.getElementById(pub).classList.add("invisible");
-                    document.getElementById(pub).classList.remove("visible");
-                }
-            } else {
-                if (data[pub].filter.includes(filter)) {
-                    document.getElementById(pub).classList.add("visible");
-                    document.getElementById(pub).classList.remove("invisible");
-                } else {
-                    document.getElementById(pub).classList.add("invisible");
-                    document.getElementById(pub).classList.remove("visible");
+                    if (data[pub].filter.includes(currentFilters[i])) {
+                        document.getElementById(pub).classList.add("visible");
+                        document.getElementById(pub).classList.remove("invisible");
+                    } else {
+                        document.getElementById(pub).classList.add("invisible");
+                        document.getElementById(pub).classList.remove("visible");
+                    }
                 }
             }
         }
@@ -117,17 +116,12 @@ $(window).on('load', function() {
         for (let i = 0; i < allPubs.length; i++) {
             let pub = allPubs[i];
 
-            console.log(pub);
-            console.log(document.getElementById(pub).classList.contains("visible"));
+            removeOrderTags(i);
 
             if (document.getElementById(pub).classList.contains("visible")) {
                 document.getElementById(pub).classList.add("order-0");
-                document.getElementById(pub).classList.remove("order-19");
-                removeOrderTags(i);
             } else {
-                document.getElementById(pub).classList.remove("order-0");
                 document.getElementById(pub).classList.add("order-19");
-                removeOrderTags(i);
             }
         }
     }

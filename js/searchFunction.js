@@ -56,13 +56,6 @@ function searchFunction() {
                 document.getElementById(pubListObjects[i]).classList.remove('invisible');
                 document.getElementById(pubListObjects[i]).classList.add('visible');
 
-                // Put pub cards in order, so the matching ones are shown first
-                for (let j = 2; j < length; j++) {
-                    document.getElementById(pubListObjects[i]).classList.remove(("order-" + j));
-                }
-
-                document.getElementById(pubListObjects[i]).classList.add('order-1');
-
             // Special case, if the e has no acute accent
             } else if (txtFilter.indexOf("CAFE") > -1) {
                 searchFunctionSpecial(0, 3);
@@ -91,22 +84,18 @@ function searchFunction() {
             } else {
                 document.getElementById(pubListObjects[i]).classList.remove('visible');
                 document.getElementById(pubListObjects[i]).classList.add('invisible');
-
-                for (let j = 1; j < length; j++) {
-                    document.getElementById(pubListObjects[i]).classList.remove(("order-" + j));
-                }
-
-                document.getElementById(pubListObjects[i]).classList.add('order-19');
             }
 
-        // Make all pub cards invisible if the search is empty
+        // Make all pub cards visible if the search is empty
         } else {
             for (let j = 0; j < pubListObjects.length; j++) {
-                document.getElementById(pubListObjects[j]).classList.remove('visible');
-                document.getElementById(pubListObjects[j]).classList.add('invisible');
+                document.getElementById(pubListObjects[j]).classList.remove('invisible');
+                document.getElementById(pubListObjects[j]).classList.add('visible');
             }
         }
     }
+
+    visiblePubsFirst();
 }
 
 
@@ -114,56 +103,60 @@ function searchFunction() {
  * Search function for special cases.
  */
 function searchFunctionSpecial(exceptionIndex1, exceptionIndex2) {
-    // Make the pub cards that match condition visible
-    document.getElementById(pubListObjects[exceptionIndex1]).classList.remove('invisible');
-    document.getElementById(pubListObjects[exceptionIndex1]).classList.add('visible');
+    fixVisibility(exceptionIndex1, exceptionIndex2);
 
-    if (exceptionIndex2 !== -1) {
-        document.getElementById(pubListObjects[exceptionIndex2]).classList.remove('invisible');
-        document.getElementById(pubListObjects[exceptionIndex2]).classList.add('visible');
+    for (let j = 0; j < pubListObjects.length; j++) {
+        removeOrderTags(j);
     }
-
-    makeInvisible(exceptionIndex1, exceptionIndex2);
-
-    changeOrderingToLast(exceptionIndex1, exceptionIndex2);
-
-    // Change the order of pubs that match condition
-    document.getElementById(pubListObjects[exceptionIndex1]).classList.add('order-1');
-
-    if (exceptionIndex2 !== -1) {
-        document.getElementById(pubListObjects[exceptionIndex2]).classList.add('order-1');
-    }
-
 }
 
 
 /**
  * Make all the cards that do not fit the condition invisible.
  */
-function makeInvisible(exceptionIndex1, exceptionIndex2) {
+function fixVisibility(exceptionIndex1, exceptionIndex2) {
     for (let i = 0; i < length; i++) {
         if ((i !== exceptionIndex1)) {
             if (i !== exceptionIndex2) {
                 document.getElementById(pubListObjects[i]).classList.add('invisible');
+                document.getElementById(pubListObjects[i]).classList.remove('visible');
+            } else {
+                document.getElementById(pubListObjects[i]).classList.remove('invisible');
+                document.getElementById(pubListObjects[i]).classList.add('visible');
             }
+        } else {
+            document.getElementById(pubListObjects[i]).classList.remove('invisible');
+            document.getElementById(pubListObjects[i]).classList.add('visible');
         }
     }
 }
 
 
 /**
- * Change order of all pub cards that do not match the condition to last
+ * Puts all the visible pubs first.
  */
-function changeOrderingToLast(exceptionIndex1, exceptionIndex2) {
-    for (let i = 0; i < length; i++) {
-        for (let j = 1; j < (length + 1); j++) {
-            document.getElementById(pubList[i]).classList.remove(("order-" + j));
-        }
+function visiblePubsFirst() {
+    for (let i = 0; i < pubListObjects.length; i++) {
+        let pub = pubListObjects[i];
 
-        if (i !== exceptionIndex1) {
-            if (i !== exceptionIndex2) {
-                document.getElementById(pubListObjects[i]).classList.add('order-19');
-            }
+        removeOrderTags(pub);
+
+        if (document.getElementById(pub).classList.contains("visible")) {
+            document.getElementById(pub).classList.add("order-0");
+        } else {
+            document.getElementById(pub).classList.add("order-19");
         }
+    }
+}
+
+
+/**
+ * Remove all the order tags.
+ */
+function removeOrderTags(pub) {
+    for (let j = 0; j < (pubListObjects.length + 1); j++) {
+        let orderN = "order-" + j;
+
+        document.getElementById(pub).classList.remove(orderN);
     }
 }

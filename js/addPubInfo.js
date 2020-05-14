@@ -29,39 +29,36 @@ $(window).on('load', function() {
      * @param data - the JSON data
      */
     function processJSON(data) {
-        for (var i = 0; i < elems.length; i++) { 
+        for (let i = 0; i < elems.length; i++) {
             var elemID = elems[i].id;
 
-            // The "help" element does not need any information from pub-data.json
-            if (elemID !== "help") {
-                $(locInfo[i]).text(data[elemID].location);
-                $(timeInfo[i]).text(data[elemID].openingHours);
+            $(locInfo[i]).text(data[elemID].location);
+            $(timeInfo[i]).text(data[elemID].openingHours);
 
-                // Fix icons
-                var filterIcons = data[elemID].filter;
-                var filterIconsLength = Object.keys(filterIcons).length;
+            // Fix icons
+            var filterIcons = data[elemID].filter;
+            var filterIconsLength = Object.keys(filterIcons).length;
 
-                for (var j = 0; j < filterIconsLength; j++) {
-                    switch (filterIcons[j]) {
-                        case "beer":
-                            beerIcon[i].src = "../images/icons/beer.png";
-                            break;
-                        case "drink":
-                            drinkIcon[i].src = "../images/icons/drink.png";
-                            break;
-                        case "wine":
-                            wineIcon[i].src = "../images/icons/wine.png";
-                            break;
-                        case "food":
-                            foodIcon[i].src = "../images/icons/food.png";
-                            break;
-                        case "coffee":
-                            coffeeIcon[i].src = "..images/icons/coffee.png"
-                            break;
-                        case "activity":
-                            activityIcon[i].src = "..images/icons/activity.png";
-                            break;
-                    }
+            for (let j = 0; j < filterIconsLength; j++) {
+                switch (filterIcons[j]) {
+                    case "beer":
+                        beerIcon[i].src = "../images/icons/beer.png";
+                        break;
+                    case "drinks":
+                        drinkIcon[i].src = "../images/icons/drink.png";
+                        break;
+                    case "wine":
+                        wineIcon[i].src = "../images/icons/wine.png";
+                        break;
+                    case "food":
+                        foodIcon[i].src = "../images/icons/food.png";
+                        break;
+                    case "coffee":
+                        coffeeIcon[i].src = "..images/icons/coffee.png";
+                        break;
+                    case "activity":
+                        activityIcon[i].src = "..images/icons/activity.png";
+                        break;
                 }
             }
         }
