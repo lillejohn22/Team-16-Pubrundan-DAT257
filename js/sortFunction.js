@@ -1,9 +1,6 @@
 /**
  * This file has a function for sorting an array list, alphabetically and after queue length.
  * It also registers which button was pressed and sorts the element on the website accordingly.
- *
- * @author Jennifer Krogh
- * @author Emma Pettersson
  */
 
 
@@ -59,6 +56,8 @@ function sortFunction (pubList, sortBy) {
     for (let i = 0; i < pubList.length; i++) {
         removeOrderTags(i);
         addOrderTag(i);
+        document.getElementById(pubList[i]).classList.remove('invisible');
+        document.getElementById(pubList[i]).classList.add('visible');
     }
 }
 
