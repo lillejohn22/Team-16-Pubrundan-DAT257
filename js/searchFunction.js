@@ -126,9 +126,11 @@ var textValue = as.textContent || as.innerText;
     // special case, if the J.A. is spelled without dots
     } else if(txtFilter.indexOf("JA") > -1) {
 
+      // make the pub cards that match condition visible
       document.getElementById(pubListObjects[1]).classList.remove('invisible');
       document.getElementById(pubListObjects[1]).classList.add('visible');
 
+      // make all other pub cards invisible
       document.getElementById(pubListObjects[0]).classList.add('invisible');
       document.getElementById(pubListObjects[2]).classList.add('invisible');
       document.getElementById(pubListObjects[3]).classList.add('invisible');
@@ -149,6 +151,7 @@ var textValue = as.textContent || as.innerText;
       document.getElementById(pubListObjects[18]).classList.add('invisible');
 
 
+    // put pub cards in order, so the matching ones are shown first
       for(var m = 0; m < pubListObjects.length; m++) {
 
          document.getElementById(pubListObjects[m]).classList.remove('order-1');
@@ -182,9 +185,11 @@ var textValue = as.textContent || as.innerText;
     // special case, if the 11:an has no colon
     } else if(txtFilter.indexOf("11AN") > -1) {
 
+      // make the pub cards that match condition visible
       document.getElementById(pubListObjects[5]).classList.remove('invisible');
       document.getElementById(pubListObjects[5]).classList.add('visible');
 
+      // make all other pub cards invisible
       document.getElementById(pubListObjects[0]).classList.add('invisible');
       document.getElementById(pubListObjects[1]).classList.add('invisible');
       document.getElementById(pubListObjects[2]).classList.add('invisible');
@@ -204,6 +209,7 @@ var textValue = as.textContent || as.innerText;
       document.getElementById(pubListObjects[17]).classList.add('invisible');
       document.getElementById(pubListObjects[18]).classList.add('invisible');
 
+    // put pub cards in order, so the matching ones are shown first
       for(var m = 0; m < pubListObjects.length; m++) {
 
         document.getElementById(pubListObjects[m]).classList.remove('order-1');
@@ -237,9 +243,11 @@ var textValue = as.textContent || as.innerText;
     // special case, if the Pig 'N'... has no apostrophe
     } else if(txtFilter.indexOf("PIGN") > -1) {
 
+      // make the pub cards that match condition visible
       document.getElementById(pubListObjects[14]).classList.remove('invisible');
       document.getElementById(pubListObjects[14]).classList.add('visible');
 
+      // make all other pub cards invisible
       document.getElementById(pubListObjects[0]).classList.add('invisible');
       document.getElementById(pubListObjects[1]).classList.add('invisible');
       document.getElementById(pubListObjects[2]).classList.add('invisible');
@@ -259,6 +267,7 @@ var textValue = as.textContent || as.innerText;
       document.getElementById(pubListObjects[17]).classList.add('invisible');
       document.getElementById(pubListObjects[18]).classList.add('invisible');
 
+    // put pub cards in order, so the matching ones are shown first
       for(var m = 0; m < pubListObjects.length; m++) {
 
        document.getElementById(pubListObjects[m]).classList.remove('order-1');
