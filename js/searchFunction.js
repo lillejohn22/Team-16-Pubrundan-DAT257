@@ -106,7 +106,7 @@ function searchFunctionSpecial(exceptionIndex1, exceptionIndex2) {
     fixVisibility(exceptionIndex1, exceptionIndex2);
 
     for (let j = 0; j < pubListObjects.length; j++) {
-        removeOrderTags(j);
+        removeOrderTagsSearch(j);
     }
 }
 
@@ -139,7 +139,7 @@ function visiblePubsFirst() {
     for (let i = 0; i < pubListObjects.length; i++) {
         let pub = pubListObjects[i];
 
-        removeOrderTags(pub);
+        removeOrderTagsSearch(pub);
 
         if (document.getElementById(pub).classList.contains("visible")) {
             document.getElementById(pub).classList.add("order-0");
@@ -153,7 +153,7 @@ function visiblePubsFirst() {
 /**
  * Remove all the order tags.
  */
-function removeOrderTags(pub) {
+function removeOrderTagsSearch(pub) {
     for (let j = 0; j < (pubListObjects.length + 1); j++) {
         let orderN = "order-" + j;
 

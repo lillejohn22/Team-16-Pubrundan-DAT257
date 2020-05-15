@@ -1,12 +1,4 @@
 /**
- * Displays the list of suggestions.
- */
-$('.classL').mousedown(function(event) {
-    clickPubSearch($(event.target));
-});
-
-
-/**
 * Function to create list of suggestions when you search for something
 */
 function googleSearch() {

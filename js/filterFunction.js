@@ -37,8 +37,6 @@ $(window).on('load', function() {
      * @param obj  - the checkbox that was pressed
      */
     function filterFunction(data, obj) {
-        var filter = $(obj).attr('id').replace("-checkbox", "");
-
         if (currentFilters.includes(filter)) {
             removeFilter(data, filter);
         } else {
@@ -122,12 +120,14 @@ $(window).on('load', function() {
         for (let i = 0; i < allPubs.length; i++) {
             let pub = allPubs[i];
 
-            removeOrderTags(i);
+            removeOrderTags(pub);
 
             if (document.getElementById(pub).classList.contains("visible")) {
                 document.getElementById(pub).classList.add("order-0");
+                document.getElementById(pub).classList.remove("order-19");
             } else {
                 document.getElementById(pub).classList.add("order-19");
+                document.getElementById(pub).classList.remove("order-0");
             }
         }
     }
@@ -140,6 +140,19 @@ $(window).on('load', function() {
         for (let i = 0; i < allPubs.length; i++) {
             document.getElementById(allPubs[i]).classList.remove("invisible");
             document.getElementById(allPubs[i]).classList.add("visible");
+        }
+    }
+
+
+    /**
+     *
+     * @param pub
+     */
+    function removeOrderTags(pub) {
+        for (let j = 0; j < (allPubs.length + 1); j++) {
+            let orderN = "order-" + j;
+
+            document.getElementById(pub).classList.remove(orderN);
         }
     }
 

@@ -9,33 +9,36 @@ var pubList = ["bulten", "japripps", "wijkanders", "gasquen", "cafec", "11an", "
     "pignwhistle"];
 
 // The pubs should initially be sorted by their queue time.
-sortFunction(pubList, "queue");
+sortFunction("queue");
 
 
 /**
  * Sorts the pubs based on the alphabetical order.
  */
-$('#alphaSort').click(function(){
-    sortFunction(pubList, "alpha");
+$('#alphaSort').click(function() {
+    console.log("alphaSort");
+
+    sortFunction("alpha");
 });
 
 
 /**
  * Sorts the pubs based on the queue length.
  */
-$('#queueSort').click(function(){
-    sortFunction(pubList, "queue");
+$('#queueSort').click(function() {
+    console.log("queueSort");
+
+    sortFunction("queue");
 });
 
 
 /**
  * Sorts the pub based on its argument, either alphabetically or by queue length.
  *
- * @param {string[]} pubList - a list of all the pubs
  * @param {string} sortBy - tells us how to sort the pubList
  * @returns
  */
-function sortFunction (pubList, sortBy) {
+function sortFunction (sortBy) { 
     if (sortBy === "alpha"){
         pubList.sort();
     } else {
@@ -54,7 +57,7 @@ function sortFunction (pubList, sortBy) {
     }
 
     for (let i = 0; i < pubList.length; i++) {
-        removeOrderTags(i);
+        removeOrderTagsSort(i);
         addOrderTag(i);
         document.getElementById(pubList[i]).classList.remove('invisible');
         document.getElementById(pubList[i]).classList.add('visible');
@@ -67,8 +70,8 @@ function sortFunction (pubList, sortBy) {
  *
  * @param {int} i - the index of the element
  */
-function removeOrderTags(i) {
-    for (let j = 0; j < 20; j++) {
+function removeOrderTagsSort(i) {
+    for (let j = 0; j < (pubList.length + 1); j++) {
         let orderN = "order-" + j;
 
         document.getElementById(pubList[i]).classList.remove(orderN);

@@ -5,7 +5,11 @@
  */
 
 
-allPubs = new Map();
+var pubs = ["bulten", "japripps", "wijkanders", "cafec", "basen", "11an", "focus", "fortnox", "gasquen",
+    "gastownospritkoket", "goldeni",  "hubben21", "jarnvagspub", "kajsabaren", "pignwhistle", "rodarummet",
+    "ventren", "winden", "zaloonen"];
+
+pubs = new Map();
 
 // Hack for creating "enums" in JavaScript
 const QueueLength = {SHORT: 1, MEDIUM: 2, LONG: 3,};
@@ -24,9 +28,9 @@ module.exports = function updateQueue(voteObject){
  * @param voteObject
  */
 function addPubToMap(voteObject) {
-    if (allPubs.get(voteObject.pubName) === undefined) {
+    if (pubs.get(voteObject.pubName) === undefined) {
         let queueData = {name: voteObject.pubName, queue: {"colorIndex": 0}, queueArray: [0, 0, 0, 0, 0], lastVoted: 0};
-        allPubs.set(voteObject.pubName, queueData)
+        pubs.set(voteObject.pubName, queueData)
     }
 }
 
@@ -38,7 +42,7 @@ function addPubToMap(voteObject) {
  * */
 function updateQueueData(voteObject){
     // Gets the queue data for the pub
-    let queueData = allPubs.get(voteObject.pubName);
+    let queueData = pubs.get(voteObject.pubName);
 
     // Adds the queue values to the memory array
     queueData.queueArray.shift();
@@ -51,7 +55,7 @@ function updateQueueData(voteObject){
     queueData.queue = calculateQueue(queueData.queueArray);
 
     // Store all the new queue data in the map
-    allPubs.set(voteObject.pubName, queueData);
+    pubs.set(voteObject.pubName, queueData);
 
     return queueData.queue;
 }
