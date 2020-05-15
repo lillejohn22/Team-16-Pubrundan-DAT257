@@ -105,7 +105,32 @@ body {
     color:white;
 }
 
+/* ---------------
+         Map
+   --------------- */
 
+
+#map-container {
+    width: 100%;
+}
+.map-element {
+    margin-top: 45pt;
+    background-color: #333333;
+    border: 5pt solid #F4F7F5;
+    height: 850pt;
+}
+.map-element h2 {
+    font-family: "Raleway Regular";
+    color: #F4F7F5;
+    text-align: center;
+    padding-top: 10pt;
+    border-bottom: 5px solid rgba(255, 255, 255, .3);
+}
+
+.align-radio {
+    display: flex;
+    justify-content: center;
+}
 
 /* ---------------
          SSF
