@@ -1,6 +1,6 @@
 const express = require('express')
 const path = require('path')
-const QUpdater = require('./js/calculateQueue')
+const queue = require('./modules/calculateQueue')
 const fs = require('fs')
 
 const server = express()
@@ -24,7 +24,7 @@ server.get('/pub-data.json', (req, res) => {
 let requestNumber = 0;
 server.use('/voted', (request, response, next) => {
     let voteObject = request.body;  // contains the entire vote object that is sent from getVote.js
-    response.status(200).json(QUpdater(voteObject));  // QUpdater(voteObject); MUST RETURN AN OBJECT THAT CAN BE PARSED THROUGH JSON!!
+    response.status(200).json(queue.updateQueue(voteObject));  // QUpdater(voteObject); MUST RETURN AN OBJECT THAT CAN BE PARSED THROUGH JSON!!
     requestNumber++;
     next()
     /*

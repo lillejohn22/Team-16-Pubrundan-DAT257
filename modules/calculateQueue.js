@@ -15,8 +15,7 @@ pubs = new Map();
 const QueueLength = {SHORT: 1, MEDIUM: 2, LONG: 3,};
 Object.freeze(QueueLength);
 
-// TODO: Uncaught ReferenceError: module is not defined
-module.exports = function updateQueue(voteObject){
+function updateQueue(voteObject){
     addPubToMap(voteObject);
     return updateQueueData(voteObject);
 };
@@ -115,3 +114,6 @@ function calculateQueue(queueArray) {
         return {"colorIndex": QueueLength.SHORT};
     }
 }
+
+// TODO: Uncaught ReferenceError: module is not defined
+module.exports.updateQueue = updateQueue
