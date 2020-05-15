@@ -1,3 +1,9 @@
+/* TODO:
+    - make resetCheckboxes() work somehow
+    - it only uses the last filter to filter the pubs, fix that
+ */
+
+
 $(window).on('load', function() {
     var allPubs = ["bulten", "japripps", "wijkanders", "gasquen", "cafec", "11an", "rodarummet", "ventren", "basen",
         "goldeni", "kajsabaren", "focus", "hubben21", "fortnox", "gastownospritkoket", "winden", "jarnvagspub",

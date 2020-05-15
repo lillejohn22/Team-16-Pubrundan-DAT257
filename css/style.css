@@ -31,6 +31,11 @@
   src: url(../fonts/oswald/static/Oswald-Light.ttf)
 }
 
+@font-face {
+    font-family: "Humble Cafe";
+    src: url("../fonts/humble-cafe/HumbleCafe-P6R7.ttf");
+}
+
 
 /* ---------------
        Body
@@ -431,7 +436,26 @@ body {
 }
 
 #detailed-view-logo {
-    width: 150pt;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 200pt;
+}
+
+.detailed-view h3 {
+    font-family: "Humble Cafe", sans-serif;
+    font-size: 5em;
+    text-align: center;
+}
+
+.detailed-view h4 {
+    font-family: "Oswald Light", sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#myCarousel {
+    width: 500pt;
 }
 
 
