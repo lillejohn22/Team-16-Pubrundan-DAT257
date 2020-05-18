@@ -93,25 +93,42 @@
                     L.control.scale().addTo(map);
 
                     //Adds markers for every pub
-                    L.marker([57.687480, 11.978640]).addTo(map).bindPopup(L.popup({closeOnClick: false, autoClose: false}).setContent("Basen")).openPopup();
-                    L.marker([57.688210, 11.978730]).addTo(map).bindPopup(L.popup({closeOnClick: false, autoClose: false}).setContent("Kajsabaren")).openPopup();
-                    L.marker([57.688330, 11.979270]).addTo(map).bindPopup(L.popup({closeOnClick: false, autoClose: false}).setContent("Hubben 2.1")).openPopup();
-                    L.marker([57.688970, 11.978690]).addTo(map).bindPopup(L.popup({closeOnClick: false, autoClose: false}).setContent("Café Bulten")).openPopup();
-                    L.marker([57.689081, 11.979204]).addTo(map).bindPopup(L.popup({closeOnClick: false, autoClose: false}).setContent("Zaloonen")).openPopup();
-                    L.marker([57.689552, 11.978064]).addTo(map).bindPopup(L.popup({closeOnClick: false, autoClose: false}).setContent("Winden")).openPopup();
-                    L.marker([57.687510, 11.976563]).addTo(map).bindPopup(L.popup({closeOnClick: false, autoClose: false}).setContent("Röda Rummet")).openPopup();
-                    L.marker([57.687560, 11.976763]).addTo(map).bindPopup(L.popup({closeOnClick: false, autoClose: false}).setContent("Verum")).openPopup();
-                    L.marker([57.688282, 11.975849]).addTo(map).bindPopup(L.popup({closeOnClick: false, autoClose: false}).setContent("Tågvagnen")).openPopup();
-                    L.marker([57.688650, 11.975160]).addTo(map).bindPopup(L.popup({closeOnClick: false, autoClose: false}).setContent("Gasquen")).openPopup();
-                    L.marker([57.688740, 11.974630]).addTo(map).bindPopup(L.popup({closeOnClick: false, autoClose: false}).setContent("J.A. Pripps")).openPopup();
-                    L.marker([57.691053, 11.975531]).addTo(map).bindPopup(L.popup({closeOnClick: false, autoClose: false}).setContent("Focus")).openPopup();
-                    L.marker([57.691039, 11.978209]).addTo(map).bindPopup(L.popup({closeOnClick: false, autoClose: false}).setContent("Fort NOx")).openPopup();
-                    L.marker([57.691113, 11.978331]).addTo(map).bindPopup(L.popup({closeOnClick: false, autoClose: false}).setContent("Gastown & Spritköket")).openPopup();
-                    L.marker([57.692588, 11.975321]).addTo(map).bindPopup(L.popup({closeOnClick: false, autoClose: false}).setContent("Wikanders")).openPopup();
-                    L.marker([57.692902, 11.975156]).addTo(map).bindPopup(L.popup({closeOnClick: false, autoClose: false}).setContent("Golden-I")).openPopup();
-                    L.marker([57.707149, 11.940027]).addTo(map).bindPopup(L.popup({closeOnClick: false, autoClose: false}).setContent("Café C")).openPopup();
-                    L.marker([57.706218, 11.936804]).addTo(map).bindPopup(L.popup({closeOnClick: false, autoClose: false}).setContent("11:an")).openPopup();
-
+                    let basen = L.marker([57.687480, 11.978640]).addTo(map);
+                        basen.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Basen")).openPopup();
+                    let kajsa = L.marker([57.688210, 11.978730]).addTo(map)
+                        kajsa.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Kajsabaren")).openPopup();
+                    let hubben = L.marker([57.688330, 11.979270]).addTo(map)
+                        hubben.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Hubben 2.1")).openPopup();
+                    let bulten = L.marker([57.688970, 11.978690]).addTo(map)
+                        bulten.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Café Bulten")).openPopup();
+                    let zaloonen = L.marker([57.689081, 11.979204]).addTo(map)
+                        zaloonen.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Zaloonen")).openPopup();
+                    let winden = L.marker([57.689552, 11.978064]).addTo(map)
+                        winden.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Winden")).openPopup();
+                    let rodaRummet = L.marker([57.687510, 11.976563]).addTo(map)
+                        rodaRummet.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Röda Rummet")).openPopup();
+                    let verum = L.marker([57.687560, 11.976763]).addTo(map)
+                        verum.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Verum")).openPopup();
+                    let tagvagnen = L.marker([57.688282, 11.975849]).addTo(map)
+                        tagvagnen.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Tågvagnen")).openPopup();
+                    let gasquen = L.marker([57.688650, 11.975160]).addTo(map)
+                        gasquen.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Gasquen")).openPopup();
+                    let pripps = L.marker([57.688740, 11.974630]).addTo(map)
+                        pripps.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("J.A. Pripps")).openPopup();
+                    let focus = L.marker([57.691053, 11.975531]).addTo(map)
+                        focus.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Focus")).openPopup();
+                    let fortNOx = L.marker([57.691039, 11.978209]).addTo(map)
+                        fortNOx.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Fort NOx")).openPopup();
+                    let gastown = L.marker([57.691113, 11.978331]).addTo(map)
+                        gastown.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Gastown & Spritköket")).openPopup();
+                    let wikanders = L.marker([57.692588, 11.975321]).addTo(map)
+                        wikanders.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Wikanders")).openPopup();
+                    let goldenI = L.marker([57.692902, 11.975156]).addTo(map)
+                        goldenI.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Golden-I")).openPopup();
+                    let cafeC = L.marker([57.707149, 11.940027]).addTo(map)
+                        cafeC.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Café C")).openPopup();
+                    let elvan = L.marker([57.706218, 11.936804]).addTo(map)
+                        elvan.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("11:an")).openPopup();
                 </script>
             </div>
         </div>
@@ -192,7 +209,6 @@
 
 <!-- JavaScript files-->
 <script src="../js/getVote.js"></script>
-<script src="../node_modules/calculateQueue.js"></script>
 <script src="../js/changeQueueColour.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="../js/expandContractGridElements.js"></script>

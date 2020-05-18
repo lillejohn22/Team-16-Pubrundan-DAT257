@@ -115,5 +115,4 @@ function calculateQueue(queueArray) {
     }
 }
 
-// TODO: Uncaught ReferenceError: module is not defined
 module.exports.updateQueue = updateQueue
