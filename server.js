@@ -24,7 +24,7 @@ server.get('/pub-data.json', (req, res) => {
 let requestNumber = 0;
 server.use('/voted', (request, response, next) => {
     let voteObject = request.body;  // contains the entire vote object that is sent from getVote.js
-    response.status(200).json(queue.updateQueue(voteObject));  // QUpdater(voteObject); MUST RETURN AN OBJECT THAT CAN BE PARSED THROUGH JSON!!
+    response.status(200).json(queue.updateQueue(voteObject));  // *.json(...) MUST RETURN AN OBJECT THAT CAN BE PARSED THROUGH JSON!!
     requestNumber++;
     next()
     /*
