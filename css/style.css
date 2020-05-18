@@ -119,22 +119,22 @@ body {
     /* configure the size of the map */
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 #map-container {
     width: 100%;
 }
 .map-element {
-    margin-top: 45pt;
-    background-color: #333333;
-    border: 5pt solid #F4F7F5;
-    height: 850pt;
+    background-color: white;
+    margin-top: 20pt;
+
+    height: 90vh;
 }
 .map-element h2 {
     font-family: "Raleway Regular", sans-serif;
     color: #F4F7F5;
     text-align: center;
-    padding-top: 10pt;
+
     border-bottom: 5px solid rgba(255, 255, 255, .3);
 }
 
@@ -559,7 +559,7 @@ body {
     font-weight: 100;
     background-color: #333333;
     color: #F4F7F5;
-    margin-top: 25pt;
+    margin-top: 20pt;
     padding: 5% 10% 5% 10%;
     font-size: 13pt;
 }
