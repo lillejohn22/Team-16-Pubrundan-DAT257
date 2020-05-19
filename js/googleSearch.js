@@ -94,8 +94,8 @@ function googleSearch() {
 function clickPubSearch(id) {
     // List with pub ids
     var pubListObj = ["bulten", "japripps", "wijkanders", "cafec", "basen", "11an", "focus", "fortnox", "gasquen",
-        "gastownospritkoket", "goldeni",  "hubben21", "jarnvagspub", "kajsabaren", "pignwhistle", "rodarummet",
-        "ventren", "winden", "zaloonen"];
+        "gastownospritkoket", "goldeni",  "hubben21", "tagvagnen", "kajsabaren", "pignwhistle", "rodarummet",
+        "verum", "winden", "zaloonen"];
 
     // Make search suggestion list invisible
     document.getElementById("searchList").classList.add('invisible');

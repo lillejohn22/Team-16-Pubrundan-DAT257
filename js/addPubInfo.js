@@ -29,11 +29,13 @@ $(window).on('load', function() {
      * @param data - the JSON data
      */
     function processJSON(data) {
+        var currentHour = new Date(Date.now()).getHours()
+
         for (let i = 0; i < elems.length; i++) {
             var elemID = elems[i].id;
-
             $(locInfo[i]).text(data[elemID].location);
             $(timeInfo[i]).text(data[elemID].openingHours);
+            setPubQueueColor(timeInfo[i], currentHour,elemID);
 
             // Fix icons
             var filterIcons = data[elemID].filter;
@@ -63,5 +65,60 @@ $(window).on('load', function() {
             }
         }
     }
+
+    function setPubQueueColor(timeInfo, currentHour,elemID) {
+        if(!isPubOpen(timeInfo, currentHour)) {
+            replaceClassesOfItemWith(elemID, "pub-closed")
+        }
+        if(true) {
+            $.getJSON(`../getQueueFor/${elemID}`, function (queueLength) {
+                console.log(queueLength)
+                switch(queueLength) {
+                    case 1:
+                        replaceClassesOfItemWith(elemID, "short-queue")
+                        break;
+                    case 2:
+                        replaceClassesOfItemWith(elemID, "medium-queue")
+                        break;
+                    case 3:
+                        replaceClassesOfItemWith(elemID, "long-queue")
+                        break;
+                    default:
+                        replaceClassesOfItemWith(elemID, "pub-closed")
+
+                }
+            });
+        }
+    }
+
+    function isPubOpen(timeInfo, currentHour) {
+        let openingHour = parseInt(timeInfo.innerHTML.slice(0,2))
+        let closingHour = parseInt(timeInfo.innerHTML.slice(timeInfo.innerHTML.length-2, timeInfo.innerHTML.length))
+
+        // Rebase the clock to open at 0 for easier if/else logic
+        let newOpen = 0;
+        let newClose = (closingHour + 24 - openingHour) % 24
+        let newCurrent = (currentHour + 24 - openingHour) % 24
+
+        if(newOpen <= newCurrent && newCurrent < newClose)
+            return true
+        else
+            return false
+    }
+
+    /**
+     * Replaces four specific ids with a custom one, not meant to be used outside of addPubInfo.js!!!
+     * @param {String} elemID
+     * @param {String} string
+     */
+    function replaceClassesOfItemWith(elemID, string) {
+        document.getElementById(elemID).classList.replace("short-queue", string)
+        document.getElementById(elemID).classList.replace("medium-queue", string)
+        document.getElementById(elemID).classList.replace("long-queue", string)
+        document.getElementById(elemID).classList.replace("pub-closed", string)
+
+
+    }
+
 });
 

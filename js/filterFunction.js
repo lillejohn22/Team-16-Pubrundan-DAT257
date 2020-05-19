@@ -26,6 +26,7 @@ $(window).on('load', function() {
         $.getJSON('../pub-data.json', function (data) {
             // Pass the data on to the filter function, along with the object that called the function
             filterFunction(data, obj);
+
         });
     }
 

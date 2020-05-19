@@ -35,6 +35,11 @@ server.use('/voted', (request, response, next) => {
     */
 })
 
+server.get('/getQueueFor/:value',(request, response) => {
+    // console.log(request.params.value)
+    response.status(200).json(queue.getQueueForPub(request.params.value))
+})
+
 
 server.use("/js", express.static(__dirname + '/js'))
 server.use("/images", express.static(__dirname + '/images'))
