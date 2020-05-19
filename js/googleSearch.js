@@ -114,3 +114,65 @@ function clickPubSearch(id) {
     document.getElementById(pubListObj[id]).classList.add('order-1');
 }
 
+
+/**
+ * Dropdown of search bar and list
+ */
+$('#dropDownSearch').click(function() {
+
+if(document.getElementById("searchDropdown").classList.contains('invisible')){
+    document.getElementById("searchDropdown").classList.remove('invisible');
+     document.getElementById("searchDropdown").classList.add('visible');
+     document.getElementById("sortDropdown").classList.remove('visible');
+     document.getElementById("sortDropdown").classList.add('invisible');
+     document.getElementById("filterDropdown").classList.remove('visible');
+     document.getElementById("filterDropdown").classList.add('invisible');
+
+ } else  {
+       document.getElementById("searchDropdown").classList.remove('visible');
+        document.getElementById("searchDropdown").classList.add('invisible');
+
+
+     }
+});
+
+/**
+ * Dropdown of sortbuttons
+ */
+$('#dropDownSort').click(function() {
+
+if(document.getElementById("sortDropdown").classList.contains('invisible')){
+    document.getElementById("sortDropdown").classList.remove('invisible');
+     document.getElementById("sortDropdown").classList.add('visible');
+     document.getElementById("searchDropdown").classList.remove('visible');
+     document.getElementById("searchDropdown").classList.add('invisible');
+     document.getElementById("filterDropdown").classList.remove('visible');
+     document.getElementById("filterDropdown").classList.add('invisible');
+
+ } else  {
+       document.getElementById("sortDropdown").classList.remove('visible');
+        document.getElementById("sortDropdown").classList.add('invisible');
+
+     }
+});
+
+
+/**
+ * Dropdown of filterbuttons
+ */
+$('#dropDownFilter').click(function() {
+
+if(document.getElementById("filterDropdown").classList.contains('invisible')){
+    document.getElementById("filterDropdown").classList.remove('invisible');
+     document.getElementById("filterDropdown").classList.add('visible');
+     document.getElementById("searchDropdown").classList.remove('visible');
+     document.getElementById("searchDropdown").classList.add('invisible');
+     document.getElementById("sortDropdown").classList.remove('visible');
+     document.getElementById("sortDropdown").classList.add('invisible');
+
+ } else  {
+       document.getElementById("filterDropdown").classList.remove('visible');
+        document.getElementById("filterDropdown").classList.add('invisible');
+
+     }
+});
