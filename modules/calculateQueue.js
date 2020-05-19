@@ -116,7 +116,7 @@ function calculateQueue(queueArray) {
 
 function getQueueForPub(keyId) {
     addPubToMap(keyId);
-    console.log("getQueueForPub " + keyId + " colorIndex = " + JSON.stringify(pubs.get(keyId).queue.colorIndex))
+    // console.log("getQueueForPub " + keyId + " colorIndex = " + JSON.stringify(pubs.get(keyId).queue.colorIndex))
     return pubs.get(keyId).queue.colorIndex;
 }
 

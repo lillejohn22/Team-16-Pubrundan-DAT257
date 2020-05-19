@@ -72,7 +72,6 @@ $(window).on('load', function() {
         }
         if(true) {
             $.getJSON(`../getQueueFor/${elemID}`, function (queueLength) {
-                console.log(queueLength)
                 switch(queueLength) {
                     case 1:
                         replaceClassesOfItemWith(elemID, "short-queue")
