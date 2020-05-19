@@ -40,6 +40,7 @@
 /* ---------------
        Body
    --------------- */
+
 body {
   background-color: #F4F7F5;
 }
@@ -115,21 +116,24 @@ body {
 /* ---------------
          Map
    --------------- */
+
 #map {
-    /* configure the size of the map */
+    /* Configure the size of the map */
     width: 100%;
     height: 100%;
     z-index: 2;
 }
+
 #map-container {
     width: 100%;
 }
+
 .map-element {
     background-color: white;
     margin-top: 20pt;
-
     height: 90vh;
 }
+
 .map-element h2 {
     font-family: "Raleway Regular", sans-serif;
     color: #F4F7F5;
@@ -138,10 +142,6 @@ body {
     border-bottom: 5px solid rgba(255, 255, 255, .3);
 }
 
-.align-radio {
-    display: flex;
-    justify-content: center;
-}
 
 /* ---------------
          SSF
@@ -209,7 +209,6 @@ body {
     text-decoration: none;
     display: block;
 }
-
 
 /* Sort */
 .sortButtons {
@@ -415,6 +414,7 @@ body {
     -moz-transition: all .25s ease;      /* Firefox */
     -o-transition: all .25s ease;        /* Opera */
     transition: all .25s ease;
+    overflow: auto;
 }
 
 .detailed-view-content {
@@ -424,7 +424,7 @@ body {
     width: 80%;
     height: auto;
     background-color: #F4F7F5;
-    padding: 5pt;
+    padding: 15pt 5pt 15pt 5pt;
     -webkit-transition: all .25s ease;   /* Safari and Chrome */
     -moz-transition: all .25s ease;      /* Firefox */
     -o-transition: all .25s ease;        /* Opera */
@@ -445,6 +445,7 @@ body {
     float: right;
     width: 15pt;
     height: 15pt;
+    margin-top: -10pt;
     background-image: url("../images/icons/exit-nocolor.png");
     background-size: contain;
     -webkit-transition: all .25s ease;   /* Safari and Chrome */
@@ -463,30 +464,94 @@ body {
 }
 
 .detailed-view-element {
-    border: 5pt solid #333333;
+    border: 5pt solid #F4F7F5;
 }
 
-#detailed-view-logo {
+#detailed-view-name-container {
+    z-index: 10;
     display: block;
-    margin-right: auto;
-    margin-left: auto;
-    width: 200pt;
+    position: absolute;
+    width: 100%;
+    height: 150pt;
+    margin: auto;
+    padding-top: 3%;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
-.detailed-view h3 {
+#detailed-view-name {
     font-family: "Humble Cafe", sans-serif;
-    font-size: 5em;
+    font-size: 4em;
+    color: #F4F7F5;
     text-align: center;
+    padding: 0 5pt 0 5pt;
 }
 
-.detailed-view h4 {
+#detailed-view-host {
     font-family: "Oswald Light", sans-serif;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    color: #F4F7F5;
     text-align: center;
 }
 
-#myCarousel {
-    width: 500pt;
+.detailed-view-header {
+    font-family: "Oswald Light", sans-serif;
+    padding-bottom: 5pt;
+}
+
+.detailed-view-mini-header {
+    font-family: "Oswald Light", sans-serif;
+    font-size: 1.3em;
+}
+
+.detailed-view-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.detailed-view p {
+    font-family: "Raleway Regular", sans-serif;
+}
+
+.detailed-view-info-element {
+    padding-bottom: 10pt;
+}
+
+.detailed-view-table {
+    font-family: "Raleway Regular", sans-serif;
+}
+
+.detailed-view-table th {
+    width: 100pt;
+    text-align: left;
+}
+
+.detailed-view-table td {
+    width: 100pt;
+    text-align: right;
+}
+
+#detailed-view-map-container {
+    padding-bottom: 10pt;
+}
+
+/* Carousel */
+.carousel-item img {
+    display: flex;
+    justify-content: center;
+    height: 150pt;
+    object-fit: cover;
+}
+
+.carousel-control-prev {
+    z-index: 11;
+}
+
+.carousel-control-next {
+    z-index: 11;
+}
+
+.capitalize {
+    text-transform: capitalize;
 }
 
 
@@ -535,19 +600,19 @@ body {
     margin-left: 15pt;
 }
 
-.order-13{-ms-flex-order:13;order:13}
+.order-13{-ms-flex-order:13; order:13}
 
-.order-14{-ms-flex-order:14;order:14}
+.order-14{-ms-flex-order:14; order:14}
 
-.order-15{-ms-flex-order:15;order:15}
+.order-15{-ms-flex-order:15; order:15}
 
-.order-16{-ms-flex-order:16;order:16}
+.order-16{-ms-flex-order:16; order:16}
 
-.order-17{-ms-flex-order:17;order:17}
+.order-17{-ms-flex-order:17; order:17}
 
-.order-18{-ms-flex-order:18;order:18}
+.order-18{-ms-flex-order:18; order:18}
 
-.order-19{-ms-flex-order:19;order:19}
+.order-19{-ms-flex-order:19; order:19}
 
 
 /* ---------------

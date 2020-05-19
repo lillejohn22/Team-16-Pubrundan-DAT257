@@ -1,12 +1,21 @@
 {
   "bulten":{
-    "name" : "Café Bulten",
+    "name" : "Cafe Bulten",
     "host" : "Café Bulten",
     "location" : "M-huset",
     "address" : "Hörsalsvägen 7, 412 58 Göteborg",
     "openingHours" : "18 - 01",
     "paymentTypes" : ["SU-card", "Card"],
-    "filter" : ["wine", "food"]
+    "filter" : ["wine", "food"],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": ["Dance competition", "Drinking competition"],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": ["Chill"]
   },
 
   "japripps":{
@@ -16,7 +25,16 @@
     "address" : "Sven Hultins gata 4, 412 58 Göteborg",
     "openingHours" : "15 - 01",
     "paymentTypes" : ["SU-card", "Card"],
-    "filter" : ["drinks"]
+    "filter" : ["drinks"],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""]
   },
 
   "wijkanders":{
@@ -26,7 +44,16 @@
     "address" : "Vera Sandbergs allé 5B, 411 33 Göteborg",
     "openingHours" : "15 - 22",
     "paymentTypes" : ["SU-card", "Card"],
-    "filter" : ["beer"]
+    "filter" : ["beer"],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""]
   },
 
   "gasquen":{
@@ -36,17 +63,35 @@
     "address" : "Teknologplatsen 6, 412 58 Göteborg",
     "openingHours" : "20 - 01",
     "paymentTypes" : ["SU-card", "Card"],
-    "filter" : [""]
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""]
   },
 
   "cafec":{
-    "name" : "Café C",
+    "name" : "Cafe C",
     "host" : "C",
     "location" : "Navet (Lindholmen)",
     "address" : "Lindholmspiren 5, 417 55 Göteborg",
     "openingHours" : "15 - 19",
     "paymentTypes" : ["SU-card", "Card"],
-    "filter" : [""]
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""]
   },
 
   "11an":{
@@ -56,27 +101,54 @@
     "address" : "Forskningsgången 4, 417 56 Göteborg",
     "openingHours" : "15 - 20",
     "paymentTypes" : "Card",
-    "filter" : [""]
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""]
   },
 
   "rodarummet":{
-    "name" : "Röda Rummet",
+    "name" : "Roda Rummet",
     "host" : "PubA",
     "location" : "Biblioteket",
     "address" : "Sven Hultins gata 6, 412 58 Göteborg",
     "openingHours" : "19 - 03",
     "paymentTypes" : "Card",
-    "filter" : [""]
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""]
   },
 
   "ventren":{
-    "name" : "V-entrén",
+    "name" : "V-entren",
     "host" : "SNOK",
     "location" : "Samhällsbyggnad III",
     "address" : "Sven Hultins gata 6, 412 58 Göteborg",
     "openingHours" : "19 -03",
     "paymentTypes" : "Card",
-    "filter" : [""]
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""]
   },
 
   "basen":{
@@ -86,7 +158,16 @@
     "address" : "Rännvägen 6b, 412 58 Göteborg",
     "openingHours" : "19 - 01",
     "paymentTypes" : "Card",
-    "filter" : [""]
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""]
   },
 
   "goldeni":{
@@ -96,7 +177,16 @@
     "address" : "Vera Sandbergs allé 8A, 411 33 Göteborg",
     "openingHours" : "19 - 03",
     "paymentTypes" : "Cash",
-    "filter" : [""]
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""]
   },
 
   "kajsabaren":{
@@ -106,7 +196,16 @@
     "address" : "Maskingränd 2, 412 58 Göteborg",
     "openingHours" : "17 - 01",
     "paymentTypes" : ["Cash", "Card"],
-    "filter" : [""]
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""]
   },
 
   "focus":{
@@ -116,7 +215,16 @@
     "address" : "Kemivägen 11, 411 33 Göteborg",
     "openingHours" : "19 - 03",
     "paymentTypes" : "Cash",
-    "filter" : [""]
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""]
   },
 
   "hubben21":{
@@ -126,7 +234,16 @@
     "address" : "Hörsalsvägen 9, 412 58 Göteborg",
     "openingHours" : "17 - 02",
     "paymentTypes" : "Card",
-    "filter" : [""]
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""]
   },
 
   "fortnox":{
@@ -136,17 +253,35 @@
     "address" : "",
     "openingHours" : "19 - 01",
     "paymentTypes" : "Card",
-    "filter" : [""]
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""]
   },
 
   "gastownospritkoket":{
-    "name" : "Gastown & Spritköket",
+    "name" : "Gastown o Spritkoket",
     "host" : "Kaos",
     "location" : "Kemi",
     "address" : "",
     "openingHours" : "19 - 01",
     "paymentTypes" : "Card",
-    "filter" : [""]
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""]
   },
 
   "winden":{
@@ -156,17 +291,35 @@
     "address" : "Hörsalsvägen 5, 412 58 Göteborg",
     "openingHours" : "19 - 03",
     "paymentTypes" : ["Cash", "Card"],
-    "filter" : [""]
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""]
   },
 
   "jarnvagspub":{
-    "name" : "Järnvägspub",
+    "name" : "Jarnvagspub",
     "host" : "prosex.",
     "location" : "Tågvagnen",
     "address" : "Sven Hultins gata 4, 412 58 Göteborg", 
     "openingHours" : "18 - 01",
     "paymentTypes" : ["Cash", "Card"],
-    "filter" : [""]
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""]
   },
 
   "zaloonen":{
@@ -177,7 +330,15 @@
     "openingHours" : "19 - 01",
     "paymentTypes" : "Card",
     "filter" : [""],
-    "id" : "zaloonen"
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""]
   },
 
   "pignwhistle":{
@@ -187,6 +348,15 @@
     "address" : "Gibraltargatan 80, 412 79 Göteborg",
     "openingHours" : "16 - 01",
     "paymentTypes" : ["Cash", "Card"],
-    "filter" : [""]
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""]
   }
 }
