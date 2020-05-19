@@ -145,6 +145,37 @@ body {
 
 /* ---------------
          SSF
+
+    position: relative;
+
+    .dropdwnButton {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      top: 10%;
+
+    }
+
+    .dropdwnButton:hover {
+      background-color: white;
+    }
+
+
+        margin:auto;
+           top: 50px;
+            left: 10px;
+
+
+    .ssf-element h2 {
+        font-family: "Raleway Regular", sans-serif;
+        color: #F4F7F5;
+        text-align: center;
+        padding-top: 10pt;
+        border-bottom: 5px solid rgba(255, 255, 255, .3);
+    }
+
    --------------- */
 
 #ssf-container {
@@ -153,54 +184,75 @@ body {
 
 .ssf-element {
     margin-top: 15pt;
-    background-color: #333333;
-    border: 5pt solid #F4F7F5;
-    height: 150pt;
-    }
+    background-color: #F4F7F5;
+    min-height: 100pt;
+    border: 2pt solid #333333;
 
-.ssf-element h2 {
-    font-family: "Raleway Regular", sans-serif;
-    color: #F4F7F5;
-    text-align: center;
-    padding-top: 10pt;
-    border-bottom: 5px solid rgba(255, 255, 255, .3);
+}
+
+.ddMenu {
+    width: 100%;
+    display: inline;
+}
+
+.btn-outline-primary:hover {
+    background-color:#F4F7F5;
+    border-color:#333333;
+}
+
+.buttonWidth {
+    width: 32%;
+    justify-content: center;
+}
+
+.dropdown-content {
+    position: absolute;
+    width: 100%;
+    float:left;
+    display: block;
+    z-index: 10;
 }
 
 /* Search */
 #searchBar {
-    width: 85%;
-    font-size: 16px;
-    padding: 12px 20px 12px 40px;
-    border: 1px solid #ddd;
+    width: 80%;
+    font-size: 15px;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid #333333;
     margin-bottom: 12px;
+    margin-top: 20px;
 }
 
 #searchButton {
-    width: 10%;
+    width: 12%;
     font-size: 16px;
-    padding: 1px 2px 1px 4px;
-    border: 1px solid #f8f9fa;
-    margin-right: auto;
-    background-color: #f8f9fa;
-    color: #212529;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid #333333;
+    margin-right: 5%;
+    background-color: #F4F7F5;
+    color: #333333;
 }
 
 #searchList {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    width: 80%;
     visibility: visible;
+    overflow: hidden;
+    z-index: 10;
 }
 
 .searchL {
     border: none;
-    margin-top: -1px;
-    padding: 5px;
+    margin-top: -5px;
+    padding: 3px;
     background-color: #F6F6F6;
     font-size: 16px;
     color: black;
-    display: block;
     text-decoration: none;
+    display: block;
+
 }
 
 .searchL a:hover {
@@ -208,6 +260,7 @@ body {
     color: white;
     text-decoration: none;
     display: block;
+
 }
 
 
@@ -216,11 +269,16 @@ body {
     font-family: "Raleway Regular", sans-serif;
     font-size: 1.2em;
     color: #08090A;
+    width: 100%;
 }
 
  .align-radio {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    width: 93%;
+    margin-right:5%;
+    margin-top: 10px;
+
 }
 
 /* Filter */
@@ -241,7 +299,10 @@ body {
    --------------- */
 
 /* Some code for image zooming borrowed from here:
-   https://thatwebdude.com/tutorial/css-image-zooming-grid/ */
+   https://thatwebdude.com/tutorial/css-image-zooming-grid/
+       margin-left: 10%;
+         width: 100%;
+       */
 
 #grid-container {
     width: 80%;
