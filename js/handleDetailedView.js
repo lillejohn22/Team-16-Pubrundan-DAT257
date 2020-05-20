@@ -67,7 +67,8 @@ $(window).on('load', function() {
         document.getElementById("detailed-view-name").innerHTML = pubData[id].name;
 
         /* Host + website link */
-        document.getElementById("detailed-view-host").innerHTML = "Hosted by " + pubData[id].host;
+        document.getElementById("detailed-view-host").innerHTML = "Pub hosted by " + pubData[id].host;
+        //console.log(document.getElementById("detailed-view-host-website"));
         //document.getElementById("detailed-view-host-website").href = pubData[id].hostWebsite;
 
         /* Description */
@@ -96,7 +97,7 @@ $(window).on('load', function() {
 
         /* Offerings */
         document.getElementById("detailed-offering-info").innerHTML =
-            createInfoString(id, "/", "offerings");
+            createInfoString(id, "/", "filter");
 
         /* Drinks */
         addDetailedViewDrinkData(id);
@@ -107,9 +108,9 @@ $(window).on('load', function() {
 
 
     /**
+     * Add the map data from Google Maps by embedding it.
      *
-     *
-     * @param id
+     * @param id - the id of the pub.
      */
     function addDetailedViewMapData(id) {
         let link;
@@ -125,7 +126,7 @@ $(window).on('load', function() {
                 link = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2132.404738205159!2d11.973130216252125!3d57.69259324819357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff3736be94497%3A0x57820489e5a0243a!2sWijkanders!5e0!3m2!1ssv!2sse!4v1589967520416!5m2!1ssv!2sse";
                 break;
             case "gasquen":
-                link = "<https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2132.6348754568216!2d11.972810516252048!3d57.688682948501636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff30c82ab535b%3A0x2200f43ab5d50a72!2sGasquen!5e0!3m2!1ssv!2sse!4v1589967569542!5m2!1ssv!2sse";
+                link = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2132.6348754568216!2d11.972810516252048!3d57.688682948501636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff30c82ab535b%3A0x2200f43ab5d50a72!2sGasquen!5e0!3m2!1ssv!2sse!4v1589967569542!5m2!1ssv!2sse";
                 break;
             case "cafec":
                 link = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2131.548158761385!2d11.93784271625245!3d57.70714604704631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff36dbc5e91e3%3A0xb16bc1bfa58f2ec!2zQ2Fmw6kgQw!5e0!3m2!1ssv!2sse!4v1589967603277!5m2!1ssv!2sse";
@@ -176,9 +177,9 @@ $(window).on('load', function() {
 
 
     /**
+     * Add a short line of text that describres the current queue length.
      *
-     *
-     * @param id
+     * @param id - the id of the pub.
      */
     function addDetailedViewQueueData(id) {
         if (document.getElementById(id).classList.contains("short-queue")) {
