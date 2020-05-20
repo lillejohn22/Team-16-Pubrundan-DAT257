@@ -4,6 +4,8 @@
  * @author Emma Pettersson
  */
 
+let developmentModeIsOn = true; // To toggle if pubs can be displayed as open outside of active hours.
+
 $(window).on('load', function() {
     var elems = document.getElementsByClassName("grid-element");
     var locInfo = document.getElementsByClassName("location-info");
@@ -67,26 +69,27 @@ $(window).on('load', function() {
     }
 
     function setPubQueueColor(timeInfo, currentHour,elemID) {
-        if(!isPubOpen(timeInfo, currentHour)) {
-            replaceClassesOfItemWith(elemID, "pub-closed")
-        }
-        if(true) {
+
+        if(isPubOpen(timeInfo, currentHour) || developmentModeIsOn) {
             $.getJSON(`../getQueueFor/${elemID}`, function (queueLength) {
                 switch(queueLength) {
                     case 1:
-                        replaceClassesOfItemWith(elemID, "short-queue")
+                        changeItemClassTo(elemID, "short-queue")
                         break;
                     case 2:
-                        replaceClassesOfItemWith(elemID, "medium-queue")
+                        changeItemClassTo(elemID, "medium-queue")
                         break;
                     case 3:
-                        replaceClassesOfItemWith(elemID, "long-queue")
+                        changeItemClassTo(elemID, "long-queue")
                         break;
                     default:
-                        replaceClassesOfItemWith(elemID, "pub-closed")
+                        changeItemClassTo(elemID, "pub-closed")
 
                 }
             });
+        }
+        else {
+            changeItemClassTo(elemID, "pub-closed")
         }
     }
 
@@ -110,7 +113,7 @@ $(window).on('load', function() {
      * @param {String} elemID
      * @param {String} string
      */
-    function replaceClassesOfItemWith(elemID, string) {
+    function changeItemClassTo(elemID, string) {
         document.getElementById(elemID).classList.replace("short-queue", string)
         document.getElementById(elemID).classList.replace("medium-queue", string)
         document.getElementById(elemID).classList.replace("long-queue", string)
