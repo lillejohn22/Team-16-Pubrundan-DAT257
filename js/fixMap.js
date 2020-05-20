@@ -37,10 +37,10 @@ let rodaRummet = L.marker([57.687510, 11.976563]).addTo(map);
 rodaRummet.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Röda Rummet")).openPopup();
 
 let verum = L.marker([57.687560, 11.976763]).addTo(map);
-verum.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Verum")).openPopup();
+verum.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("V-entrén")).openPopup();
 
 let tagvagnen = L.marker([57.688282, 11.975849]).addTo(map);
-tagvagnen.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Tågvagnen")).openPopup();
+tagvagnen.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Järnvägspub")).openPopup();
 
 let gasquen = L.marker([57.688650, 11.975160]).addTo(map);
 gasquen.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Gasquen")).openPopup();
@@ -58,7 +58,7 @@ let gastown = L.marker([57.691113, 11.978331]).addTo(map);
 gastown.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Gastown & Spritköket")).openPopup();
 
 let wikanders = L.marker([57.692588, 11.975321]).addTo(map);
-wikanders.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Wikanders")).openPopup();
+wikanders.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Wijkanders")).openPopup();
 
 let goldenI = L.marker([57.692902, 11.975156]).addTo(map);
 goldenI.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Golden-I")).openPopup();
