@@ -16,8 +16,7 @@ $("#searchBar").keyup(function(event) { //on keyup
     if (event.keyCode === 13) {
         $("#searchButton").click();
     }
-    //else {
-    //}
+
 });
 
 

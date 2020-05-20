@@ -62,7 +62,7 @@ function googleSearch() {
             document.getElementById("searchList").classList.remove('invisible');
 
         // Special case for "Café Bulten"
-        } else if ((filter.indexOf("B") > -1) && (filter.indexOf("BU") > -1)) {
+        } else if (filter.indexOf("BU") > -1) {
            li[0].style.display = "";
            document.getElementById("searchList").classList.remove('invisible');
 
@@ -137,7 +137,7 @@ if(document.getElementById("searchDropdown").classList.contains('invisible')){
      document.getElementById("filterDropdown").classList.remove('visible');
      document.getElementById("filterDropdown").classList.add('invisible');
 
-     document.getElementById("ssf-element-container").style.height = "160pt";
+     document.getElementById("ssf-element-container").style.height = "165pt";
 
  } else  {
        document.getElementById("searchDropdown").classList.remove('visible');
