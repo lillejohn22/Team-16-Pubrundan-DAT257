@@ -1,181 +1,172 @@
 <!doctype html>
+
 <html lang="en">
-<head>
-    <title>Pub Crawl | Help</title>
+    <head>
+        <title>Pub Crawl | Help</title>
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- Theme CSS -->
-    <link rel="stylesheet" href="../css/style.css">
-
-
-    <!-- Font awesome -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
-</head>
-
-<body>
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="/">Pub Crawl <i class="fa fa-beer" aria-hidden="true"></i></a>
-    <a class="navbar-promo">Chalmers University of Technology</a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse nav-items" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/">Home<li><i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
-        </li>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="/views/pubmap.html">Map <li><i class="fa fa-street-view" aria-hidden="true"></i></a>
-        </li></li>
-
-            <li class="nav-item active">
-                <a class="nav-link" href="/views/help.html">Help <li><i class="fa fa-info-circle" aria-hidden="true"></i></a>
-        </li></li>
+        <!-- Theme CSS -->
+        <link rel="stylesheet" href="../css/style.css">
 
 
-        </ul>
-    </div>
-</nav> <!-- Navbar END -->
+        <!-- Font awesome -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    </head>
+
+    <body>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="/">Pub Crawl <i class="fa fa-beer" aria-hidden="true"></i></a>
+            <a class="navbar-promo">Chalmers University of Technology</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse nav-items" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home
+                            <i class="fa fa-home" aria-hidden="true"></i></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/views/pubmap.html">Pub Map
+                            <i class="fa fa-street-view" aria-hidden="true"></i></a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/views/help.html">Help
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav> <!-- Navbar END -->
 
 
-<!--<div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-first" id="help">
-    <p id="help-text">Tap me to expand/contract!</p>
+        <!--<div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-first" id="help">
+            <p id="help-text">Tap me to expand/contract!</p>
 
-    <div class="grid-element-contracted-info">
-        <h3 class="grid-element-name">Help me!</h3>
-        <i class="material-icons grid-element-expand-indicator" id="help-expand-indicator">keyboard_arrow_down </i>
-    </div>
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">Help me!</h3>
+                <i class="material-icons grid-element-expand-indicator" id="help-expand-indicator">keyboard_arrow_down </i>
+            </div>
 
-    <div class="grid-element-expanded-info">
-        <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
-        <span class="location-info">Tap to open map :)</span>
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">Tap to open map :)</span>
 
-        <hr class="grid-element-expanded-info-hr">
+                <hr class="grid-element-expanded-info-hr">
 
-        <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
-        <span class="time-info">00 - 00</span>
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">00 - 00</span>
 
-        <hr class="grid-element-expanded-info-hr">
+                <hr class="grid-element-expanded-info-hr">
 
-        <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
-        <span>How long is queue?</span>
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>How long is queue?</span>
 
-        <div class="container queue-container">
-            <div class="queueVoter">
+                <div class="container queue-container">
+                    <div class="queueVoter">
 
-                <div class="voteButton" id="helpButtons">
-                    <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                    <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                    <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
+                        <div class="voteButton" id="helpButtons">
+                            <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <p>Filled in =  available!</p>
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
                 </div>
             </div>
-        </div>
-
-        <hr class="grid-element-expanded-info-hr">
-
-        <div class="container-fluid grid-icon-info-container">
-            <p>Filled in =  available!</p>
-            <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
-            <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
-            <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
-            <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
-            <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
-            <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
-        </div>
-    </div>
-</div>-->
+        </div>-->
 
 
-<!-----------------------
-          Footer
------------------------->
-<footer class="site-footer">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-3 site-footer-element">
-                <h2 class="site-footer-heading mb-4">About Us</h2>
-                <hr class="site-footer-element-hr">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
+        <!-----------------------
+                  Footer
+        ------------------------>
+        <footer class="site-footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3 site-footer-element">
+                        <h2 class="site-footer-heading mb-4">About Us</h2>
+                        <hr class="site-footer-element-hr">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+
+                    <div class="col-md-3 site-footer-element">
+                        <h5 class="site-footer-heading mb-4">Chalmers Policy</h5>
+                        <hr class="site-footer-element-hr">
+
+                        <ul class="list-unstyled">
+                            <li><a href="#!">Link 1</a></li>
+                            <li><a href="#!">Link 2</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 site-footer-element">
+                        <h5 class="site-footer-heading mb-4">Rules</h5>
+                        <hr class="site-footer-element-hr">
+
+                        <ul class="list-unstyled">
+                            <li><a href="#!">Link 1</a></li>
+                            <li><a href="#!">Link 2</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 site-footer-element">
+                        <h5 class="site-footer-heading mb-4">Student Union</h5>
+                        <hr class="site-footer-element-hr">
+
+                        <ul class="list-unstyled">
+                            <li><a href="#!">Link 1</a></li>
+                            <li><a href="#!">Link 2</a></li>
+                        </ul>
+                    </div>
+                </div> <!-- Grid row -->
             </div>
 
-            <div class="col-md-3 site-footer-element">
-                <h5 class="site-footer-heading mb-4">Chalmers Policy</h5>
-                <hr class="site-footer-element-hr">
+            <hr class="site-footer-hr">
 
-                <ul class="list-unstyled">
-                    <li><a href="#!">Link 1</a></li>
-                    <li><a href="#!">Link 2</a></li>
-                </ul>
+            <!-- Copyright -->
+            <div class="footer-copyright text-center">
+                <h6>
+                    &copy;
+                    <script>document.write(new Date().getFullYear());</script>
+                    Copyright
+                </h6>
+
+                <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
             </div>
+            <!-- Copyright -->
 
-            <div class="col-md-3 site-footer-element">
-                <h5 class="site-footer-heading mb-4">Rules</h5>
-                <hr class="site-footer-element-hr">
-
-                <ul class="list-unstyled">
-                    <li><a href="#!">Link 1</a></li>
-                    <li><a href="#!">Link 2</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-3 site-footer-element">
-                <h5 class="site-footer-heading mb-4">Student Union</h5>
-                <hr class="site-footer-element-hr">
-
-                <ul class="list-unstyled">
-                    <li><a href="#!">Link 1</a></li>
-                    <li><a href="#!">Link 2</a></li>
-                </ul>
-            </div>
-        </div> <!-- Grid row -->
-    </div>
-
-    <hr class="site-footer-hr">
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center">
-        <h6>
-            &copy;
-            <script>document.write(new Date().getFullYear());</script>
-            Copyright
-        </h6>
-
-        <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-    </div>
-    <!-- Copyright -->
-
-</footer> <!-- Footer END -->
+        </footer> <!-- Footer END -->
 
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-<!-- JavaScript files-->
-<script src="../node_modules/calculateQueue.js"></script>
-<script src="js/changeQueueColour.js"></script>
-<script src="js/sortFunction.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="js/expandContractGridElements.js"></script>
-<script src="js/getVote.js"></script>
 
-<!-- The window.onload function has to be the last one to be loaded! -->
-<script src="js/addPubInfo.js"></script>
-
-</body>
-
+    </body>
 </html>

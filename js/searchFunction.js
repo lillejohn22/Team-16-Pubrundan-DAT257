@@ -1,6 +1,6 @@
 // List of all the pubs
 var pubListObjects = ["bulten", "japripps", "wijkanders", "cafec", "basen", "11an", "focus", "fortnox", "gasquen",
-    "gastownospritkoket", "goldeni",  "hubben21", "jarnvagspub", "kajsabaren", "pignwhistle", "rodarummet",
+    "gastownospritkoket", "goldeni",  "hubben21", "jarnvagspub", "kajsabaren", "rodarummet",
     "ventren", "winden", "zaloonen"];
 
 const {length} = pubListObjects;
@@ -67,10 +67,6 @@ function searchFunction() {
             // Special case, if the 11:an has no colon
             } else if(txtFilter.indexOf("11A") > -1) {
                 searchFunctionSpecial(5, -1);
-
-            // Special case, if the Pig 'N'... has no apostrophe
-            } else if (txtFilter.indexOf("PIGN") > -1) {
-                searchFunctionSpecial(14, -1);
 
             // Special case, if the V-Entrén has no hyphen and acute accent
             } else if (txtFilter.indexOf("VE") > -1) {

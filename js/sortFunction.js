@@ -5,8 +5,7 @@
 
 
 var pubList = ["bulten", "japripps", "wijkanders", "gasquen", "cafec", "11an", "rodarummet", "ventren", "basen",
-    "goldeni", "kajsabaren", "focus", "hubben21", "fortnox", "gastownospritkoket", "winden", "jarnvagspub", "zaloonen",
-    "pignwhistle"];
+    "goldeni", "kajsabaren", "focus", "hubben21", "fortnox", "gastownospritkoket", "winden", "jarnvagspub", "zaloonen"];
 
 // The pubs should initially be sorted by their queue time.
 sortFunction("queue");
