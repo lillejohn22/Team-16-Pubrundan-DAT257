@@ -11,6 +11,7 @@ $(window).on('load', function() {
     var currentFilters = [];
     var pubData;
 
+
     // Event listeners for the checkboxes
     $('.filter-checkbox').click(function (event) {
         filterFunction($(event.target));
@@ -80,24 +81,31 @@ $(window).on('load', function() {
     function updateFilter() {
         for (let i = 0; i < currentFilters.length; i++) {
             for (let j = 0; j < allPubs.length; j++) {
-                let pub = allPubs[j];
+                let pub = document.getElementById(allPubs[j]);
+                let pubId = allPubs[j];
 
                 if (currentFilters[i] === "open") {
-                    if (!document.getElementById(pub).classList.contains("pub-closed")) {
-                        document.getElementById(pub).classList.add("visible");
-                        document.getElementById(pub).classList.remove("invisible");
+                    if (!pub.classList.contains("pub-closed")) {
+                        pub.classList.add("visible");
                     } else {
-                        document.getElementById(pub).classList.add("invisible");
-                        document.getElementById(pub).classList.remove("visible");
+                        pub.classList.add("invisible");
                     }
                 } else {
-                    if (pubData[pub].filter.includes(currentFilters[i])) {
-                        document.getElementById(pub).classList.add("visible");
-                        document.getElementById(pub).classList.remove("invisible");
+                    if (pubData[pubId].filter.includes(currentFilters[i])) {
+                        pub.classList.add("visible");
                     } else {
-                        document.getElementById(pub).classList.add("invisible");
-                        document.getElementById(pub).classList.remove("visible");
+                        pub.classList.add("invisible");
                     }
+                }
+            }
+        }
+
+        for (let j = 0; j < allPubs.length; j++) {
+            let pub = document.getElementById(allPubs[j]);
+
+            if (pub.classList.contains("visible")) {
+                if (pub.classList.contains("invisible")) {
+                    pub.classList.remove("visible");
                 }
             }
         }
