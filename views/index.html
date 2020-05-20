@@ -1,1192 +1,1327 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <title>Pub Crawl</title>
-    
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="../css/style.css">
 
     <!-- Icons -->
-      <!-- TODO: fix the path below, it is pointing to nowhere.... -->
-      <!-- link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" -->
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- TODO: fix the path below, it is pointing to nowhere.... -->
+    <!-- link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-  </head>
-  
-  <body>
-    <!----------------------- 
-             Navbar 
-    ------------------------>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="/">Pub Crawl <i class="fa fa-beer" aria-hidden="true"></i></a>
-        <a class="navbar-promo">Chalmers University of Technology</a>
+</head>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<body>
+<!-----------------------
+         Navbar
+------------------------>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="/">Pub Crawl <i class="fa fa-beer" aria-hidden="true"></i></a>
+    <a class="navbar-promo">Chalmers University of Technology</a>
 
-        <div class="collapse navbar-collapse nav-items" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
-                </li>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="/views/pubmap.html">Pub Map <i class="fa fa-street-view" aria-hidden="true"></i></a>
-                </li>
+    <div class="collapse navbar-collapse nav-items" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home
+            <li><i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
+            </li>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="/views/help.html">Help <i class="fa fa-info-circle" aria-hidden="true"></i></a>
-                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/views/pubmap.html">Map
+            <li><i class="fa fa-street-view" aria-hidden="true"></i></a>
+            </li>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/views/help.html">Help <li> <i class="fa fa-info-circle" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+    </div>
+</nav> <!-- Navbar END -->
+
+
+<!-----------------------
+    Search/sort/filter
+------------------------>
+<div class="container-fluid" id="ssf-container">
+    <div class="row">
+        <!-----------------------
+                 Search
+        ------------------------>
+        <div class="col-lg-12 ssf-element" id="search">
+            <h2>Search</h2>
+
+            <input type="text" id="searchBar" placeholder="Search for pubs..."/>
+            <button type="search" id="searchButton">Search</button>
+
+            <ul class="searchL invisible" id="searchList">
+                <li onmousedown="clickPubSearch(0)" class="searchL" id="0"><a href="#"> Café Bulten </a></li>
+                <li onmousedown="clickPubSearch(1)" class="searchL" id="1"><a href="#"> J.A. Pripps </a></li>
+                <li onmousedown="clickPubSearch(2)" class="searchL" id="2"><a href="#"> Wijkanders </a></li>
+                <li onmousedown="clickPubSearch(3)" class="searchL" id="3"><a href="#"> Café C </a></li>
+                <li onmousedown="clickPubSearch(4)" class="searchL" id="4"><a href="#"> Basen </a></li>
+                <li onmousedown="clickPubSearch(5)" class="searchL" id="5"><a href="#"> 11:an </a></li>
+                <li onmousedown="clickPubSearch(6)" class="searchL" id="6"><a href="#"> Focus </a></li>
+                <li onmousedown="clickPubSearch(7)" class="searchL" id="7"><a href="#"> Fort Nox </a></li>
+                <li onmousedown="clickPubSearch(8)" class="searchL" id="8"><a href="#"> Gasquen </a></li>
+                <li onmousedown="clickPubSearch(9)" class="searchL" id="9"><a href="#"> Gastown & Spritköket </a></li>
+                <li onmousedown="clickPubSearch(10)" class="searchL" id="10"><a href="#"> Golden-I </a></li>
+                <li onmousedown="clickPubSearch(11)" class="searchL" id="11"><a href="#"> Hubben 2.1 </a></li>
+                <li onmousedown="clickPubSearch(12)" class="searchL" id="12"><a href="#"> Järnvägspub </a></li>
+                <li onmousedown="clickPubSearch(13)" class="searchL" id="13"><a href="#"> Kajsabaren </a></li>
+                <li onmousedown="clickPubSearch(14)" class="searchL" id="14"><a href="#"> Pig 'N' Whistle </a></li>
+                <li onmousedown="clickPubSearch(15)" class="searchL" id="15"><a href="#"> Röda Rummet </a></li>
+                <li onmousedown="clickPubSearch(16)" class="searchL" id="16"><a href="#"> V-Entrén </a></li>
+                <li onmousedown="clickPubSearch(17)" class="searchL" id="17"><a href="#"> Winden </a></li>
+                <li onmousedown="clickPubSearch(18)" class="searchL" id="18"><a href="#"> Zaloonen </a></li>
             </ul>
-        </div>
-    </nav> <!-- Navbar END -->
+        </div> <!-- Search END -->
 
 
-    <!----------------------- 
-        Search/sort/filter 
-    ------------------------>
-    <div class="container-fluid" id="ssf-container">
-        <div class="row">
-            <!-----------------------
-                     Search
-            ------------------------>
-            <div class="col-lg-12 ssf-element" id="search">
-                <h2>Search</h2>
+        <!-----------------------
+                  Sort
+        ------------------------>
+        <div class="col-lg-6 ssf-element" id="sort">
+            <h2>Sort</h2>
 
-                <input type="text" id="searchBar" placeholder="Search for pubs..."/>
-                <button type="search" id="searchButton">Search</button>
+            <div class="sortButtons btn-group btn-group-toggle align-radio" data-toggle="buttons">
+                <label class="btn btn-light" id="alphaSort">
+                    <input type="radio" name="sortPubs" id="alpha"> Alphabetical
+                </label>
 
-                <ul class="searchL invisible" id="searchList">
-                    <li onmousedown="clickPubSearch(0)" class="searchL" id="0"> <a href="#"> Café Bulten </a></li>
-                    <li onmousedown="clickPubSearch(1)" class="searchL" id="1"> <a href="#"> J.A. Pripps </a></li>
-                    <li onmousedown="clickPubSearch(2)" class="searchL" id="2"> <a href="#"> Wijkanders </a></li>
-                    <li onmousedown="clickPubSearch(3)" class="searchL" id="3"> <a href="#"> Café C </a></li>
-                    <li onmousedown="clickPubSearch(4)" class="searchL" id="4"> <a href="#"> Basen </a></li>
-                    <li onmousedown="clickPubSearch(5)" class="searchL" id="5"> <a href="#"> 11:an </a></li>
-                    <li onmousedown="clickPubSearch(6)" class="searchL" id="6"> <a href="#"> Focus </a></li>
-                    <li onmousedown="clickPubSearch(7)" class="searchL" id="7"> <a href="#"> Fort Nox </a></li>
-                    <li onmousedown="clickPubSearch(8)" class="searchL" id="8"> <a href="#"> Gasquen </a></li>
-                    <li onmousedown="clickPubSearch(9)" class="searchL" id="9"> <a href="#"> Gastown & Spritköket </a></li>
-                    <li onmousedown="clickPubSearch(10)" class="searchL" id="10"><a href="#"> Golden-I </a></li>
-                    <li onmousedown="clickPubSearch(11)" class="searchL" id="11"><a href="#"> Hubben 2.1 </a></li>
-                    <li onmousedown="clickPubSearch(12)" class="searchL" id="12"><a href="#"> Järnvägspub </a></li>
-                    <li onmousedown="clickPubSearch(13)" class="searchL" id="13"><a href="#"> Kajsabaren </a></li>
-                    <li onmousedown="clickPubSearch(14)" class="searchL" id="14"><a href="#"> Pig 'N' Whistle </a></li>
-                    <li onmousedown="clickPubSearch(15)" class="searchL" id="15"><a href="#"> Röda Rummet </a></li>
-                    <li onmousedown="clickPubSearch(16)" class="searchL" id="16"><a href="#"> V-Entrén </a></li>
-                    <li onmousedown="clickPubSearch(17)" class="searchL" id="17"><a href="#"> Winden </a></li>
-                    <li onmousedown="clickPubSearch(18)" class="searchL" id="18"><a href="#"> Zaloonen </a></li>
-                </ul>
-            </div> <!-- Search END -->
+                <label class="btn btn-light active" id="queueSort">
+                    <input type="radio" name="sortPubs" id="queue"> Queue Length
+                </label>
+            </div>
+        </div> <!-- Sort END -->
 
 
-            <!-----------------------
-                      Sort
-            ------------------------>
-            <div class="col-lg-6 ssf-element" id="sort">
-                <h2>Sort</h2>
+        <!-----------------------
+                 Filter
+        ------------------------>
+        <div class="col-lg-6 ssf-element">
+            <div class="filterButtons" id="filter">
+                <h2>Filter</h2>
 
-                <div class="sortButtons btn-group btn-group-toggle align-radio" data-toggle="buttons">
-                    <label class="btn btn-light" id="alphaSort">
-                        <input type="radio" name="sortPubs" id="alpha"> Alphabetical
-                    </label>
-
-                    <label class="btn btn-light active" id="queueSort">
-                        <input type="radio" name="sortPubs" id="queue"> Queue Length
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input filter-checkbox" type="checkbox" id="beer-checkbox" value="option1">
+                    <label class="form-check-label" for="beer-checkbox">
+                        <img class="grid-icon-info" src="../images/icons/beer.png" title="Beer" alt="beer-icon"/>
+                        Beer
                     </label>
                 </div>
-            </div> <!-- Sort END -->
 
-
-            <!-----------------------
-                     Filter
-            ------------------------>
-            <div class="col-lg-6 ssf-element">
-                <div class="filterButtons" id="filter">
-                    <h2>Filter</h2>
-
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input filter-checkbox" type="checkbox" id="beer-checkbox" value="option1">
-                        <label class="form-check-label" for="beer-checkbox">
-                            <img class="grid-icon-info" src="../images/icons/beer.png" title="Beer" alt="beer-icon"/>
-                            Beer
-                        </label>
-                    </div>
-
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input filter-checkbox" type="checkbox" id="drinks-checkbox" value="option2">
-                        <label class="form-check-label" for="drinks-checkbox">
-                            Drinks
-                            <img class="grid-icon-info" src="../images/icons/drink.png" title="Drink" alt="drink-icon"/>
-                        </label>
-                    </div>
-
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input filter-checkbox" type="checkbox" id="wine-checkbox" value="option1">
-                        <label class="form-check-label" for="wine-checkbox">
-                            <img class="grid-icon-info" src="../images/icons/wine.png" title="Wine" alt="wine-icon"/>
-                            Wine
-                        </label>
-                    </div>
-
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input filter-checkbox" type="checkbox" id="coffee-checkbox" value="option2">
-                        <label class="form-check-label" for="coffee-checkbox">
-                            <img class="grid-icon-info" src="../images/icons/coffee.png" title="Coffee & Tea" alt="coffee-icon"/>
-                            Coffee & Tea
-                        </label>
-                    </div>
-
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input filter-checkbox" type="checkbox" id="food-checkbox" value="option1">
-                        <label class="form-check-label" for="food-checkbox">
-                            <img class="grid-icon-info" src="../images/icons/food.png" title="Food" alt="food-icon"/>
-                            Food
-                        </label>
-                    </div>
-
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input filter-checkbox" type="checkbox" id="activities-checkbox" value="option2">
-                        <label class="form-check-label" for="activities-checkbox">
-                            <img class="grid-icon-info" src="../images/icons/activity.png" title="Activities" alt="activity-icon"/>
-                            Activities
-                        </label>
-                    </div>
-
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input filter-checkbox" type="checkbox" id="open-checkbox" value="option2">
-                        <label class="form-check-label" for="open-checkbox">
-                            <img class="grid-icon-info" src="../images/icons/open.png" title="Open" alt="open-icon"/>
-                            Open
-                        </label>
-                    </div>
-
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input filter-checkbox" type="checkbox" id="drinks-checkbox"
+                           value="option2">
+                    <label class="form-check-label" for="drinks-checkbox">
+                        Drinks
+                        <img class="grid-icon-info" src="../images/icons/drink.png" title="Drink" alt="drink-icon"/>
+                    </label>
                 </div>
-            </div> <!-- Filter END -->
-        </div> <!-- Row END -->
-    </div> <!-- Search/sort/filter END -->
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input filter-checkbox" type="checkbox" id="wine-checkbox" value="option1">
+                    <label class="form-check-label" for="wine-checkbox">
+                        <img class="grid-icon-info" src="../images/icons/wine.png" title="Wine" alt="wine-icon"/>
+                        Wine
+                    </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input filter-checkbox" type="checkbox" id="coffee-checkbox"
+                           value="option2">
+                    <label class="form-check-label" for="coffee-checkbox">
+                        <img class="grid-icon-info" src="../images/icons/coffee.png" title="Coffee & Tea"
+                             alt="coffee-icon"/>
+                        Coffee & Tea
+                    </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input filter-checkbox" type="checkbox" id="food-checkbox" value="option1">
+                    <label class="form-check-label" for="food-checkbox">
+                        <img class="grid-icon-info" src="../images/icons/food.png" title="Food" alt="food-icon"/>
+                        Food
+                    </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input filter-checkbox" type="checkbox" id="activities-checkbox"
+                           value="option2">
+                    <label class="form-check-label" for="activities-checkbox">
+                        <img class="grid-icon-info" src="../images/icons/activity.png" title="Activities"
+                             alt="activity-icon"/>
+                        Activities
+                    </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input filter-checkbox" type="checkbox" id="open-checkbox" value="option2">
+                    <label class="form-check-label" for="open-checkbox">
+                        <img class="grid-icon-info" src="../images/icons/open.png" title="Open" alt="open-icon"/>
+                        Open
+                    </label>
+                </div>
+
+            </div>
+        </div> <!-- Filter END -->
+    </div> <!-- Row END -->
+</div> <!-- Search/sort/filter END -->
 
 
-    <!-----------------------
-          Detailed view
-   ------------------------>
-    <div class="container-fluid detailed-view">
-        <div class="detailed-view-content">
-            <div class="exit-button"></div>
+<!-----------------------
+      Detailed view
+------------------------>
+<div class="container-fluid detailed-view">
+    <div class="detailed-view-content">
+        <div class="exit-button"></div>
 
-            <div class="container-fluid" id="detailed-view-content-container">
-                <div class="row">
-                    <div class="col-sm-12 col-lg-12 col-xl-12 detailed-view-element">
-                        <h3 id="detailed-view-name">Cafe Bulten</h3>
-                        <h4 id="detailed-view-host">Hosted by Cafe Bulten</h4>
-                    </div>
+        <div class="container-fluid" id="detailed-view-content-container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-12 col-xl-12 detailed-view-element">
+                    <h3 id="detailed-view-name">Cafe Bulten</h3>
+                    <h4 id="detailed-view-host">Hosted by Cafe Bulten</h4>
+                </div>
 
-                    <div class="col-sm-12 col-lg-6 col-xl-4 detailed-view-element">
-                    </div>
+                <div class="col-sm-12 col-lg-6 col-xl-4 detailed-view-element">
+                </div>
 
-                    <div class="col-sm-12 col-lg-6 col-xl-4 detailed-view-element">
-                    </div>
+                <div class="col-sm-12 col-lg-6 col-xl-4 detailed-view-element">
+                </div>
 
-                    <div class="col-sm-12 col-lg-6 col-xl-4 detailed-view-element">
-                    </div>
+                <div class="col-sm-12 col-lg-6 col-xl-4 detailed-view-element">
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
-    <!-----------------------
-        Grid/list of pubs 
-    ------------------------>
-    <div class="container-fluid" id="grid-container">
+<!-----------------------
+    Grid/list of pubs
+------------------------>
+<div class="container-fluid" id="grid-container">
+    <div class="row">
+        <div class="col-sm-6 col-lg-6 col-xl-3 grid-element short-queue visible" id="bulten">
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">Café Bulten</h3>
+                <i class="material-icons grid-element-expand-indicator">keyboard_arrow_down </i>
+            </div>
+
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">Rainbow Road 1</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">00 - 00</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>Queue length vote</span>
+
+                <div class="container queue-container">
+                    <div class="queueVoter">
+                        <div class="voteButton" id="bultenButtons">
+                            <button type="button" value=1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value=2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value=3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"
+                         alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"
+                         alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"
+                         alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"
+                         alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png"
+                         title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png"
+                         title="Activities" alt="activity-icon"/>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6 col-xl-3 grid-element medium-queue visible" id="japripps">
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">J.A. Pripps</h3>
+                <i class="material-icons grid-element-expand-indicator">keyboard_arrow_down </i>
+            </div>
+
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">Rainbow Road 1</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">00 - 00</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>Queue length vote</span>
+
+                <div class="container queue-container">
+                    <div class="queueVoter">
+                        <div class="voteButton" id="japrippsButtons">
+                            <button type="button" value=1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value=2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value=3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"
+                         alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"
+                         alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"
+                         alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"
+                         alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png"
+                         title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png"
+                         title="Activities" alt="activity-icon"/>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6 col-xl-3 grid-element long-queue visible" id="wijkanders">
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">Wijkanders</h3>
+                <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
+            </div>
+
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">Rainbow Road 1</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">00 - 00</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>Queue length vote</span>
+
+                <div class="container queue-container">
+                    <div class="queueVoter">
+                        <div class="voteButton" id="wijkandersButtons">
+                            <button type="button" value=1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value=2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value=3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"
+                         alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"
+                         alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"
+                         alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"
+                         alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png"
+                         title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png"
+                         title="Activities" alt="activity-icon"/>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="gasquen">
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">Gasquen</h3>
+                <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
+            </div>
+
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">Rainbow Road 1</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">00 - 00</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>Queue length vote</span>
+
+                <div class="container queue-container">
+                    <div class="queueVoter">
+                        <div class="voteButton" id="gasquenButtons">
+                            <button type="button" value=1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value=2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value=3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"
+                         alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"
+                         alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"
+                         alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"
+                         alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png"
+                         title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png"
+                         title="Activities" alt="activity-icon"/>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="cafec">
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">Café C</h3>
+                <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
+            </div>
+
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">Rainbow Road 1</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">00 - 00</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>Queue length vote</span>
+
+                <div class="container queue-container">
+                    <div class="queueVoter">
+                        <div class="voteButton" id="cafecButtons">
+                            <button type="button" value=1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value=2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value=3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"
+                         alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"
+                         alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"
+                         alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"
+                         alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png"
+                         title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png"
+                         title="Activities" alt="activity-icon"/>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="11an">
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">11:an</h3>
+                <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
+            </div>
+
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">Rainbow Road 1</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">00 - 00</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>Queue length vote</span>
+
+                <div class="container queue-container">
+                    <div class="queueVoter">
+                        <div class="voteButton" id="11anButtons">
+                            <button type="button" value=1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value=2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value=3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"
+                         alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"
+                         alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"
+                         alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"
+                         alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png"
+                         title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png"
+                         title="Activities" alt="activity-icon"/>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="rodarummet">
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">Röda Rummet</h3>
+                <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
+            </div>
+
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">Rainbow Road 1</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">00 - 00</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>Queue length vote</span>
+
+                <div class="container queue-container">
+                    <div class="queueVoter">
+                        <div class="voteButton" id="rodarummetButtons">
+                            <button type="button" value=1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value=2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value=3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"
+                         alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"
+                         alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"
+                         alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"
+                         alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png"
+                         title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png"
+                         title="Activities" alt="activity-icon"/>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="ventren">
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">V-entrén</h3>
+                <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
+            </div>
+
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">Rainbow Road 1</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">00 - 00</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>Queue length vote</span>
+
+                <div class="container queue-container">
+                    <div class="queueVoter">
+                        <div class="voteButton" id="ventrenButtons">
+                            <button type="button" value=1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value=2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value=3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"
+                         alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"
+                         alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"
+                         alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"
+                         alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png"
+                         title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png"
+                         title="Activities" alt="activity-icon"/>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="basen">
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">Basen</h3>
+                <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
+            </div>
+
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">Rainbow Road 1</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">00 - 00</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>Queue length vote</span>
+
+                <div class="container queue-container">
+                    <div class="queueVoter">
+                        <div class="voteButton" id="basenButtons">
+                            <button type="button" value=1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value=2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value=3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"
+                         alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"
+                         alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"
+                         alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"
+                         alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png"
+                         title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png"
+                         title="Activities" alt="activity-icon"/>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="goldeni">
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">Golden-I</h3>
+                <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
+            </div>
+
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">Rainbow Road 1</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">00 - 00</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>Queue length vote</span>
+
+                <div class="container queue-container">
+                    <div class="queueVoter">
+                        <div class="voteButton" id="goldeniButtons">
+                            <button type="button" value=1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value=2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value=3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"
+                         alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"
+                         alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"
+                         alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"
+                         alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png"
+                         title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png"
+                         title="Activities" alt="activity-icon"/>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="kajsabaren">
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">Kajsabaren</h3>
+                <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
+            </div>
+
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">Rainbow Road 1</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">00 - 00</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>Queue length vote</span>
+
+                <div class="container queue-container">
+                    <div class="queueVoter">
+                        <div class="voteButton" id="kajsabarenButtons">
+                            <button type="button" value=1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value=2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value=3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"
+                         alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"
+                         alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"
+                         alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"
+                         alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png"
+                         title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png"
+                         title="Activities" alt="activity-icon"/>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="focus">
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">Focus</h3>
+                <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
+            </div>
+
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">Rainbow Road 1</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">00 - 00</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>Queue length vote</span>
+
+                <div class="container queue-container">
+                    <div class="queueVoter">
+                        <div class="voteButton" id="focusButtons">
+                            <button type="button" value=1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value=2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value=3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"
+                         alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"
+                         alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"
+                         alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"
+                         alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png"
+                         title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png"
+                         title="Activities" alt="activity-icon"/>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="hubben21">
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">Hubben 2.1</h3>
+                <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
+            </div>
+
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">Rainbow Road 1</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">00 - 00</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>Queue length vote</span>
+
+                <div class="container queue-container">
+                    <div class="queueVoter">
+                        <div class="voteButton" id="hubben21Buttons">
+                            <button type="button" value=1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value=2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value=3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"
+                         alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"
+                         alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"
+                         alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"
+                         alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png"
+                         title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png"
+                         title="Activities" alt="activity-icon"/>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="fortnox">
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">Fort NOx</h3>
+                <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
+            </div>
+
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">Rainbow Road 1</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">00 - 00</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>Queue length vote</span>
+
+                <div class="container queue-container">
+                    <div class="queueVoter">
+                        <div class="voteButton" id="fortnoxButtons">
+                            <button type="button" value=1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value=2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value=3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"
+                         alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"
+                         alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"
+                         alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"
+                         alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png"
+                         title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png"
+                         title="Activities" alt="activity-icon"/>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="gastownospritkoket">
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">Gastown & Spritköket</h3>
+                <i class="material-icons grid-element-expand-indicator">keyboard_arrow_down </i>
+            </div>
+
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">Rainbow Road 1</span>
+                <hr class="grid-element-expanded-info-hr">
+
+                <!-- <a href="https://goo.gl/maps/ZHk1pXkiXs5WYSHG9"></a> -->
+
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">00 - 00</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>Queue length vote</span>
+
+                <div class="container queue-container">
+                    <div class="queueVoter">
+                        <div class="voteButton" id="gastownospritkoketButtons">
+                            <button type="button" value=1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value=2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value=3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"
+                         alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"
+                         alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"
+                         alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"
+                         alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png"
+                         title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png"
+                         title="Activities" alt="activity-icon"/>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="winden">
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">Winden</h3>
+                <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
+            </div>
+
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">Rainbow Road 1</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">00 - 00</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>Queue length vote</span>
+                <span>Queue length vote</span>
+
+                <div class="container queue-container">
+                    <div class="queueVoter">
+                        <div class="voteButton" id="windenButtons">
+                            <button type="button" value=1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value=2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value=3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"
+                         alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"
+                         alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"
+                         alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"
+                         alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png"
+                         title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png"
+                         title="Activities" alt="activity-icon"/>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="jarnvagspub">
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">Järnvägspub</h3>
+                <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
+            </div>
+
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">Rainbow Road 1</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">00 - 00</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>Queue length vote</span>
+                <span>Queue length vote</span>
+
+                <div class="container queue-container">
+                    <div class="queueVoter">
+                        <div class="voteButton" id="jarnvagspubButtons">
+                            <button type="button" value=1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value=2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value=3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"
+                         alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"
+                         alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"
+                         alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"
+                         alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png"
+                         title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png"
+                         title="Activities" alt="activity-icon"/>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="zaloonen">
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">Zaloonen</h3>
+                <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
+            </div>
+
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">Rainbow Road 1</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">00 - 00</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>Queue length vote</span>
+
+                <div class="container queue-container">
+                    <div class="queueVoter">
+                        <div class="voteButton" id="zaloonenButtons">
+                            <button type="button" value=1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value=2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value=3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"
+                         alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"
+                         alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"
+                         alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"
+                         alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png"
+                         title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png"
+                         title="Activities" alt="activity-icon"/>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="pignwhistle">
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">Pig 'n' Whistle</h3>
+                <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
+            </div>
+
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">Rainbow Road 1</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">00 - 00</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>Queue length vote</span>
+
+                <div class="container queue-container">
+                    <div class="queueVoter">
+                        <div class="voteButton" id="pignwhistleButtons">
+                            <button type="button" value=1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value=2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value=3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer"
+                         alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink"
+                         alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine"
+                         alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food"
+                         alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png"
+                         title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png"
+                         title="Activities" alt="activity-icon"/>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
+            </div>
+        </div> <!-- Columns END -->
+    </div> <!-- Row END -->
+</div><!-- Grid END -->
+
+
+<!-----------------------
+          Footer
+------------------------>
+<footer class="site-footer">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element short-queue visible" id="bulten">
-                <div class="grid-element-contracted-info">
-                    <h3 class="grid-element-name">Café Bulten</h3>
-                    <i class="material-icons grid-element-expand-indicator">keyboard_arrow_down </i>
-                </div>
+            <div class="col-md-3 site-footer-element">
+                <h2 class="site-footer-heading mb-4">About Us</h2>
+                <hr class="site-footer-element-hr">
+                <p>
+                    The Chalmers Pub Crawl is an important and entertaining event and this site is the essential guide
+                    to help all the students who attend the Pub Crawl.
+                    This webpage project has been created by the brilliant students from Team 16 in the course DAT257.
 
-                <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
-                    <span class="location-info">Rainbow Road 1</span>
 
-                    <hr class="grid-element-expanded-info-hr">
 
-                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
-                    <span class="time-info">00 - 00</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
-                    <span>Queue length vote</span>
-
-                    <div class="container queue-container">
-                        <div class="queueVoter">
-                            <div class="voteButton" id="bultenButtons">
-                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
-                </div>
+                </p>
             </div>
 
-            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element medium-queue visible" id="japripps">
-                <div class="grid-element-contracted-info">
-                    <h3 class="grid-element-name">J.A. Pripps</h3>
-                    <i class="material-icons grid-element-expand-indicator">keyboard_arrow_down </i>
-                </div>
+            <div class="col-md-3 site-footer-element">
+                <h5 class="site-footer-heading mb-4">Social Media</h5>
+                <hr class="site-footer-element-hr">
 
-                <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
-                    <span class="location-info">Rainbow Road 1</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
-                    <span class="time-info">00 - 00</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
-                    <span>Queue length vote</span>
-
-                    <div class="container queue-container">
-                        <div class="queueVoter">
-                            <div class="voteButton" id="japrippsButtons">
-                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
-                </div>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.facebook.com/chalmersstudentkar">Student Union Facebook</a></li>
+                    <li><a href="https://www.facebook.com/ChalmersStudentkarsPubrunda">Pub Crawl Facebook</a></li>
+                </ul>
             </div>
 
-            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element long-queue visible" id="wijkanders">
-                <div class="grid-element-contracted-info">
-                    <h3 class="grid-element-name">Wijkanders</h3>
-                    <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
-                </div>
+            <div class="col-md-3 site-footer-element">
+                <h5 class="site-footer-heading mb-4">Alcohol Policy</h5>
+                <hr class="site-footer-element-hr">
 
-                <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
-                    <span class="location-info">Rainbow Road 1</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
-                    <span class="time-info">00 - 00</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
-                    <span>Queue length vote</span>
-
-                    <div class="container queue-container">
-                        <div class="queueVoter">
-                            <div class="voteButton" id="wijkandersButtons">
-                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
-                </div>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://www.riksdagen.se/sv/dokument-lagar/dokument/svensk-forfattningssamling/alkohollag-20101622_sfs-2010-1622">Swedish
+                            Alcohol laws</a></li>
+                    <li>
+                        <a href="https://student.portal.chalmers.se/en/studentlife/student-work-environment/Pages/alcohol-drug-abuse-policy.aspx">Chalmers
+                            Alcohol rules</a></li>
+                </ul>
             </div>
 
-            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="gasquen">
-                <div class="grid-element-contracted-info">
-                    <h3 class="grid-element-name">Gasquen</h3>
-                    <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
-                </div>
+            <div class="col-md-3 site-footer-element">
+                <h5 class="site-footer-heading mb-4">Student Union</h5>
+                <hr class="site-footer-element-hr">
 
-                <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
-                    <span class="location-info">Rainbow Road 1</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
-                    <span class="time-info">00 - 00</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
-                    <span>Queue length vote</span>
-
-                    <div class="container queue-container">
-                        <div class="queueVoter">
-                            <div class="voteButton" id="gasquenButtons">
-                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
-                </div>
+                <ul class="list-unstyled">
+                    <li><a href="https://chalmersstudentkar.se/contact-us/">Contact the Student Union</a></li>
+                    <li><a href="https://chalmersstudentkar.se/pub-crawl/">Pub Crawl Info</a></li>
+                </ul>
             </div>
-
-            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="cafec">
-                <div class="grid-element-contracted-info">
-                    <h3 class="grid-element-name">Café C</h3>
-                    <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
-                </div>
-
-                <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
-                    <span class="location-info">Rainbow Road 1</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
-                    <span class="time-info">00 - 00</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
-                    <span>Queue length vote</span>
-
-                    <div class="container queue-container">
-                        <div class="queueVoter">
-                            <div class="voteButton" id="cafecButtons">
-                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="11an">
-                <div class="grid-element-contracted-info">
-                    <h3 class="grid-element-name">11:an</h3>
-                    <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
-                </div>
-
-                <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
-                    <span class="location-info">Rainbow Road 1</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
-                    <span class="time-info">00 - 00</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
-                    <span>Queue length vote</span>
-
-                    <div class="container queue-container">
-                        <div class="queueVoter">
-                            <div class="voteButton" id="11anButtons">
-                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="rodarummet">
-                <div class="grid-element-contracted-info">
-                    <h3 class="grid-element-name">Röda Rummet</h3>
-                    <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
-                </div>
-
-                <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
-                    <span class="location-info">Rainbow Road 1</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
-                    <span class="time-info">00 - 00</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
-                    <span>Queue length vote</span>
-
-                    <div class="container queue-container">
-                        <div class="queueVoter">
-                            <div class="voteButton" id="rodarummetButtons">
-                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="ventren">
-                <div class="grid-element-contracted-info">
-                    <h3 class="grid-element-name">V-entrén</h3>
-                    <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
-                </div>
-
-                <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
-                    <span class="location-info">Rainbow Road 1</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
-                    <span class="time-info">00 - 00</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
-                    <span>Queue length vote</span>
-
-                    <div class="container queue-container">
-                        <div class="queueVoter">
-                            <div class="voteButton" id="ventrenButtons">
-                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="basen">
-                <div class="grid-element-contracted-info">
-                    <h3 class="grid-element-name">Basen</h3>
-                    <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
-                </div>
-
-                <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
-                    <span class="location-info">Rainbow Road 1</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
-                    <span class="time-info">00 - 00</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
-                    <span>Queue length vote</span>
-
-                    <div class="container queue-container">
-                        <div class="queueVoter">
-                            <div class="voteButton" id="basenButtons">
-                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="goldeni">
-                <div class="grid-element-contracted-info">
-                    <h3 class="grid-element-name">Golden-I</h3>
-                    <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
-                </div>
-
-                <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
-                    <span class="location-info">Rainbow Road 1</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
-                    <span class="time-info">00 - 00</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
-                    <span>Queue length vote</span>
-
-                    <div class="container queue-container">
-                        <div class="queueVoter">
-                            <div class="voteButton" id="goldeniButtons">
-                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="kajsabaren">
-                <div class="grid-element-contracted-info">
-                    <h3 class="grid-element-name">Kajsabaren</h3>
-                    <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
-                </div>
-
-                <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
-                    <span class="location-info">Rainbow Road 1</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
-                    <span class="time-info">00 - 00</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
-                    <span>Queue length vote</span>
-
-                    <div class="container queue-container">
-                        <div class="queueVoter">
-                            <div class="voteButton" id="kajsabarenButtons">
-                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="focus">
-                <div class="grid-element-contracted-info">
-                    <h3 class="grid-element-name">Focus</h3>
-                    <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
-                </div>
-
-                <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
-                    <span class="location-info">Rainbow Road 1</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
-                    <span class="time-info">00 - 00</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
-                    <span>Queue length vote</span>
-
-                    <div class="container queue-container">
-                        <div class="queueVoter">
-                            <div class="voteButton" id="focusButtons">
-                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="hubben21">
-                <div class="grid-element-contracted-info">
-                    <h3 class="grid-element-name">Hubben 2.1</h3>
-                    <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
-                </div>
-
-                <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
-                    <span class="location-info">Rainbow Road 1</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
-                    <span class="time-info">00 - 00</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
-                    <span>Queue length vote</span>
-
-                    <div class="container queue-container">
-                        <div class="queueVoter">
-                            <div class="voteButton" id="hubben21Buttons">
-                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="fortnox">
-                <div class="grid-element-contracted-info">
-                    <h3 class="grid-element-name">Fort NOx</h3>
-                    <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
-                </div>
-
-                <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
-                    <span class="location-info">Rainbow Road 1</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
-                    <span class="time-info">00 - 00</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
-                    <span>Queue length vote</span>
-
-                    <div class="container queue-container">
-                        <div class="queueVoter">
-                            <div class="voteButton" id="fortnoxButtons">
-                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="gastownospritkoket">
-                <div class="grid-element-contracted-info">
-                    <h3 class="grid-element-name">Gastown & Spritköket</h3>
-                    <i class="material-icons grid-element-expand-indicator">keyboard_arrow_down </i>
-                </div>
-
-                <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
-                    <span class="location-info">Rainbow Road 1</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
-                    <span class="time-info">00 - 00</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
-                    <span>Queue length vote</span>
-
-                    <div class="container queue-container">
-                        <div class="queueVoter">
-                            <div class="voteButton" id="gastownospritkoketButtons">
-                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="winden">
-                <div class="grid-element-contracted-info">
-                    <h3 class="grid-element-name">Winden</h3>
-                    <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
-                </div>
-
-                <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
-                    <span class="location-info">Rainbow Road 1</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
-                    <span class="time-info">00 - 00</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
-                    <span>Queue length vote</span>
-                    <span>Queue length vote</span>
-
-                    <div class="container queue-container">
-                        <div class="queueVoter">
-                            <div class="voteButton" id="windenButtons">
-                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="jarnvagspub">
-                <div class="grid-element-contracted-info">
-                    <h3 class="grid-element-name">Järnvägspub</h3>
-                    <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
-                </div>
-
-                <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
-                    <span class="location-info">Rainbow Road 1</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
-                    <span class="time-info">00 - 00</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
-                    <span>Queue length vote</span>
-                    <span>Queue length vote</span>
-
-                    <div class="container queue-container">
-                        <div class="queueVoter">
-                            <div class="voteButton" id="jarnvagspubButtons">
-                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="zaloonen">
-                <div class="grid-element-contracted-info">
-                    <h3 class="grid-element-name">Zaloonen</h3>
-                    <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
-                </div>
-
-                <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
-                    <span class="location-info">Rainbow Road 1</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
-                    <span class="time-info">00 - 00</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
-                    <span>Queue length vote</span>
-
-                    <div class="container queue-container">
-                        <div class="queueVoter">
-                            <div class="voteButton" id="zaloonenButtons">
-                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element pub-closed visible" id="pignwhistle">
-                <div class="grid-element-contracted-info">
-                    <h3 class="grid-element-name">Pig 'n' Whistle</h3>
-                    <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
-                </div>
-
-                <div class="grid-element-expanded-info">
-                    <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
-                    <span class="location-info">Rainbow Road 1</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
-                    <span class="time-info">00 - 00</span>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
-                    <span>Queue length vote</span>
-
-                    <div class="container queue-container">
-                        <div class="queueVoter">
-                            <div class="voteButton" id="pignwhistleButtons">
-                                <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
-                                <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
-                                <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <div class="container-fluid grid-icon-info-container">
-                        <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
-                        <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
-                        <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
-                        <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
-                        <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
-                        <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
-                    </div>
-
-                    <hr class="grid-element-expanded-info-hr">
-
-                    <button class="detailed-view-button btn btn-outline-info btn-sm">Open detailed view</button>
-                </div>
-            </div> <!-- Columns END -->
-        </div> <!-- Row END -->
-    </div><!-- Grid END -->
-
-
-    <!----------------------- 
-              Footer 
-    ------------------------>
-    <footer class="site-footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3 site-footer-element">
-                    <h2 class="site-footer-heading mb-4">About Us</h2>
-                    <hr class="site-footer-element-hr">
-                    <p>
-                     The Chalmers Pub Crawl is an important and entertaining event and this site is the essential guide to help all the students who attend the Pub Crawl.
-                     This webpage project has been created by the brilliant students from Team 16 in the course DAT257.
-                    </p>
-                </div>
-
-                <div class="col-md-3 site-footer-element">
-                    <h5 class="site-footer-heading mb-4">Social Media</h5>
-                    <hr class="site-footer-element-hr">
-
-                    <ul class="list-unstyled">
-                        <li><a href="https://www.facebook.com/chalmersstudentkar">Student Union Facebook</a></li>
-                        <li><a href="https://www.facebook.com/ChalmersStudentkarsPubrunda">Pub Crawl Facebook</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-3 site-footer-element">
-                    <h5 class="site-footer-heading mb-4">Alcohol Policy</h5>
-                    <hr class="site-footer-element-hr">
-
-                    <ul class="list-unstyled">
-                        <li><a href="https://www.riksdagen.se/sv/dokument-lagar/dokument/svensk-forfattningssamling/alkohollag-20101622_sfs-2010-1622">Swedish Alcohol laws</a></li>
-                        <li><a href="https://student.portal.chalmers.se/en/studentlife/student-work-environment/Pages/alcohol-drug-abuse-policy.aspx">Chalmers Alcohol rules</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-3 site-footer-element">
-                    <h5 class="site-footer-heading mb-4">Student Union</h5>
-                    <hr class="site-footer-element-hr">
-                    
-                    <ul class="list-unstyled">
-                        <li><a href="https://chalmersstudentkar.se/contact-us/">Contact Us</a></li>
-                        <li><a href="https://chalmersstudentkar.se/pub-crawl/">Pub Crawl Info</a></li>
-                    </ul>
-                </div>
-            </div> <!-- Grid row -->
-        </div>
-
-        <hr class="site-footer-hr">
-
-        <!-- Copyright -->
-        <div class="footer-copyright text-center">
-            <h6>
-                &copy; 
-                <script>document.write(new Date().getFullYear());</script>
-                Copyright
-            </h6>
-
-            <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
-                 from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-        </div>
-    </footer> <!-- Footer END -->
-
-
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Popper.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
-
-
-     <!-- JavaScript files-->
-    <script src="../js/changeQueueColour.js"></script>
-    <script src="../js/sortFunction.js"></script>
-    <script src="../js/filterFunction.js"></script>
-    <script src="../js/expandContractGridElements.js"></script>
-    <script src="../js/getVote.js"></script>
-    <script src="../js/handleDetailedView.js"></script>
-    <script src="../js/searchFunction.js"></script>
-    <script src="../js/googleSearch.js"></script>
-    <script src="../js/addPubInfo.js"></script>
-  </body>
+        </div> <!-- Grid row -->
+    </div>
+
+    <hr class="site-footer-hr">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center">
+        <h6>
+            &copy;
+            <script>document.write(new Date().getFullYear());</script>
+            Copyright
+        </h6>
+
+        <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+            from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </div>
+</footer> <!-- Footer END -->
+
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Popper.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+<!-- JavaScript files-->
+<script src="../js/changeQueueColour.js"></script>
+<script src="../js/sortFunction.js"></script>
+<script src="../js/filterFunction.js"></script>
+<script src="../js/expandContractGridElements.js"></script>
+<script src="../js/getVote.js"></script>
+<script src="../js/handleDetailedView.js"></script>
+<script src="../js/searchFunction.js"></script>
+<script src="../js/googleSearch.js"></script>
+<script src="../js/addPubInfo.js"></script>
+</body>
 </html>
