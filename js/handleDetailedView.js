@@ -177,7 +177,7 @@ $(window).on('load', function() {
 
 
     /**
-     * Add a short line of text that describres the current queue length.
+     * Add a short line of text that describes the current queue length.
      *
      * @param id - the id of the pub.
      */
@@ -197,10 +197,10 @@ $(window).on('load', function() {
     /**
      *
      *
-     * @param id
-     * @param separator
-     * @param dataToGet
-     * @returns {string}
+     * @param id - the id of the pub.
+     * @param separator - separates each of the elements from the pub data.
+     * @param dataToGet - which data to get from the pub data.
+     * @returns {string} with the info to add to the detailed view.
      */
     function createInfoString(id, separator, dataToGet) {
         let infoString = "";
@@ -218,9 +218,9 @@ $(window).on('load', function() {
 
 
     /**
+     * Adds the available drinks and its prices to the detailed view.
      *
-     *
-     * @param id
+     * @param id - the id of the pub.
      */
     function addDetailedViewDrinkData(id) {
         // TODO
@@ -228,9 +228,9 @@ $(window).on('load', function() {
 
 
     /**
+     * Adds the available food and its prices to the detailed view.
      *
-     *
-     * @param id
+     * @param id - the id of the pub.
      */
     function addDetailedViewFoodData(id) {
         // TODO
