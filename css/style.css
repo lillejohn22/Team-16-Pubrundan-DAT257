@@ -476,6 +476,7 @@ body {
     margin: auto;
     padding-top: 3%;
     background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 #detailed-view-name {

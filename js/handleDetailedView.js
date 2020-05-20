@@ -67,9 +67,8 @@ $(window).on('load', function() {
         document.getElementById("detailed-view-name").innerHTML = pubData[id].name;
 
         /* Host + website link */
+        document.getElementById("detailed-view-host").href = pubData[id].hostWebsite;
         document.getElementById("detailed-view-host").innerHTML = "Pub hosted by " + pubData[id].host;
-        //console.log(document.getElementById("detailed-view-host-website"));
-        //document.getElementById("detailed-view-host-website").href = pubData[id].hostWebsite;
 
         /* Description */
         document.getElementById("detailed-view-description").innerHTML = pubData[id].description;
