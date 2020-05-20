@@ -9,13 +9,14 @@ const {length} = pubListObjects;
 /**
  * Allows searching by pressing the enter key.
  */
-$("#searchBar").keyup(function(event) {
-    if (event.keyCode === 13) {
-        $("#searchButton").click();
-    } else {
+$("#searchBar").keyup(function(event) { //on keyup
 
     googleSearch();
+
+    if (event.keyCode === 13) {
+        $("#searchButton").click();
     }
+
 });
 
 

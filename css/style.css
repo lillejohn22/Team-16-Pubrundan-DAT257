@@ -145,59 +145,52 @@ body {
 
 /* ---------------
          SSF
-
-    position: relative;
-
-    .dropdwnButton {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px;
-      font-size: 16px;
-      border: none;
-      top: 10%;
-
-    }
-
-    .dropdwnButton:hover {
-      background-color: white;
-    }
-
-
-        margin:auto;
-           top: 50px;
-            left: 10px;
-
-
-    .ssf-element h2 {
-        font-family: "Raleway Regular", sans-serif;
-        color: #F4F7F5;
-        text-align: center;
-        padding-top: 10pt;
-        border-bottom: 5px solid rgba(255, 255, 255, .3);
-    }
-
    --------------- */
 
 #ssf-container {
-    width: 80%;
+    width: 77%;
 }
 
 .ssf-element {
     margin-top: 15pt;
-    background-color: #F4F7F5;
-    min-height: 100pt;
-    border: 2pt solid #333333;
+    background-color: #333333;
+    border-radius: 4px;
+    border: 1pt solid #F4F7F5;
+
+}
+
+#ssf-element-container {
+    height: 65pt;
 
 }
 
 .ddMenu {
     width: 100%;
     display: inline;
+
 }
 
-.btn-outline-primary:hover {
-    background-color:#F4F7F5;
+.btn-outline-dark {
+    font-family: "Raleway Regular", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    background-color: #333333;
+    border-radius: 4px;
+    border: 1pt solid #F4F7F5;
+    color: #F4F7F5;
+
+}
+
+.btn-outline-dark:hover {
+    background-color: white;
     border-color:#333333;
+    color: #333333;
+}
+
+.btn-outline-dark:active {
+    background-color: white;
+    border: 2px solid #333333;
+    color: #333333;
 }
 
 .buttonWidth {
@@ -216,15 +209,19 @@ body {
 /* Search */
 #searchBar {
     width: 80%;
-    font-size: 15px;
+    font-size: 16px;
     padding: 5px 5px 5px 5px;
-    border: 1px solid #333333;
+    border: 1px solid #F4F7F5;
+    background-color: #333333;
     margin-bottom: 12px;
-    margin-top: 20px;
+    margin-top: 25px;
+    font-family: "Raleway Regular", sans-serif;
+    color: #F4F7F5;
 }
 
 #searchButton {
     width: 12%;
+    height: 7%;
     font-size: 16px;
     padding: 5px 5px 5px 5px;
     border: 1px solid #333333;
@@ -233,31 +230,67 @@ body {
     color: #333333;
 }
 
+#searchButton:active {
+    background-color: white;
+    border: 2px solid #333333;
+
+}
+
+.search-icon {
+    display: inline-block;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 20px;
+    height: 20px;
+}
+
+
 #searchList {
+    border: none;
     list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 80%;
+    padding: 5px 5px 5px 0px;
+    position: relative;
+    width: 93%;
     visibility: visible;
     overflow: hidden;
     z-index: 10;
+    margin-top: 0;
+    color: #333333;
+
 }
 
 .searchL {
     border: none;
     margin-top: -5px;
+    margin-left: 0px;
     padding: 3px;
-    background-color: #F6F6F6;
+    background-color: #333333;
     font-size: 16px;
-    color: black;
+    color: #F4F7F5;
     text-decoration: none;
     display: block;
 
 }
 
+.searchL a {
+    font-family: "Raleway Regular", sans-serif;
+    color: #F4F7F5;
+
+}
+
 .searchL a:hover {
-    background-color: #A9A9A9;
     color: white;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+
+}
+
+.searchL a:click {
+    color: black;
+    font-weight: bold;
     text-decoration: none;
     display: block;
 
@@ -267,6 +300,7 @@ body {
 /* Sort */
 .sortButtons {
     font-family: "Raleway Regular", sans-serif;
+    font-weight: 500;
     font-size: 1.2em;
     color: #08090A;
     width: 100%;
@@ -277,20 +311,27 @@ body {
     justify-content: center;
     width: 93%;
     margin-right:5%;
-    margin-top: 10px;
+    margin-top: 30px;
 
 }
 
-/* Filter */
- #filter {
-     font-family: "Raleway Regular", sans-serif;
-     font-size: 1.2em;
-     color: #F4F7F5;
- }
+.btn-light {
+    background-color: #333333;
+    color:#d0d3d6;
+}
+
+
+/* Filter*/
 
  .filter-checkbox {
      width: 13pt;
      height: 13pt;
+ }
+
+ .form-check label {
+    color: #F4F7F5;
+    font-family: "Raleway Regular", sans-serif;
+
  }
 
 
@@ -300,8 +341,6 @@ body {
 
 /* Some code for image zooming borrowed from here:
    https://thatwebdude.com/tutorial/css-image-zooming-grid/
-       margin-left: 10%;
-         width: 100%;
        */
 
 #grid-container {
