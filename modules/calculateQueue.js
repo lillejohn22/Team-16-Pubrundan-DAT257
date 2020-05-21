@@ -115,5 +115,12 @@ function getQueueForPub(keyId) {
     return pubs.get(keyId).queue.colorIndex;
 }
 
+function newRandomQueuesForAllPubs() {
+    pubs.forEach((value, key, map) => {
+        map.get(key).queue = {"colorIndex": Math.floor(Math.random()*4)}
+    })
+}
+
 module.exports.updateQueue = updateQueue;
 module.exports.getQueueForPub = getQueueForPub;
+module.exports.newRandomQueuesForAllPubs = newRandomQueuesForAllPubs;
