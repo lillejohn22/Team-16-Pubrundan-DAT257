@@ -18,6 +18,14 @@ server.get('/newQueues', (req, res) => {
     res.send("<html> <head> </head> <body> <p> New queues have now been generated. Please returns to home page. </p> <a href = ../> Return To Home Page </a></body></html>")
     res.status(200).end()})
 
+server.get('/dev', (req, res) => {
+    res.send("<html> <head> </head> " +
+        "<body> " +
+        "<h1> This is a development page hardcoded into the server. It will only provide useful links for development purposes. </h1> " +
+        "<a id = newQueues href = ./newQueues> Get new Queues </a> " +
+        "</body>")
+    res.status(200).end()})
+
 server.get('/pub-data.json', (req, res) => {
     var obj = JSON.parse(fs.readFileSync(path.join(__dirname,'pub-data.json'),'utf8'));
     res.status(200).json(obj)
