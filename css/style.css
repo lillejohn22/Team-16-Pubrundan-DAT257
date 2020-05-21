@@ -144,6 +144,49 @@ body {
 }
 
 /* ---------------
+      Help Page
+   --------------- */
+
+.helpinfo {
+    color: #F4F7F5;
+    text-align: center;
+}
+
+#ssf-container-tmp2 {
+    width: 80%;
+
+}
+
+#use-page {
+    height: 185pt;
+}
+
+#recommend-text {
+    list-style-position: inside;
+    text-align: center;
+    color: #F4F7F5;
+}
+
+#items {
+    font-family: "Lato Regular";
+    font-size: small;
+    color: black;
+}
+
+#items-button {
+    font-family: "Lato Regular";
+    font-size: small;
+    text-align: center;
+    color: black;
+}
+
+#grid-container-help {
+    width: 95%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* ---------------
          SSF
    --------------- */
 
