@@ -16,7 +16,9 @@
     "food": {
       "Dammsugare": "10 kr"
     },
-    "types": ["Chill"]
+    "types": ["Chill"],
+    "id": "bulten",
+    "coordinates" : [57.688970, 11.978690]
   },
 
   "japripps":{
@@ -36,7 +38,9 @@
     "food": {
       "Dammsugare": "10 kr"
     },
-    "types": [""]
+    "types": [""],
+    "id": "japripps",
+    "coordinates" : [57.688740, 11.974630]
   },
 
   "wijkanders":{
@@ -56,7 +60,10 @@
     "food": {
       "Dammsugare": "10 kr"
     },
-    "types": [""]
+    "types": [""],
+
+    "id": "wijkanders",
+    "coordinates" : [57.692588, 11.975321]
   },
 
   "gasquen":{
@@ -76,7 +83,9 @@
     "food": {
       "Dammsugare": "10 kr"
     },
-    "types": [""]
+    "types": [""],
+    "id": "gasquen",
+    "coordinates": [57.688650, 11.975160]
   },
 
   "cafec":{
@@ -96,7 +105,9 @@
     "food": {
       "Dammsugare": "10 kr"
     },
-    "types": [""]
+    "types": [""],
+    "id": "cafec",
+    "coordinates" : [57.707149, 11.940027]
   },
 
   "11an":{
@@ -116,11 +127,13 @@
     "food": {
       "Dammsugare": "10 kr"
     },
-    "types": [""]
+    "types": [""],
+    "id": "11an",
+    "coordinates" : [57.706218, 11.936804]
   },
 
   "rodarummet":{
-    "name" : "Roda Rummet",
+    "name" : "Röda Rummet",
     "host" : "PubA",
     "hostWebsite": "http://www.a-sektionen.se/kommitteer/puba/",
     "location" : "Biblioteket",
@@ -136,11 +149,13 @@
     "food": {
       "Dammsugare": "10 kr"
     },
-    "types": [""]
+    "types": [""],
+    "id": "rodarummet",
+    "coordinates" : [57.687510, 11.976563]
   },
 
-  "ventren":{
-    "name" : "V-entren",
+  "verum":{
+    "name" : "Verum",
     "host" : "SNOK",
     "hostWebsite": "https://www.vtek.se/foreningar/snok/",
     "location" : "Samhällsbyggnad III",
@@ -156,7 +171,9 @@
     "food": {
       "Dammsugare": "10 kr"
     },
-    "types": [""]
+    "types": [""],
+    "id": "verum",
+    "coordinates": [57.687560, 11.976763]
   },
 
   "basen":{
@@ -176,7 +193,9 @@
     "food": {
       "Dammsugare": "10 kr"
     },
-    "types": [""]
+    "types": [""],
+    "id": "basen",
+    "coordinates": [57.687480, 11.978640]
   },
 
   "goldeni":{
@@ -196,7 +215,9 @@
     "food": {
       "Dammsugare": "10 kr"
     },
-    "types": [""]
+    "types": [""],
+    "id": "goldeni",
+    "coordinates" : [57.692902, 11.975156]
   },
 
   "kajsabaren":{
@@ -216,7 +237,9 @@
     "food": {
       "Dammsugare": "10 kr"
     },
-    "types": [""]
+    "types": [""],
+    "id": "kajsabaren",
+    "coordinates": [57.688210, 11.978730]
   },
 
   "focus":{
@@ -236,7 +259,10 @@
     "food": {
       "Dammsugare": "10 kr"
     },
-    "types": [""]
+    "types": [""],
+    "id": "focus",
+    "coordinates" : [57.691053, 11.975531]
+
   },
 
   "hubben21":{
@@ -256,7 +282,9 @@
     "food": {
       "Dammsugare": "10 kr"
     },
-    "types": [""]
+    "types": [""],
+    "id" : "hubben21",
+    "coordinates" : [57.688330, 11.979270]
   },
 
   "fortnox":{
@@ -276,7 +304,9 @@
     "food": {
       "Dammsugare": "10 kr"
     },
-    "types": [""]
+    "types": [""],
+    "id": "fortnox",
+    "coordinates" : [57.691039, 11.978209]
   },
 
   "gastownospritkoket":{
@@ -296,8 +326,10 @@
     "food": {
       "Dammsugare": "10 kr"
     },
-    "types": [""]
-  },
+    "types": [""],
+    "id" : "gastownospritkoket",
+    "coordinates" : [57.691113, 11.978331]
+},
 
   "winden":{
     "name" : "Winden",
@@ -316,11 +348,14 @@
     "food": {
       "Dammsugare": "10 kr"
     },
-    "types": [""]
+    "types": [""],
+    "id" : "winden",
+    "coordinates" : [57.689552, 11.978064]
+
   },
 
-  "jarnvagspub":{
-    "name" : "Jarnvagspub",
+  "tagvagnen":{
+    "name" : "Tågvagnen",
     "host" : "prosex.",
     "hostWebsite": "https://tdtek.chalmers.se/?page_id=19",
     "location" : "Tågvagnen",
@@ -336,7 +371,9 @@
     "food": {
       "Dammsugare": "10 kr"
     },
-    "types": [""]
+    "types": [""],
+    "id" : "tagvagnen",
+    "coordinates": [57.688282, 11.975849]
   },
 
   "zaloonen":{
@@ -356,6 +393,8 @@
     "food": {
       "Dammsugare": "10 kr"
     },
-    "types": [""]
+    "types": [""],
+    "id" : "zaloonen",
+    "coordinates": [57.689081, 11.979204]
   }
 }
