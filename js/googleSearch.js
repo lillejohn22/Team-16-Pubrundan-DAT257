@@ -68,12 +68,7 @@ function googleSearch() {
 
         // Special case, if the V-Entrén has no hyphen and acute accent
         } else if (filter.indexOf("VEN") > -1) {
-            li[16].style.display = "";
-            document.getElementById("searchList").classList.remove('invisible');
-
-        // Special case, if the Pig 'N'... has no apostrophe
-        } else if (filter.indexOf("PIGN") > -1) {
-            li[14].style.display = "";
+            li[15].style.display = "";
             document.getElementById("searchList").classList.remove('invisible');
 
         // Special case, if the Golden-I has no hyphen
@@ -102,9 +97,7 @@ function googleSearch() {
 */
 function clickPubSearch(id) {
     // List with pub ids
-    var pubListObj = ["bulten", "japripps", "wijkanders", "cafec", "basen", "11an", "focus", "fortnox", "gasquen",
-        "gastownospritkoket", "goldeni",  "hubben21", "tagvagnen", "kajsabaren", "pignwhistle", "rodarummet",
-        "verum", "winden", "zaloonen"];
+    var pubListObj = getPubList();
 
     // Make search suggestion list invisible
     document.getElementById("searchList").classList.add('invisible');
@@ -115,11 +108,11 @@ function clickPubSearch(id) {
         document.getElementById(pubListObj[c]).classList.add('visible');
 
         document.getElementById(pubListObj[c]).classList.remove('order-1');
-        document.getElementById(pubListObj[c]).classList.add('order-19');
+        document.getElementById(pubListObj[c]).classList.add('order-18');
     }
 
     // Change order of card of clicked pub name to first
-    document.getElementById(pubListObj[id]).classList.remove('order-19');
+    document.getElementById(pubListObj[id]).classList.remove('order-18');
     document.getElementById(pubListObj[id]).classList.add('order-1');
 }
 
@@ -137,7 +130,7 @@ if(document.getElementById("searchDropdown").classList.contains('invisible')){
      document.getElementById("filterDropdown").classList.remove('visible');
      document.getElementById("filterDropdown").classList.add('invisible');
 
-     document.getElementById("ssf-element-container").style.height = "165pt";
+     document.getElementById("ssf-element-container").style.height = "170pt";
 
  } else  {
        document.getElementById("searchDropdown").classList.remove('visible');
@@ -192,7 +185,7 @@ if(document.getElementById("filterDropdown").classList.contains('invisible')){
      document.getElementById("searchList").classList.remove('visible');
      document.getElementById("searchList").classList.add('invisible');
 
-     document.getElementById("ssf-element-container").style.height = "120pt";
+     document.getElementById("ssf-element-container").style.height = "130pt";
 
  } else  {
        document.getElementById("filterDropdown").classList.remove('visible');

@@ -4,9 +4,11 @@
  */
 
 
-var pubList = ["bulten", "japripps", "wijkanders", "gasquen", "cafec", "11an", "rodarummet", "verum", "basen",
-    "goldeni", "kajsabaren", "focus", "hubben21", "fortnox", "gastownospritkoket", "winden", "tagvagnen", "zaloonen",
-    "pignwhistle"];
+var pubList = getPubList();
+
+//["bulten", "japripps", "wijkanders", "gasquen", "cafec", "11an", "rodarummet", "verum", "basen",
+//    "goldeni", "kajsabaren", "focus", "hubben21", "fortnox", "gastownospritkoket", "winden", "tagvagnen", "zaloonen",
+//    "pignwhistle"];
 
 // The pubs should initially be sorted by their queue time.
 sortFunction("queue");
