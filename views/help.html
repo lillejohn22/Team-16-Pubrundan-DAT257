@@ -1,26 +1,18 @@
 <!doctype html>
-
 <html lang="en">
-    <head>
-        <title>Pub Crawl | Help</title>
+<head>
+    <title>Pub Crawl | Help</title>
 
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <!-- Theme CSS -->
-        <link rel="stylesheet" href="../css/style.css">
-
-
-
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- Icons -->
     <!-- TODO: fix the path below, it is pointing to nowhere.... -->
@@ -32,111 +24,212 @@
 </head>
 
 <body>
-
-        <!-- Font awesome -->
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    </head>
-
-    <body>
-    <!-----------------------
-   Navbar
+<!-----------------------
+         Navbar
 ------------------------>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="/">Pub Crawl <i class="fa fa-beer" aria-hidden="true"></i></a>
-        <a class="navbar-promo">Chalmers University of Technology</a>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="/">Pub Crawl <i class="fa fa-beer" aria-hidden="true"></i></a>
+    <a class="navbar-promo">Chalmers University of Technology</a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="collapse navbar-collapse nav-items" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item ">
-                    <a class="nav-link" href="/">Home<li> <i class="fa fa-home" aria-hidden="true">
+    <div class="collapse navbar-collapse nav-items" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
+            </li>
 
-            </i><span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+                <a class="nav-link" href="/views/pubmap.html">Pub Map <i class="fa fa-street-view"
+                                                                         aria-hidden="true"></i></a>
             </li>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="/views/pubmap.html">Map<li>
-                <i class="fa fa-street-view" aria-hidden="true"></i></a>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/views/help.html">Help <i class="fa fa-info-circle"
+                                                                    aria-hidden="true"></i></a>
             </li>
-                </li>
-                <li class="nav-item active ">
-                    <a class="nav-link" href="#">Help<li>
-                <i class="fa fa-info-circle" aria-hidden="true"></i></a>
-            </li>
-                </li>
+        </ul>
+    </div>
+</nav> <!-- Navbar END -->
+
+<!-----------------------
+    Help text-area
+------------------------>
+<div class="container-fluid" id="ssf-container-tmp2">
+    <div class="row">
+        <!-----------------------
+                 The text
+        ------------------------>
+        <div class="col-lg-12 ssf-element" id="use-page">
+            <h2 id="header-help">How to use the website:</h2>
+            <p class="helpinfo">There are many different functions on this site and we want to make sure that you feel comfortable when navigating through the page. Please feel free <br>
+                to use our template pub card and try it out so that you can use the official cards more efficiently. This help card has all the necessary information that <br> you need
+                to fully enjoy every pub the crawl has to offer. In addition, we recommend that you use these special tools to increase the experience:
+            </p>
+
+            <ul id="recommend-text">
+                <li>The voting function helps you to see how long the queue is and you can vote yourself too!</li>
+                <li>The Map page has an overview of all the pubs and where to find them!</li>
             </ul>
+
         </div>
-    </nav> <!-- Navbar END -->
+    </div> <!-- Row END -->
+</div> <!-- Help box END -->
 
+<!-----------------------
+    The Help card
+------------------------>
+<div class="container-fluid" id="grid-container-help">
+    <div class="row">
+        <div class="col-sm-6 col-lg-6 col-xl-3 grid-element short-queue visible" id="help">
+            <div class="grid-element-contracted-info">
+                <h3 class="grid-element-name">Tap me to expand!</h3>
+                <i class="material-icons grid-element-expand-indicator">keyboard_arrow_down </i>
+            </div>
 
+            <div class="grid-element-expanded-info">
+                <img class="grid-icon" src="../images/icons/location.png" alt="location-icon"/>
+                <span class="location-info">The Pub Name </span>
 
-    <!-----------------------
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/time.png" alt="time-icon"/>
+                <span class="time-info">Opening Hours of the Pub</span>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <img class="grid-icon" src="../images/icons/vote.png" alt="vote-icon"/>
+                <span>How long is the queue? Vote!</span>
+
+                <div class="container queue-container">
+                    <div class="queueVoter">
+                        <div>
+                            <button type="button" value = 1 class="btn btn-outline-success btn-sm">Short</button>
+                            <button type="button" value = 2 class="btn btn-outline-warning btn-sm">Med.</button>
+                            <button type="button" value = 3 class="btn btn-outline-danger btn-sm">Long</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <div class="container-fluid grid-icon-info-container">
+                    <p id="items">A colored icon shows the available items</p>
+                    <img class="grid-icon-info icon-beer" src="../images/icons/beer-nocolor.png" title="Beer" alt="beer-icon"/>
+                    <img class="grid-icon-info icon-drink" src="../images/icons/drink-nocolor.png" title="Drink" alt="drink-icon"/>
+                    <img class="grid-icon-info icon-wine" src="../images/icons/wine-nocolor.png" title="Wine" alt="wine-icon"/>
+                    <img class="grid-icon-info icon-food" src="../images/icons/food-nocolor.png" title="Food" alt="food-icon"/>
+                    <img class="grid-icon-info icon-coffee" src="../images/icons/coffee-nocolor.png" title="Coffee & Tea" alt="coffee-icon"/>
+                    <img class="grid-icon-info icon-activities" src="../images/icons/activity-nocolor.png" title="Activities" alt="activity-icon"/>
+                </div>
+
+                <hr class="grid-element-expanded-info-hr">
+
+                <p id="items-button">Button to give you a detailed view</p>
+
+            </div>
+        </div>
+    </div> <!-- Row END -->
+</div><!-- Card END -->
+
+<!-----------------------
                   Footer
         ------------------------>
-    <footer class="site-footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3 site-footer-element">
-                    <h2 class="site-footer-heading mb-4">About Us</h2>
-                    <hr class="site-footer-element-hr">
-                    <p>
-                        The Chalmers Pub Crawl is an important and entertaining event and this site is the essential guide to help all the students who attend the Pub Crawl.
-                        This webpage project has been created by the brilliant students from Team 16 in the course DAT257.
-                    </p>
-                </div>
+<footer class="site-footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 site-footer-element">
+                <h2 class="site-footer-heading mb-4">About Us</h2>
+                <hr class="site-footer-element-hr">
+                <p>
+                    The Chalmers Pub Crawl is an important and entertaining event and this site is the essential guide to help all the students who attend the Pub Crawl.
+                    This webpage project has been created by the brilliant students from Team 16 in the course DAT257.
+                </p>
+            </div>
 
-                <div class="col-md-3 site-footer-element">
-                    <h5 class="site-footer-heading mb-4">Useful links</h5>
-                    <hr class="site-footer-element-hr">
+            <div class="col-md-3 site-footer-element">
+                <h5 class="site-footer-heading mb-4">Useful links</h5>
+                <hr class="site-footer-element-hr">
 
-                    <ul class="list-unstyled">
-                        <li><a href="https://student.portal.chalmers.se/en/studentlife/student-work-environment/Pages/alcohol-drug-abuse-policy.aspx">Chalmers Alcohol Policy</a></li>
-                        <li><a href="https://www.facebook.com/ChalmersStudentkarsPubrunda">Pub Crawl Facebook</a></li>
-                        <li><a href="https://chalmersstudentkar.se/pub-crawl/">Pub Crawl Info</a></li>
-                        <li><a href="https://www.riksdagen.se/sv/dokument-lagar/dokument/svensk-forfattningssamling/alkohollag-20101622_sfs-2010-1622">Swedish Alcohol Laws</a></li>
-
-
-                    </ul>
-                </div>
-
-                <div class="col-md-3 site-footer-element">
-                    <h5 class="site-footer-heading mb-4">Contact Us</h5>
-                    <hr class="site-footer-element-hr">
-
-                    <ul class="list-unstyled">
-                        <p>pubcrawl@crawl.pub</a> </p>
-
-                    </ul>
-                </div>
-            </div> <!-- Grid row -->
-        </div>
-
-        <hr class="site-footer-hr">
-
-        <!-- Copyright -->
-        <div class="footer-copyright text-center">
-            <h6>
-                &copy;
-                <script>document.write(new Date().getFullYear());</script>
-                Copyright
-            </h6>
-
-            <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
-                from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-        </div>
-    </footer> <!-- Footer END -->
+                <ul class="list-unstyled">
+                    <li><a href="https://student.portal.chalmers.se/en/studentlife/student-work-environment/Pages/alcohol-drug-abuse-policy.aspx">Chalmers Alcohol Policy</a></li>
+                    <li><a href="https://www.facebook.com/ChalmersStudentkarsPubrunda">Pub Crawl Facebook</a></li>
+                    <li><a href="https://chalmersstudentkar.se/pub-crawl/">Pub Crawl Info</a></li>
+                    <li><a href="https://www.riksdagen.se/sv/dokument-lagar/dokument/svensk-forfattningssamling/alkohollag-20101622_sfs-2010-1622">Swedish Alcohol Laws</a></li>
 
 
+                </ul>
+            </div>
 
-        <!-- jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <!-- Popper.js -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <!-- Bootstrap JS -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
-    </body>
+            <div class="col-md-3 site-footer-element">
+                <h5 class="site-footer-heading mb-4">Contact Us</h5>
+                <hr class="site-footer-element-hr">
+
+                <ul class="list-unstyled">
+                    <p>pubcrawl@crawl.pub</a> </p>
+
+                </ul>
+            </div>
+        </div> <!-- Grid row -->
+    </div>
+
+    <hr class="site-footer-hr">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center">
+        <h6>
+            &copy;
+            <script>document.write(new Date().getFullYear());</script>
+            Copyright
+        </h6>
+
+        <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+            from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </div>
+</footer> <!-- Footer END -->
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Popper.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+
+
+<!-- JavaScript files-->
+<script src="../js/changeQueueColour.js"></script>
+<script src="../js/sortFunction.js"></script>
+<script src="../js/filterFunction.js"></script>
+<script src="../js/expandContractGridElements.js"></script>
+<script src="../js/getVote.js"></script>
+<script src="../js/handleDetailedView.js"></script>
+<script src="../js/searchFunction.js"></script>
+<script src="../js/googleSearch.js"></script>
+<script src="../js/addPubInfo.js"></script>
+
+<!-- Remove comments below after check -->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
+<!-- JavaScript files-->
+<!--<script src="../node_modules/calculateQueue.js"></script>
+<script src="js/changeQueueColour.js"></script>
+<script src="js/sortFunction.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/expandContractGridElements.js"></script>
+<script src="js/getVote.js"></script> -->
+
+<!-- The window.onload function has to be the last one to be loaded! -->
+<!--<script src="js/addPubInfo.js"></script>-->
+
+</body>
+
 </html>
+
