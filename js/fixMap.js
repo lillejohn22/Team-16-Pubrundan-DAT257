@@ -1,70 +1,134 @@
 /**
  * Fixes the pub map.
+ * Merged with colored markers.
+ * Refactored pub creation into "addPubToMap(pub)"
+ * Moved map initialization into createMap()
  */
 
-// Initialize Leaflet
-var map = L.map('map').setView({lon: 11.976642, lat: 57.689454}, 15);
+var map; // For global scope visibility.
+var pubs = new Map();
+createMap()
 
-// Add the OpenStreetMap tiles
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-}).addTo(map);
+/**
+ * Initialises the map and sets basic properties such as start zoom and visible area.
+ * Then adds all pubs based on server data through addPubsFromServer().
+ */
+function createMap() {
 
-// Show the scale bar on the lower left corner
-L.control.scale().addTo(map);
+// initialize Leaflet
+    map = L.map('map').setView({lon: 11.976642, lat: 57.689454}, 15);
 
-// Adds markers for every pub
-let basen = L.marker([57.687480, 11.978640]).addTo(map);
-basen.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Basen")).openPopup();
+// add the OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+    }).addTo(map);
 
-let kajsa = L.marker([57.688210, 11.978730]).addTo(map);
-kajsa.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Kajsabaren")).openPopup();
+// show the scale bar on the lower left corner
+    L.control.scale().addTo(map);
+    addPubsFromServer()
+}
 
-let hubben = L.marker([57.688330, 11.979270]).addTo(map);
-hubben.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Hubben 2.1")).openPopup();
+/** Requests all pubs from server and calls the addPubToMap function to add them to the map */
+function addPubsFromServer() {
+    getJSONdata(null, '/pub-data.json', 'GET').then(function(pubData) {
+        for(var pub in pubData) {
+            addPubToMap(pubData[pub])
+        }
+    });
+}
 
-let bulten = L.marker([57.688970, 11.978690]).addTo(map);
-bulten.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Café Bulten")).openPopup();
+/**
+ * Adds a pub to the map, assumes that the pub is based on the structure in pub-data.json
+ * @param pub
+ */
+async function addPubToMap(pub) {
+    //Adds markers for pub
+    let myIcon = await getPubMapMarker(pub.id)
+    if((pub.coordinates[0] != null) || (pub.coordinates[1] != null)) { // Ignore this pub.
+        L.marker(
+            pub.coordinates,
+            {icon: myIcon}
+        ).addTo(map).bindPopup(L.popup({
+            closeOnClick: true,
+            autoClose: false
+        }).setContent(pub.name)).openPopup();
+    }
+}
 
-let zaloonen = L.marker([57.689081, 11.979204]).addTo(map);
-zaloonen.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Zaloonen")).openPopup();
+async function getPubMapMarker(pubID) {
+    return await getPubQueue(pubID).then(function(queue) {
+        switch(queue) {
+            case 1:
+                return L.icon({
+                    iconUrl: '../images/icons/greenMapMarker.png',
+                    iconSize: [30, 50],
+                    iconAnchor: [22, 94],
+                    popupAnchor: [-3, -76]
+                });
+            case 2:
+                return L.icon({
+                    iconUrl: '../images/icons/yellowMapMarker.png',
+                    iconSize: [30, 50],
+                    iconAnchor: [22, 94],
+                    popupAnchor: [-3, -76]
+                });
+            case 3:
+                return L.icon({
+                    iconUrl: '../images/icons/redMapMarker.png',
+                    iconSize: [30, 50],
+                    iconAnchor: [22, 94],
+                    popupAnchor: [-3, -76]
+                });
+            case 0:
+                return L.icon({
+                    iconUrl: '../images/icons/blackMapMarker.png',
+                    iconSize: [30, 50],
+                    iconAnchor: [22, 94],
+                    popupAnchor: [-3, -76]
+                });
+            default:
+                return L.icon({
+                    iconUrl: '../images/icons/blueMapMarker.png',
+                    iconSize: [30, 50],
+                    iconAnchor: [22, 94],
+                    popupAnchor: [-3, -76]
+                });
+        }
+    })
+}
 
-let winden = L.marker([57.689552, 11.978064]).addTo(map);
-winden.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Winden")).openPopup();
+/** Returns the queue the pub specified by pubID
+ * @param {String} pubID
+ * @return {Promise} queueLength
+ */
+async function getPubQueue(pubID) {
+    let url = `/getQueueFor/${pubID}`;
+    return await getJSONdata(null,url,"get")
+}
 
-let rodaRummet = L.marker([57.687510, 11.976563]).addTo(map);
-rodaRummet.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Röda Rummet")).openPopup();
+/**
+ * Retrieves data from server at specified url using specified method. To use the returned data
+ * write: sendAndGetJSONdata(data, url, method).then(function(dataReturned) {methods})
+ * @param data
+ * @param url
+ * @param method
+ * @return {Promise<JSON>}
+ */
+async function getJSONdata(data, url, method) {
 
-let verum = L.marker([57.687560, 11.976763]).addTo(map);
-verum.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Verum")).openPopup();
+    let response = await fetch(url, {
+        method: method.toUpperCase(),
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8',
+            'Accept': 'application/json'
+        },
+        body: data
+    });
 
-let tagvagnen = L.marker([57.688282, 11.975849]).addTo(map);
-tagvagnen.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Tågvagnen")).openPopup();
+    // Results is parsed as JSON and returned to caller.
+    return response.json()
+}
 
-let gasquen = L.marker([57.688650, 11.975160]).addTo(map);
-gasquen.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Gasquen")).openPopup();
 
-let pripps = L.marker([57.688740, 11.974630]).addTo(map);
-pripps.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("J.A. Pripps")).openPopup();
 
-let focus = L.marker([57.691053, 11.975531]).addTo(map);
-focus.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Focus")).openPopup();
-
-let fortNOx = L.marker([57.691039, 11.978209]).addTo(map);
-fortNOx.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Fort NOx")).openPopup();
-
-let gastown = L.marker([57.691113, 11.978331]).addTo(map);
-gastown.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Gastown & Spritköket")).openPopup();
-
-let wikanders = L.marker([57.692588, 11.975321]).addTo(map);
-wikanders.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Wijkanders")).openPopup();
-
-let goldenI = L.marker([57.692902, 11.975156]).addTo(map);
-goldenI.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Golden-I")).openPopup();
-
-let cafeC = L.marker([57.707149, 11.940027]).addTo(map);
-cafeC.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Café C")).openPopup();
-
-let elvan = L.marker([57.706218, 11.936804]).addTo(map);
-elvan.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("11:an")).openPopup();
