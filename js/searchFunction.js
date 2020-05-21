@@ -1,7 +1,7 @@
 // List of all the pubs
 var pubListObjects = ["bulten", "japripps", "wijkanders", "cafec", "basen", "11an", "focus", "fortnox", "gasquen",
-    "gastownospritkoket", "goldeni",  "hubben21", "jarnvagspub", "kajsabaren", "pignwhistle", "rodarummet",
-    "ventren", "winden", "zaloonen"];
+    "gastownospritkoket", "goldeni",  "hubben21", "tagvagnen", "kajsabaren", "pignwhistle", "rodarummet",
+    "verum", "winden", "zaloonen"];
 
 const {length} = pubListObjects;
 
