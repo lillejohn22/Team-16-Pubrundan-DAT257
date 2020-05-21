@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
     <head>
         <title>Pub Crawl</title>
@@ -61,32 +60,45 @@
         </nav> <!-- Navbar END -->
 
 
-        <!-----------------------
-            Search/sort/filter
-        ------------------------>
-        <div class="container-fluid" id="ssf-container">
-            <div class="row">
-                <!-----------------------
-                         Search
-                ------------------------>
-                <div class="col-lg-12 ssf-element" id="search">
-                    <h2>Search</h2>
+    <!----------------------- 
+        Search/sort/filter 
+    ------------------------>
+    <div class="container-fluid" id="ssf-container">
+        <div class="row">
 
-                    <label for="searchBar"></label>
+            <div class="col-lg-12 ssf-element" id="ssf-element-container">
+                <div class= "ddMenu">
+                <button type="button" id="dropDownSearch" class="btn btn-outline-dark buttonWidth">Search</button>
+                </div>
+
+                <div class="ddMenu">
+                <button type="button" id="dropDownSort" class="btn btn-outline-dark buttonWidth">Sort</button>
+
+                </div>
+
+                <div class="ddMenu">
+                    <button type="button" id="dropDownFilter" class="btn btn-outline-dark buttonWidth">Filter</button>
+
+                </div>
+
+
+                <div id="searchDropdown" class="dropdown-content invisible">
                     <input type="text" id="searchBar" placeholder="Search for pubs..."/>
-                    <button id="searchButton">Search</button>
+                    <button type="search" id="searchButton">
+                        <img class="search-icon" src="../images/searchIcon.png"/>
+                    </button>
 
                     <ul class="searchL invisible" id="searchList">
-                        <li onmousedown="clickPubSearch(0)"  class="searchL" id="0"> <a href="#"> Café Bulten </a></li>
-                        <li onmousedown="clickPubSearch(1)"  class="searchL" id="1"> <a href="#"> J.A. Pripps </a></li>
-                        <li onmousedown="clickPubSearch(2)"  class="searchL" id="2"> <a href="#"> Wijkanders </a></li>
-                        <li onmousedown="clickPubSearch(3)"  class="searchL" id="3"> <a href="#"> Café C </a></li>
-                        <li onmousedown="clickPubSearch(4)"  class="searchL" id="4"> <a href="#"> Basen </a></li>
-                        <li onmousedown="clickPubSearch(5)"  class="searchL" id="5"> <a href="#"> 11:an </a></li>
-                        <li onmousedown="clickPubSearch(6)"  class="searchL" id="6"> <a href="#"> Focus </a></li>
-                        <li onmousedown="clickPubSearch(7)"  class="searchL" id="7"> <a href="#"> Fort Nox </a></li>
-                        <li onmousedown="clickPubSearch(8)"  class="searchL" id="8"> <a href="#"> Gasquen </a></li>
-                        <li onmousedown="clickPubSearch(9)"  class="searchL" id="9"> <a href="#"> Gastown & Spritköket </a></li>
+                        <li onmousedown="clickPubSearch(0)" class="searchL" id="0"> <a href="#"> Café Bulten </a></li>
+                        <li onmousedown="clickPubSearch(1)" class="searchL" id="1"> <a href="#"> J.A. Pripps </a></li>
+                        <li onmousedown="clickPubSearch(2)" class="searchL" id="2"> <a href="#"> Wijkanders </a></li>
+                        <li onmousedown="clickPubSearch(3)" class="searchL" id="3"> <a href="#"> Café C </a></li>
+                        <li onmousedown="clickPubSearch(4)" class="searchL" id="4"> <a href="#"> Basen </a></li>
+                        <li onmousedown="clickPubSearch(5)" class="searchL" id="5"> <a href="#"> 11:an </a></li>
+                        <li onmousedown="clickPubSearch(6)" class="searchL" id="6"> <a href="#"> Focus </a></li>
+                        <li onmousedown="clickPubSearch(7)" class="searchL" id="7"> <a href="#"> Fort Nox </a></li>
+                        <li onmousedown="clickPubSearch(8)" class="searchL" id="8"> <a href="#"> Gasquen </a></li>
+                        <li onmousedown="clickPubSearch(9)" class="searchL" id="9"> <a href="#"> Gastown & Spritköket </a></li>
                         <li onmousedown="clickPubSearch(10)" class="searchL" id="10"><a href="#"> Golden-I </a></li>
                         <li onmousedown="clickPubSearch(11)" class="searchL" id="11"><a href="#"> Hubben 2.1 </a></li>
                         <li onmousedown="clickPubSearch(12)" class="searchL" id="12"><a href="#"> Järnvägspub </a></li>
@@ -96,94 +108,86 @@
                         <li onmousedown="clickPubSearch(16)" class="searchL" id="16"><a href="#"> Winden </a></li>
                         <li onmousedown="clickPubSearch(17)" class="searchL" id="17"><a href="#"> Zaloonen </a></li>
                     </ul>
-                </div> <!-- Search END -->
+
+                </div>
 
 
-                <!-----------------------
-                          Sort
-                ------------------------>
-                <div class="col-lg-6 ssf-element" id="sort">
-                    <h2>Sort</h2>
+                <div id="sortDropdown" class="dropdown-content invisible">
+                        <div class="sortButtons btn-group btn-group-toggle align-radio" data-toggle="buttons">
+                            <label class="btn btn-light" id="alphaSort">
+                                <input type="radio" name="sortPubs" id="alpha"> Alphabetical
+                            </label>
+                            <label class="btn btn-light active" id="queueSort">
+                                <input type="radio" name="sortPubs" id="queue"> Queue Length
+                            </label>
+                        </div>
+                </div>
 
-                    <div class="sortButtons btn-group btn-group-toggle align-radio" data-toggle="buttons">
-                        <label class="btn btn-light" id="alphaSort">
-                            <input type="radio" name="sortPubs" id="alpha"> Alphabetical
-                        </label>
 
-                        <label class="btn btn-light active" id="queueSort">
-                            <input type="radio" name="sortPubs" id="queue"> Queue Length
+                <div id="filterDropdown" class="dropdown-content invisible">
+                    <div class="form-check form-check-inline" style="margin-top:10px;">
+                        <input class="form-check-input filter-checkbox" type="checkbox" id="beer-checkbox" value="option1">
+                        <label class="form-check-label" for="beer-checkbox">
+                            <img class="grid-icon-info" src="../images/icons/beer.png" title="Beer" alt="beer-icon"/>
+                            Beer
                         </label>
                     </div>
-                </div> <!-- Sort END -->
 
-
-                <!-----------------------
-                         Filter
-                ------------------------>
-                <div class="col-lg-6 ssf-element">
-                    <div class="filterButtons" id="filter">
-                        <h2>Filter</h2>
-
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input filter-checkbox" type="checkbox" id="beer-checkbox" value="option1">
-                            <label class="form-check-label" for="beer-checkbox">
-                                <img class="grid-icon-info" src="../images/icons/beer.png" title="Beer" alt="beer-icon"/>
-                                Beer
-                            </label>
-                        </div>
-
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input filter-checkbox" type="checkbox" id="drinks-checkbox" value="option2">
-                            <label class="form-check-label" for="drinks-checkbox">
-                                Drinks
-                                <img class="grid-icon-info" src="../images/icons/drink.png" title="Drink" alt="drink-icon"/>
-                            </label>
-                        </div>
-
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input filter-checkbox" type="checkbox" id="wine-checkbox" value="option1">
-                            <label class="form-check-label" for="wine-checkbox">
-                                <img class="grid-icon-info" src="../images/icons/wine.png" title="Wine" alt="wine-icon"/>
-                                Wine
-                            </label>
-                        </div>
-
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input filter-checkbox" type="checkbox" id="coffee-checkbox" value="option2">
-                            <label class="form-check-label" for="coffee-checkbox">
-                                <img class="grid-icon-info" src="../images/icons/coffee.png" title="Coffee & Tea" alt="coffee-icon"/>
-                                Coffee & Tea
-                            </label>
-                        </div>
-
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input filter-checkbox" type="checkbox" id="food-checkbox" value="option1">
-                            <label class="form-check-label" for="food-checkbox">
-                                <img class="grid-icon-info" src="../images/icons/food.png" title="Food" alt="food-icon"/>
-                                Food
-                            </label>
-                        </div>
-
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input filter-checkbox" type="checkbox" id="activities-checkbox" value="option2">
-                            <label class="form-check-label" for="activities-checkbox">
-                                <img class="grid-icon-info" src="../images/icons/activity.png" title="Activities" alt="activity-icon"/>
-                                Activities
-                            </label>
-                        </div>
-
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input filter-checkbox" type="checkbox" id="open-checkbox" value="option2">
-                            <label class="form-check-label" for="open-checkbox">
-                                <img class="grid-icon-info" src="../images/icons/open.png" title="Open" alt="open-icon"/>
-                                Open
-                            </label>
-                        </div>
-
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input filter-checkbox" type="checkbox" id="drinks-checkbox" value="option2">
+                        <label class="form-check-label" for="drinks-checkbox">
+                            Drinks
+                            <img class="grid-icon-info" src="../images/icons/drink.png" title="Drink" alt="drink-icon"/>
+                        </label>
                     </div>
-                </div> <!-- Filter END -->
-            </div> <!-- Row END -->
-        </div> <!-- Search/sort/filter END -->
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input filter-checkbox" type="checkbox" id="wine-checkbox" value="option1">
+                        <label class="form-check-label" for="wine-checkbox">
+                            <img class="grid-icon-info" src="../images/icons/wine.png" title="Wine" alt="wine-icon"/>
+                            Wine
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input filter-checkbox" type="checkbox" id="coffee-checkbox" value="option2">
+                        <label class="form-check-label" for="coffee-checkbox">
+                            <img class="grid-icon-info" src="../images/icons/coffee.png" title="Coffee & Tea" alt="coffee-icon"/>
+                            Coffee & Tea
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input filter-checkbox" type="checkbox" id="food-checkbox" value="option1">
+                        <label class="form-check-label" for="food-checkbox">
+                            <img class="grid-icon-info" src="../images/icons/food.png" title="Food" alt="food-icon"/>
+                            Food
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input filter-checkbox" type="checkbox" id="activities-checkbox" value="option2">
+                        <label class="form-check-label" for="activities-checkbox">
+                            <img class="grid-icon-info" src="../images/icons/activity.png" title="Activities" alt="activity-icon"/>
+                            Activities
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input filter-checkbox" type="checkbox" id="open-checkbox" value="option2">
+                        <label class="form-check-label" for="open-checkbox">
+                            <img class="grid-icon-info" src="../images/icons/open.png" title="Open" alt="open-icon"/>
+                            Open
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <!-- SearchSortFilter END  -->
 
 
         <!-----------------------
@@ -1004,11 +1008,11 @@
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-15 pub-closed visible" id="gastownospritkoket">
-                    <div class="grid-element-contracted-info">
-                        <h3 class="grid-element-name">Gastown & Spritköket</h3>
-                        <i class="material-icons grid-element-expand-indicator">keyboard_arrow_down </i>
-                    </div>
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-15 pub-closed visible" id="gastownospritkoket">
+                <div class="grid-element-contracted-info">
+                    <h3 class="grid-element-name">Gastown & Spritköket</h3>
+                    <i class="material-icons grid-element-expand-indicator">keyboard_arrow_down </i>
+                </div>
 
                     <div class="grid-element-expanded-info">
                         <a href="https://goo.gl/maps/N6FhjRgYKK8kPRUY7">
@@ -1102,11 +1106,11 @@
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-17 pub-closed visible" id="tagvagnen">
-                    <div class="grid-element-contracted-info">
-                        <h3 class="grid-element-name">Järnvägspub</h3>
-                        <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
-                    </div>
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-17 pub-closed visible" id="tagvagnen">
+                <div class="grid-element-contracted-info">
+                    <h3 class="grid-element-name">Järnvägspub</h3>
+                    <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
+                </div>
 
                     <div class="grid-element-expanded-info">
                         <a href="https://goo.gl/maps/qbfQ7ne3ms6PUfXp8">
@@ -1151,11 +1155,11 @@
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-18 pub-closed visible" id="zaloonen">
-                    <div class="grid-element-contracted-info">
-                        <h3 class="grid-element-name">Zaloonen</h3>
-                        <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
-                    </div>
+            <div class="col-sm-6 col-lg-6 col-xl-3 grid-element order-18 pub-closed visible" id="zaloonen">
+                <div class="grid-element-contracted-info">
+                    <h3 class="grid-element-name">Zaloonen</h3>
+                    <i class="material-icons grid-element-expand-indicator ">keyboard_arrow_down </i>
+                </div>
 
                     <div class="grid-element-expanded-info">
                         <a href="https://goo.gl/maps/m56RP1ZdjLTbTabF9">
@@ -1268,16 +1272,16 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
 
 
-         <!-- JavaScript files-->
-        <script src="../js/getPubList.js"></script> <!-- must be first because loads pubList to multiple other files-->
-        <script src="../js/changeQueueColour.js"></script>
-        <script src="../js/sortFunction.js"></script>
-        <script src="../js/filterFunction.js"></script>
-        <script src="../js/expandContractGridElements.js"></script>
-        <script src="../js/getVote.js"></script>
-        <script src="../js/handleDetailedView.js"></script>
-        <script src="../js/searchFunction.js"></script>
-        <script src="../js/googleSearch.js"></script>
-        <script src="../js/addPubInfo.js"></script>
-    </body>
+     <!-- JavaScript files-->
+    <script src="../js/getPubList.js"></script> <!-- must be first because loads pubList to multiple other files-->
+    <script src="../js/changeQueueColour.js"></script>
+    <script src="../js/sortFunction.js"></script>
+    <script src="../js/filterFunction.js"></script>
+    <script src="../js/expandContractGridElements.js"></script>
+    <script src="../js/getVote.js"></script>
+    <script src="../js/handleDetailedView.js"></script>
+    <script src="../js/searchFunction.js"></script>
+    <script src="../js/googleSearch.js"></script>
+    <script src="../js/addPubInfo.js"></script>
+  </body>
 </html>

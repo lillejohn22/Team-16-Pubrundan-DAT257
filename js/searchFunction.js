@@ -8,12 +8,14 @@ const {length} = pubListObjects;
 /**
  * Allows searching by pressing the enter key.
  */
-$("#searchBar").keyup(function(event) {
+$("#searchBar").keyup(function(event) { //on keyup
+
+    googleSearch();
+
     if (event.keyCode === 13) {
         $("#searchButton").click();
     }
 
-    googleSearch();
 });
 
 
