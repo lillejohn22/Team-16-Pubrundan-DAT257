@@ -89,9 +89,9 @@ function googleSearch() {
 }
 
 /**
-* Function that moves the card of the clicked pub name to the first position
- *
-* @param id, which is the id number of the pub, to be selected in the list below
+ * Function that moves the card of the clicked pub name to the first position.
+ * This is done setting all items to be in the back and then moving specified to be first.
+ * @param id, which is the id number of the pub, to be selected in the list below
  */
 function clickPubSearch(id) {
     // List with pub ids
