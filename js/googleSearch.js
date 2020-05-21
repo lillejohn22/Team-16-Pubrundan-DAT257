@@ -92,12 +92,10 @@ function googleSearch() {
 * Function that moves the card of the clicked pub name to the first position
  *
 * @param id, which is the id number of the pub, to be selected in the list below
-*/
+ */
 function clickPubSearch(id) {
     // List with pub ids
-    var pubListObj = ["bulten", "japripps", "wijkanders", "cafec", "basen", "11an", "focus", "fortnox", "gasquen",
-        "gastownospritkoket", "goldeni",  "hubben21", "tagvagnen", "kajsabaren", "rodarummet",
-        "verum", "winden", "zaloonen"];
+    var pubListObj = getPubList();
 
     // Make search suggestion list invisible
     document.getElementById("searchList").classList.add('invisible');

@@ -59,7 +59,6 @@ $(window).on('load', function() {
      */
     function addDetailedViewData(obj) {
         let id = $(obj).attr('id').replace("detailed-", "");
-
         /* Carousel Images */
         // TODO: Need images first.
 
@@ -113,7 +112,6 @@ $(window).on('load', function() {
      */
     function addDetailedViewMapData(id) {
         let link;
-        
         switch (id) {
             case "bulten":
                 link = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2132.6118109764366!2d11.976324116251982!3d57.68907484847075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff30b3d58e515%3A0xc9e8bc8489acdd0c!2sCaf%C3%A9%20Bulten!5e0!3m2!1ssv!2sse!4v1589901070588!5m2!1ssv!2sse";
