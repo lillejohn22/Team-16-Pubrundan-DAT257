@@ -4,8 +4,8 @@
 
 
 $(window).on('load', function() {
-    var allPubs = ["bulten", "japripps", "wijkanders", "gasquen", "cafec", "11an", "rodarummet", "ventren", "basen",
-        "goldeni", "kajsabaren", "focus", "hubben21", "fortnox", "gastownospritkoket", "winden", "jarnvagspub",
+    var allPubs = ["bulten", "japripps", "wijkanders", "gasquen", "cafec", "11an", "rodarummet", "verum", "basen",
+        "goldeni", "kajsabaren", "focus", "hubben21", "fortnox", "gastownospritkoket", "winden", "tagvagnen",
         "zaloonen"];
 
     var currentFilters = [];

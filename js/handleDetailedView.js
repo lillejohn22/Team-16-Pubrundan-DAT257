@@ -136,7 +136,7 @@ $(window).on('load', function() {
             case "rodarummet":
                 link = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2132.7039388247363!2d11.974362516251983!3d57.687509448594156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff30b9932fbc5%3A0xc546b8c77043137d!2sR%C3%B6da%20rummet!5e0!3m2!1ssv!2sse!4v1589967776297!5m2!1ssv!2sse";
                 break;
-            case "ventren":
+            case "verum":
                 link = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2132.642473353872!2d11.973164466252!3d57.68855384851187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff30b9852dbc7%3A0x867cce9b10ae9808!2sVerum!5e0!3m2!1ssv!2sse!4v1589968006194!5m2!1ssv!2sse";
                 break;
             case "basen":
@@ -163,7 +163,7 @@ $(window).on('load', function() {
             case "winden":
                 link = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2132.58359672518!2d11.975879216252004!3d57.68955424843297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff30b11431be5%3A0x81ca7ad1ae019ad0!2sWinden!5e0!3m2!1ssv!2sse!4v1589968396405!5m2!1ssv!2sse";
                 break;
-            case "jarnvagspub":
+            case "tagvagnen":
                 link = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2132.65546214274!2d11.973598616252032!3d57.68833314852923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff39c09a20bed%3A0xc12f58f11443cbc6!2zSsOkcm52w6Rnc3ZhZ25lbiwgQ2hhbG1lcnM!5e0!3m2!1ssv!2sse!4v1589968430063!5m2!1ssv!2sse";
                 break;
             case "zaloonen":

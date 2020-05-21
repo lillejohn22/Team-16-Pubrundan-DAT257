@@ -59,13 +59,20 @@ function googleSearch() {
             li[5].style.display = "";
             document.getElementById("searchList").classList.remove('invisible');
 
-        // Special case, if the V-Entrén has no hyphen and acute accent
-        } else if (filter.indexOf("VEN") > -1) {
-            li[16].style.display = "";
-            document.getElementById("searchList").classList.remove('invisible');
+
+        }
+
+        /*
+        Removed because it seems redundant.
+            // Special case, if the V-Entrén has no hyphen and acute accent
+            else if (filter.indexOf("VEN") > -1) {
+                li[16].style.display = "";
+                document.getElementById("searchList").classList.remove('invisible');
+                }
+         */
 
         // Special case, if the Golden-I has no hyphen
-        } else if (filter.indexOf("GOLDENI") > -1) {
+        else if (filter.indexOf("GOLDENI") > -1) {
             li[10].style.display = "";
             document.getElementById("searchList").classList.remove('invisible');
 
@@ -89,8 +96,8 @@ function googleSearch() {
 function clickPubSearch(id) {
     // List with pub ids
     var pubListObj = ["bulten", "japripps", "wijkanders", "cafec", "basen", "11an", "focus", "fortnox", "gasquen",
-        "gastownospritkoket", "goldeni",  "hubben21", "jarnvagspub", "kajsabaren", "rodarummet",
-        "ventren", "winden", "zaloonen"];
+        "gastownospritkoket", "goldeni",  "hubben21", "tagvagnen", "kajsabaren", "rodarummet",
+        "verum", "winden", "zaloonen"];
 
     // Make search suggestion list invisible
     document.getElementById("searchList").classList.add('invisible');

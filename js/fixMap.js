@@ -37,10 +37,10 @@ let rodaRummet = L.marker([57.687510, 11.976563]).addTo(map);
 rodaRummet.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Röda Rummet")).openPopup();
 
 let verum = L.marker([57.687560, 11.976763]).addTo(map);
-verum.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("V-entrén")).openPopup();
+verum.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Verum")).openPopup();
 
 let tagvagnen = L.marker([57.688282, 11.975849]).addTo(map);
-tagvagnen.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Järnvägspub")).openPopup();
+tagvagnen.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Tågvagnen")).openPopup();
 
 let gasquen = L.marker([57.688650, 11.975160]).addTo(map);
 gasquen.bindPopup(L.popup({closeOnClick: true, autoClose: false}).setContent("Gasquen")).openPopup();
