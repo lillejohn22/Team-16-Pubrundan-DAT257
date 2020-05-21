@@ -40,6 +40,7 @@
 /* ---------------
        Body
    --------------- */
+
 body {
   background-color: #F4F7F5;
 }
@@ -115,21 +116,24 @@ body {
 /* ---------------
          Map
    --------------- */
+
 #map {
-    /* configure the size of the map */
+    /* Configure the size of the map */
     width: 100%;
     height: 100%;
     z-index: 2;
 }
+
 #map-container {
     width: 100%;
 }
+
 .map-element {
     background-color: white;
     margin-top: 20pt;
-
     height: 90vh;
 }
+
 .map-element h2 {
     font-family: "Raleway Regular", sans-serif;
     color: #F4F7F5;
@@ -138,10 +142,6 @@ body {
     border-bottom: 5px solid rgba(255, 255, 255, .3);
 }
 
-.align-radio {
-    display: flex;
-    justify-content: center;
-}
 
 /* ---------------
       Help Page
@@ -191,64 +191,150 @@ body {
    --------------- */
 
 #ssf-container {
-    width: 80%;
+    width: 77%;
 }
 
 .ssf-element {
     margin-top: 15pt;
     background-color: #333333;
-    border: 5pt solid #F4F7F5;
-    height: 150pt;
-    }
+    border-radius: 4px;
+    border: 1pt solid #F4F7F5;
 
-.ssf-element h2 {
+}
+
+#ssf-element-container {
+    height: 65pt;
+
+}
+
+.ddMenu {
+    width: 100%;
+    display: inline;
+
+}
+
+.btn-outline-dark {
     font-family: "Raleway Regular", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    background-color: #333333;
+    border-radius: 4px;
+    border: 1pt solid #F4F7F5;
     color: #F4F7F5;
-    text-align: center;
-    padding-top: 10pt;
-    border-bottom: 5px solid rgba(255, 255, 255, .3);
+    margin-top: 20px;
+
+}
+
+.btn-outline-dark:hover {
+    background-color: white;
+    border-color:#333333;
+    color: #333333;
+}
+
+.btn-outline-dark:active {
+    background-color: white;
+    border: 2px solid #333333;
+    color: #333333;
+}
+
+.buttonWidth {
+    width: 32%;
+    justify-content: center;
+}
+
+.dropdown-content {
+    position: absolute;
+    width: 100%;
+    float:left;
+    display: block;
+    z-index: 10;
 }
 
 /* Search */
 #searchBar {
-    width: 85%;
+    width: 80%;
     font-size: 16px;
-    padding: 12px 20px 12px 40px;
-    border: 1px solid #ddd;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid #F4F7F5;
+    background-color: #333333;
     margin-bottom: 12px;
+    margin-top: 25px;
+    font-family: "Raleway Regular", sans-serif;
+    color: #F4F7F5;
 }
 
 #searchButton {
-    width: 10%;
+    width: 12%;
+    height: 7%;
     font-size: 16px;
-    padding: 1px 2px 1px 4px;
-    border: 1px solid #f8f9fa;
-    margin-right: auto;
-    background-color: #f8f9fa;
-    color: #212529;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid #333333;
+    margin-right: 0px;
+    background-color: #F4F7F5;
+    color: #333333;
 }
 
+#searchButton:active {
+    background-color: white;
+    border: 2px solid #333333;
+
+}
+
+.search-icon {
+    display: inline-block;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 20px;
+    height: 20px;
+}
+
+
 #searchList {
+    border: none;
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    padding: 5px 5px 5px 0px;
+    position: relative;
+    width: 93%;
     visibility: visible;
+    overflow: hidden;
+    z-index: 10;
+    margin-top: 0;
+    color: #333333;
+
 }
 
 .searchL {
     border: none;
-    margin-top: -1px;
-    padding: 5px;
-    background-color: #F6F6F6;
+    margin-top: -5px;
+    margin-left: 0px;
+    padding: 3px;
+    background-color: #333333;
     font-size: 16px;
-    color: black;
-    display: block;
+    color: #F4F7F5;
     text-decoration: none;
+    display: block;
+
+}
+
+.searchL a {
+    font-family: "Raleway Regular", sans-serif;
+    color: #F4F7F5;
+
 }
 
 .searchL a:hover {
-    background-color: #A9A9A9;
     color: white;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+
+}
+
+.searchL a:active {
+    color: black;
+    font-weight: bold;
     text-decoration: none;
     display: block;
 }
@@ -257,25 +343,44 @@ body {
 /* Sort */
 .sortButtons {
     font-family: "Raleway Regular", sans-serif;
+    font-weight: 500;
     font-size: 1.2em;
     color: #08090A;
+    width: 100%;
 }
 
  .align-radio {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    width: 93%;
+    margin-right:5%;
+    margin-top: 30px;
+
 }
 
-/* Filter */
- #filter {
-     font-family: "Raleway Regular", sans-serif;
-     font-size: 1.2em;
-     color: #F4F7F5;
- }
+.btn-light {
+    background-color: #333333;
+    color:#d0d3d6;
+}
+
+
+/* Filter*/
+
+#filterDropdown {
+
+margin-top: 15px;
+
+}
 
  .filter-checkbox {
      width: 13pt;
      height: 13pt;
+ }
+
+ .form-check label {
+    color: #F4F7F5;
+    font-family: "Raleway Regular", sans-serif;
+
  }
 
 
@@ -458,6 +563,7 @@ body {
     -moz-transition: all .25s ease;      /* Firefox */
     -o-transition: all .25s ease;        /* Opera */
     transition: all .25s ease;
+    overflow: auto;
 }
 
 .detailed-view-content {
@@ -467,7 +573,7 @@ body {
     width: 80%;
     height: auto;
     background-color: #F4F7F5;
-    padding: 5pt;
+    padding: 15pt 5pt 15pt 5pt;
     -webkit-transition: all .25s ease;   /* Safari and Chrome */
     -moz-transition: all .25s ease;      /* Firefox */
     -o-transition: all .25s ease;        /* Opera */
@@ -488,6 +594,7 @@ body {
     float: right;
     width: 15pt;
     height: 15pt;
+    margin-top: -10pt;
     background-image: url("../images/icons/exit-nocolor.png");
     background-size: contain;
     -webkit-transition: all .25s ease;   /* Safari and Chrome */
@@ -506,30 +613,95 @@ body {
 }
 
 .detailed-view-element {
-    border: 5pt solid #333333;
+    border: 5pt solid #F4F7F5;
 }
 
-#detailed-view-logo {
+#detailed-view-name-container {
+    z-index: 10;
     display: block;
-    margin-right: auto;
-    margin-left: auto;
-    width: 200pt;
+    position: absolute;
+    width: 100%;
+    height: 150pt;
+    margin: auto;
+    padding-top: 3%;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
-.detailed-view h3 {
+#detailed-view-name {
     font-family: "Humble Cafe", sans-serif;
-    font-size: 5em;
+    font-size: 4em;
+    color: #F4F7F5;
     text-align: center;
+    padding: 0 5pt 0 5pt;
 }
 
-.detailed-view h4 {
+#detailed-view-host {
     font-family: "Oswald Light", sans-serif;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    color: #F4F7F5;
     text-align: center;
 }
 
-#myCarousel {
-    width: 500pt;
+.detailed-view-header {
+    font-family: "Oswald Light", sans-serif;
+    padding-bottom: 5pt;
+}
+
+.detailed-view-mini-header {
+    font-family: "Oswald Light", sans-serif;
+    font-size: 1.3em;
+}
+
+.detailed-view-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.detailed-view p {
+    font-family: "Raleway Regular", sans-serif;
+}
+
+.detailed-view-info-element {
+    padding-bottom: 10pt;
+}
+
+.detailed-view-table {
+    font-family: "Raleway Regular", sans-serif;
+}
+
+.detailed-view-table th {
+    width: 100pt;
+    text-align: left;
+}
+
+.detailed-view-table td {
+    width: 100pt;
+    text-align: right;
+}
+
+#detailed-view-map-container {
+    padding-bottom: 10pt;
+}
+
+/* Carousel */
+.carousel-item img {
+    display: flex;
+    justify-content: center;
+    height: 150pt;
+    object-fit: cover;
+}
+
+.carousel-control-prev {
+    z-index: 11;
+}
+
+.carousel-control-next {
+    z-index: 11;
+}
+
+.capitalize {
+    text-transform: capitalize;
 }
 
 
@@ -578,19 +750,19 @@ body {
     margin-left: 15pt;
 }
 
-.order-13{-ms-flex-order:13;order:13}
+.order-13{-ms-flex-order:13; order:13}
 
-.order-14{-ms-flex-order:14;order:14}
+.order-14{-ms-flex-order:14; order:14}
 
-.order-15{-ms-flex-order:15;order:15}
+.order-15{-ms-flex-order:15; order:15}
 
-.order-16{-ms-flex-order:16;order:16}
+.order-16{-ms-flex-order:16; order:16}
 
-.order-17{-ms-flex-order:17;order:17}
+.order-17{-ms-flex-order:17; order:17}
 
-.order-18{-ms-flex-order:18;order:18}
+.order-18{-ms-flex-order:18; order:18}
 
-.order-19{-ms-flex-order:19;order:19}
+.order-19{-ms-flex-order:19; order:19}
 
 
 /* ---------------

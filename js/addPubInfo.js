@@ -4,6 +4,8 @@
  * @author Emma Pettersson
  */
 
+let developmentModeIsOn = true; // To toggle if pubs can be displayed as open outside of active hours.
+
 $(window).on('load', function() {
     var elems = document.getElementsByClassName("grid-element");
     var locInfo = document.getElementsByClassName("location-info");
@@ -29,11 +31,14 @@ $(window).on('load', function() {
      * @param data - the JSON data
      */
     function processJSON(data) {
+        var currentHour = new Date(Date.now()).getHours()
+
         for (let i = 0; i < elems.length; i++) {
             var elemID = elems[i].id;
 
             $(locInfo[i]).text(data[elemID].location);
             $(timeInfo[i]).text(data[elemID].openingHours);
+            setPubQueueColor(timeInfo[i], currentHour,elemID);
 
             // Fix icons
             var filterIcons = data[elemID].filter;
@@ -62,6 +67,59 @@ $(window).on('load', function() {
                 }
             }
         }
+    }
+    function setPubQueueColor(timeInfo, currentHour,elemID) {
+
+        if(isPubOpen(timeInfo, currentHour) || developmentModeIsOn) {
+            $.getJSON(`../getQueueFor/${elemID}`, function (queueLength) {
+                switch(queueLength) {
+                    case 1:
+                        changeItemClassTo(elemID, "short-queue")
+                        break;
+                    case 2:
+                        changeItemClassTo(elemID, "medium-queue")
+                        break;
+                    case 3:
+                        changeItemClassTo(elemID, "long-queue")
+                        break;
+                    default:
+                        changeItemClassTo(elemID, "pub-closed")
+
+                }
+            });
+        }
+        else {
+            changeItemClassTo(elemID, "pub-closed")
+        }
+    }
+
+    function isPubOpen(timeInfo, currentHour) {
+        let openingHour = parseInt(timeInfo.innerHTML.slice(0,2))
+        let closingHour = parseInt(timeInfo.innerHTML.slice(timeInfo.innerHTML.length-2, timeInfo.innerHTML.length))
+
+        // Rebase the clock to open at 0 for easier if/else logic
+        let newOpen = 0;
+        let newClose = (closingHour + 24 - openingHour) % 24
+        let newCurrent = (currentHour + 24 - openingHour) % 24
+
+        if(newOpen <= newCurrent && newCurrent < newClose)
+            return true
+        else
+            return false
+    }
+
+    /**
+     * Replaces four specific ids with a custom one, not meant to be used outside of addPubInfo.js!!!
+     * @param {String} elemID
+     * @param {String} string
+     */
+    function changeItemClassTo(elemID, string) {
+        document.getElementById(elemID).classList.replace("short-queue", string)
+        document.getElementById(elemID).classList.replace("medium-queue", string)
+        document.getElementById(elemID).classList.replace("long-queue", string)
+        document.getElementById(elemID).classList.replace("pub-closed", string)
+
+
     }
 });
 

@@ -1,7 +1,6 @@
 // List of all the pubs
-var pubListObjects = ["bulten", "japripps", "wijkanders", "cafec", "basen", "11an", "focus", "fortnox", "gasquen",
-    "gastownospritkoket", "goldeni",  "hubben21", "jarnvagspub", "kajsabaren", "pignwhistle", "rodarummet",
-    "ventren", "winden", "zaloonen"];
+
+var pubListObjects = getPubList();
 
 const {length} = pubListObjects;
 
@@ -9,12 +8,14 @@ const {length} = pubListObjects;
 /**
  * Allows searching by pressing the enter key.
  */
-$("#searchBar").keyup(function(event) {
+$("#searchBar").keyup(function(event) { //on keyup
+
+    googleSearch();
+
     if (event.keyCode === 13) {
         $("#searchButton").click();
     }
 
-    googleSearch();
 });
 
 
@@ -68,13 +69,9 @@ function searchFunction() {
             } else if(txtFilter.indexOf("11A") > -1) {
                 searchFunctionSpecial(5, -1);
 
-            // Special case, if the Pig 'N'... has no apostrophe
-            } else if (txtFilter.indexOf("PIGN") > -1) {
-                searchFunctionSpecial(14, -1);
-
             // Special case, if the V-Entrén has no hyphen and acute accent
             } else if (txtFilter.indexOf("VE") > -1) {
-                searchFunctionSpecial(16, -1);
+                searchFunctionSpecial(15, -1);
 
             // Special case, if the Golden-I has no hyphen
             } else if (txtFilter.indexOf("GOLDENI") > -1) {
@@ -142,9 +139,9 @@ function visiblePubsFirst() {
         removeOrderTagsSearch(pub);
 
         if (document.getElementById(pub).classList.contains("visible")) {
-            document.getElementById(pub).classList.add("order-0");
+            document.getElementById(pub).classList.add("order-1");
         } else {
-            document.getElementById(pub).classList.add("order-19");
+            document.getElementById(pub).classList.add("order-18");
         }
     }
 }

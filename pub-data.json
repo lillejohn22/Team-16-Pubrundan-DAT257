@@ -1,192 +1,400 @@
 {
   "bulten":{
-    "name" : "Café Bulten",
+    "name" : "Cafe Bulten",
     "host" : "Café Bulten",
+    "hostWebsite": "http://cafebulten.se/",
     "location" : "M-huset",
     "address" : "Hörsalsvägen 7, 412 58 Göteborg",
     "openingHours" : "18 - 01",
     "paymentTypes" : ["SU-card", "Card"],
-    "filter" : ["wine", "food"]
+    "filter" : ["wine", "food"],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": ["Dance competition", "Drinking competition"],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": ["Chill"],
+    "id": "bulten",
+    "coordinates" : [57.688970, 11.978690]
   },
 
   "japripps":{
     "name" : "J.A. Pripps",
     "host" : "J.A. Pripps",
+    "hostWebsite": "https://www.facebook.com/japrippspub",
     "location" : "Kårhuset",
     "address" : "Sven Hultins gata 4, 412 58 Göteborg",
     "openingHours" : "15 - 01",
     "paymentTypes" : ["SU-card", "Card"],
-    "filter" : ["drinks"]
+    "filter" : ["drinks"],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""],
+    "id": "japripps",
+    "coordinates" : [57.688740, 11.974630]
   },
 
   "wijkanders":{
     "name" : "Wijkanders",
     "host" : "Wijkanders",
+    "hostWebsite": "https://wijkanders.se/",
     "location" : "Vasa Hus 8",
     "address" : "Vera Sandbergs allé 5B, 411 33 Göteborg",
     "openingHours" : "15 - 22",
     "paymentTypes" : ["SU-card", "Card"],
-    "filter" : ["beer"]
+    "filter" : ["beer"],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""],
+
+    "id": "wijkanders",
+    "coordinates" : [57.692588, 11.975321]
   },
 
   "gasquen":{
     "name" : "Gasquen",
     "host" : "GasqueK",
+    "hostWebsite": "https://gasquen.se/",
     "location" : "Kårhuset",
     "address" : "Teknologplatsen 6, 412 58 Göteborg",
     "openingHours" : "20 - 01",
     "paymentTypes" : ["SU-card", "Card"],
-    "filter" : [""]
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""],
+    "id": "gasquen",
+    "coordinates": [57.688650, 11.975160]
   },
 
   "cafec":{
-    "name" : "Café C",
+    "name" : "Cafe C",
     "host" : "C",
+    "hostWebsite": "https://www.lindholmen.se/restauranger/cafe-c",
     "location" : "Navet (Lindholmen)",
     "address" : "Lindholmspiren 5, 417 55 Göteborg",
     "openingHours" : "15 - 19",
     "paymentTypes" : ["SU-card", "Card"],
-    "filter" : [""]
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""],
+    "id": "cafec",
+    "coordinates" : [57.707149, 11.940027]
   },
 
   "11an":{
     "name" : "11:an",
     "host" : "Pubf",
+    "hostWebsite": "https://pubf.se/",
     "location" : "Svea (Lindholmen)",
     "address" : "Forskningsgången 4, 417 56 Göteborg",
     "openingHours" : "15 - 20",
-    "paymentTypes" : "Card",
-    "filter" : [""]
+    "paymentTypes" : ["Card"],
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""],
+    "id": "11an",
+    "coordinates" : [57.706218, 11.936804]
   },
 
   "rodarummet":{
     "name" : "Röda Rummet",
     "host" : "PubA",
+    "hostWebsite": "http://www.a-sektionen.se/kommitteer/puba/",
     "location" : "Biblioteket",
     "address" : "Sven Hultins gata 6, 412 58 Göteborg",
     "openingHours" : "19 - 03",
-    "paymentTypes" : "Card",
-    "filter" : [""]
+    "paymentTypes" : ["Card"],
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""],
+    "id": "rodarummet",
+    "coordinates" : [57.687510, 11.976563]
   },
 
-  "ventren":{
-    "name" : "V-entrén",
+  "verum":{
+    "name" : "Verum",
     "host" : "SNOK",
+    "hostWebsite": "https://www.vtek.se/foreningar/snok/",
     "location" : "Samhällsbyggnad III",
     "address" : "Sven Hultins gata 6, 412 58 Göteborg",
     "openingHours" : "19 -03",
-    "paymentTypes" : "Card",
-    "filter" : [""]
+    "paymentTypes" : ["Card"],
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""],
+    "id": "verum",
+    "coordinates": [57.687560, 11.976763]
   },
 
   "basen":{
     "name" : "Basen",
     "host" : "Delta",
+    "hostWebsite": "https://www.facebook.com/deltachalmers/",
     "location" : "EDIT",
     "address" : "Rännvägen 6b, 412 58 Göteborg",
     "openingHours" : "19 - 01",
-    "paymentTypes" : "Card",
-    "filter" : [""]
+    "paymentTypes" : ["Card"],
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""],
+    "id": "basen",
+    "coordinates": [57.687480, 11.978640]
   },
 
   "goldeni":{
     "name" : "Golden-I",
     "host" : "QQ7",
+    "hostWebsite": "https://qq7.se/",
     "location" : "Vasa Hus 2",
     "address" : "Vera Sandbergs allé 8A, 411 33 Göteborg",
     "openingHours" : "19 - 03",
-    "paymentTypes" : "Cash",
-    "filter" : [""]
+    "paymentTypes" : ["Cash"],
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""],
+    "id": "goldeni",
+    "coordinates" : [57.692902, 11.975156]
   },
 
   "kajsabaren":{
     "name" : "Kajsabaren",
     "host" : "Kajsabaren",
+    "hostWebsite": "https://www.facebook.com/Kajsabaren/",
     "location" : "EDIT",
     "address" : "Maskingränd 2, 412 58 Göteborg",
     "openingHours" : "17 - 01",
     "paymentTypes" : ["Cash", "Card"],
-    "filter" : [""]
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""],
+    "id": "kajsabaren",
+    "coordinates": [57.688210, 11.978730]
   },
 
   "focus":{
     "name" : "Focus",
     "host" : "Djungelpatrullen",
+    "hostWebsite": "https://ftek.se/djungelpatrullen/",
     "location" : "Forskarhuset Fysik",
     "address" : "Kemivägen 11, 411 33 Göteborg",
     "openingHours" : "19 - 03",
-    "paymentTypes" : "Cash",
-    "filter" : [""]
+    "paymentTypes" : ["Cash"],
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""],
+    "id": "focus",
+    "coordinates" : [57.691053, 11.975531]
+
   },
 
   "hubben21":{
     "name" : "Hubben 2.1",
     "host" : "P.R.I.T.",
+    "hostWebsite": "https://chalmers.it/committees/prit",
     "location" : "EDIT",
     "address" : "Hörsalsvägen 9, 412 58 Göteborg",
     "openingHours" : "17 - 02",
-    "paymentTypes" : "Card",
-    "filter" : [""]
+    "paymentTypes" : ["Card"],
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""],
+    "id" : "hubben21",
+    "coordinates" : [57.688330, 11.979270]
   },
 
   "fortnox":{
     "name" : "Fort NOx",
     "host" : "Häks",
+    "hostWebsite": "https://www.kemisektionen.com/haumlks.html",
     "location" : "Kemi",
     "address" : "",
     "openingHours" : "19 - 01",
-    "paymentTypes" : "Card",
-    "filter" : [""]
+    "paymentTypes" : ["Card"],
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""],
+    "id": "fortnox",
+    "coordinates" : [57.691039, 11.978209]
   },
 
   "gastownospritkoket":{
-    "name" : "Gastown & Spritköket",
-    "host" : "Kaos",
+    "name" : "Gastown o Spritkoket",
+    "host" : "KAOS",
+    "hostWebsite": "http://www.kfkb.se/kommitteer/lokalkommitten/",
     "location" : "Kemi",
     "address" : "",
     "openingHours" : "19 - 01",
-    "paymentTypes" : "Card",
-    "filter" : [""]
-  },
+    "paymentTypes" : ["Card"],
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""],
+    "id" : "gastownospritkoket",
+    "coordinates" : [57.691113, 11.978331]
+},
 
   "winden":{
     "name" : "Winden",
     "host" : "Rustmästeriet",
+    "hostWebsite": "https://mtek.chalmers.se/rustet/",
     "location" : "Gamla M-huset",
     "address" : "Hörsalsvägen 5, 412 58 Göteborg",
     "openingHours" : "19 - 03",
     "paymentTypes" : ["Cash", "Card"],
-    "filter" : [""]
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""],
+    "id" : "winden",
+    "coordinates" : [57.689552, 11.978064]
+
   },
 
-  "jarnvagspub":{
-    "name" : "Järnvägspub",
+  "tagvagnen":{
+    "name" : "Tågvagnen",
     "host" : "prosex.",
+    "hostWebsite": "https://tdtek.chalmers.se/?page_id=19",
     "location" : "Tågvagnen",
     "address" : "Sven Hultins gata 4, 412 58 Göteborg", 
     "openingHours" : "18 - 01",
     "paymentTypes" : ["Cash", "Card"],
-    "filter" : [""]
+    "filter" : [""],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""],
+    "id" : "tagvagnen",
+    "coordinates": [57.688282, 11.975849]
   },
 
   "zaloonen":{
     "name" : "Zaloonen",
     "host" : "Zexet",
+    "hostWebsite": "https://www.ztek.se/kommitteer/zexet/",
     "location" : "Hörsalar HB",
     "address" : "Gibraltarvallsvägen 3, 412 58 Göteborg",
     "openingHours" : "19 - 01",
-    "paymentTypes" : "Card",
+    "paymentTypes" : ["Card"],
     "filter" : [""],
-    "id" : "zaloonen"
-  },
-
-  "pignwhistle":{
-    "name" : "Pig 'n' Whistle",
-    "host" : "Pig 'n' Whistle",
-    "location" : "Emilsborg 2",
-    "address" : "Gibraltargatan 80, 412 79 Göteborg",
-    "openingHours" : "16 - 01",
-    "paymentTypes" : ["Cash", "Card"],
-    "filter" : [""]
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "activities": [""],
+    "drinks": {
+      "Kaffedrink": "35 kr"
+    },
+    "food": {
+      "Dammsugare": "10 kr"
+    },
+    "types": [""],
+    "id" : "zaloonen",
+    "coordinates": [57.689081, 11.979204]
   }
 }

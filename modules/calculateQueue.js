@@ -1,13 +1,8 @@
 /**
  * ...
  *
- * @author ???
+ * @author Thomas,Jesper,Ludvid,Johan
  */
-
-
-var pubs = ["bulten", "japripps", "wijkanders", "cafec", "basen", "11an", "focus", "fortnox", "gasquen",
-    "gastownospritkoket", "goldeni",  "hubben21", "jarnvagspub", "kajsabaren", "pignwhistle", "rodarummet",
-    "ventren", "winden", "zaloonen"];
 
 pubs = new Map();
 
@@ -16,20 +11,19 @@ const QueueLength = {SHORT: 1, MEDIUM: 2, LONG: 3,};
 Object.freeze(QueueLength);
 
 function updateQueue(voteObject){
-    addPubToMap(voteObject);
+    addPubToMap(voteObject.pubName);
     return updateQueueData(voteObject);
 };
-
 
 /**
  * Adds the pub to the map of pubs if it isn't already added
  *
- * @param voteObject
+ * @param {String} pubName
  */
-function addPubToMap(voteObject) {
-    if (pubs.get(voteObject.pubName) === undefined) {
-        let queueData = {name: voteObject.pubName, queue: {"colorIndex": 0}, queueArray: [0, 0, 0, 0, 0], lastVoted: 0};
-        pubs.set(voteObject.pubName, queueData)
+function addPubToMap(pubName) {
+    if (pubs.get(pubName) === undefined) {
+        let queueData = {name: pubName, queue: {"colorIndex": Math.floor(Math.random()*4)}, queueArray: [0, 0, 0, 0, 0], lastVoted: 0};
+        pubs.set(pubName, queueData)
     }
 }
 
@@ -115,4 +109,18 @@ function calculateQueue(queueArray) {
     }
 }
 
-module.exports.updateQueue = updateQueue
+function getQueueForPub(keyId) {
+    addPubToMap(keyId);
+    // console.log("getQueueForPub " + keyId + " colorIndex = " + JSON.stringify(pubs.get(keyId).queue.colorIndex))
+    return pubs.get(keyId).queue.colorIndex;
+}
+
+function newRandomQueuesForAllPubs() {
+    pubs.forEach((value, key, map) => {
+        map.get(key).queue = {"colorIndex": Math.floor(Math.random()*4)}
+    })
+}
+
+module.exports.updateQueue = updateQueue;
+module.exports.getQueueForPub = getQueueForPub;
+module.exports.newRandomQueuesForAllPubs = newRandomQueuesForAllPubs;
