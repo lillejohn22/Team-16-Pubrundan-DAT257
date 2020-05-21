@@ -49,7 +49,6 @@ function googleSearch() {
             li[15].style.display = "none";
             li[16].style.display = "none";
             li[17].style.display = "none";
-            li[18].style.display = "none";
 
             // Make the suggestion list for search results visible again
             document.getElementById("searchList").classList.remove('invisible');
@@ -62,14 +61,13 @@ function googleSearch() {
 
         }
 
-        /*
-        Removed because it seems redundant.
-            // Special case, if the V-Entrén has no hyphen and acute accent
-            else if (filter.indexOf("VEN") > -1) {
-                li[16].style.display = "";
+
+        // Special case, if the V-Entrén has no hyphen and acute accent
+        else if (filter.indexOf("VEN") > -1) {
+                li[15].style.display = "";
                 document.getElementById("searchList").classList.remove('invisible');
-                }
-         */
+         }
+
 
         // Special case, if the Golden-I has no hyphen
         else if (filter.indexOf("GOLDENI") > -1) {
@@ -106,11 +104,11 @@ function clickPubSearch(id) {
         document.getElementById(pubListObj[c]).classList.add('visible');
 
         document.getElementById(pubListObj[c]).classList.remove('order-1');
-        document.getElementById(pubListObj[c]).classList.add('order-19');
+        document.getElementById(pubListObj[c]).classList.add('order-18');
     }
 
     // Change order of card of clicked pub name to first
-    document.getElementById(pubListObj[id]).classList.remove('order-19');
+    document.getElementById(pubListObj[id]).classList.remove('order-18');
     document.getElementById(pubListObj[id]).classList.add('order-1');
 }
 
