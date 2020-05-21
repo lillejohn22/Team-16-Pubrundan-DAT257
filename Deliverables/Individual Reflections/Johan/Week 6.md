@@ -1,4 +1,4 @@
-# [DRAFT] Individual Reflection - Week 6
+# Individual Reflection - Week 6
 
 Name:	Johan Laberg Nilsson  
 Email:	Nilssojo@student.chalmers.se
@@ -14,32 +14,29 @@ Email:	Nilssojo@student.chalmers.se
 ------
 
 **Now:**  
-Currently, I have a better understanding of how our group works, the estimates and the project methodology. I have also become better at accurately estimating the time a user story takes although it's still difficult due to the lack of experience within the web programming. 
+Having worked under pressures has highlighted some things. For example it has highlighted the need of code review and the hardships that come with not being available at the same place. The sprint was completed but I feel that I learned more about how different group members like to work and communicate. 
 
 **Next and How: **  
-Next I want to see how the group is affected while working under stricter time limits and how this is taken into account during the sprint planning phase. To do this I will communicate with the group and we can together carefully weigh the estimates and the velocity for this week to still achieve a good sprint. 
-
-------
+Forthcoming I want to become better at using the KPIs that we have implemented. I also want to improve at using code reviewing and at keeping value creation in mind during creation of tasks and user stories. Also, to ensure that the project turns out as a single product, not as multiple stitched together parts. 
 
 #### How can I help someone or the team to learn something new? 
 
 -------
+I can help my team to learn new things by doing code reviews and keeping in mind to create content and to communicate more with my group members. 
 
-I can help the team in the reflection part and by having open communication with the group. Furthermore I can help by discussing the current project status, what creates value and to try to keep the project on track. 
-
--------
+------
 
 #### What is my contribution towards the team's use of Scrum? 
 
-I have contributed by discussing what adds value to the project and by having communicated whenever I got stuck or finished early. I have also contributed by using the scrum board and the shared resources while I was completing and testing the tasks I finished. 
+Reviewing code and participating in meeting, although this week I was quite busy with my other course and naturally didn't have time to help out as I have contributed by discussing what adds value to the project and by having communicated whenever I got stuck or finished early. I have also contributed by using the scrum board and the shared resources while I was completing and testing the tasks I finished. 
 
 Additionally, I have help by applying the scrum estimation procedure and by participating in daily meetings and having used the communication channels set up. 
 
 -------
 
-#### What is my contribution towards the team's deliveries? 
+#### What is my contribution towards the team's deliveries?
 
-I have helped write the weekly reflection and helped solve tasks related to the server side processing the votes. I have also helped discuss changes with the group and fixed minor bugs as well as discussed the testing that needed to be done.   
+Writing the team documents and participating in meetings. Code wise I have focused mainly on discussing code and trying to be available as much as possible.  
 
 ------
 
