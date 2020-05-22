@@ -16,7 +16,7 @@
 [Antonia Welzel | welzel](https://github.com/antoniiia)
 
 
-**Scrum Board**
+### Scrum Board
 
 The Trello board is public and can be found [**here**](https://trello.com/b/uNYqSmu7/agile).
 
@@ -40,12 +40,12 @@ It contains:
 6. What was discussed in each Team Reflection
 
 
-**Deliverables**
+### Deliverables
 
 All our deliverables (Social Contract, Project Scope, Team Reflections, Sprint Retrospectives and Individual Reflections) can be found here on GitHub, in the *Deliverables* folder.
 
 
-**Google Drive Folder**
+### Google Drive Folder
 
 [Contains some meeting protocols, prototype sketches, and unfinished design document etc.](https://drive.google.com/drive/folders/1UJXMLQg57acr7RPwPpx-ZiAskqL6B5Q9?usp=sharing)
  Not neccessary reading.
