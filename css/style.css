@@ -157,13 +157,21 @@ body {
     text-align: center;
 }
 
-#ssf-container-tmp2 {
+#ssf-container-help {
     width: 80%;
+}
 
+.ssf-element-help {
+    margin-top: 15pt;
+    background-color: #333333;
+    border-radius: 4px;
+    border: 1pt solid #F4F7F5;
 }
 
 #use-page {
-    height: 185pt;
+    height: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 #recommend-text {
@@ -204,7 +212,6 @@ body {
     background-color: #333333;
     border-radius: 4px;
     border: 1pt solid #F4F7F5;
-
 }
 
 #ssf-element-container {
