@@ -65,7 +65,7 @@
     ------------------------>
     <div class="container-fluid" id="ssf-container">
         <div class="row">
-
+            <!-- Search -->
             <div class="col-lg-12 ssf-element" id="ssf-element-container">
                 <div class= "ddMenu">
                 <button type="button" id="dropDownSearch" class="btn btn-outline-dark buttonWidth">Search</button>
@@ -80,7 +80,6 @@
                     <button type="button" id="dropDownFilter" class="btn btn-outline-dark buttonWidth">Filter</button>
 
                 </div>
-
 
                 <div id="searchDropdown" class="dropdown-content invisible">
                     <input type="text" id="searchBar" placeholder="Search for pubs..."/>
@@ -108,22 +107,23 @@
                         <li onmousedown="clickPubSearch(16)" class="searchL" id="16"><a href="#"> Winden </a></li>
                         <li onmousedown="clickPubSearch(17)" class="searchL" id="17"><a href="#"> Zaloonen </a></li>
                     </ul>
-
                 </div>
 
 
+                <!-- Sort -->
                 <div id="sortDropdown" class="dropdown-content invisible">
-                        <div class="sortButtons btn-group btn-group-toggle align-radio" data-toggle="buttons">
-                            <label class="btn btn-light" id="alphaSort">
-                                <input type="radio" name="sortPubs" id="alpha"> Alphabetical
-                            </label>
-                            <label class="btn btn-light active" id="queueSort">
-                                <input type="radio" name="sortPubs" id="queue"> Queue Length
-                            </label>
-                        </div>
+                    <div class="sortButtons btn-group btn-group-toggle align-radio" data-toggle="buttons">
+                        <label class="btn btn-light" id="alphaSort">
+                            <input type="radio" name="sortPubs" id="alpha"> Alphabetical
+                        </label>
+                        <label class="btn btn-light active" id="queueSort">
+                            <input type="radio" name="sortPubs" id="queue"> Queue Length
+                        </label>
+                    </div>
                 </div>
 
 
+                <!-- Search -->
                 <div id="filterDropdown" class="dropdown-content invisible">
                     <div class="form-check form-check-inline" style="margin-top:10px;">
                         <input class="form-check-input filter-checkbox" type="checkbox" id="beer-checkbox" value="option1">
@@ -183,11 +183,7 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-
-  <!-- SearchSortFilter END  -->
+    </div> <!-- Search/Sort/Filter END  -->
 
 
         <!-----------------------
@@ -1213,7 +1209,7 @@
         <footer class="site-footer">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-3 site-footer-element">
+                    <div class="col-md-5 site-footer-element">
                         <h2 class="site-footer-heading mb-4">About Us</h2>
                         <hr class="site-footer-element-hr">
                         <p>
@@ -1222,7 +1218,7 @@
                         </p>
                     </div>
 
-                    <div class="col-md-3 site-footer-element">
+                    <div class="col-md-4 site-footer-element">
                         <h5 class="site-footer-heading mb-4">Useful links</h5>
                         <hr class="site-footer-element-hr">
 

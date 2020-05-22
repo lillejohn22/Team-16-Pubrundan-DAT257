@@ -181,13 +181,13 @@ body {
 }
 
 #items {
-    font-family: "Lato Regular";
+    font-family: "Lato Regular", sans-serif;
     font-size: small;
     color: black;
 }
 
 #items-button {
-    font-family: "Lato Regular";
+    font-family: "Lato Regular", sans-serif;
     font-size: small;
     text-align: center;
     color: black;
@@ -199,12 +199,14 @@ body {
     margin-right: 10%;
 }
 
+
 /* ---------------
          SSF
    --------------- */
 
 #ssf-container {
-    width: 77%;
+    width: 80%;
+    border: 9pt solid #F4F7F5;
 }
 
 .ssf-element {
@@ -289,15 +291,11 @@ body {
 #searchButton:active {
     background-color: white;
     border: 2px solid #333333;
-
 }
 
 .search-icon {
     display: inline-block;
-    margin-left: 2px;
-    margin-right: 2px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: 0 2px 0 2px;
     width: 20px;
     height: 20px;
 }
@@ -306,7 +304,7 @@ body {
 #searchList {
     border: none;
     list-style-type: none;
-    padding: 5px 5px 5px 0px;
+    padding: 5px 5px 5px 0;
     position: relative;
     width: 93%;
     visibility: visible;
@@ -320,7 +318,7 @@ body {
 .searchL {
     border: none;
     margin-top: -5px;
-    margin-left: 0px;
+    margin-left: 0;
     padding: 3px;
     background-color: #333333;
     font-size: 16px;
@@ -377,11 +375,10 @@ body {
 
 
 /* Filter*/
-
 #filterDropdown {
-
-margin-top: 15px;
-
+    display: block;
+    text-align: center;
+    margin: 15px auto 0 auto;
 }
 
  .filter-checkbox {
@@ -392,7 +389,6 @@ margin-top: 15px;
  .form-check label {
     color: #F4F7F5;
     font-family: "Raleway Regular", sans-serif;
-
  }
 
 
