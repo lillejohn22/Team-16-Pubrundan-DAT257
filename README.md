@@ -40,7 +40,7 @@ Can be found in *Deliverables/Team Reflections* and *Deliverables/Individual Ref
  - [x] [**Scrum Board**](https://trello.com/b/uNYqSmu7/agile)
    - [x] **User stories** \
    Each user story has the blue tag "User Story", and starts with a number, e.g. "1. As a user I want to see the pubs' queue length on the website, to avoid standing in long lines."
-   - [x] **Effort estimation** \ 
+   - [x] **Effort estimation** \
    We call it "Points". One point = 1 hour.
    - [x] **Task Breakdown** \
    Each task starts with the number of the user story it belongs to, and then another number for the task, e.g. "1.1 Add queue indication to the box items."
