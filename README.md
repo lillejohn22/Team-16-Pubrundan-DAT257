@@ -1,27 +1,30 @@
 # Agile Software Project Management | DAT257
 **Group 16 Members Githubs**
 
-[Thomas Jinton](https://github.com/ThomasT2), [Jennifer Krogh](https://github.com/jenniferkrogh), [Ludvig Lindell](https://github.com/Ludvig7), [Jesper Lundgren](https://github.com/jeslundg), [Johan Nilsson](https://github.com/lillejohn22), [Emma Pettersson](https://github.com/emmouto), [Antonia Welzel](https://github.com/antoniiia)
+[Thomas Jinton | jintont](https://github.com/ThomasT2), [Jennifer Krogh | kroghj](https://github.com/jenniferkrogh), [Ludvig Lindell | ludlinde](https://github.com/Ludvig7), [Jesper Lundgren | jeslundg](https://github.com/jeslundg), [Johan Nilsson | nilssojo](https://github.com/lillejohn22), [Emma Pettersson  | emmp](https://github.com/emmouto), [Antonia Welzel | welzel](https://github.com/antoniiia)
 
-**Links to Group Documents**
 
-[**Scrum board**](https://trello.com/b/uNYqSmu7/agile)
+**Scrum Board**
 
-**Other Group Documents**
+The Trello board is public and can be found [**here**](https://trello.com/b/uNYqSmu7/agile).
 
-[Social Contract (Overleaf)](https://www.overleaf.com/project/5e78bdbf4b0d3600011fef94)
 
-[Project ideas](https://docs.google.com/document/d/1k_mHuLcZ9OvkI-vUGn5mLNtOOzorqsnM5VZBiyd6xP0/edit#heading=h.uqgi5nsgq5rt)
+**Deliverables**
 
-[Design Document](https://docs.google.com/document/d/1fVXF8uIhJW6w_5GY0Plv2MNIyX6TfHhCqAInZfSoNgk/edit)
+All our deliverables (Social Contract, Project Scope, Team Reflections, Sprint Retrospectives and Individual Reflections) can be found here on GitHub, in the *Deliverables* folder.
 
-[Meetings](https://docs.google.com/document/d/1dcxJ8pMqfS4kS1LxVa4P2S6e0350JRCzHmraORlDVDQ/edit#heading=h.abhqm953pq0r)
 
-[OLD REPO](https://github.com/emmouto/DAT257_Teams16)
+**Google Drive Folder**
 
-[ZOOM Handledningslänk](https://chalmers.zoom.us/j/2550119262)
+[Contains some meeting protocols, prototype sketches, and unfinished design document etc.](https://drive.google.com/drive/folders/1UJXMLQg57acr7RPwPpx-ZiAskqL6B5Q9?usp=sharing)
+ Not neccessary reading.
 
-# NodeJS setup 
+
+
+# Running our project 
+Start with downloading the project, then run the server using NodeJS.
+
+### NodeJS setup 
 #### Installation
 Download and Install NodeJS from [NodeJS](https://nodejs.org/en/).
 
