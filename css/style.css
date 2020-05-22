@@ -68,7 +68,7 @@ body {
 
 .navbar .navbar-brand {
     font-size: 1.5em;
-    margin-left: 9.75%;
+    margin-left: 10%;
     text-transform: uppercase;
     color: #F4F7F5;
 }
@@ -81,7 +81,7 @@ body {
 }
 
 .nav-items {
-    margin-left: 38%;
+    margin-left: 39.5%;
 }
 
 .nav-item {
@@ -150,6 +150,10 @@ body {
 .helpinfo {
     color: #F4F7F5;
     text-align: center;
+}
+
+.nav-items-help {
+    margin-left: 37.5%;
 }
 
 #header-help {
