@@ -119,7 +119,7 @@ $(window).on('load', function() {
         document.getElementById(elemID).classList.replace("long-queue", string)
         document.getElementById(elemID).classList.replace("pub-closed", string)
 
-
+        sortFunction("queue");
     }
 });
 
