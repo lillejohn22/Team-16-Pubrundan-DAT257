@@ -19,11 +19,14 @@
  - [ ] Final Report \
 Can be found in *Deliverables*
       
- - [x] Source Code (It's this repo)
+ - [x] Source Code \
+Can be found in this repo.
  
- - [ ] Tests
+ - [ ] Tests \
+Can be found as a checklist on each User Story on the Scrum Board.
  
- - [ ] Contribution Breakdown
+ - [ ] Contribution Breakdown \
+...
  
  - [x] Technical Documentation \
  Can be found in all the .js-files.
@@ -34,11 +37,15 @@ Can be found further down in this readme.
  - [x] Weekly Reflections \
 Can be found in *Deliverables/Team Reflections* and *Deliverables/Individual Reflections*.
  
- - [x] Scrum Board (Link is a bit further down)
-   - [x] Well-written User Stories
-   - [x] Effort estimation (We call it "Points")
-   - [x] Task Breakdown
-   - [x] Epics
+ - [x] [Scrum Board](https://trello.com/b/uNYqSmu7/agile)
+   - [x] User stories \
+   Each user story has the blue tag "User Story", and starts with a number, e.g. "1. As a user I want to see the pubs' queue length on the website, to avoid standing in long lines."
+   - [x] Effort estimation 
+   We call it "Points". One point = 1 hour.
+   - [x] Task Breakdown \
+   Each task starts with the number of the user story it belongs to, and then another number for the task, e.g. "1.1 Add queue indication to the box items."
+   - [x] Epics \
+   "I want information about the pubs." and "I want a map with the pubs."
 
 
 ### Scrum Board
