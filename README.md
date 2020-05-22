@@ -22,10 +22,8 @@ Can be found in *Deliverables*
  - [x] **Source Code** \
 Can be found in this repo.
  
- - [ ] **Tests** \
-Can be found as a checklist on each User Story on the Scrum Board.
-<br> <br> Tests are now added but not checked/ticked. Someone please 
-<br> read through them and tick them as they get checked.   
+ - [x] **Tests** \
+Can be found as a checklist on each User Story on the Scrum Board. 
  
  - [ ] **Contribution Breakdown** \
 ...
@@ -89,8 +87,7 @@ All our deliverables (Social Contract, Project Scope, Team Reflections, Sprint R
 
 # Project setup
 Instructions to install and run the project.   
-It might run without installing NodeJS since <br> 
-NodeJS binaries are included in the repository.
+It might run without installing NodeJS since NodeJS binaries are included in the repository.
  
 ## Installation
 Download and Install NodeJS from [NodeJS](https://nodejs.org/en/).
