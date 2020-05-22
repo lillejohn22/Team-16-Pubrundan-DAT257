@@ -1,7 +1,19 @@
 # Agile Software Project Management | DAT257
 **Group 16 Members Githubs**
 
-[Thomas Jinton | jintont](https://github.com/ThomasT2), [Jennifer Krogh | kroghj](https://github.com/jenniferkrogh), [Ludvig Lindell | ludlinde](https://github.com/Ludvig7), [Jesper Lundgren | jeslundg](https://github.com/jeslundg), [Johan Nilsson | nilssojo](https://github.com/lillejohn22), [Emma Pettersson  | emmp](https://github.com/emmouto), [Antonia Welzel | welzel](https://github.com/antoniiia)
+[Thomas Jinton | jintont](https://github.com/ThomasT2)
+
+[Jennifer Krogh | kroghj](https://github.com/jenniferkrogh)
+
+[Ludvig Lindell | ludlinde](https://github.com/Ludvig7)
+
+[Jesper Lundgren | jeslundg](https://github.com/jeslundg)
+
+[Johan Nilsson | nilssojo](https://github.com/lillejohn22)
+
+[Emma Pettersson  | emmp](https://github.com/emmouto)
+
+[Antonia Welzel | welzel](https://github.com/antoniiia)
 
 
 **Scrum Board**
