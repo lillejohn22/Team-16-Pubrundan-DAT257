@@ -173,13 +173,13 @@ body {
 }
 
 #items {
-    font-family: "Lato Regular";
+    font-family: "Lato Regular", sans-serif;
     font-size: small;
     color: black;
 }
 
 #items-button {
-    font-family: "Lato Regular";
+    font-family: "Lato Regular", sans-serif;
     font-size: small;
     text-align: center;
     color: black;
@@ -191,12 +191,14 @@ body {
     margin-right: 10%;
 }
 
+
 /* ---------------
          SSF
    --------------- */
 
 #ssf-container {
-    width: 77%;
+    width: 80%;
+    border: 9pt solid #F4F7F5;
 }
 
 .ssf-element {
