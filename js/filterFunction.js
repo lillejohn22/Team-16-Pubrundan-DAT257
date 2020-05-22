@@ -1,8 +1,3 @@
-/* TODO:
-    - it only uses the last filter to filter the pubs, fix that
- */
-
-
 $(window).on('load', function() {
     var allPubs = getPubList();
 

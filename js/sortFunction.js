@@ -5,16 +5,11 @@
 
 var pubList = getPubList();
 
-// The pubs should initially be sorted by their queue time.
-sortFunction("queue");
-
 
 /**
  * Sorts the pubs based on the alphabetical order.
  */
 $('#alphaSort').click(function() {
-    console.log("alphaSort");
-
     sortFunction("alpha");
 });
 
@@ -23,8 +18,6 @@ $('#alphaSort').click(function() {
  * Sorts the pubs based on the queue length.
  */
 $('#queueSort').click(function() {
-    console.log("queueSort");
-
     sortFunction("queue");
 });
 
