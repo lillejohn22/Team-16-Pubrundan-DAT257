@@ -25,13 +25,13 @@
 #### Installation
 Download and Install NodeJS from [NodeJS](https://nodejs.org/en/).
 
-#### Run in Commandline
-Navigate to the project folder in your commandprompt.   
-Run the following command:
-```
-npm run nodemon
-``` 
-#### Run in IntelliJ
+# Run the project
+1. To run the project open a command line.
+2. Navigate to the project folder in your commandprompt.   
+3. Run the following command: <br> 
+   ```  npm run nodemon ``` 
+
+# Development setup in IntelliJ
 To run nodemon from IntelliJ go to:   
 1. _Run_,  
 2. _Edit Configurations..._,
