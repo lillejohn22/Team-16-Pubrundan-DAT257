@@ -20,6 +20,25 @@
 
 The Trello board is public and can be found [**here**](https://trello.com/b/uNYqSmu7/agile).
 
+It contains:
+ 1. Scrum Board
+    1. Product Backlog
+    2. Tasks
+    3. Sprint Backlog
+    4. In Progress / To Check / Done
+ 
+ 2. Definition of Done
+ 
+ 3. List of Deliverables and their deadlines
+ 
+ 4. Meetings
+    1. Planned meetings
+    2. Finished Meetings
+    
+5. To Do-list
+
+6. What was discussed in each Team Reflection
+
 
 **Deliverables**
 
@@ -31,6 +50,8 @@ All our deliverables (Social Contract, Project Scope, Team Reflections, Sprint R
 [Contains some meeting protocols, prototype sketches, and unfinished design document etc.](https://drive.google.com/drive/folders/1UJXMLQg57acr7RPwPpx-ZiAskqL6B5Q9?usp=sharing)
  Not neccessary reading.
 
+
+- - - -
 
 
 # Running our project 
