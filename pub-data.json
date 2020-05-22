@@ -7,7 +7,7 @@
     "address" : "Hörsalsvägen 7, 412 58 Göteborg",
     "openingHours" : "18 - 01",
     "paymentTypes" : ["SU-card", "Card"],
-    "filter" : ["wine", "food"],
+    "filter" : ["wine", "food", "beer", "coffee"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "activities": ["Dance competition", "Drinking competition"],
     "drinks": {
@@ -29,7 +29,7 @@
     "address" : "Sven Hultins gata 4, 412 58 Göteborg",
     "openingHours" : "15 - 01",
     "paymentTypes" : ["SU-card", "Card"],
-    "filter" : ["drinks"],
+    "filter" : ["drinks", "food", "beer"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "activities": [""],
     "drinks": {
@@ -51,7 +51,7 @@
     "address" : "Vera Sandbergs allé 5B, 411 33 Göteborg",
     "openingHours" : "15 - 22",
     "paymentTypes" : ["SU-card", "Card"],
-    "filter" : ["beer"],
+    "filter" : ["beer", "food", "wine"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "activities": [""],
     "drinks": {
@@ -74,7 +74,7 @@
     "address" : "Teknologplatsen 6, 412 58 Göteborg",
     "openingHours" : "20 - 01",
     "paymentTypes" : ["SU-card", "Card"],
-    "filter" : [""],
+    "filter" : ["beer", "drinks"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "activities": [""],
     "drinks": {
@@ -96,7 +96,7 @@
     "address" : "Lindholmspiren 5, 417 55 Göteborg",
     "openingHours" : "15 - 19",
     "paymentTypes" : ["SU-card", "Card"],
-    "filter" : [""],
+    "filter" : ["food", "beer", "coffee", "wine"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "activities": [""],
     "drinks": {
@@ -118,7 +118,7 @@
     "address" : "Forskningsgången 4, 417 56 Göteborg",
     "openingHours" : "15 - 20",
     "paymentTypes" : ["Card"],
-    "filter" : [""],
+    "filter" : ["drinks", "coffee", "wine"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "activities": [""],
     "drinks": {
@@ -140,7 +140,7 @@
     "address" : "Sven Hultins gata 6, 412 58 Göteborg",
     "openingHours" : "19 - 03",
     "paymentTypes" : ["Card"],
-    "filter" : [""],
+    "filter" : ["beer", "wine", "drinks"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "activities": [""],
     "drinks": {
@@ -162,7 +162,7 @@
     "address" : "Sven Hultins gata 6, 412 58 Göteborg",
     "openingHours" : "19 -03",
     "paymentTypes" : ["Card"],
-    "filter" : [""],
+    "filter" : ["beer", "wine", "drinks", "food"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "activities": [""],
     "drinks": {
@@ -184,7 +184,7 @@
     "address" : "Rännvägen 6b, 412 58 Göteborg",
     "openingHours" : "19 - 01",
     "paymentTypes" : ["Card"],
-    "filter" : [""],
+    "filter" : ["beer", "wine"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "activities": [""],
     "drinks": {
@@ -206,7 +206,7 @@
     "address" : "Vera Sandbergs allé 8A, 411 33 Göteborg",
     "openingHours" : "19 - 03",
     "paymentTypes" : ["Cash"],
-    "filter" : [""],
+    "filter" : ["drinks", "beer", "wine", "food"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "activities": [""],
     "drinks": {
@@ -228,7 +228,7 @@
     "address" : "Maskingränd 2, 412 58 Göteborg",
     "openingHours" : "17 - 01",
     "paymentTypes" : ["Cash", "Card"],
-    "filter" : [""],
+    "filter" : ["food", "beer", "wine", "coffee"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "activities": [""],
     "drinks": {
@@ -250,9 +250,9 @@
     "address" : "Kemivägen 11, 411 33 Göteborg",
     "openingHours" : "19 - 03",
     "paymentTypes" : ["Cash"],
-    "filter" : [""],
+    "filter" : ["beer", "drinks", "wine"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "activities": [""],
+    "activities": ["beer", "wine", "drinks"],
     "drinks": {
       "Kaffedrink": "35 kr"
     },
@@ -273,9 +273,9 @@
     "address" : "Hörsalsvägen 9, 412 58 Göteborg",
     "openingHours" : "17 - 02",
     "paymentTypes" : ["Card"],
-    "filter" : [""],
+    "filter" : ["beer", "activity"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "activities": [""],
+    "activities": ["Karaoke"],
     "drinks": {
       "Kaffedrink": "35 kr"
     },
@@ -295,7 +295,7 @@
     "address" : "",
     "openingHours" : "19 - 01",
     "paymentTypes" : ["Card"],
-    "filter" : [""],
+    "filter" : ["beer", "drinks", "wine"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "activities": [""],
     "drinks": {
@@ -317,7 +317,7 @@
     "address" : "",
     "openingHours" : "19 - 01",
     "paymentTypes" : ["Card"],
-    "filter" : [""],
+    "filter" : ["beer", "drinks"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "activities": [""],
     "drinks": {
@@ -339,7 +339,7 @@
     "address" : "Hörsalsvägen 5, 412 58 Göteborg",
     "openingHours" : "19 - 03",
     "paymentTypes" : ["Cash", "Card"],
-    "filter" : [""],
+    "filter" : ["coffee", "beer", "wine", "drinks"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "activities": [""],
     "drinks": {
@@ -362,7 +362,7 @@
     "address" : "Sven Hultins gata 4, 412 58 Göteborg", 
     "openingHours" : "18 - 01",
     "paymentTypes" : ["Cash", "Card"],
-    "filter" : [""],
+    "filter" : ["drinks", "beer"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "activities": [""],
     "drinks": {
@@ -384,7 +384,7 @@
     "address" : "Gibraltarvallsvägen 3, 412 58 Göteborg",
     "openingHours" : "19 - 01",
     "paymentTypes" : ["Card"],
-    "filter" : [""],
+    "filter" : ["food", "beer", "wine"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "activities": [""],
     "drinks": {
