@@ -21,11 +21,15 @@
 
 [ZOOM Handledningslänk](https://chalmers.zoom.us/j/2550119262)
 
-# NodeJS setup 
-#### Installation
+# Project setup
+Instructions to install and run the project.   
+It might run without installing NodeJS since <br> 
+NodeJS binaries are included in the repository.
+ 
+## Installation
 Download and Install NodeJS from [NodeJS](https://nodejs.org/en/).
 
-# Run the project
+## Run the project
 1. To run the project open a command line.
 2. Navigate to the project folder in your commandprompt.   
 3. Run the following command: <br> 
