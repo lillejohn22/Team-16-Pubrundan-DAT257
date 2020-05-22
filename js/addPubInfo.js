@@ -59,10 +59,10 @@ $(window).on('load', function() {
                         foodIcon[i].src = "../images/icons/food.png";
                         break;
                     case "coffee":
-                        coffeeIcon[i].src = "..images/icons/coffee.png";
+                        coffeeIcon[i].src = "../images/icons/coffee.png";
                         break;
                     case "activity":
-                        activityIcon[i].src = "..images/icons/activity.png";
+                        activityIcon[i].src = "../images/icons/activity.png";
                         break;
                 }
             }
