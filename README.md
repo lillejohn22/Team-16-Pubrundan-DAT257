@@ -15,6 +15,27 @@
 
 [Antonia Welzel | welzel](https://github.com/antoniiia)
 
+## To pass the course
+ - [ ] Final Report (Can be found in *Deliverables*)
+      
+ - [x] Source Code (It's this repo)
+ 
+ - [ ] Tests
+ 
+ - [ ] Contribution Breakdown
+ 
+ - [x] Technical Documentation (Can be found in all the .js-files)
+ 
+ - [x] Instructions on how to install and use (Can be found further down in this readme)
+ 
+ - [x] Weekly Reflections (Can be found in *Deliverables*)
+ 
+ - [x] Scrum Board (Link is a bit further down)
+   - [x] Well-written User Stories
+   - [x] Effort estimation (We call it "Points")
+   - [x] Task Breakdown
+   - [x] Epics
+
 
 ### Scrum Board
 
