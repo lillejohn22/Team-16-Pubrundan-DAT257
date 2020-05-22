@@ -54,7 +54,7 @@ All our deliverables (Social Contract, Project Scope, Team Reflections, Sprint R
 - - - -
 
 
-# Running our project 
+## Running our project 
 Start with downloading the project, then run the server using NodeJS.
 
 ### NodeJS setup 
