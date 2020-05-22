@@ -24,6 +24,8 @@ Can be found in this repo.
  
  - [ ] **Tests** \
 Can be found as a checklist on each User Story on the Scrum Board.
+<br> <br> Tests are now added but not checked/ticked. Someone please 
+<br> read through them and tick them as they get checked.   
  
  - [ ] **Contribution Breakdown** \
 ...
