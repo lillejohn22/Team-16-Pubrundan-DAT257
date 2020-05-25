@@ -26,7 +26,7 @@ Can be found in this repo.
 Can be found as a checklist on each User Story on the Scrum Board. 
  
  - [ ] **Contribution Breakdown** \
-...
+We cannot get gitinspector to work.
  
  - [x] **Technical Documentation** \
  Can be found in all the .js-files.
