@@ -26,7 +26,7 @@ Can be found in this repo.
 Can be found as a checklist on each User Story on the Scrum Board. 
  
  - [ ] **Contribution Breakdown** \
-We cannot get gitinspector to work.
+We cannot get gitinspector to work. Use Contributors in the meantime. Emma has a lot of rows because she somehow got the credit for all the npm stuff. Jesper has nothing because he worked together with Ludvig, so Ludvig's commits are for both of them. We do not know we Antonia removed so many rows.
  
  - [x] **Technical Documentation** \
  Can be found in all the .js-files.
