@@ -16,8 +16,8 @@
 [Antonia Welzel | welzel](https://github.com/antoniiia)
 
 ## To pass the course
- - [ ] **Final Report** \
-Can be found in *Deliverables*
+ - [ ] [**Final Report**]() \
+Can be found in [*Deliverables*](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/tree/master/Deliverables)
       
  - [x] **Source Code** \
 Can be found in this repo.
@@ -26,7 +26,7 @@ Can be found in this repo.
 Can be found as a checklist on each User Story on the Scrum Board. 
  
  - [ ] **Contribution Breakdown** \
-We cannot get gitinspector to work. Use [Contributors](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/graphs/contributors) in the meantime. Emma has a lot of rows because she somehow got the credit for all the npm stuff. Ludvig has nothing because he worked together with Jesper, so Jesper's commits are for both of them. We do not know why Antonia removed so many rows. 
+We cannot get gitinspector to work. Use [**Contributors**](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/graphs/contributors) in the meantime. Emma has a lot of rows because she somehow got the credit for all the npm stuff. Ludvig has nothing because he worked together with Jesper, so Jesper's commits are for both of them. We do not know why Antonia removed so many rows. 
  
  - [x] **Technical Documentation** \
  Can be found in all the .js-files.
@@ -74,7 +74,7 @@ It contains:
 
 ### Deliverables
 
-All our deliverables ([Social Contract](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/blob/master/Deliverables/Social%20Contract.pdf), [Project Scope](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/blob/master/Deliverables/Project%20Scope.pdf), [Team Reflections](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/tree/master/Deliverables/Team%20Reflections), [Sprint Retrospectives](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/tree/master/Deliverables/Sprint%20Retrospectives) and [Individual Reflections](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/tree/master/Deliverables/Individual%20Reflections)) can be found here on GitHub, in the [*Deliverables*](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/tree/master/Deliverables) folder.
+All our deliverables ([*Social Contract*](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/blob/master/Deliverables/Social%20Contract.pdf), [*Project Scope*](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/blob/master/Deliverables/Project%20Scope.pdf), [*Team Reflections*](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/tree/master/Deliverables/Team%20Reflections), [*Sprint Retrospectives*](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/tree/master/Deliverables/Sprint%20Retrospectives) and [*Individual Reflections*](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/tree/master/Deliverables/Individual%20Reflections)) can be found here on GitHub, in the [*Deliverables*](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/tree/master/Deliverables) folder.
 
 
 ### Google Drive Folder
@@ -90,7 +90,7 @@ Instructions to install and run the project.
 It might run without installing NodeJS since NodeJS binaries are included in the repository.
  
 ## Installation
-Download and Install NodeJS from [NodeJS](https://nodejs.org/en/).
+Download and Install NodeJS from [**NodeJS**](https://nodejs.org/en/).
 
 ## Run the project
 1. To run the project open a command line.
