@@ -26,7 +26,7 @@ Can be found in this repo.
 Can be found as a checklist on each User Story on the Scrum Board. 
  
  - [ ] **Contribution Breakdown** \
-We cannot get gitinspector to work. Use Contributors in the meantime. Emma has a lot of rows because she somehow got the credit for all the npm stuff. Ludvig has nothing because he worked together with Jesper, so Jesper's commits are for both of them. We do not know why Antonia removed so many rows. 
+We cannot get gitinspector to work. Use [Contributors](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/graphs/contributors) in the meantime. Emma has a lot of rows because she somehow got the credit for all the npm stuff. Ludvig has nothing because he worked together with Jesper, so Jesper's commits are for both of them. We do not know why Antonia removed so many rows. 
  
  - [x] **Technical Documentation** \
  Can be found in all the .js-files.
@@ -35,7 +35,7 @@ We cannot get gitinspector to work. Use Contributors in the meantime. Emma has a
 Can be found further down in this readme.
  
  - [x] **Weekly Reflections** \
-Can be found in *Deliverables/Team Reflections* and *Deliverables/Individual Reflections*.
+Can be found in [*Deliverables/Team Reflections*](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/tree/master/Deliverables/Team%20Reflections) and [*Deliverables/Individual Reflections*](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/tree/master/Deliverables/Individual%20Reflections).
  
  - [x] [**Scrum Board**](https://trello.com/b/uNYqSmu7/agile)
    - [x] **User stories** \
@@ -45,7 +45,7 @@ Can be found in *Deliverables/Team Reflections* and *Deliverables/Individual Ref
    - [x] **Task Breakdown** \
    Each task starts with the number of the user story it belongs to, and then another number for the task, e.g. "1.1 Add queue indication to the box items."
    - [x] **Epics** \
-   Our initiative was "As a user, I want a web page for the pub rounds," and our epics "I want information about the pubs" and "I want a map with the pubs."
+   Our initiative was **"As a user, I want a web page for the pub rounds,"** and our epics *"I want information about the pubs"* and *"I want a map with the pubs."*
 
 
 ### Scrum Board
@@ -74,7 +74,7 @@ It contains:
 
 ### Deliverables
 
-All our deliverables (Social Contract, Project Scope, Team Reflections, Sprint Retrospectives and Individual Reflections) can be found here on GitHub, in the *Deliverables* folder.
+All our deliverables ([Social Contract](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/blob/master/Deliverables/Social%20Contract.pdf), [Project Scope](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/blob/master/Deliverables/Project%20Scope.pdf), [Team Reflections](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/tree/master/Deliverables/Team%20Reflections), [Sprint Retrospectives](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/tree/master/Deliverables/Sprint%20Retrospectives) and [Individual Reflections](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/tree/master/Deliverables/Individual%20Reflections)) can be found here on GitHub, in the [*Deliverables*](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/tree/master/Deliverables) folder.
 
 
 ### Google Drive Folder
