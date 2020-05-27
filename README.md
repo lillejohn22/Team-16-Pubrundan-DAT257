@@ -23,22 +23,18 @@ Can be found in [*Deliverables*](https://github.com/lillejohn22/Team-16-Pubrunda
 Can be found in this repo.
  
  - [x] **Tests** \
+Can be found as a checklist on each User Story on the Scrum Board. 
  ![](tests.png)
  
-Can be found as a checklist on each User Story on the Scrum Board. 
- 
  - [ ] **Contribution Breakdown** \
- ![](contributors.png) <!-- .element height="50%" width="50%" -->
- 
 We cannot get gitinspector to work. Use [**Contributors**](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/graphs/contributors) in the meantime. Emma has a lot of rows because she somehow got the credit for all the npm stuff. Ludvig has nothing because he worked together with Jesper, so Jesper's commits are for both of them. We do not know why Antonia removed so many rows. 
  
  - [x] **Technical Documentation** \
- ![](comments.png)
- 
- Can be found in all the .js-files, as both JavaDoc and normal comments. 
+  Can be found in all the .js-files, as both JavaDoc and normal comments. 
+   ![](comments.png)
  
  - [x] **Instructions on how to install and use** \
-Can be found further down in this readme.
+ Can be found further down in this readme.
  
  - [x] **Weekly Reflections** \
 Can be found in [*Deliverables/Team Reflections*](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/tree/master/Deliverables/Team%20Reflections) and [*Deliverables/Individual Reflections*](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/tree/master/Deliverables/Individual%20Reflections).
