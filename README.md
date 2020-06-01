@@ -29,10 +29,10 @@ Can be found as a checklist on each User Story on the Scrum Board.
  - [x] **Contribution Breakdown** \
 We cannot get gitinspector to work. Use [**Contributors**](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/graphs/contributors) in the meantime. Emma has a lot of rows because she somehow got the credit for all the npm stuff. Ludvig has nothing because he worked together with Jesper and/or Johan all the time, so Jesper's commits are for both of them. We do not know why Antonia removed so many rows. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #### Pair Programming
-- Jag, Johan (lillejohn22), parprogrammerade server tillsammans med Jesper och Ludvig. Vi implementerade även olika mapfeatures tillsammans. Tillsammans med Antonia har jag utvecklat sökfunktioner och filtreringfunktioner för hemsidan.
+#### Pair Programming
+- Johan, Ludvid and Jesper worked together on the implementation of the server and the map features together.
 
-- bla bla
+- Johan and Antonia worked together on the design of the search and filtering features on the front-end of the website
 
  
  - [x] **Technical Documentation** \
