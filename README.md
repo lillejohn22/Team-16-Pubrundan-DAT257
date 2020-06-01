@@ -29,7 +29,9 @@ Can be found as a checklist on each User Story on the Scrum Board.
  - [x] **Contribution Breakdown** \
 We cannot get gitinspector to work. Use [**Contributors**](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/graphs/contributors) in the meantime. Emma has a lot of rows because she somehow got the credit for all the npm stuff. Ludvig has nothing because he worked together with Jesper, so Jesper's commits are for both of them. We do not know why Antonia removed so many rows. 
 
-### Pair Programming
+- bla bla
+
+- bla bla
 
  
  - [x] **Technical Documentation** \
