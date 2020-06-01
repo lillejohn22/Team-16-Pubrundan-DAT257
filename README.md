@@ -1,19 +1,19 @@
 # Agile Software Project Management | DAT257
 **Group 16 Members Githubs**
 
-[Thomas Jinton | jintont](https://github.com/ThomasT2)
+[Thomas Jinton | cid: jintont | github: ThomasT2](https://github.com/ThomasT2)
 
-[Jennifer Krogh | kroghj](https://github.com/jenniferkrogh)
+[Jennifer Krogh | cid: kroghj | github: jenniferkrogh](https://github.com/jenniferkrogh)
 
-[Ludvig Lindell | ludlinde](https://github.com/Ludvig7)
+[Ludvig Lindell | cid: ludlinde | github: Ludvig7](https://github.com/Ludvig7)
 
-[Jesper Lundgren | jeslundg](https://github.com/jeslundg)
+[Jesper Lundgren | cid: jeslundg | github: jeslundg](https://github.com/jeslundg)
 
-[Johan Nilsson | nilssojo](https://github.com/lillejohn22)
+[Johan Nilsson | cid: nilssojo | github: lillejohn22](https://github.com/lillejohn22)
 
-[Emma Pettersson  | emmp](https://github.com/emmouto)
+[Emma Pettersson | cid: emmp | github: emmouto](https://github.com/emmouto)
 
-[Antonia Welzel | welzel](https://github.com/antoniiia)
+[Antonia Welzel | cid: welzel | github: antoniiia](https://github.com/antoniiia)
 
 ## To pass the course
  - [x] [**Final Report**](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/blob/master/Deliverables/Final%20Team%20Reflection.pdf) \
@@ -30,7 +30,7 @@ Can be found as a checklist on each User Story on the Scrum Board.
 We cannot get gitinspector to work. Use [**Contributors**](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/graphs/contributors) in the meantime. Emma has a lot of rows because she somehow got the credit for all the npm stuff. Ludvig has nothing because he worked together with Jesper and/or Johan all the time, so Jesper's commits are for both of them. We do not know why Antonia removed so many rows. 
 
 #### Pair Programming
-- 
+- Jag, Johan (lillejohn22), parprogrammerade server tillsammans med Jesper och Ludvig. Vi implementerade även olika mapfeatures tillsammans. Tillsammans med Antonia har jag utvecklat sökfunktioner och filtreringfunktioner för hemsidan.
 
 - bla bla
 
