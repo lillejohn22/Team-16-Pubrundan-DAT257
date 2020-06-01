@@ -1,19 +1,19 @@
 # Agile Software Project Management | DAT257
 **Group 16 Members Githubs**
 
-[Thomas Jinton | cid: jintont | github: ThomasT2](https://github.com/ThomasT2)
+[Thomas Jinton   | cid: jintont  | github: ThomasT2](https://github.com/ThomasT2)
 
-[Jennifer Krogh | cid: kroghj | github: jenniferkrogh](https://github.com/jenniferkrogh)
+[Jennifer Krogh  | cid: kroghj   | github: jenniferkrogh](https://github.com/jenniferkrogh)
 
-[Ludvig Lindell | cid: ludlinde | github: Ludvig7](https://github.com/Ludvig7)
+[Ludvig Lindell  | cid: ludlinde | github: Ludvig7](https://github.com/Ludvig7)
 
 [Jesper Lundgren | cid: jeslundg | github: jeslundg](https://github.com/jeslundg)
 
-[Johan Nilsson | cid: nilssojo | github: lillejohn22](https://github.com/lillejohn22)
+[Johan Nilsson   | cid: nilssojo | github: lillejohn22](https://github.com/lillejohn22)
 
-[Emma Pettersson | cid: emmp | github: emmouto](https://github.com/emmouto)
+[Emma Pettersson | cid: emmp     | github: emmouto](https://github.com/emmouto)
 
-[Antonia Welzel | cid: welzel | github: antoniiia](https://github.com/antoniiia)
+[Antonia Welzel  | cid: welzel   | github: antoniiia](https://github.com/antoniiia)
 
 ## To pass the course
  - [x] [**Final Report**](https://github.com/lillejohn22/Team-16-Pubrundan-DAT257/blob/master/Deliverables/Final%20Team%20Reflection.pdf) \
